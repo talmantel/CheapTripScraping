@@ -1,11 +1,7 @@
-//$(document).ready(function(){
-  $("#Play").on("click", async () => {
-      await cities_id();
-  });
-//})
-  // $('#Play').click(async () => {
-  //       await cities_id();
-  // });
+document.getElementById('play').addEventListener('click', async () => {
+  await cities_id();
+});
+
 const port = 5000;
 const url = 'http://localhost:' + port;
 //list of transportation id
@@ -51,17 +47,16 @@ async function createArrayCities(id_cities) {
     if (!id_cities) return;
 
     let places = [];
-    //for (var i = 0; i < id_cities.length; i++) {
-      //var from = id_cities[i].city;
+    
       let to = "Saint Petersburg,Russia";
       for (var j = 0; j < id_cities.length; j++) {
-        //if (to != id_cities[j].city) {
+       
           if (id_cities[j].city != "Saint Petersburg,Russia") {  
           var from = id_cities[j].city;
           places.push({ from: from, to: to });
         }
       }
-    //}
+    
 
     console.log({ places, length: places.length });
 
@@ -71,7 +66,7 @@ async function createArrayCities(id_cities) {
         if (!from || !to) return;
         
         let operation = await search(from, to, id_cities);
-        //let operation = await search(id_cities);
+      
         console.log("places[i]:",places[i],"index",i);
         if(!operation){
           console.error(
@@ -85,14 +80,14 @@ async function createArrayCities(id_cities) {
          if (!d_sorted || !dataCityId) return;
         let result_d_sorted = updateCityId(d_sorted,dataCityId);
         console.log(result_d_sorted);
-        if(result_d_sorted != []){
-        let insert_result = await insertData(result_d_sorted);
-        console.log('createArrayCities -> insert_result', insert_result);
-        if(i==places.length-1){
-          console.log(i,"this is end");
-        }
-        sleep(100);
-        }
+        //   if(result_d_sorted != []){
+        //     let insert_result = await insertData(result_d_sorted);
+        //     console.log('createArrayCities -> insert_result', insert_result);
+        //     if(i==places.length-1){
+        //       console.log(i,"this is end");
+        //     }
+        //     sleep(100);
+        // }
       }catch(error){
         console.log('createArrayCities -> insert_result -> error', error);
         return;
@@ -122,16 +117,14 @@ async function search(from, to, id_cities) {
       
     });
 
-    //let C = $('body > div.layout-header > header > div > div.navbar__users > ul > li.navbar__users-settings > a > span:nth-child(1)').val();
-    //let dataCoin = $('body > div.layout-header > header > div > div.navbar__users > ul > li.navbar__users-settings > a > span:nth-child(1) > span.js-user-currency').val();
-    //console.log("check coin ", dataCoin);
+    
     if (!request) {
       console.error('search -> from, to, id_cities', from, to, id_cities);
       throw new Error('could not get response on search');
     }
     
     const { data: result } = request;
-    //console.log("id_cities:",id_cities);//list of id cities with names cities
+    
     var data = result[0];
     var from = result[1];
     var to = result[2];
@@ -354,7 +347,7 @@ async function createTablePrices(from,to,prices){
     dataLowPrice.push(prices[lowPriceIndex]);
     var data = editTime(dataLowPrice);
     if(data != undefined){
-    await createArrayAllPrices(from,to,data);
+    //await createArrayAllPrices(from,to,data);
     //return;
     }
   }catch(error) {

@@ -13,7 +13,7 @@ router.get('/getIdCities', TravelController.getCities);
 router.post('/insertLowPrices', TravelController.createArrayAllPrices); // было в базу данных
 
 //create variables and edit data before insert to database
-// TODO: csv 
+
 router.put('/insert_Data', function (req, res, next) {
   var data = JSON.parse(req.body.d);
   

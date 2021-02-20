@@ -21,6 +21,13 @@ const id_transportation = [
 let id_cities = [];
 let arrPlusLine = [];
 
+// test
+let testDestinations = [
+  'Saint-Petersburg, Russia',
+  'Tel Aviv, Israel',
+  'Yerevan, Armenia'
+]
+
 //get all cities. list of cities with names and id
 async function cities_id() {
   try {
@@ -29,8 +36,9 @@ async function cities_id() {
 
     if (!data) return;
     id_cities = data;
-    console.log(id_cities);//list of id cities with names cities
-    createArrayCities(id_cities);
+    //list of id cities with names cities - this is fine
+    await createArrayCities(id_cities);
+    //console.log(id_cities);
     return id_cities;
   } catch (error) {
     console.log('functioncities_id -> error', error);
@@ -41,26 +49,29 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-//creating objects array with exit and target(from,to) 
+//creating objects array with exit and target(from,to)
+
+
+
+
 async function createArrayCities(id_cities) {
   try {
     if (!id_cities) return;
-
     let places = [];
     
-      let to = "Saint Petersburg,Russia";
+      let to = testDestinations[Math.floor(Math.random() * testDestinations.length)];
       for (var j = 0; j < id_cities.length; j++) {
-       
-          if (id_cities[j].city != "Saint Petersburg,Russia") {  
           var from = id_cities[j].city;
           places.push({ from: from, to: to });
-        }
       }
     
 
     console.log({ places, length: places.length });
 
-    for (var i = 191; i < 192; i++) {
+    // cities from csv - first id. in our case it is 8
+    var firstId = parseInt(id_cities[0].id);
+
+    for (var i = firstId; i < id_cities.length - 1; i++) {
         try{
         const { from, to } = places[i];
         if (!from || !to) return;
@@ -489,7 +500,7 @@ function dataDismantlement(d_type) {
   //return arrPlusLine;
 }
 
-//insert data to DB
+//insert data (was to DB)
 async function insertData(obj_data) {
   //console.log(obj_data);
   try {

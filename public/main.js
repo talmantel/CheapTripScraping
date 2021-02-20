@@ -80,14 +80,7 @@ async function createArrayCities(id_cities) {
          if (!d_sorted || !dataCityId) return;
         let result_d_sorted = updateCityId(d_sorted,dataCityId);
         console.log(result_d_sorted);
-        //   if(result_d_sorted != []){
-        //     let insert_result = await insertData(result_d_sorted);
-        //     console.log('createArrayCities -> insert_result', insert_result);
-        //     if(i==places.length-1){
-        //       console.log(i,"this is end");
-        //     }
-        //     sleep(100);
-        // }
+        
       }catch(error){
         console.log('createArrayCities -> insert_result -> error', error);
         return;

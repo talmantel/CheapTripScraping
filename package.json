@@ -5,7 +5,10 @@
   "type": "commonjs",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js --verbose"
+  },
+  "nodemonConfig": {
+    "ignore": "bin/modules/data.json"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -13,7 +16,6 @@
     "cheerio": "^1.0.0-rc.3",
     "cities.json": "^1.1.5",
     "cors": "^2.8.5",
-    "csv-parser": "^3.0.0",
     "express": "^4.17.1",
     "get-urls": "^9.2.0",
     "http-errors": "~1.6.3",

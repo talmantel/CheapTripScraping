@@ -1,17 +1,11 @@
-const csv = require("csv-parser");
-const fs = require("fs");
+const converter = require('./csv-json-converter.js');
 
 
-const cities = [];
+
 
 // Read data from CSV (replace hardcoded values that were before)
-// TODO: нужно чтобы содержимое файла было доступно вне фс
 
-let content = fs.createReadStream('data.csv')
-  .pipe(csv())
-  .on('data', (row) => {
-    cities.push(row);
-  });
+const cities = converter.convertCSVtoJSONarray('/data.csv');
 
   
 

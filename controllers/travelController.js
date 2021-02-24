@@ -30,7 +30,7 @@ class TravelController {
       });
 
       console.log(rome2rioUrl);
-
+      // TODO: разметка HTML уже не та!!!
       // get travel details
       let travelData = await page.evaluate(() => {
         let travel = [];

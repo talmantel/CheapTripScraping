@@ -24,6 +24,13 @@ class TravelController {
       await page.setViewport({ width: 1920, height: 926 });
       await page.goto(rome2rioUrl);
 
+      await page.setCookie({
+        'name': 'currency',
+        'value': 'EUR'
+      });
+
+      console.log(rome2rioUrl);
+
       // get travel details
       let travelData = await page.evaluate(() => {
         let travel = [];

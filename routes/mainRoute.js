@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { TravelController } = require('../controllers/travelController');
+const fs = require('fs');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -31,6 +32,8 @@ router.put('/insert_Data', function (req, res, next) {
     time = time ? time : 0;
     price = price ? price : 0;
   }
+
+  
   
   res.end();
 });

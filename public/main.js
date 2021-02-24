@@ -506,8 +506,8 @@ async function insertData(obj_data) {
   try {
     var d = JSON.stringify(obj_data, null, 2);
     let output = null;
-
-    await $.ajax({ // fetch
+    
+    await fetch({ // fetch
       url: `http://localhost:${port}/insert_Data`,
       type: 'put',
       data: { d },

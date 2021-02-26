@@ -112,7 +112,7 @@ class TravelController {
     }
   }
     
-    static async createArrayAllPrices(req,res,next){  
+   /* static async createArrayAllPrices(req,res,next){  
       var from = req.body.from;
       var to = req.body.to;
       var prices = req.body.prices;
@@ -127,7 +127,7 @@ class TravelController {
     
       res.send(isInserted);
       res.end();
-  }
+  }*/
 
 }
 

@@ -11,7 +11,7 @@ router.get('/', function (req, res, next) {
 router.get('/getIdCities', TravelController.getCities);
 
 // пока непонятно, что делать с этой функцией
-router.post('/insertLowPrices', TravelController.createArrayAllPrices); // было в базу данных
+//router.post('/insertLowPrices', TravelController.createArrayAllPrices); // было в базу данных
 
 //create variables and edit data before insert to database
 

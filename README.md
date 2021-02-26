@@ -9,3 +9,6 @@ npm i
 Launch
 `npm start` - production mode
 `npm run dev` - development mode
+
+
+`problems.md` - all issues that are happened during development. (+) means solved

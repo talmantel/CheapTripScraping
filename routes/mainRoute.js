@@ -16,23 +16,38 @@ router.post('/insertLowPrices', TravelController.createArrayAllPrices); // бы�
 //create variables and edit data before insert to database
 
 router.put('/insert_Data', function (req, res, next) {
-  var data = JSON.parse(req.body.d);
-  
-  for (var i = 0; i < data.length; i++) {
-    var from = Number(data[i].from);
-    var to = Number(data[i].to);
-    var type = Number(data[i].types);
-    var time = Number(data[i].time);
-    var price = Number(data[i].price);
-    var line = data[i].line;
-    var coin = data[i].coin;
+  let body = req.body;
+  let data = [];
+  data.push(body['d']);
+  let jsonData = [];
+
+  for (let i = 0; i < data.length; i++) {
+    let from = Number(data[i].from);
+    let to = Number(data[i].to);
+    let type = Number(data[i].type);
+    let time = Number(data[i].time);
+    let price = Number(data[i].price);
+    let line = data[i].line;
+    let coin = data[i].coin;
     from = from ? from : 0; 
     to = to ? to : 0;
     type = type ? type : 0;
     time = time ? time : 0;
     price = price ? price : 0;
+    let item = `${from},${to},${type},${time},${price},${line},${coin}`;
+    console.log('item', item);
+    console.log('jsonData', jsonData);
+    //jsonData[i].push(item); // TODO: здесь не выполняется!
+    console.log('jsonData', jsonData);
   }
+  console.log('after', jsonData);
+  jsonData = JSON.stringify(jsonData, null, 1);
+  // create new JSON
+  fs.writeFileSync('output.json', jsonData, function(err){
+    console.log(err.message);
+  });
 
+  
   
   
   res.end();

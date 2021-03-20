@@ -9,6 +9,7 @@ const writeToJSON = require('./writeToJSON');
 const { performance } = require('perf_hooks');
 const measureMs = require('../performance_tests/measureMS');
 const writeTable = require('./writeTable');
+const moveFile = require('./moveFile');
 
 const grab = async (params) => { // {id, from, to, cookies}
     // todo: id ?
@@ -25,17 +26,19 @@ const grab = async (params) => { // {id, from, to, cookies}
         const $ = cheerio.load(response.body);
         const result = $('#deeplinkTrip')[0].attribs.content;
         writeTable({id, data: result});
+        moveFile(`${id}.txt`, `tables/${id}.txt`);
         // fs.writeFileSync(`../results/tmp.json`, data, {
         //     'flag': 'w+'
         // });
         //measureMs('fetch rom2rio', t0);
         return result;
       }).then((data) => {
-            console.log(data);
             let t1 = performance.now();
             //let data = fs.readFileSync('../results/tmp.json', 'utf-8');
             data = JSON.parse(data);
             data = data[2][1];
+
+            
             // [0], [1], [2]
             // Grab transport type
             let transport = [];

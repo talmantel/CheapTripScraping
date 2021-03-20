@@ -1,3 +1,4 @@
 node_modules/
-data.json
-out.txt
+tmp.json
+model.json
+*.txt

@@ -5,7 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js --verbose"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "tmp.json",
+      "model.json",
+      "results/*.json",
+      ".txt",
+      "tables/*.txt"
+    ]
   },
   "keywords": [],
   "author": "",

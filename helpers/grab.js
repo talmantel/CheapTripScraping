@@ -31,7 +31,7 @@ const grab = async (params) => { // {id, from, to, cookies}
         //measureMs('fetch rom2rio', t0);
         return result;
       }).then((data) => {
-       // console.log(data);
+            console.log(data);
             let t1 = performance.now();
             //let data = fs.readFileSync('../results/tmp.json', 'utf-8');
             data = JSON.parse(data);

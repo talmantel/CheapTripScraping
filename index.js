@@ -16,14 +16,14 @@ fs.createReadStream('cities.csv')
       const cookieJar = new CookieJar();
       const setCookie = promisify(cookieJar.setCookie.bind(cookieJar));
       const cookies = setCookie('currency=EUR', 'https://www.rome2rio.com');
-    
+      let from = to = '';
       for (let i = 0; i < cities1.length; i++){
         for (let j = 1; j < cities2.length - 1; j++){
           if (cities1[i] !== cities2[j]){
             grab({
-              id: cities1[i].id,
-              from: cities1[i].from,
-              to: cities2[j].to,
+              id: cities1[i][0],
+              from: cities1[i][1],
+              to: cities2[j][1],
               cookies
             });
           }

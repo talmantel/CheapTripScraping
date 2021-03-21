@@ -2,3 +2,5 @@ node_modules/
 tmp.json
 model.json
 *.txt
+tables/*.txt
+results/**/*.json

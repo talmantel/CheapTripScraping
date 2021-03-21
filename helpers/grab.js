@@ -1,8 +1,8 @@
 const fs = require('fs');
-
+const {promisify} = require('util');
 const cheerio = require('cheerio');
 const got = require('got');
-
+const {CookieJar} = require('tough-cookie');
 const writeToJSON = require('./writeToJSON');
 
 const { performance } = require('perf_hooks');
@@ -15,13 +15,18 @@ const moveFile = require('./moveFile');
 const grab = async (params) => { // {id, from, to, cookies}
     // todo: id ?
     
-    const {id, from, to, cookies} = params;
+    const {id, from, to} = params;
 
     const url = `https://www.rome2rio.com/map/${from}/${to}`;
 
     let t0 = performance.now();
+
+    const cookieJar = new CookieJar();
+    const setCookie = promisify(cookieJar.setCookie.bind(cookieJar));
+    const cookies = setCookie('currency=EUR', url);
 	
 	await got(url, {cookies}).then(response => {
+        
         const $ = cheerio.load(response.body);
         const result = $('#deeplinkTrip')[0].attribs.content;
         writeTable({id, data: result});

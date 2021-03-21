@@ -4,6 +4,10 @@ const writeToJSON = (params) => { // {id,from,to,info,times,prices}
     
     const {id,from,to,types,times,prices} = params;
     const filePath = `../results/${from}_${to}.json`;
+    if (!fs.existsSync(filePath)){
+        return;
+    }
+    // TODO
     fs.writeFileSync(filePath, '{\n', {flag: "a+"});
     fs.writeFileSync(filePath, `\t\"id\": ${id}\n`, {flag: "a+"});
     fs.writeFileSync(filePath, `\t\"from\": ${from}\n`, {flag: "a+"});

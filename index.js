@@ -14,18 +14,18 @@ fs.createReadStream('cities.csv')
   })
   .on('end', () => {
       
-      let from = to = '';
-      for (let i = 0; i < cities1.length; i++){
-        for (let j = 1; j < cities2.length - 1; j++){
-          if (cities1[i] !== cities2[j]){
-            grab({
-              id: cities1[i][0],
-              from: cities1[i][1],
-              to: cities2[j][1]
-            });
-          }
+    let from = to = '';
+    for (let i = 0; i < cities1.length; i++){
+      for (let j = 1; j < cities2.length - 1; j++){
+        if (cities1[i] !== cities2[j]){
+          grab({
+            id: cities1[i][0],
+            from: cities1[i][1],
+            to: cities2[j][1]
+          });
         }
       }
+    }
 
     
   });

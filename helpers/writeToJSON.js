@@ -1,6 +1,6 @@
 const fs = require('fs');
 const touch = require('touch'); // creates new empty file (forcing)
-const checkForFile = require('./putToFile');
+const putToFile = require('./putToFile');
 
 
 const writeToJSON = (params) => { // {id,from,to,info,times,prices}

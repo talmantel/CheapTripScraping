@@ -7,3 +7,4 @@ tables/**/*.json
 results/**/*.json
 *.zip
 *.csv
+performance_tests/performance.txt

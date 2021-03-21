@@ -14,7 +14,8 @@
       "results/**/*.json",
       ".txt",
       "tables/*.txt",
-      "tables/**/*.json"
+      "tables/**/*.json",
+      "performance_tests/performance.txt"
     ]
   },
   "keywords": [],

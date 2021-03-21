@@ -21,25 +21,23 @@ const writeToJSON = (params) => { // {id,from,to,info,times,prices}
         "to":"${to}",
         "info":{
             "types": [
-                ${types.length ? types.join(',\n') : ''}
+                ${types.length ? types.join(',\n\t') : ''}
             ],
             "time": [
-                ${times.length ? times.join(",\n") : ''}
+                ${times.length ? times.join(",\n\t") : ''}
             ],
             "price": [
-                ${prices.length ? prices.join(",\n") : ''}
+                ${prices.length ? prices.join(",\n\t") : ''}
             ]
         }
     } 
     `;
+
     
     // TODO: Fix json data
-    // TODO: eur
-
-    checkForFile(filePath, () => { // if file exists -> call callback writing func
-       fs.writeFile(filePath, content, (err,data) => {
-            throw new Error(`Fatal: writing to JSON failed: ${err}`);
-       });
+    
+    checkForFile(filePath, content, () => { 
+       //fs.writeFileSync(filePath, content, {flag: 'a+'});
     });
 }
 

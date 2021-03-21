@@ -35,7 +35,8 @@ const grab = async (params) => { // {id, from, to, cookies}
         //measureMs('fetch rom2rio', t0);
         return result;
       }).then((data) => {
-            let types = ["flight", "ride", "plane", "bus", "ferry"];
+            // JSON values need to be quoted
+            let types = ['"flight"', '"ride"', '"plane"', '"bus"', '"ferry"'];
             let t1 = performance.now();
             data = JSON.parse(data);
             data = data[2][1];
@@ -62,9 +63,9 @@ const grab = async (params) => { // {id, from, to, cookies}
             writeToJSON({ id, from, to, types, times, prices });
             
             //measureMs('make JSON file', t1);
-            // как передать id
+    
       }).catch(err => {
-        console.log(err);
+        throw err;
       });
 
     

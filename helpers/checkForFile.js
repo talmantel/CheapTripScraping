@@ -10,18 +10,15 @@ const fs = require('fs');
 //     });
 // }
 
-function checkForFile(fileName,callback) // deprecated!
+function checkForFile(fileName, content, callback) // deprecated!
 {
     fs.exists(fileName, function (exists) {
         if(exists)
         {
-            callback();
+            return;
         }else
         {
-            fs.writeFile(fileName, 'test', {flag: 'wx'}, function (err, data) 
-            { 
-                callback();
-            })
+            fs.writeFileSync(fileName, content, {flag: 'wx'});
         }
     });
 }

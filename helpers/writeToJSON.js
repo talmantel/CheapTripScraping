@@ -1,6 +1,6 @@
 const fs = require('fs');
 const touch = require('touch'); // creates new empty file (forcing)
-const checkForFile = require('./checkForFile');
+const checkForFile = require('./putToFile');
 
 
 const writeToJSON = (params) => { // {id,from,to,info,times,prices}
@@ -35,10 +35,8 @@ const writeToJSON = (params) => { // {id,from,to,info,times,prices}
 
     
     // TODO: Fix json data
-    
-    checkForFile(filePath, content, () => { 
-       //fs.writeFileSync(filePath, content, {flag: 'a+'});
-    });
+    // check for file, if file exists -> write
+    putToFile(filePath, content);
 }
 
 

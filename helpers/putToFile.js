@@ -10,17 +10,14 @@ const fs = require('fs');
 //     });
 // }
 
-function checkForFile(fileName, content, callback) // deprecated!
+function putToFile(fileName, content, callback) // deprecated!
 {
-    fs.exists(fileName, function (exists) {
-        if(exists)
-        {
-            return;
-        }else
-        {
-            fs.writeFileSync(fileName, content, {flag: 'wx'});
-        }
+    // check if exists
+    fs.exists(fileName, (exists) => {
+        fs.writeFileSync(fileName, content, {flag: 'a+'});
+        
+        // TODO: if file is not empty - return
     });
 }
 
-module.exports = checkForFile;
+module.exports = putToFile;

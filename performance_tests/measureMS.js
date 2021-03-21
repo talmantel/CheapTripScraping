@@ -13,7 +13,7 @@ module.exports = {
     const now = performance.now();
     const timeOfOperation = now - time;
     const durationParsed = millisToMinutesAndSeconds(timeOfOperation);
-    fs.writeFile(__dirname + '/performance.txt', `measureMs -> time for operation of "${
+    fs.writeFile(__dirname + `/${operationName}.txt`, `measureMs -> time for operation of "${
       operationName || 'operation'
     }": ${durationParsed}\n`, { flag: 'a+' }, (e) => {
       console.log(e);

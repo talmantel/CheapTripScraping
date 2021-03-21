@@ -3,4 +3,7 @@ tmp.json
 model.json
 *.txt
 tables/*.txt
+tables/**/*.json
 results/**/*.json
+*.zip
+*.csv

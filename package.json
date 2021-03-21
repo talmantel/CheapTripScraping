@@ -13,7 +13,8 @@
       "model.json",
       "results/**/*.json",
       ".txt",
-      "tables/*.txt"
+      "tables/*.txt",
+      "tables/**/*.json"
     ]
   },
   "keywords": [],

@@ -1,18 +1,18 @@
 // Simple travel. In the future we can expand this script
 const csv = require('csv-parser');
-
 const fs = require('fs')
-
 const grab = require('./helpers/grab');
+const measureMS = require('./performance_tests/measureMS');
 
 let cities1 = cities2 = [];
-fs.createReadStream('cities.csv')
+fs.createReadStream('India for scraping.csv')
   .pipe(csv())
   .on('data', (data) => {
     cities1.push([data.id, `${data.city},${data.country}`])
     cities2.push([data.id, `${data.city},${data.country}`])
   })
   .on('end', () => {
+    let t0 = performance.now();
       
     let from = to = '';
     for (let i = 0; i < cities1.length; i++){
@@ -26,6 +26,8 @@ fs.createReadStream('cities.csv')
         }
       }
     }
+
+    measureMS('grab-jsons', t0);
 
     
   });

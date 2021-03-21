@@ -6,7 +6,7 @@ tables/*.txt
 tables/**/*.json
 results/**/*.json
 *.zip
-*.csv
+cities.csv
 performance_tests/performance.txt
 *.pem
 *.ppk

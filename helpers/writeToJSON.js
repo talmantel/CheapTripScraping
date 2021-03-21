@@ -1,8 +1,12 @@
 const fs = require('fs');
-const checkForFile = require('./checkForFile');
 const touch = require('touch'); // creates new empty file (forcing)
+const checkForFile = require('./checkForFile');
+
 
 const writeToJSON = (params) => { // {id,from,to,info,times,prices}
+
+
+
     
     const {id,from,to,types,times,prices} = params;
     fs.mkdir(`results/${from}`, { recursive: true }, (err) => {
@@ -28,30 +32,19 @@ const writeToJSON = (params) => { // {id,from,to,info,times,prices}
         }
     } 
     `;
-    // TODO: Error: EPERM: operation not permitted, futime - fix!
+    
     // TODO: Fix json data
     // TODO: eur
 
-    touch.sync(filePath, {force: true})
-        .then(() => {
-            console.log('touch ok')
-            fs.writeFile(filePath, content, {flag: 'wx'}, (err) => {
-                if (err) throw err;
-            });
-        })
-        .catch(e => console.log(e));
-
-    /*
-    if (checkForFile(filePath)){
-        console.log(checkForFile(filePath));
-        fs.writeFile(filePath, content, {flag: 'wx'}, (err) => {
-            if (err) throw err;
-        });
-    } else {
-        return;
-    }*/
-
+    checkForFile(filePath, () => { // if file exists -> call callback writing func
+       fs.writeFile(filePath, content, (err,data) => {
+            throw new Error(`Fatal: writing to JSON failed: ${err}`);
+       });
+    });
 }
+
+
+
 
 module.exports = writeToJSON;
 

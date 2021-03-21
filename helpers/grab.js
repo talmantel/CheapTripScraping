@@ -13,7 +13,7 @@ const moveFile = require('./moveFile');
 
 
 const grab = async (params) => { // {id, from, to, cookies}
-    // todo: id ?
+   
     
     const {id, from, to} = params;
 

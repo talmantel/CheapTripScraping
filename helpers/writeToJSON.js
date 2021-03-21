@@ -4,17 +4,33 @@ const writeToJSON = (params) => { // {id,from,to,info,times,prices}
     
     const {id,from,to,types,times,prices} = params;
     const filePath = `../results/${from}_${to}.json`;
+    
+    let content = `
+    {
+        "id": ${id},
+        "from":"${from}",
+        "to":"${to}",
+        "info":{
+            "types": [
+                ${types.length ? types.join(',\n') : ''}
+            ],
+            "time": [
+                ${times.length ? times.join(",\n") : ''}
+            ],
+            "price": [
+                ${prices.length ? prices.join(",\n") : ''}
+            ]
+        }
+    } 
+    `;
+    // TODO - fix ENOENT error
     if (!fs.existsSync(filePath)){
+        fs.writeFile(filePath, content, (err) => {
+            if (err) throw err;
+        });
+    } else {
         return;
     }
-    // TODO
-    fs.writeFileSync(filePath, '{\n', {flag: "a+"});
-    fs.writeFileSync(filePath, `\t\"id\": ${id}\n`, {flag: "a+"});
-    fs.writeFileSync(filePath, `\t\"from\": ${from}\n`, {flag: "a+"});
-    fs.writeFileSync(filePath, `\t\"to\": ${to}\n`, {flag: "a+"});
-    fs.writeFileSync(filePath, `\t\"info\" {\n\"types\": [${types.length ? types.join(",\n") : ''}],`, {flag: "a+"});
-    fs.writeFileSync(filePath, `\t{\n\"time\": [${times.length ? times.join(",\n") : ''}],`, {flag: "a+"});
-    fs.writeFileSync(filePath, `\t{\n\"price\": [${prices.length ? prices.join(",\n") : ''}]\n\t}\n}`, {flag: "a+"});
 
 }
 

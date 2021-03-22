@@ -9,7 +9,7 @@ let cities1 = cities2 = [];
 fs.createReadStream('India for scraping.csv')
   .pipe(csv())
   .on('data', (data) => { // -800 india
-    cities1.push([parseInt(data.id)-800, `${data.city},${data.country}`]);
+    cities1.push([parseInt(data.id)-800, `${data.city.trim()},${data.country}`]);
     //cities2.push([parseInt(data.id)-800, `${data.city},${data.country}`]);
   })
   .on('end', () => {

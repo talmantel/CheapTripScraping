@@ -9,6 +9,7 @@ const { performance } = require('perf_hooks');
 const measureMs = require('../performance_tests/measureMS');
 const writeTable = require('./writeTable');
 const moveFile = require('./moveFile');
+const convertToEur = require('../rates/convertToEur');
 
 
 
@@ -49,7 +50,7 @@ const grab = async (params) => { // {id, from, to, cookies}
                    
             
             let times = [22, 33];
-            let prices = [10, 20, 30]; // todo
+            let prices = [10, 20, 30, convertToEur(55.141485)]; // todo
 
             // disabled now. uncomment to test
             //writeToJSON({ id, from, to, types, times, prices });

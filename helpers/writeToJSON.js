@@ -12,7 +12,7 @@ const writeToJSON = (params) => { // {id,from,to,info,times,prices}
     fs.mkdir(`results/${from}`, { recursive: true }, (err) => {
         if (err) throw err;
       });
-    const filePath = `results/${from}/${from}_${to}.json`;
+    const filePath = `results/${id}_${from}/${id}_${from}_${to}.json`;
     
     let content = `
     {

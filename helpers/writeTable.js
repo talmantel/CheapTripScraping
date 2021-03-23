@@ -9,22 +9,22 @@ const writeTable = (params) => {
     
         
 
-        fs.mkdir(`tables/${from}`, { recursive: true }, (err) => {
+        fs.mkdir(`tables/${id}_${from}`, { recursive: true }, (err) => {
             if (err) throw err;
           });
         
-        zipper.addLocalFolder(`tables/${from}`, `results/tables/${from}`);
+        zipper.addLocalFolder(`tables/${id}_${from}`, `results/tables/${id}_${from}`);
     
         
     
-        const filePath = `tables/${from}/${from}_${to}.json`;
+        const filePath = `tables/${id}_${from}/${id}_${from}_${to}.json`;
         
         putToFile(filePath, data);
         
               
         zipper.addLocalFile(filePath, `results/${filePath}`);
     
-        fs.writeFileSync('results.zip', zipper.toBuffer());
+        fs.writeFileSync('compressed.zip', zipper.toBuffer());
 
 
     

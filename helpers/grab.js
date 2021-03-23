@@ -41,8 +41,8 @@ const grab = async (params) => { // {id, from, to, cookies}
   
               
   
-              writeTable({from, to, data: result});
-              moveFile(`${from}_${to}.json`, `tables/${from}_${to}.json`);
+              writeTable({id, from, to, data: result});
+              moveFile(`${id}_${from}_${to}.json`, `tables/${id}_${from}_${to}.json`);
             }, timeout);
 
             

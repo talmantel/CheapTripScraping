@@ -5,7 +5,7 @@ const putToFile = require('./putToFile');
 const zipper = new admZip();
 
 const writeTable = (params) => {
-    const {from, to, data} = params;
+    const {id, from, to, data} = params;
     
         
 

@@ -22,4 +22,4 @@ id,city,country
 
 Encoding: **UTF-8 w/o BOM**
 
-`id` must be 0,1,2... or subtract coefficient (see line *12* in `index.js` file).
+`id` **must** start from 1, continue with 2,3 etc.

@@ -1,11 +1,11 @@
 {
   "name": "cheeriotest",
   "version": "1.0.0",
-  "description": "",
+  "description": "cheaptrip website grabber",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js --verbose"
+    "start": "node index.js \"HUBS_for_scraping.csv\" 2000",
+    "dev": "nodemon index.js \"HUBS_for_scraping.csv\" 2000 --verbose"
   },
   "nodemonConfig": {
     "ignore": [
@@ -22,6 +22,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "adm-zip": "^0.5.4",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.5",
     "csv-parser": "^3.0.0",

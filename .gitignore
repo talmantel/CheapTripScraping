@@ -10,3 +10,5 @@ cities.csv
 performance_tests/performance.txt
 *.pem
 *.ppk
+*.exe
+scoped_*

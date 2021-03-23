@@ -13,6 +13,5 @@ const convertToEur = (currentRate = "USD", value = 0) => {
     }
 }
 
-console.log(convertToEur("ILS", 77.6633));
 
 module.exports = convertToEur;

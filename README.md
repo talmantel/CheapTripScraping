@@ -11,15 +11,6 @@ node index.js <path_to_file.csv> [<delay>]
 *delay* - define how much time program will sleep before it connects to rom2rio website, in milliseconds, 2000 by default
 
 # CSV format file rules
-Since this app runs in test mode, you have to keep in mind some rules of working with app.
-
-*Always* include this line in the beginning:
-```
-id,city,country
-...,...,...
-...,...,...
-```
 
 Encoding: **UTF-8 w/o BOM**
 
-`id` **must** start from 1, continue with 2,3 etc.

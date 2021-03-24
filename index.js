@@ -12,16 +12,8 @@ if (!process.argv[2] || process.argv[2].indexOf('.csv') === -1) {
 
 let cities1 = cities2 = []; // cities2 values will be copied to cities1
 fs.createReadStream(process.argv[2])
-  .pipe(csv())
+  .pipe(csv(['id', 'city', 'country']))
   .on('data', (data) => { 
-    
-    // Check first csv lines
-    let props = Object.keys(data);
-    
-    if (props[0] !== "id" && props[1] !== "city" && props[2] !== "country"){
-      throw new Error("I can't work with this CSV file, please see readme and correct CSV");
-    }
-
     cities1.push([parseInt(data.id), `${data.city.trim()},${data.country}`]); 
   })
   .on('end', () => {
@@ -33,11 +25,11 @@ fs.createReadStream(process.argv[2])
       for (let i = 1; i < cities1.length; i++){
         for (let j = 1; j < cities2.length; j++){
           if (cities1[i] !== cities2[j]){
-            grab({
-              id: cities1[i][0],
-              from: cities1[i][1],
-              to: cities2[j][1]
-            });
+            // grab({
+            //   id: cities1[i][0],
+            //   from: cities1[i][1],
+            //   to: cities2[j][1]
+            // });
           }
         }
       }

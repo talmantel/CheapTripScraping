@@ -19,21 +19,20 @@ fs.createReadStream(process.argv[2])
   .on('end', () => {
     // we should try/catch in all async/promise operations => no warnings from node
     try {
-      const measureMS = require('./performance_tests/measureMS');
       let t0 = performance.now();
       let from = to = '';
-      for (let i = 1; i < cities1.length; i++){
-        for (let j = 1; j < cities2.length; j++){
-          if (cities1[i] !== cities2[j]){
-            // grab({
-            //   id: cities1[i][0],
-            //   from: cities1[i][1],
-            //   to: cities2[j][1]
-            // });
+      for (let i = 1; i < 10; i++){
+        for (let j = 1; j < 10; j++){
+          if (cities1[i][0] !== cities2[j][0]){
+            grab({
+              from: cities1[i][1],
+              from_id: cities1[i][0],
+              to: cities2[j][1],
+              to_id: cities2[j][0]
+            })
           }
         }
       }
-      measureMS('grab-jsons', t0);
     } catch (error) {
       console.error(error);
     }

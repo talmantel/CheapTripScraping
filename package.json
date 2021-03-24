@@ -4,8 +4,8 @@
   "description": "cheaptrip website grabber",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js \"HUBS_for_scraping.csv\" 2000",
-    "dev": "nodemon index.js \"HUBS_for_scraping.csv\" 2000 --verbose"
+    "start": "node index.js \"HUBS_for_scraping.csv\" 3000",
+    "dev": "nodemon index.js \"HUBS_for_scraping.csv\" 3000 --verbose"
   },
   "nodemonConfig": {
     "ignore": [

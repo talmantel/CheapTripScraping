@@ -5,6 +5,7 @@ model.json
 tables/*.txt
 tables/**/*.json
 results/**/*.json
+*.json
 *.zip
 cities.csv
 performance_tests/performance.txt

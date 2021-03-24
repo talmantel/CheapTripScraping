@@ -13,7 +13,7 @@ const writeTable = (params) => {
             if (err) throw err;
           });
         
-        zipper.addLocalFolder(`tables/${id}_${from}`, `results/tables/${id}_${from}`);
+        zipper.addLocalFolder(`tables/${id}_${from}`, `tables/${id}_${from}`);
     
         
     
@@ -22,7 +22,7 @@ const writeTable = (params) => {
         putToFile(filePath, data);
         
               
-        zipper.addLocalFile(filePath, `results/${filePath}`);
+        zipper.addLocalFile(filePath, `${filePath}`);
     
         fs.writeFileSync('compressed.zip', zipper.toBuffer());
 

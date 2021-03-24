@@ -14,10 +14,15 @@ function putToFile(fileName, content, callback) // deprecated!
 {
     // check if exists
     fs.exists(fileName, (exists) => {
-        fs.writeFileSync(fileName, content, {flag: 'w+'});
-        if (exists) return;
         
-        // TODO: if file is not empty - return
+        try {
+            fs.writeFileSync(fileName, content, {flag: 'w+'});
+            if (exists) return;
+        
+        } catch (error) {
+            console.log(error, 'putToFile.js');
+        }
+
     });
 }
 

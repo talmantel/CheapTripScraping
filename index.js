@@ -30,8 +30,8 @@ fs.createReadStream(process.argv[2])
       const measureMS = require('./performance_tests/measureMS');
       let t0 = performance.now();
       let from = to = '';
-      for (let i = 1; i < cities1.length - 1; i += 2){
-        for (let j = 1; j < cities2.length - 1; j += 2){
+      for (let i = 1; i < cities1.length; i++){
+        for (let j = 1; j < cities2.length; j++){
           if (cities1[i] !== cities2[j]){
             grab({
               id: cities1[i][0],

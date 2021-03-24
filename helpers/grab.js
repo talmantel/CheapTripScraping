@@ -29,19 +29,19 @@ const grab = async (params) => { // {id, from, to, cookies}
             const measureMs = require('../performance_tests/measureMS');
             let t1 = performance.now();
             let timeout = parseInt(process.argv[3]) || 2000;
-          
-            setTimeout(() => {
-              const $ = cheerio.load(response.body);
-              const result = $('#deeplinkTrip')[0].attribs.content;
+            const $ = cheerio.load(response.body);
+            const result = $('#deeplinkTrip')[0].attribs.content;
   
-              if (!result){
-                console.error('Error retrieving connection');
-                return;
-              }
+            if (!result){
+              console.error('Error retrieving connection');
+              return;
+            }
   
               
   
-              writeTable({id, from, to, data: result});
+            writeTable({id, from, to, data: result});
+          
+            setTimeout(() => {
               moveFile(`${id}_${from}_${to}.json`, `tables/${id}_${from}_${to}.json`);
             }, timeout);
 

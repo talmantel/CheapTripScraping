@@ -8,9 +8,5 @@ If we could replace `exists` function in `helpers/putToFile.js` then we could ru
 node index.js <path_to_file.csv> [<delay>]
 ```
 
-*delay* - define how much time program will sleep before it connects to rom2rio website, in milliseconds, 2000 by default
-
-# CSV format file rules
-
-Encoding: **UTF-8 w/o BOM**
+*delay* - define how much time program will sleep before it writes & zips parsed data, in milliseconds, 3000 by default. Delay is required because of async nature of node.js...
 

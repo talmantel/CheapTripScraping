@@ -1,14 +1,22 @@
 // Simple travel. In the future we can expand this script
+// TODO: fix zip problem
 const csv = require('csv-parser');
+const languageEncoding = require('detect-file-encoding-and-language');
 const fs = require('fs');
 const { performance } = require('perf_hooks');
 const grab = require('./helpers/grab');
 
-if (!process.argv[2] || process.argv[2].indexOf('.csv') === -1) {
+const pathToFile = process.argv[2];
+
+if (!pathToFile || pathToFile.indexOf('.csv') === -1) {
   throw new Error('No csv file provided!');
 }
 
-
+languageEncoding(pathToFile).then(fileInfo => {
+  if (fileInfo.encoding !== 'utf-8'){
+    throw new Error('CSV encoding error, must be utf-8 w/o BOM');
+  }
+});
 
 let cities1 = cities2 = []; // cities2 values will be copied to cities1
 fs.createReadStream(process.argv[2])

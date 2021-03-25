@@ -8,7 +8,7 @@ results/**/*.json
 *.json
 *.zip
 cities.csv
-performance_tests/performance.txt
+performance_tests/*.txt
 *.pem
 *.ppk
 *.exe

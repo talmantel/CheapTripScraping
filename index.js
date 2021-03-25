@@ -3,8 +3,8 @@
 const csv = require('csv-parser');
 const languageEncoding = require('detect-file-encoding-and-language');
 const fs = require('fs');
-const { performance } = require('perf_hooks');
 const grab = require('./helpers/grab');
+
 
 const pathToFile = process.argv[2];
 
@@ -27,7 +27,6 @@ fs.createReadStream(process.argv[2])
   .on('end', () => {
     // we should try/catch in all async/promise operations => no warnings from node
     try {
-      let t0 = performance.now();
       let from = to = '';
       for (let i = 1; i < cities1.length; i++){
         for (let j = 1; j < cities2.length; j++){
@@ -42,6 +41,7 @@ fs.createReadStream(process.argv[2])
         }
       }
     } catch (error) {
+      
       console.error(error);
     }
 

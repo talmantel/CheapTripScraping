@@ -1,7 +1,7 @@
 const cheerio = require('cheerio');
 const got = require('got');
 const { performance } = require('perf_hooks');
-
+const logMissedFile = require('../performance_tests/logMissedFile');
 const writeTable = require('./writeTable');
 
 const grab = async (params) => {
@@ -28,6 +28,7 @@ const grab = async (params) => {
  
             return result;
         } catch (error) {
+          logMissedFile();
           console.log(error, 'grabTest.js got');
         }
 

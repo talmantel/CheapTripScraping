@@ -3,12 +3,6 @@ const { performance } = require('perf_hooks');
 const writeTable = require('./writeTable');
 const https = require('https'); // native node.js module for HTTP requests
 
-function fixedEncodeURIComponent(str) {
-  return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-    return '%' + c.charCodeAt(0).toString(16);
-  });
-}
-
 const grab = (params) => {
     const {from, from_id, to, to_id} = params;
 
@@ -36,8 +30,6 @@ const grab = (params) => {
         // clean everything we don't need in received HTML
 
         // Define text that will include JSON content only
-        // let substrBegin = '<meta id=\'deeplinkTrip\'';
-        // let substrBeginIndex = data.indexOf(substrBegin);
 
         let substrBegin = '<meta id=\'deeplinkTrip\' content=\'';
         let substrBeginIndex = data.indexOf(substrBegin);
@@ -55,7 +47,7 @@ const grab = (params) => {
         fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, data, {flag: 'w+'});
 
         // Important! We need to delete temporary file before new grabbing
-        //fs.rmSync('tmp.txt');
+        fs.rmSync('tmp.txt');
       });
 
     });

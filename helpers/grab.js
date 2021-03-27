@@ -3,11 +3,18 @@ const { performance } = require('perf_hooks');
 const writeTable = require('./writeTable');
 const https = require('https'); // native node.js module for HTTP requests
 
+function fixedEncodeURIComponent(str) {
+  return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+    return '%' + c.charCodeAt(0).toString(16);
+  });
+}
 
 const grab = (params) => {
     const {from, from_id, to, to_id} = params;
+
+    console.log(from, from_id, to, to_id);
 	
-    const options = {
+      const options = {
       hostname: 'www.rome2rio.com',
       port: 443,
       path: `/map/${from}/${to}`,
@@ -41,7 +48,7 @@ const grab = (params) => {
 
         data = data.slice(substrBeginIndex, substrEndIndex);
         
-        fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, data, {flag: 'w+'});
+        //fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, data, {flag: 'w+'});
 
         // Important! We need to delete temporary file before new grabbing
         fs.rmSync('tmp.txt');

@@ -4,31 +4,32 @@ const csv = require('csv-parser');
 const languageEncoding = require('detect-file-encoding-and-language');
 const fs = require('fs');
 const grab = require('./helpers/grab');
+const escapeURL = require('./helpers/escapeURL');
 
-
-
-grab({from: 'Moscow', from_id: 111, to: 'London', to_id: 33});
-
-/*
 const pathToFile = process.argv[2];
 
 if (!pathToFile || pathToFile.indexOf('.csv') === -1) {
-  throw new Error('No csv file provided!');
+  throw new Error('No CSV file provided!');
 }
 
 languageEncoding(pathToFile).then(fileInfo => {
-  if (fileInfo.encoding !== 'utf-8'){
+  console.log(fileInfo.encoding);
+  if (fileInfo.encoding !== 'UTF-8' || fileInfo.encoding !== 'utf-8'){
     throw new Error('CSV encoding error, must be utf-8 w/o BOM');
   }
-});
+}).catch(error => console.log(error));
 
 let cities1 = cities2 = []; // cities2 values will be copied to cities1
-fs.createReadStream(process.argv[2])
+fs.createReadStream(pathToFile)
   .pipe(csv(['id', 'city', 'country']))
   .on('data', (data) => { 
-    cities1.push([parseInt(data.id), `${data.city.trim()},${data.country}`]); 
+    cities1.push([
+      parseInt(data.id), 
+      `${escapeURL(data.city.trim())},${data.country}`
+    ]); 
   })
   .on('end', () => {
+
     // we should try/catch in all async/promise operations => no warnings from node
     try {
       let from = to = '';
@@ -48,7 +49,5 @@ fs.createReadStream(process.argv[2])
       
       console.error(error);
     }
-
     
-  });
-*/
+});

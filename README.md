@@ -5,3 +5,4 @@ node version must be 14.x.x or lower!
 `index.js`
 `helpers/grab.js`
 
+ZIP and measureMs modules are not active.

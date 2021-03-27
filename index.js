@@ -1,11 +1,15 @@
 // Simple travel. In the future we can expand this script
-// TODO: fix zip problem
+
 const csv = require('csv-parser');
 const languageEncoding = require('detect-file-encoding-and-language');
 const fs = require('fs');
 const grab = require('./helpers/grab');
 
 
+
+grab({from: 'Moscow', from_id: 111, to: 'London', to_id: 33});
+
+/*
 const pathToFile = process.argv[2];
 
 if (!pathToFile || pathToFile.indexOf('.csv') === -1) {
@@ -47,15 +51,4 @@ fs.createReadStream(process.argv[2])
 
     
   });
-
-
-
-
-
-
-
-
-
-
-
-
+*/

@@ -36,6 +36,9 @@ const grab = (params) => {
         // clean everything we don't need in received HTML
 
         // Define text that will include JSON content only
+        // let substrBegin = '<meta id=\'deeplinkTrip\'';
+        // let substrBeginIndex = data.indexOf(substrBegin);
+
         let substrBegin = '<meta id=\'deeplinkTrip\' content=\'';
         let substrBeginIndex = data.indexOf(substrBegin);
 
@@ -44,14 +47,15 @@ const grab = (params) => {
 
         // Fine tune text grabbing indexes
         substrBeginIndex = substrBeginIndex + 33;
+        
         substrEndIndex = substrEndIndex - 6;
 
         data = data.slice(substrBeginIndex, substrEndIndex);
         
-        //fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, data, {flag: 'w+'});
+        fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, data, {flag: 'w+'});
 
         // Important! We need to delete temporary file before new grabbing
-        fs.rmSync('tmp.txt');
+        //fs.rmSync('tmp.txt');
       });
 
     });

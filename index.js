@@ -6,6 +6,9 @@ const fs = require('fs');
 const grab = require('./helpers/grab');
 const escapeURL = require('./helpers/escapeURL');
 
+
+// grab({from: 'Saint%20Petersburg,Russia',from_id:33,to:'New%20York,USA',to_id:999})
+
 const pathToFile = process.argv[2];
 
 if (!pathToFile || pathToFile.indexOf('.csv') === -1) {
@@ -46,7 +49,6 @@ fs.createReadStream(pathToFile)
         }
       }
     } catch (error) {
-      
       console.error(error);
     }
     

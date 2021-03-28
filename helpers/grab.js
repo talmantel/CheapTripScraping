@@ -2,11 +2,13 @@ const fs = require('fs');
 const { performance } = require('perf_hooks');
 const writeTable = require('./writeTable');
 const https = require('https'); // native node.js module for HTTP requests
+const measureMs = require('../performance_tests/measureMS');
+const logMissedFile = require('../performance_tests/logMissedFile');
 
 const grab = (params) => {
     const {from, from_id, to, to_id} = params;
 
-    console.log(from, from_id, to, to_id);
+      let t0 = performance.now();
 	
       const options = {
       hostname: 'www.rome2rio.com',
@@ -31,7 +33,7 @@ const grab = (params) => {
 
         // Define text that will include JSON content only
 
-        let substrBegin = '<meta id=\'deeplinkTrip\' content=\'';
+        let substrBegin = '<meta id=\'deeplinkTrip\' content=\''; 
         let substrBeginIndex = data.indexOf(substrBegin);
 
         let substrEnd = '<meta id=\'deeplinkQuery\'';
@@ -45,14 +47,19 @@ const grab = (params) => {
         data = data.slice(substrBeginIndex, substrEndIndex);
         
         fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, data, {flag: 'w+'});
+        // fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, from_id.toString(), {flag: 'w+'});
 
         // Important! We need to delete temporary file before new grabbing
         fs.rmSync('tmp.txt');
       });
-
     });
+
+    // Connect to rom2rio + fetch HTML data + get JSON from meta tag + remove temporary file
+    measureMs('single grab operation', t0);
     
-    req.on('error', error => { throw new Error(error) });
+    req.on('error', error => { 
+      logMissedFile(error);
+     });
     
     req.end();    
 };

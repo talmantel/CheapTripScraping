@@ -23,12 +23,8 @@
   "license": "ISC",
   "dependencies": {
     "adm-zip": "^0.5.4",
-    "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.5",
     "csv-parser": "^3.0.0",
-    "detect-file-encoding-and-language": "^1.6.1",
-    "got": "^11.8.2",
-    "tough-cookie": "^4.0.0"
+    "detect-file-encoding-and-language": "^1.6.1"
   },
   "devDependencies": {
     "nodemon": "*"

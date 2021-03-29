@@ -13,7 +13,7 @@ const grab = (params) => {
       const options = {
       hostname: 'www.rome2rio.com',
       port: 443,
-      path: `/map/${from}/${to}`,
+      path: encodeURI(`/map/${from}/${to}`),
       method: 'GET'
     };
     

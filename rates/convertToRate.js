@@ -2,11 +2,11 @@ const getRates = require('./getRates');
 
 
 
-const convertToEur = (currentRate = "USD", value = 0) => {
-   let rates = getRates();
+const convertToRate = (value = 0, targetRate = 'EUR') => {
+  let rates = getRates();
   console.log(rates);
     if (rates){
-        let rate = rates[currentRate];
+        let rate = rates[targetRate];
         return Math.round(value / rate);
     } else {
         console.error('convert error');
@@ -14,4 +14,4 @@ const convertToEur = (currentRate = "USD", value = 0) => {
 }
 
 
-module.exports = convertToEur;
+module.exports = convertToRate;

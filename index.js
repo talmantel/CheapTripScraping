@@ -4,7 +4,6 @@ const csv = require('csv-parser');
 const languageEncoding = require('detect-file-encoding-and-language');
 const fs = require('fs');
 const grabTrigger = require('./helpers/grabTrigger');
-const escapeURL = require('./helpers/escapeURL');
 
 const pathToFile = process.argv[2];
 const delay = parseInt(process.argv[3]) || 3000;
@@ -31,7 +30,7 @@ fs.createReadStream(pathToFile)
   .on('data', (data) => { 
     cities1.push([
       parseInt(data.id), 
-      `${escapeURL(data.city.trim())},${data.country}`
+      `${data.city.trim()},${data.country}`
     ]); 
     console.log(cities1.length, cities2.length);
   })

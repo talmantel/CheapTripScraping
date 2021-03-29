@@ -8,13 +8,16 @@ const measureMs = (operationName, time) => {
   const now = performance.now();
   const timeOfOperation = now - time;
   const durationParsed = timeOfOperation;
-  fs.writeFile(__dirname + '/performance.txt', `
+  let fd = fs.openSync(__dirname + '/performance.txt');
+  fs.writeFileSync(__dirname + '/performance.txt', `
     measureMs -> ${memoryUsed} MB is used at the moment\n
     measureMs -> time for operation of "${
     operationName || 'operation'
   }": ${durationParsed} ms\n`, { flag: 'a+' }, (e) => {
     console.log(e);
   });
+  
+  fs.closeSync(fd);
 }
 
 module.exports = measureMs;

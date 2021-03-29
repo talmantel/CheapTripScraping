@@ -5,6 +5,8 @@ const https = require('https'); // native node.js module for HTTP requests
 const measureMs = require('../performance_tests/measureMS');
 const logMissedFile = require('../performance_tests/logMissedFile');
 
+
+
 const grab = (params) => {
     const {from, from_id, to, to_id} = params;
 
@@ -18,10 +20,12 @@ const grab = (params) => {
     };
     
     const req = https.request(options, res => {
-      
+        
       res.on('data', d => {
         fs.writeFileSync('tmp.txt', d, {flag: 'a'}); // data is fetched several times => need append flag
       });
+
+      
 
       res.on('end', () => {
         console.log('Fetch data ok');
@@ -45,9 +49,8 @@ const grab = (params) => {
         substrEndIndex = substrEndIndex - 6;
 
         data = data.slice(substrBeginIndex, substrEndIndex);
-        
         fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, data, {flag: 'w+'});
-        // fs.writeFileSync(`tables/${from_id}_${from}_${to_id}_${to}.json`, from_id.toString(), {flag: 'w+'});
+        
 
         // Important! We need to delete temporary file before new grabbing
         fs.rmSync('tmp.txt');

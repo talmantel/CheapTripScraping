@@ -2,6 +2,8 @@
 
 еще одна ошибка socket hang up
 
+[ссылка на собранные файлы](https://drive.google.com/file/d/1A81__1V0MXdPlnoFiNFxgQTR9K-dt-Y1/view?usp=sharing)
+
 # Issues 29-03-2021
 
 1. Если добавить дескрипторы fs open/close в файл - пары проходят все. Но файлы не пишутся!

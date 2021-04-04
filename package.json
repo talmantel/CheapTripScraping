@@ -4,8 +4,8 @@
   "description": "cheaptrip website grabber",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js \"HUBS_for_scraping.csv\" 3000",
-    "dev": "nodemon index.js \"HUBS_for_scraping.csv\" 3000 --verbose"
+    "start": "node index.js \"hubs1.csv\" 3000 --abort-on-uncaught-exception",
+    "dev": "nodemon index.js \"hubs1.csv\" 3000 --verbose"
   },
   "nodemonConfig": {
     "ignore": [
@@ -24,7 +24,8 @@
   "dependencies": {
     "adm-zip": "^0.5.4",
     "csv-parser": "^3.0.0",
-    "detect-file-encoding-and-language": "^1.6.1"
+    "detect-file-encoding-and-language": "^1.6.1",
+    "throttled-queue": "^1.0.7"
   },
   "devDependencies": {
     "nodemon": "*"

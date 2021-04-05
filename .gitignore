@@ -2,12 +2,14 @@ node_modules/
 tmp.json
 model.json
 *.txt
-tables/*.txt
+tables/**/*.txt
+tables/**/*.csv
 tables/**/*.json
 results/**/*.json
 *.json
 *.zip
 cities.csv
+tmp.csv
 performance_tests/*.txt
 *.pem
 *.ppk

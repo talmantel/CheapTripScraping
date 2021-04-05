@@ -4,6 +4,7 @@ const csv = require('csv-parser');
 const languageEncoding = require('detect-file-encoding-and-language');
 
 const fs = require('fs');
+const { exit } = require('process');
 const grabTrigger = require('./helpers/grabTrigger');
 
 const pathToFile = process.argv[2];
@@ -49,3 +50,5 @@ fs.createReadStream(pathToFile)
       console.error(error);
     }
   });
+
+exit(0)

@@ -51,4 +51,3 @@ fs.createReadStream(pathToFile)
     }
   });
 
-exit(0)

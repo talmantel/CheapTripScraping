@@ -17,20 +17,20 @@ const grab = (params) => {
   counter++;
   if (from !== to && counter % 2 == 1) {// to prevent double connection
 
-    //let t0 = performance.now();
+    let t0 = performance.now();
     // const path = encodeURI(`map/${from}/${to}`)
     // const url = `https://www.rome2rio.com/${path}`
 
     try {
       fileString = `${from_id},${from},${to_id},${to}`;
       fs.writeFileSync(`tables/${fileString}.csv`, `${fileString}\n`, { flag: 'w+' });
-      console.log(counter);
+
 
     } catch (error) {
       throw new Error(error)
 
     }
-    //measureMs('single grab operation', t0, from, to);
+    measureMs('single grab operation', t0, from, to);
 
     /* https.get(url, (res) => {
    //res.on('data', d => null);//buffer

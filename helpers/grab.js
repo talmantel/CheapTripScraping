@@ -6,6 +6,11 @@ const writeTable = require('./writeTable');
 const measureMs = require('../performance_tests/measureMS');
 const logMissedFile = require('../performance_tests/logMissedFile');
 
+const sleep = (ms) => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve, ms);
+  });
+}
 
 let throttle = throttledQueue(5, 1000); // at most 5 requests per second.
 let counter = 0;
@@ -18,15 +23,25 @@ const grab = (params) => {
   if (from !== to && counter % 2 == 1) {// to prevent double connection
 
     let t0 = performance.now();
-    // const path = encodeURI(`map/${from}/${to}`)
-    // const url = `https://www.rome2rio.com/${path}`
+    const path = encodeURI(`map/${from}/${to}`)
+    const url = `https://www.rome2rio.com/${path}`
 
+    fileString = `${from_id},${from},${to_id},${to}`;
     try {
-      fileString = `${from_id},${from},${to_id},${to}`;
-      fs.writeFileSync(`tables/${fileString}.csv`, `${fileString}\n`, { flag: 'w+' });
+
+      https.get(url, (res) => {
+        console.log(`counter: ${counter}, status code: ${res.statusCode}`);
+        res.on('data', (d) => {
+          // page is fetched several times (several chunks - that is why we need append flag)
+          fs.writeFileSync(`tables/${fileString}.json`, d, { flag: 'a+' });
+        });
 
 
+      }).on('finish', () => {
+        console.log(counter);
+      });
     } catch (error) {
+
       throw new Error(error)
 
     }

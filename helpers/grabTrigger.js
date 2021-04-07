@@ -1,6 +1,6 @@
+const sleep = require('system-sleep');
 const grab = require('./grab');
-
-
+const DELAY = parseInt(process.argv[3]) || 5000;
 
 
 const grabTrigger = (cities1, cities2) => {
@@ -15,8 +15,9 @@ const grabTrigger = (cities1, cities2) => {
           to: cities2[j][1],
           to_id: cities2[j][0]
         })
-      }
+      };
 
+      sleep(DELAY);
 
     }
   }

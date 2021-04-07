@@ -12,6 +12,7 @@
       "tmp.json",
       "model.json",
       "results/**/*.json",
+      "cut/**/*.json",
       ".txt",
       "tmp.csv",
       "tables/*.txt",
@@ -23,11 +24,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "adm-zip": "^0.5.4",
     "csv-parser": "^3.0.0",
     "detect-file-encoding-and-language": "^1.6.1",
-    "system-sleep": "^1.3.7",
-    "throttled-queue": "^1.0.7"
+    "system-sleep": "^1.3.7"
   },
   "devDependencies": {
     "nodemon": "*"

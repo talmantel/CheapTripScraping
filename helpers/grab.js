@@ -1,18 +1,10 @@
-const throttledQueue = require('throttled-queue'); // TODO: try debug this *******
 const fs = require('fs');
 const { performance } = require('perf_hooks');
 const https = require('https'); // native node.js module for HTTP requests
-const writeTable = require('./writeTable');
 const measureMs = require('../performance_tests/measureMS');
-const logMissedFile = require('../performance_tests/logMissedFile');
+const logError = require('../performance_tests/logError');
+const cutData = require('./cutData');
 
-const sleep = (ms) => {
-  return new Promise((resolve) => {
-    setTimeout(() => resolve, ms);
-  });
-}
-
-let throttle = throttledQueue(5, 1000); // at most 5 requests per second.
 let counter = 0;
 let fileString = ''; // path + contents
 const grab = (params) => {
@@ -33,31 +25,22 @@ const grab = (params) => {
         console.log(`counter: ${counter}, status code: ${res.statusCode}`);
         res.on('data', (d) => {
           // page is fetched several times (several chunks - that is why we need append flag)
-          fs.writeFileSync(`tables/${fileString}.json`, d, { flag: 'a+' });
+          fs.writeFileSync(`tables/${fileString}.html`, d, { flag: 'a+' });
         });
-
-
-      }).on('finish', () => {
-        console.log(counter);
+        res.on('end', () => {
+          try {
+            cutData(fileString);
+            measureMs('grab.js', t0, from, to);
+          } catch (error) {
+            logError(error);
+            throw new Error(error);
+          }
+        });
       });
     } catch (error) {
-
-      throw new Error(error)
-
+      logError(error);
+      throw new Error(error);
     }
-    measureMs('single grab operation', t0, from, to);
-
-    /* https.get(url, (res) => {
-   //res.on('data', d => null);//buffer
-   //res.on('end', () => fs.writeFileSync('tmp.csv', from_id + ',' + from + ',' + to_id + ',' + to + '\n', { flag: 'a+' }));
-       //measureMs('single grab operation', t0, from, to);
-   
-       res.on('error', error => {
-         logMissedFile(error);
-       });
-   
-     })
-   }*/
   }
 }
 

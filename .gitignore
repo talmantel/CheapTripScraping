@@ -5,7 +5,9 @@ model.json
 tables/**/*.txt
 tables/**/*.csv
 tables/**/*.json
+tables/**/*.html
 results/**/*.json
+cut/**/*.json
 *.json
 *.zip
 cities.csv

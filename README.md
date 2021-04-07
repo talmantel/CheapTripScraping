@@ -1,8 +1,7 @@
 # Warning
 node version must be 14.x.x or lower!
 
-# Working files in this branch
-`index.js`
-`helpers/grab.js`
+# Start
+`node index.js "path_to_file.csv" [delay(ms)]`
 
-ZIP and measureMs modules are not active.
+Delay is 5000 ms by default.

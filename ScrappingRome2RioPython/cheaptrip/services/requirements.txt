@@ -1,0 +1,7 @@
+# requirements.txt
+
+requests~=2.26.0
+python-dotenv==0.17.1
+geopy
+forex-python
+

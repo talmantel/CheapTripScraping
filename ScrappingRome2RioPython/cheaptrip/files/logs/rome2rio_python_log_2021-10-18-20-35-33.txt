@@ -1,0 +1,235 @@
+2021-10-18 20:35:33.655 root         scrap_Rome2Rio INFO     logging into /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-10-18-20-35-33.txt
+2021-10-18 20:35:33.655 root         scrap_Rome2Rio INFO     logging to : /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-10-18-20-35-33.txt
+2021-10-18 20:35:33.655 root         scrap_Rome2Rio INFO     
+
+2021-10-18 20:35:33.657 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('9', 'tas Airport') to ('10', 'sah Airport')
+2021-10-18 20:35:33.660 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-10-18 20:35:33.660 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-10-18 20:35:33.660 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-10-18 20:35:33.660 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-10-18 20:35:33.660 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-10-18 20:35:33.660 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_sah Airport#0
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_sah Airport#1
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_sah Airport#2
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_sah Airport#3
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_sah Airport#4
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_sah Airport#5
+2021-10-18 20:35:33.661 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_sah Airport#6
+2021-10-18 20:35:33.663 root         scrap_Rome2Rio INFO     parsing hierarchy of trip tas Airport_sah Airport
+2021-10-18 20:35:33.666 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('9', 'tas Airport') to ('11', 'pnh Airport')
+2021-10-18 20:35:33.669 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_pnh Airport
+2021-10-18 20:35:33.670 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:33.671 root         scrap_Rome2Rio INFO     extracing and loading data for trip tas Airport_pnh Airport#0
+2021-10-18 20:35:33.820 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip tas Airport-pnh Airport
+2021-10-18 20:35:33.821 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_pnh Airport#1
+2021-10-18 20:35:33.821 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_pnh Airport#2
+2021-10-18 20:35:33.821 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_pnh Airport#3
+2021-10-18 20:35:33.821 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_pnh Airport#4
+2021-10-18 20:35:33.821 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_pnh Airport#5
+2021-10-18 20:35:33.822 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_pnh Airport#6
+2021-10-18 20:35:33.822 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:33.822 root         scrap_Rome2Rio INFO     extracing and loading data for trip tas Airport_pnh Airport#7
+2021-10-18 20:35:33.957 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip tas Airport-pnh Airport
+2021-10-18 20:35:33.964 root         scrap_Rome2Rio INFO     parsing hierarchy of trip tas Airport_pnh Airport
+2021-10-18 20:35:33.966 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('9', 'tas Airport') to ('12', 'nyt Airport')
+2021-10-18 20:35:33.969 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.969 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.969 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.970 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.970 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.970 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.970 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.970 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: tas Airport_nyt Airport
+2021-10-18 20:35:33.970 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:33.971 root         scrap_Rome2Rio INFO     extracing and loading data for trip tas Airport_nyt Airport#0
+2021-10-18 20:35:34.121 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip tas Airport-nyt Airport
+2021-10-18 20:35:34.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_nyt Airport#1
+2021-10-18 20:35:34.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_nyt Airport#2
+2021-10-18 20:35:34.122 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_nyt Airport#3
+2021-10-18 20:35:34.122 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_nyt Airport#4
+2021-10-18 20:35:34.122 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_nyt Airport#5
+2021-10-18 20:35:34.122 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition tas Airport_nyt Airport#6
+2021-10-18 20:35:34.122 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.123 root         scrap_Rome2Rio INFO     extracing and loading data for trip tas Airport_nyt Airport#7
+2021-10-18 20:35:34.123 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip tas Airport-nyt Airport
+2021-10-18 20:35:34.126 root         scrap_Rome2Rio INFO     parsing hierarchy of trip tas Airport_nyt Airport
+2021-10-18 20:35:34.127 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('10', 'sah Airport') to ('9', 'tas Airport')
+2021-10-18 20:35:34.130 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_tas Airport
+2021-10-18 20:35:34.130 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_tas Airport
+2021-10-18 20:35:34.130 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_tas Airport
+2021-10-18 20:35:34.130 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_tas Airport
+2021-10-18 20:35:34.131 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_tas Airport
+2021-10-18 20:35:34.131 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_tas Airport
+2021-10-18 20:35:34.131 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_tas Airport#0
+2021-10-18 20:35:34.131 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_tas Airport#1
+2021-10-18 20:35:34.131 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_tas Airport#2
+2021-10-18 20:35:34.131 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_tas Airport#3
+2021-10-18 20:35:34.131 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_tas Airport#4
+2021-10-18 20:35:34.132 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_tas Airport#5
+2021-10-18 20:35:34.133 root         scrap_Rome2Rio INFO     parsing hierarchy of trip sah Airport_tas Airport
+2021-10-18 20:35:34.135 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('10', 'sah Airport') to ('11', 'pnh Airport')
+2021-10-18 20:35:34.137 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_pnh Airport
+2021-10-18 20:35:34.138 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_pnh Airport
+2021-10-18 20:35:34.138 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_pnh Airport
+2021-10-18 20:35:34.138 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_pnh Airport
+2021-10-18 20:35:34.138 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_pnh Airport
+2021-10-18 20:35:34.138 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_pnh Airport
+2021-10-18 20:35:34.138 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_pnh Airport
+2021-10-18 20:35:34.138 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.139 root         scrap_Rome2Rio INFO     extracing and loading data for trip sah Airport_pnh Airport#0
+2021-10-18 20:35:34.267 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip sah Airport-pnh Airport
+2021-10-18 20:35:34.267 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_pnh Airport#1
+2021-10-18 20:35:34.268 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_pnh Airport#2
+2021-10-18 20:35:34.268 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_pnh Airport#3
+2021-10-18 20:35:34.268 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_pnh Airport#4
+2021-10-18 20:35:34.268 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_pnh Airport#5
+2021-10-18 20:35:34.268 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.268 root         scrap_Rome2Rio INFO     extracing and loading data for trip sah Airport_pnh Airport#6
+2021-10-18 20:35:34.412 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip sah Airport-pnh Airport
+2021-10-18 20:35:34.415 root         scrap_Rome2Rio INFO     parsing hierarchy of trip sah Airport_pnh Airport
+2021-10-18 20:35:34.417 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('10', 'sah Airport') to ('12', 'nyt Airport')
+2021-10-18 20:35:34.419 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_nyt Airport
+2021-10-18 20:35:34.419 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_nyt Airport
+2021-10-18 20:35:34.419 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_nyt Airport
+2021-10-18 20:35:34.419 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_nyt Airport
+2021-10-18 20:35:34.420 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: sah Airport_nyt Airport
+2021-10-18 20:35:34.420 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.420 root         scrap_Rome2Rio INFO     extracing and loading data for trip sah Airport_nyt Airport#0
+2021-10-18 20:35:34.559 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip sah Airport-nyt Airport
+2021-10-18 20:35:34.559 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_nyt Airport#1
+2021-10-18 20:35:34.559 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_nyt Airport#2
+2021-10-18 20:35:34.560 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition sah Airport_nyt Airport#3
+2021-10-18 20:35:34.560 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.560 root         scrap_Rome2Rio INFO     extracing and loading data for trip sah Airport_nyt Airport#4
+2021-10-18 20:35:34.560 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip sah Airport-nyt Airport
+2021-10-18 20:35:34.562 root         scrap_Rome2Rio INFO     parsing hierarchy of trip sah Airport_nyt Airport
+2021-10-18 20:35:34.566 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('11', 'pnh Airport') to ('9', 'tas Airport')
+2021-10-18 20:35:34.570 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.571 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.571 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.571 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.571 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.571 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.572 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.572 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.572 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_tas Airport
+2021-10-18 20:35:34.572 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.572 root         scrap_Rome2Rio INFO     extracing and loading data for trip pnh Airport_tas Airport#0
+2021-10-18 20:35:34.703 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip pnh Airport-tas Airport
+2021-10-18 20:35:34.703 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_tas Airport#1
+2021-10-18 20:35:34.704 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_tas Airport#2
+2021-10-18 20:35:34.704 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_tas Airport#3
+2021-10-18 20:35:34.704 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_tas Airport#4
+2021-10-18 20:35:34.704 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_tas Airport#5
+2021-10-18 20:35:34.705 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_tas Airport#6
+2021-10-18 20:35:34.705 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_tas Airport#7
+2021-10-18 20:35:34.705 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.705 root         scrap_Rome2Rio INFO     extracing and loading data for trip pnh Airport_tas Airport#8
+2021-10-18 20:35:34.831 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip pnh Airport-tas Airport
+2021-10-18 20:35:34.839 root         scrap_Rome2Rio INFO     parsing hierarchy of trip pnh Airport_tas Airport
+2021-10-18 20:35:34.840 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('11', 'pnh Airport') to ('10', 'sah Airport')
+2021-10-18 20:35:34.843 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_sah Airport
+2021-10-18 20:35:34.843 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_sah Airport
+2021-10-18 20:35:34.844 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_sah Airport
+2021-10-18 20:35:34.844 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_sah Airport
+2021-10-18 20:35:34.844 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_sah Airport
+2021-10-18 20:35:34.844 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_sah Airport
+2021-10-18 20:35:34.844 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_sah Airport
+2021-10-18 20:35:34.845 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:34.845 root         scrap_Rome2Rio INFO     extracing and loading data for trip pnh Airport_sah Airport#0
+2021-10-18 20:35:35.089 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip pnh Airport-sah Airport
+2021-10-18 20:35:35.089 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_sah Airport#1
+2021-10-18 20:35:35.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_sah Airport#2
+2021-10-18 20:35:35.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_sah Airport#3
+2021-10-18 20:35:35.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_sah Airport#4
+2021-10-18 20:35:35.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_sah Airport#5
+2021-10-18 20:35:35.090 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.091 root         scrap_Rome2Rio INFO     extracing and loading data for trip pnh Airport_sah Airport#6
+2021-10-18 20:35:35.234 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip pnh Airport-sah Airport
+2021-10-18 20:35:35.237 root         scrap_Rome2Rio INFO     parsing hierarchy of trip pnh Airport_sah Airport
+2021-10-18 20:35:35.239 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('11', 'pnh Airport') to ('12', 'nyt Airport')
+2021-10-18 20:35:35.241 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_nyt Airport
+2021-10-18 20:35:35.241 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_nyt Airport
+2021-10-18 20:35:35.242 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_nyt Airport
+2021-10-18 20:35:35.242 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: pnh Airport_nyt Airport
+2021-10-18 20:35:35.242 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.242 root         scrap_Rome2Rio INFO     extracing and loading data for trip pnh Airport_nyt Airport#0
+2021-10-18 20:35:35.381 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip pnh Airport-nyt Airport
+2021-10-18 20:35:35.381 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_nyt Airport#1
+2021-10-18 20:35:35.381 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition pnh Airport_nyt Airport#2
+2021-10-18 20:35:35.381 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.381 root         scrap_Rome2Rio INFO     extracing and loading data for trip pnh Airport_nyt Airport#3
+2021-10-18 20:35:35.513 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip pnh Airport-nyt Airport
+2021-10-18 20:35:35.517 root         scrap_Rome2Rio INFO     parsing hierarchy of trip pnh Airport_nyt Airport
+2021-10-18 20:35:35.519 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('12', 'nyt Airport') to ('9', 'tas Airport')
+2021-10-18 20:35:35.522 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_tas Airport
+2021-10-18 20:35:35.522 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_tas Airport
+2021-10-18 20:35:35.523 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_tas Airport
+2021-10-18 20:35:35.523 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_tas Airport
+2021-10-18 20:35:35.523 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_tas Airport
+2021-10-18 20:35:35.523 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_tas Airport
+2021-10-18 20:35:35.523 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_tas Airport
+2021-10-18 20:35:35.523 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.524 root         scrap_Rome2Rio INFO     extracing and loading data for trip nyt Airport_tas Airport#0
+2021-10-18 20:35:35.721 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip nyt Airport-tas Airport
+2021-10-18 20:35:35.721 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_tas Airport#1
+2021-10-18 20:35:35.721 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_tas Airport#2
+2021-10-18 20:35:35.721 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_tas Airport#3
+2021-10-18 20:35:35.722 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_tas Airport#4
+2021-10-18 20:35:35.722 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_tas Airport#5
+2021-10-18 20:35:35.722 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.722 root         scrap_Rome2Rio INFO     extracing and loading data for trip nyt Airport_tas Airport#6
+2021-10-18 20:35:35.723 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip nyt Airport-tas Airport
+2021-10-18 20:35:35.725 root         scrap_Rome2Rio INFO     parsing hierarchy of trip nyt Airport_tas Airport
+2021-10-18 20:35:35.727 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('12', 'nyt Airport') to ('10', 'sah Airport')
+2021-10-18 20:35:35.729 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_sah Airport
+2021-10-18 20:35:35.729 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_sah Airport
+2021-10-18 20:35:35.729 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_sah Airport
+2021-10-18 20:35:35.730 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_sah Airport
+2021-10-18 20:35:35.730 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.730 root         scrap_Rome2Rio INFO     extracing and loading data for trip nyt Airport_sah Airport#0
+2021-10-18 20:35:35.880 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip nyt Airport-sah Airport
+2021-10-18 20:35:35.880 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_sah Airport#1
+2021-10-18 20:35:35.880 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_sah Airport#2
+2021-10-18 20:35:35.881 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.881 root         scrap_Rome2Rio INFO     extracing and loading data for trip nyt Airport_sah Airport#3
+2021-10-18 20:35:35.881 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip nyt Airport-sah Airport
+2021-10-18 20:35:35.883 root         scrap_Rome2Rio INFO     parsing hierarchy of trip nyt Airport_sah Airport
+2021-10-18 20:35:35.889 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('12', 'nyt Airport') to ('11', 'pnh Airport')
+2021-10-18 20:35:35.891 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_pnh Airport
+2021-10-18 20:35:35.892 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_pnh Airport
+2021-10-18 20:35:35.892 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_pnh Airport
+2021-10-18 20:35:35.892 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: nyt Airport_pnh Airport
+2021-10-18 20:35:35.892 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:35.892 root         scrap_Rome2Rio INFO     extracing and loading data for trip nyt Airport_pnh Airport#0
+2021-10-18 20:35:36.045 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip nyt Airport-pnh Airport
+2021-10-18 20:35:36.045 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_pnh Airport#1
+2021-10-18 20:35:36.046 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition nyt Airport_pnh Airport#2
+2021-10-18 20:35:36.046 root         scrap_Rome2Rio INFO     total transits: 1
+2021-10-18 20:35:36.046 root         scrap_Rome2Rio INFO     extracing and loading data for trip nyt Airport_pnh Airport#3
+2021-10-18 20:35:36.192 root         scrap_Rome2Rio INFO     total of 2 items were extracted and loaded for trip nyt Airport-pnh Airport
+2021-10-18 20:35:36.195 root         scrap_Rome2Rio INFO     parsing hierarchy of trip nyt Airport_pnh Airport
+2021-10-18 20:35:36.197 root         scrap_Rome2Rio INFO     {'total_entries': 358, 'total_arrays': 228, 'arrays_element': 2, 'total_empties': 120}
+2021-10-18 20:35:36.197 root         scrap_Rome2Rio INFO     {'total_entries': 632, 'total_arrays': 379, 'arrays_element': 5, 'total_empties': 1035}
+2021-10-18 20:35:36.197 root         scrap_Rome2Rio INFO     {'total_entries': 620, 'total_arrays': 391, 'arrays_element': 3, 'total_empties': 990}
+2021-10-18 20:35:36.198 root         scrap_Rome2Rio INFO     {'total_entries': 618, 'total_arrays': 393, 'arrays_element': 3, 'total_empties': 990}
+2021-10-18 20:35:36.198 root         scrap_Rome2Rio INFO     {'total_entries': 617, 'total_arrays': 394, 'arrays_element': 3, 'total_empties': 990}
+2021-10-18 20:35:36.198 root         scrap_Rome2Rio INFO     {'total_entries': 618, 'total_arrays': 393, 'arrays_element': 3, 'total_empties': 1035}
+2021-10-18 20:35:36.198 root         scrap_Rome2Rio INFO     {'total_entries': 721, 'total_arrays': 443, 'arrays_element': 5, 'total_empties': 1378}
+2021-10-18 20:35:36.198 root         scrap_Rome2Rio INFO     {'total_entries': 706, 'total_arrays': 458, 'arrays_element': 5, 'total_empties': 1225}
+2021-10-18 20:35:36.199 root         scrap_Rome2Rio INFO     {'total_entries': 745, 'total_arrays': 463, 'arrays_element': 7, 'total_empties': 1540}
+2021-10-18 20:35:36.199 root         scrap_Rome2Rio INFO     {'total_entries': 738, 'total_arrays': 470, 'arrays_element': 7, 'total_empties': 1326}
+2021-10-18 20:35:36.199 root         scrap_Rome2Rio INFO     {'total_entries': 737, 'total_arrays': 471, 'arrays_element': 7, 'total_empties': 1326}
+2021-10-18 20:35:36.199 root         scrap_Rome2Rio INFO     {'total_entries': 743, 'total_arrays': 465, 'arrays_element': 6, 'total_empties': 1431}
+2021-10-18 20:35:36.199 root         scrap_Rome2Rio INFO     
+
+2021-10-18 20:35:36.200 root         scrap_Rome2Rio INFO     --- total python duration: 00:00:03 ---

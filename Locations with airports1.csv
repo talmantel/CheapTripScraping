@@ -1,0 +1,731 @@
+8,Tehran,thra,80,51.4167,35.7,Iran
+9,Tashkent,tas,191,69.2667,41.3,Uzbekistan
+10,Sanaa,sah,195,44.2,15.35,Yemen
+11,Phnom Penh,pnh,31,104.921,11.5696,Cambodia
+12,Naypyidaw,nyt,120,96.1344976,19.7540045,Myanmar
+13,Muscat,mct,132,58.5922,23.6139,Oman
+14,Manila,mnlp,140,120.9772,14.5958,Philippines
+15,Male,mle,106,73.5083,4.175,Maldives
+16,Lhasa,lxa,37,91.1,29.65,China
+17,Kuwait City,kwi,92,47.98,29.375,Kuwait
+18,Kathmandu,ktm,123,85.3667,27.7167,Nepal
+19,Kabul,kbl,1,69.1658,34.5328,Afghanistan
+20,Islamabad,isb,133,73.0369,33.6989,Pakistan
+21,Dushanbe,dyu,174,68.7864,38.5731,Tajikistan
+22,Doha,doh,143,51.5333,25.3,Qatar
+23,Dhaka,dac,14,90.3961,23.7161,Bangladesh
+24,Colombo,cmba,167,79.8333,6.9167,Sri Lanka
+25,Bishkek,fru,93,74.5667,42.8667,Kyrgyzstan
+26,Beirut,bey,96,35.5131,33.8869,Lebanon
+27,Bandar Seri Begawan,bwn,25,114.9167,4.9167,Brunei
+28,Baghdad,bgw,81,44.4167,33.35,Iraq
+29,Astana,nqz,88,71.4333,51.1333,Kazakhstan
+30,Ashgabat,asb,183,58.3833,37.95,Turkmenistan
+31,Amman,amma,87,35.9333,31.95,Jordan
+32,Manama,bah,13,50.5831,26.2167,Bahrain
+33,Tbilisi,tbs,64,44.7925,41.7225,Georgia
+34,Baku,gyd,11,49.8352,40.3667,Azerbaijan
+35,Yerevan,evn,8,44.5144,40.1814,Armenia
+36,Honolulu,hnl,189,-157.846,21.3294,USA
+37,San Francisco,sfo,189,-122.443,37.7562,USA
+38,Orlando,orlb,189,-81.3369,28.4772,USA
+39,Las Vegas,lasa,189,-115.2654,36.2333,USA
+40,Los Angeles,laxa,189,-118.4068,34.1139,USA
+41,Miami,mia,189,-80.2102,25.7839,USA
+42,New York,nyca,189,-73.9249,40.6943,USA
+43,Johannesburg,jnba,163,28.0416,-26.2044,South Africa
+44,Dammam,dmm,153,50.1,26.4333,Saudi Arabia
+45,Riyadh,ruh,153,46.71,24.65,Saudi Arabia
+47,Cancun,cun,112,-86.8510468,21.1617854,Mexico
+48,Fukuoka,fuk,86,130.4019,33.5903,Japan
+50,Kyoto,,86,135.7669,35.0111,Japan
+51,Osaka,osaa,86,135.5019,34.6936,Japan
+52,Jerusalem,,83,35.2167,31.7833,Israel
+53,Batam,bth,79,104.0378246,1.1061034,Indonesia
+55,Kolkata,ccu,78,88.3378,22.5411,India
+56,Jaipur,jai,78,75.8667,26.9167,India
+57,Chennai,maa,78,80.275,13.0825,India
+58,Hurgada,hrg,52,33.8307062,27.222556,Egypt
+59,Beijing,any,37,116.3914,39.905,China
+60,Zhuhai,zuh,37,113.5678,22.2769,China
+61,Guilin,kwl,37,110.2833,25.2667,China
+62,Vancouver,yvra,33,-123.1,49.25,Canada
+63,Toronto,ytoa,33,-79.3733,43.7417,Canada
+64,Rio de Janeiro,rioa,24,-43.1964,-22.9083,Brazil
+65,Buenos Aires,buea,7,-58.3819,-34.5997,Argentina
+66,Bangalore,blr,78,77.598,12.9699,India
+67,Krabi,kbv,176,98.9189,8.0592,Thailand
+68,Jeju,cju,164,126.5219,33.5097,South Korea
+69,Abu Dhabi,auha,187,54.3686,24.4781,United Arab Emirates
+70,Auckland,akl,125,174.7833,-36.85,New Zealand
+71,Cebu,ceb,140,123.9,10.3,Philippines
+72,Sydney,syd,9,151.2094,-33.865,Australia
+73,Melbourne,mela,9,144.9631,-37.8136,Australia
+74,Marrakech,rak,118,-7.9811,31.6295,Morocco
+75,Penang Island,pen,105,100.250172,5.3787924,Malaysia
+76,Jakarta,cgki,79,106.8451,-6.2146,Indonesia
+77,Ha Noi,han,194,105.8544441,21.0294498,Vietnam
+78,Cairo,cai,52,31.2394,30.0561,Egypt
+79,Johor Bahru,jhb,105,103.7611,1.4556,Malaysia
+80,Denpasar,dps,79,115.2167,-8.6667,Indonesia
+81,Ho Chi Minh,sgn,194,106.7017555,10.7758439,Vietnam
+82,Shanghai,csha,37,121.4667,31.1667,China
+83,Seoul,sela,164,127.0,37.5833,South Korea
+84,Medina,med,153,39.6,24.4667,Saudi Arabia
+85,Guangzhou,can,37,113.259,23.1288,China
+86,Mecca,jed,153,39.8261,21.4225,Saudi Arabia
+87,Taipei,tpet,173,121.5319,25.0478,Taiwan
+88,Pattaya,utp,176,100.9009534,12.931941,Thailand
+89,Tokyo,tyoa,86,139.6922,35.6897,Japan
+90,Phuket,hkt,176,98.3975,7.8881,Thailand
+91,Mumbai,bom,78,72.8333,18.9667,India
+92,Shenzhen,szx,37,114.054,22.535,China
+93,Delhi,del,78,77.23,28.66,India
+94,Kuala Lumpur,kulm,105,101.6953,3.1478,Malaysia
+95,Dubai,dzba,187,55.3094,25.2697,United Arab Emirates
+96,Singapore,sins,158,103.8,1.3,Singapore
+97,Macau,mfm,37,113.545,22.203,China
+98,Bangkok,bkkt,176,100.5167,13.75,Thailand
+99,Hong Kong,hkga,37,114.185,22.305,China
+100,Antwerp,anr,17,4.3997,51.2211,Belgium
+101,Aberdeen,abz,188,-2.11,57.15,United Kingdom
+102,Augsburg,agb,65,10.8983,48.3717,Germany
+103,Alexandroupoli,axd,67,25.8667,40.85,Greece
+104,Athens,ath,67,23.7161,37.9794,Greece
+105,Alicante,alc,166,-0.4831,38.3453,Spain
+106,Almeria,lei,166,-2.4628135,36.8414197,Spain
+107,Aalborg,aal,47,9.9166,57.0337,Denmark
+108,Aarhus,aar,47,10.2107,56.1572,Denmark
+109,Ancona,aoi,84,13.5167,43.6167,Italy
+111,Amsterdam,ams,124,4.9166,52.35,Netherlands
+112,Alanya,gzp,182,31.9997,36.5436,Turkey
+113,Ankara,esb,182,32.85,39.93,Turkey
+114,Antalya,ayt,182,30.6956,36.9081,Turkey
+115,Altenrhein,ach,171,9.5540541,47.4903839,Switzerland
+116,Brussels,brus,17,4.3517,50.8467,Belgium
+117,Burgas,boj,26,27.4667,42.5,Bulgaria
+118,Banja Luka,bnx,22,17.1833,44.7667,Bosnia and Herzegovina
+119,Belfast,belf,188,-5.93,54.5964,United Kingdom
+120,Birmingham,bhx,188,-1.9025,52.48,United Kingdom
+121,Bournemouth,boh,188,-1.88,50.72,United Kingdom
+122,Bristol,brs,188,-2.5833,51.45,United Kingdom
+123,Budapest,bud,76,19.0408,47.4983,Hungary
+124,Berlin,ber,65,13.3833,52.5167,Germany
+126,Bremen,bre,65,8.7975,53.1153,Germany
+127,Billund,bll,47,9.1159357,55.7309428,Denmark
+128,Barcelona,bcn,166,2.1769,41.3825,Spain
+129,Bilbao,bio,166,-2.9533,43.2622,Spain
+130,Bologna,blq,84,11.3428,44.4939,Italy
+131,Bergen,bgo,131,5.3233,60.3925,Norway
+132,Bodo,boo,131,14.3751,67.2827,Norway
+134,Bucharest,otp,144,26.0833,44.4,Romania
+135,Belgrade,beli,155,20.4667,44.8167,Serbia
+136,Bratislava,bts,159,17.1128,48.1447,Slovakia
+137,Bordeaux,bod,61,-0.58,44.84,France
+139,Brno,brq,45,16.6083,49.1953,Czech Republic
+140,Basel,bsl,171,7.5906,47.5606,Switzerland
+141,Bern,brn,171,7.4474,46.948,Switzerland
+142,Cardiff,cwl,188,-3.1791934,51.4816546,United Kingdom
+145,Cologne,cgn,65,6.9578,50.9422,Germany
+146,Corfu,cfu,67,19.8596189,39.591337,Greece
+147,Copenhagen,cope,47,12.5635,55.6786,Denmark
+150,Cork,ork,82,-8.4731,51.9,Ireland
+151,Cagliari,cag,84,9.104,39.2224,Italy
+152,Catania,cta,84,15.0873,37.5027,Italy
+153,Cluj-Napoca,clj,144,23.5594,46.78,Romania
+154,Clermont-Ferrand,cfe,61,3.0824,45.7831,France
+155,Chambery,cmf,61,5.9118,45.57,France
+156,Cherbourg,cfr,61,-1.65,49.6504,France
+158,Doncaster,dsa,188,-1.133,53.515,United Kingdom
+159,Dortmund,dtm,65,7.4653,51.5139,Germany
+160,Dresden,drs,65,13.7384,51.0493,Germany
+161,Dusseldorf,duss,65,6.7763137,51.2254018,Germany
+162,Dublin,dub,82,-6.2658,53.3425,Ireland
+163,Dalaman,dlm,182,28.8831401,36.8125748,Turkey
+164,Dubrovnik,dbv,42,18.1083,42.6403,Croatia
+165,Castle Donington,ema,188,-0.6717948,52.7965611,United Kingdom
+166,Edinburgh,edi,188,-3.189,55.953,United Kingdom
+167,Exeter,ext,188,-3.5333,50.7167,United Kingdom
+169,Esbjerg,ebj,47,8.45,55.467,Denmark
+171,Eilat,etm,83,34.9497949,29.5569348,Israel
+172,Eindhoven,ein,124,5.5,51.43,Netherlands
+174,Frankfurt,fran,65,8.6797,50.1136,Germany
+175,Friedrichshafen,fdh,65,9.4792,47.6542,Germany
+176,Fuerteventura,fue,166,-14.0048697,28.4003769,Spain
+177,Florence,flr,84,11.2542,43.7714,Italy
+178,Floro,fro,131,5.0172,61.5986,Norway
+179,Faro,fao,142,-7.9333,37.0167,Portugal
+180,Funchal,fnc,142,-16.9167,32.65,Portugal
+181,Graz,grz,10,15.4333,47.0667,Austria
+183,Guernsey,gci,188,-7.374733,57.1669969,United Kingdom
+184,Glasgow,glas,188,-4.2514,55.8609,United Kingdom
+185,Gloucestershire,glo,188,-2.1880662,51.7643786,United Kingdom
+186,Granada,grx,166,-3.6008,37.1781,Spain
+187,Girona,gro,166,2.8167,41.9833,Spain
+189,Genoa,goa,84,8.934,44.4072,Italy
+190,Groningen,grq,124,6.58,53.2204,Netherlands
+191,Gdansk,gdn,141,18.6333,54.3667,Poland
+192,Geneva,gva,171,6.15,46.2,Switzerland
+193,Gothenburg,goth,170,11.981,57.6717,Sweden
+194,Humberside,huy,188,-0.3534607,53.5713963,United Kingdom
+196,Hamburg,hamb,65,10.0,53.55,Germany
+197,Hannover,haj,65,9.7386,52.3744,Germany
+200,Heraklion,her,67,25.1343475,35.3400127,Greece
+201,Helsinki,hel,60,24.9342,60.1756,Finland
+202,Innsbruck,inn,10,11.3933,47.2683,Austria
+203,Inverness,inv,188,-4.2233,57.4781,United Kingdom
+204,Debrecen,deb,76,21.6392,47.53,Hungary
+205,Ibiza,ibz,166,1.4328,38.9089,Spain
+206,Izmir,izmi,182,27.1434119,38.4147331,Turkey
+207,Istanbul,ista,182,28.9603,41.01,Turkey
+208,Jonkoping,jkg,170,14.165719,57.7825634,Sweden
+209,Klagenfurt,klu,10,14.3,46.6167,Austria
+210,Baden-Baden,fkb,65,8.4,49.0167,Germany
+211,Kortrijk,kjk,17,3.2659884,50.8276429,Belgium
+212,Kaunas,kun,101,23.9333,54.9,Lithuania
+213,Katowice,ktw,141,19.0,50.25,Poland
+214,Krakow,krk,141,19.9372,50.0614,Poland
+215,Kosice,ksc,159,21.2496774,48.7172272,Slovakia
+216,Karlovy Vary,klv,45,12.8725,50.2306,Czech Republic
+217,Karlstad,ksd,170,13.4999,59.3671,Sweden
+218,Kuressaare,ure,56,22.4861,58.2533,Estonia
+219,Linz,lnz,10,14.2833,48.3,Austria
+220,Liege,lgg,17,5.5907,50.625,Belgium
+221,Land's End,leq,188,-5.7148222,50.0662633,United Kingdom
+222,Liverpool,lpl,188,-2.9833,53.4,United Kingdom
+224,Leeds,lba,188,-1.5492,53.7997,United Kingdom
+225,London,lond,188,-0.1275,51.5072,United Kingdom
+227,Lanzarote,ace,166,-13.634,29.013,Spain
+228,Las Palmas de Gran Canaria,lpa,166,-15.41343,28.09973,Spain
+230,Lamezia Terme,suf,84,16.3021451,38.9645069,Italy
+231,Larnaca,lca,44,33.6305,34.9233,Cyprus
+232,Liepaja,lpx,95,21.0111,56.5083,Latvia
+233,Luxembourg,lux,102,6.1328,49.6106,Luxembourg
+235,Lisbon,lis,142,-9.1604,38.7452,Portugal
+236,Ljubljana,lju,160,14.5167,46.05,Slovenia
+237,Lappeenranta,lpp,60,28.1861,61.0583,Finland
+239,Lille,lil,61,3.0583,50.6278,France
+240,Lyon,lyon,61,4.84,45.76,France
+241,Lugano,lug,171,8.9625,46.0103,Switzerland
+242,Lulea,lla,170,22.1459535,65.5831187,Sweden
+243,Manchester,man,188,-2.2453,53.4794,United Kingdom
+244,Mannheim,mhg,65,8.4661,49.4878,Germany
+245,Memmingen,fmm,65,10.1811,47.9878,Germany
+246,Muenster,fmo,65,7.6251879,51.9625101,Germany
+247,Munich,muc,65,11.5755,48.1372,Germany
+248,Madrid,mad,166,-3.6919,40.4189,Spain
+249,Malaga,agp,166,-4.4216366,36.7213028,Spain
+250,Mahon,mah,82,-8.4042476,51.8922026,Ireland
+251,Murcia,rmu,166,-1.1415,37.9866,Spain
+252,Milan,mila,84,9.19,45.4669,Italy
+253,Malta,mla,108,-73.7879,42.9853,Malta
+255,Maastricht,mst,124,5.677,50.853,Netherlands
+257,Milas,bjv,182,27.8085702,37.2745504,Turkey
+259,Marseille,mrs,61,5.37,43.2964,France
+260,Metz,etz,61,6.1778,49.1203,France
+261,Montpellier,mpl,61,3.8772,43.6119,France
+262,Malmo,mmx,170,13.0001566,55.6052931,Sweden
+263,Norwich,nwi,188,1.297,52.63,United Kingdom
+264,Newcastle,ncl,188,-1.6578,55.0077,United Kingdom
+265,Newquay,nqy,188,-5.0757,50.412,United Kingdom
+266,Nuremberg,nue,65,11.0778,49.4528,Germany
+267,Naples,nap,84,14.25,40.8333,Italy
+268,Constanta,cnd,144,28.6383,44.1733,Romania
+269,Nantes,nte,61,-1.5528,47.2181,France
+270,Nice,nce,61,7.2663,43.7034,France
+271,Norrkoping,nrk,170,16.1903511,58.5909124,Sweden
+272,Ostend,ost,17,2.919496,51.2258565,Belgium
+273,Alderney,aci,188,-2.2254277,49.72837,United Kingdom
+274,Oviedo,ovd,166,-5.8423,43.3634,Spain
+275,Olbia,olb,84,9.5151,40.9143,Italy
+276,Ohrid,ohd,130,20.8019,41.1169,North Macedonia
+277,Oslo,oslo,131,10.7528,59.9111,Norway
+279,Ostrava,osr,45,18.2925,49.8356,Czech Republic
+280,Plovdiv,pdv,26,24.7489,42.1433,Bulgaria
+281,Plymouth,plh,188,-4.1422,50.3714,United Kingdom
+282,Paderborn,pad,65,8.7667,51.7167,Germany
+283,Rostock,rlg,65,12.1333,54.0833,Germany
+284,Palma de Mallorca,pmi,166,2.6482482,39.568631,Spain
+285,Palermo,pmo,84,13.3613,38.1157,Italy
+286,Pescara,psr,84,14.2142,42.4643,Italy
+287,Pisa,psa,84,10.4,43.7167,Italy
+288,Paphos,pfo,44,32.4265,34.7761,Cyprus
+289,Palanga,plg,101,21.0639,55.9167,Lithuania
+290,Ponta Delgada,pdl,142,-25.67,37.74,Portugal
+291,Porto,opo,142,-8.6108,41.1495,Portugal
+292,Poprad,tat,159,20.3,49.05,Slovakia
+293,Paris,pari,61,2.3522,48.8566,France
+294,Pula,puy,42,13.8333,44.8667,Croatia
+295,Podgorica,tgd,117,19.2661,42.4397,Montenegro
+296,Pardubice,ped,45,15.7792,50.0386,Czech Republic
+297,Prague,prg,45,14.4167,50.0833,Czech Republic
+299,Rhodes,rho,67,28.2225,36.4412,Greece
+300,Reykjavik,reyk,77,-21.9422367,64.145981,Iceland
+301,Reus,reu,166,1.1076133,41.1555564,Spain
+302,Rijeka,rjk,42,14.4322,45.3297,Croatia
+303,Rome,rome,84,12.4828,41.8931,Italy
+304,Rimini,rmi,84,12.5683,44.0594,Italy
+305,Riga,rix,95,24.1069,56.9475,Latvia
+306,Rotterdam,rtm,124,4.48,51.92,Netherlands
+307,Ronneby,rnb,170,15.283333,56.3,Sweden
+308,Salzburg,szg,10,13.0477,47.7972,Austria
+309,Sofia,sof,26,23.3241,42.6975,Bulgaria
+310,Sarajevo,sjj,22,18.4167,43.8667,Bosnia and Herzegovina
+311,Southampton,sou,188,-1.4,50.9,United Kingdom
+312,Swansea,sws,188,-71.212,41.7571,United Kingdom
+314,Poznan,poz,141,16.9167,52.4,Poland
+315,Saarbruecken,saar,65,6.996379,49.234362,Germany
+316,Stuttgart,str,65,9.1775,48.7761,Germany
+317,Santorini,jtr,67,25.4566637,36.4071112,Greece
+318,Shannon,snn,82,-8.8686,52.7137,Ireland
+319,Salamanca,slm,166,-101.1972,20.5703,Spain
+320,Santiago de Compostela,scq,166,-8.5457,42.8805,Spain
+321,Sevilla,svq,166,-5.9731,37.3828,Spain
+323,Skopje,skp,130,21.4333,41.9833,North Macedonia
+325,Stavanger,svg,131,5.7333,58.9701,Norway
+326,Strasbourg,sxb,61,7.7458,48.5833,France
+327,Split,spu,42,16.45,43.51,Croatia
+329,Stockholm,stoc,170,18.0686,59.3294,Sweden
+330,Tirana,tia,2,19.82,41.33,Albania
+331,Thessaloniki,skg,67,22.95,40.6333,Greece
+332,Tenerife,tene,166,-16.589,28.217,Spain
+334,Trieste,trs,84,13.8042,45.6361,Italy
+335,Turin,trn,84,7.7,45.0667,Italy
+336,Tel-Aviv,tlv,83,34.8,32.0833,Israel
+337,Terceira Island,ter,142,-27.217639,38.7211653,Portugal
+338,Timisoara,tsr,144,21.23,45.7597,Romania
+339,Trabzon,tzx,182,39.7225,41.005,Turkey
+340,Tampere,tmp,60,23.7608,61.4981,Finland
+341,Turku,tku,60,22.27,60.4517,Finland
+342,Toulouse,tls,61,1.444,43.6045,France
+343,Tivat,tiv,117,18.7,42.43,Montenegro
+345,Tallinn,tll,56,24.745,59.4372,Estonia
+346,Tartu,tay,56,26.7225,58.38,Estonia
+347,Umea,ume,170,20.2630745,63.8256568,Sweden
+348,Vienna,vie,10,16.3731,48.2083,Austria
+349,Varna,var,26,27.9169,43.2078,Bulgaria
+351,Valencia,vlc,166,-68.0,10.1667,Spain
+352,Valladolid,vll,166,-4.7286,41.652,Spain
+353,Venice,veni,84,12.3319,45.4397,Italy
+354,Verona,vero,84,10.9928,45.4386,Italy
+356,Vilnius,vno,101,25.2833,54.6833,Lithuania
+357,Iasi,ias,144,27.5889,47.1622,Romania
+358,Vaxjo,vxo,170,14.8094385,56.8787183,Sweden
+359,Visby,vby,170,18.3071,57.629,Sweden
+361,Weeze,nrn,65,6.2011559,51.6267298,Germany
+362,Westerland,gwt,65,8.3075,54.91,Germany
+364,Warsaw,waw,141,21.0333,52.2167,Poland
+365,Wroclaw,wro,141,17.0353,51.1077,Poland
+366,zweibrucken,zqw,65,7.3641981,49.248655,Germany
+367,Zaragoza,zaz,166,-0.883,41.6483,Spain
+368,Zagreb,zag,42,15.95,45.8,Croatia
+369,Zadar,zad,42,15.2167,44.1167,Croatia
+370,Zurich,zrh,171,8.5410422,47.3744489,Switzerland
+371,Chisinau,kiv,114,28.8575,47.0056,Moldova
+372,Minsk,msqa,16,27.5618,53.9022,Belarus
+373,Gomel,gme,16,30.9833,52.4417,Belarus
+374,Brest,bqt,16,23.6569,52.0847,Belarus
+375,Vitebsk,vtb,16,30.1667,55.1833,Belarus
+376,Hrodna,gna,16,23.8167,53.6667,Belarus
+377,Kiev,kiev,186,30.5241361,50.4500336,Ukraine
+378,Kherson,khe,186,32.6,46.6333,Ukraine
+379,Chernivtsi,cwc,186,25.9344,48.2908,Ukraine
+380,Odesa,ods,186,30.7326,46.4775,Ukraine
+381,Zaporizhia,ozh,186,35.1182867,47.8507859,Ukraine
+382,Vinnytsia,vin,186,28.4672,49.2372,Ukraine
+383,Lviv,lwo,186,24.0315,49.8419,Ukraine
+384,Dnipro,dnk,186,34.9833,48.45,Ukraine
+385,Kharkiv,hrk,186,36.2292,50.0,Ukraine
+386,Ivano-Frankivsk,ifo,186,24.7106,48.9228,Ukraine
+387,Moscow,mosc,145,37.6178,55.7558,Russia
+388,Saint Petersburg,led,145,30.3167,59.95,Russia
+389,Sochi,aer,145,39.7203,43.5853,Russia
+390,Novosibirsk,ovb,145,82.9167,55.0333,Russia
+391,Ekaterinburg,svx,145,60.6128,56.8356,Russia
+392,Krasnodar,krr,145,38.9833,45.0333,Russia
+393,Anapa,aaq,145,37.3167,44.8944,Russia
+394,Kaliningrad,kgd,145,20.5,54.7167,Russia
+396,Samara,kuf,145,50.1167,53.1833,Russia
+397,Irkutsk,ikt,145,104.3,52.2833,Russia
+398,Krasnoyarsk,kja,145,92.8667,56.0167,Russia
+399,Ufa,ufa,145,55.9667,54.7333,Russia
+400,Kazan,kzn,145,49.1144,55.7908,Russia
+401,Mineralnye Vody,mrv,145,43.1125,44.2008,Russia
+402,Tyumen,tjm,145,65.5333,57.15,Russia
+403,Khabarovsk,khv,145,135.0667,48.4833,Russia
+404,Surgut,sgc,145,73.4333,61.25,Russia
+405,Vladivostok,vvo,145,131.9,43.1167,Russia
+406,Yakutsk,yaku,145,129.7319,62.0272,Russia
+407,Perm,pee,145,56.2489,58.0139,Russia
+408,Chelyabinsk,cek,145,61.4,55.15,Russia
+409,Novy Urengoy,nux,145,76.70356,66.089142,Russia
+410,Murmansk,mmk,145,33.0833,68.9667,Russia
+411,Nizhniy Novgorod,goj,145,44.0075,56.3269,Russia
+412,Volgograd,vog,145,44.4833,48.7,Russia
+413,Yuzhno-Sakhalinsk,uus,145,142.7333,46.95,Russia
+414,Arkhangelsk,arh,145,40.5333,64.55,Russia
+415,Omsk,oms,145,73.3833,54.9667,Russia
+416,Makhachkala,mcx,145,47.4833,42.9833,Russia
+417,Gelendzik,gdz,145,38.0767,44.5608,Russia
+418,Petropavlovsk-Kamchatsky,pkc,145,158.65,53.0167,Russia
+419,Naberezhnye Chelny,nbc,145,52.3333,55.7,Russia
+420,Tomsk,tof,145,84.9522,56.4886,Russia
+421,Nizhnevartovsk,njc,145,76.595,60.9389,Russia
+422,Orenburg,ren,145,55.1,51.7667,Russia
+423,Voronezh,voz,145,39.2106,51.6717,Russia
+424,Syktyvkar,scw,145,50.8167,61.6667,Russia
+425,Barnaul,bax,145,83.7872,53.3567,Russia
+426,Astrakhan,asf,145,48.0167,46.3333,Russia
+427,Norilsk,nsk,145,88.2167,69.3333,Russia
+428,Belgorod,ego,145,36.6,50.6,Russia
+429,Salehard,sly,145,66.6333,66.5333,Russia
+430,Chita,hta,145,113.5,52.0333,Russia
+431,Izhevsk,ijk,145,53.2167,56.85,Russia
+432,Khanty-Mansiysk,hma,145,69.0,61.0,Russia
+433,Saratov,sarb,145,46.0,51.5333,Russia
+434,Stavropol,stw,145,41.9833,45.05,Russia
+437,Kemerovo,kej,145,86.0667,55.3333,Russia
+438,Abakan,aba,145,91.4167,53.7167,Russia
+439,Grozny,grv,145,45.6986,43.3125,Russia
+441,Vladikavkaz,ogz,145,44.65,43.0167,Russia
+442,Ulyanovsk,ulya,145,48.3667,54.3167,Russia
+444,Penza,pez,145,45.0,53.2,Russia
+445,Saransk,skx,145,45.1833,54.1833,Russia
+446,Nadym,nym,145,72.5167,65.5333,Russia
+447,Magnitogorsk,mqf,145,59.0333,53.3833,Russia
+448,Rostov on Don,rov,145,39.7167,47.2333,Russia
+449,Cheboksary,scy,145,47.25,56.1333,Russia
+451,Nalchik,nal,145,43.6167,43.4833,Russia
+452,Cherepovets,cee,145,37.9167,59.1333,Russia
+453,Magas,igt,145,44.8167,43.1667,Russia
+454,Kirov,kvx,145,49.65,58.6,Russia
+455,Naryan-Mar,nnm,145,53.0067,67.6378,Russia
+456,Bratsk,btk,145,101.6167,56.1667,Russia
+457,Elista,esl,145,44.2667,46.3167,Russia
+458,Gorno-Altaysk,rgk,145,85.96,51.96,Russia
+460,Tambov,tbw,145,41.4333,52.7167,Russia
+461,Vorkuta,vkt,145,64.0333,67.5,Russia
+462,Neryungri,ner,145,124.725,56.6583,Russia
+463,Ivanovo,iwa,145,41.0,57.0,Russia
+464,Anadyr,dyr,145,177.5167,64.7333,Russia
+465,Kursk,urs,145,36.1872,51.7372,Russia
+466,Kogalym,kgp,145,74.4889068,62.26798,Russia
+467,Kurgan,kro,145,65.3411,55.4408,Russia
+468,Petrozavodsk,pes,145,34.35,61.7833,Russia
+469,Orsk,osw,145,58.5441,51.2145,Russia
+471,Kaluga,klf,145,36.2667,54.5333,Russia
+472,Okha,ohh,145,142.9333,53.5833,Russia
+473,Briansk,bzk,145,34.3668288,53.2423778,Russia
+475,Kyzyl,kyz,145,94.45,51.7167,Russia
+476,Tiksi,iks,145,128.835,71.6269,Russia
+477,Yaroslavl,iar,145,39.85,57.6167,Russia
+478,Pevek,pwe,145,170.3167,69.7,Russia
+480,Velikij Ustyug,vus,145,46.3039,60.7589,Russia
+481,Aldan,adh,145,125.3833,58.6,Russia
+483,Beloyarsky,eyk,145,66.6667691,63.7156353,Russia
+484,Bodaybo,odo,145,114.1933,57.8506,Russia
+485,Ust-Kut,ukx,145,105.7489287,56.780561,Russia
+486,Usinsk,usk,145,57.5414,65.9998,Russia
+487,Nyagan,nya,145,65.3833,62.1333,Russia
+489,Lensk,ulk,145,114.9,60.7167,Russia
+490,Batagay,bqj,145,134.635,67.656,Russia
+491,Uraj,urj,145,64.7833,60.1333,Russia
+492,Nikolaevsk-na-Amure,nli,145,140.7333,53.15,Russia
+493,Berezovo,ezv,145,39.2975747,54.0930506,Russia
+494,Bugulma,uua,145,52.7833,54.5333,Russia
+498,Belaya Gora,bgn,145,146.187286,68.53701,Russia
+501,Lipetsk,lpk,145,39.6,52.6167,Russia
+502,Nyurba,nyr,145,118.3333,63.2833,Russia
+504,Ust-Maya,ums,145,134.5433,60.4566,Russia
+505,Iturup,itu,145,147.8382321,44.9906085,Russia
+507,Keperveyem,kpw,145,166.1428991,67.8415768,Russia
+508,Deputatsky,dpt,145,139.9468635,69.3396494,Russia
+510,Ust-Nera,usr,145,143.2,64.5666,Russia
+512,Terney,nei,145,136.6137293,45.0504046,Russia
+513,Olenyok,onk,145,112.45,68.525,Russia
+514,Chersky,cyx,145,161.33,68.7501,Russia
+515,Kavalerovo,kvr,145,135.0498,44.2702,Russia
+516,Igarka,iaa,145,86.5667,67.4667,Russia
+517,Igrim,irm,145,64.4194,63.1933,Russia
+519,Ust-Kuyga,ukg,145,135.549835,70.00177,Russia
+520,Hatanga,htg,145,102.465,72.0411,Russia
+521,Dalnegorsk,dhg,145,135.5661,44.5539,Russia
+522,Nogliki,ngk,145,143.1667,51.8333,Russia
+523,Chokurdakh,ckh,145,147.8946,70.6183,Russia
+526,Tynda,tyd,145,124.7167,55.15,Russia
+528,Bor,tgp,145,90.1236,61.5995,Russia
+529,Zhigansk,zix,145,123.3711,66.7697,Russia
+530,Dikson,dks,145,80.5451,73.507,Russia
+531,Verkhnevilyuysk,vhv,145,120.3167,63.4457,Russia
+532,Vilyuysk,vyi,145,121.6167,63.75,Russia
+533,Dalnerechensk,dlr,145,133.7333,45.9333,Russia
+534, Svetlaja,etl,145,41.0060242,65.2215948,Russia
+535,Komsomolsk Na Amure,kxk,145,137.020782,50.550877,Russia
+538,Plastun,tly,145,136.286379,44.7589818,Russia
+540,Gagra,,64,40.27,43.28,Georgia
+541,New Athos,,64,40.81,43.09,Georgia
+542,Sukhumi,,64,41.0,43.0,Georgia
+543,Ukhta,uct,145,53.7,63.5667,Russia
+546,Pristina,prn,91,21.1667,42.6667,Kosovo
+547,Thimphu,,20,89.6333,27.4833,Bhutan
+548,Ulaanbaatar,uln,116,106.9172,47.9203,Mongolia
+550,Agartala,ixa,78,91.2667,23.8333,India
+551,Agra,agp,78,78.02,27.18,India
+552,Ahmedabad,amd,78,72.58,23.03,India
+553,Aizawl,ajl,78,92.72,23.7104,India
+554,Allahabad,ixd,78,81.84,25.455,India
+555,Amritsar,atq,78,74.85,31.6167,India
+556,Aurangabad,ixu,78,75.32,19.88,India
+557,Bagdogra,ixb,78,88.3200303,26.6988847,India
+558,Belgaum,ixg,78,74.5,15.8667,India
+560,Bhavnagar,bhu,78,72.1416449,21.7718836,India
+561,Bhopal,bho,78,77.4167,23.25,India
+562,Bhubaneswar,bbi,78,85.8435592,20.2667774,India
+563,Bhuj,bhj,78,69.81,23.2504,India
+564,Bikaner,bkb,78,73.3171367,28.0159286,India
+565,Chandigarh,ixc,78,76.7911,30.7353,India
+566,Coimbatore,cjb,78,76.9667,11.0,India
+567,Dehradun,ded,78,78.029,30.318,India
+568,Dharamsala,dhm,78,76.3167,32.2167,India
+569,Dibrugarh,dib,78,95.0,27.4833,India
+570,Dimapur,dmu,78,93.7283707,25.9135914,India
+571,Diu,diu,78,70.9904,20.7197,India
+572,Gaya,gay,78,85.0167,24.75,India
+573,Chicalim,goi,78,73.8622326,15.3944786,India
+574,Gorakhpur,gop,78,83.3667,26.7611,India
+575,Guwahati,gau,78,91.7667,26.1667,India
+576,Gwalior,gwl,78,78.1931,26.215,India
+577,Hubli,hbx,78,75.125,15.36,India
+578,Hyderabad,hyd,78,78.4667,17.3667,India
+579,Imphal,imf,78,93.95,24.82,India
+580,Indore,idr,78,75.8472,22.7206,India
+581,Jabalpur,jlr,78,79.9333,23.1667,India
+582,Jaisalmer,jsa,78,70.9167,26.9167,India
+583,Jalgaon,jlg,78,75.5667,21.0167,India
+584,Jammu,ixj,78,74.85,32.7333,India
+585,Jamnagar,jga,78,70.07,22.47,India
+586,Jodhpur,jdh,78,73.0168,26.2918,India
+587,Jorhat,jrh,78,94.2167,26.75,India
+588,Kadapa,cdp,78,78.8216861,14.4752936,India
+589,Kandla,ixy,78,76.0696792,32.6912634,India
+590,Kanpur,knu,78,80.3217588,26.4609135,India
+591,Andal,rdp,78,87.2411693,23.6247865,India
+592,Khajuraho,hjr,78,79.9333,24.85,India
+593,Kochi,cok,78,76.2833,9.9667,India
+594,Kolhapur,klh,78,74.2333,16.7,India
+595,Kozhikode,ccj,78,75.7788735,11.2586082,India
+596,Kulu,kuu,78,77.1,31.96,India
+597,Leh,ixl,78,77.5848133,34.1642029,India
+599,Lucknow,lko,78,80.947,26.847,India
+600,Ludhiana,luh,78,75.8486,30.9083,India
+601,Madurai,ixm,78,78.1194,9.9197,India
+602,Mangalore,ixe,78,74.8806,12.8703,India
+603,Mysore,myq,78,76.6531,12.3086,India
+604,Nagpur,nag,78,79.0831,21.1539,India
+605,Nanded,ndc,78,77.3333,19.15,India
+606,Nasik,isk,78,73.7833,20.0,India
+607,Pantnagar,pgh,78,79.4859989,29.0264162,India
+608,Pasighat,ixt,78,95.3324944,28.0589676,India
+609,Patna,pat,78,85.1414,25.61,India
+610,Porbandar,pbd,78,69.6047,21.6425,India
+611,Port blair,ixz,78,92.75,11.6667,India
+612,Puducherry,,78,79.83,11.93,India
+613,Pune,pnq,78,73.8553,18.5196,India
+614,Raipur,rpr,78,81.6337,21.2379,India
+615,Rajahmundry,rja,78,81.7833,16.9833,India
+616,Rajkot,raj,78,70.7984,22.2969,India
+617,Ranchi,ixr,78,85.3347,23.3556,India
+618,Salem,sxv,78,78.1667,11.65,India
+619,Shillong,shl,78,91.8789,25.5744,India
+620,Shimla,,78,77.1722,31.1033,India
+621,Shirdi,sag,78,92.79,24.7904,India
+622,Silchar,ixs,78,92.79,24.7904,India
+623,Srinagar,sxr,78,74.8061,34.0911,India
+624,Surat,stv,78,72.83,21.17,India
+625,Tezpur,tez,78,92.8,26.6338,India
+626,Thiruvananthapuram,trv,78,76.8997,8.5,India
+627,Tiruchirappalli,trz,78,78.712771,10.7620859,India
+628,Tirupati,tir,78,79.42,13.65,India
+629,Tuticorin,tcr,78,78.1333,8.7833,India
+630,Udaipur,udr,78,73.6833,24.5833,India
+631,Vadodara,bdq,78,73.2,22.3,India
+632,Varanasi,vns,78,83.0128,25.3189,India
+633,Vidyanagar,vdy,78,75.1275701,15.3638384,India
+634,Vijayawada,vga,78,80.6185102,16.5087586,India
+635,Visakhapatnam,vtz,78,83.3167,17.7333,India
+636,Chiang Mai,cnx,176,98.9868056,18.7882778,Thailand
+637,Hat Yai,hdy,176,100.4577414,7.0026257,Thailand
+638,Koh Samui,usm,176,99.9956193,9.5013944,Thailand
+639,Udon Thani,uth,176,102.75,17.4164,Thailand
+640,Chiang Rai,cei,176,99.8275,19.9094,Thailand
+641,Khon Kaen,kkc,176,102.8297,16.4297,Thailand
+642,Surat Thani,urt,176,99.3306,9.1397,Thailand
+643,Ubon Ratchathani,ubp,176,104.8594,15.2281,Thailand
+644,Nakhon Si Thammarat,nst,176,99.9667,8.4333,Thailand
+645,Phitsanulok,phs,176,100.2636,16.8158,Thailand
+646,Trang,tst,176,99.6114,7.5561,Thailand
+647,Roi Et,roi,176,103.6514,16.0578,Thailand
+648,Nakhon Phanom,kop,176,104.7880321,17.3952209,Thailand
+649,Buri Ram,bfv,176,103.1079187,14.9955693,Thailand
+650,Sakon Nakhon,sno,176,104.1456,17.1564,Thailand
+651,Lampang,lpt,176,99.5,18.3,Thailand
+652,Mae Sot,maq,176,98.5699283,16.7133787,Thailand
+653,Ranong,unn,176,98.6389,9.9619,Thailand
+654,Chumphon,cjm,176,99.18,10.4939,Thailand
+655,Loei,loe,176,101.725,17.4903,Thailand
+656,Narathiwat,naw,176,101.8212475,6.4277319,Thailand
+657,Trat,tdx,176,102.5125,12.2417,Thailand
+658,Phrae,prh,176,100.1417,18.1436,Thailand
+659,Sukhothai,ths,176,99.8219,17.0142,Thailand
+660,Mae Hong Son,hgn,176,97.9666073,19.3015068,Thailand
+661,Hua Hin,hhq,176,99.9546036,12.5672438,Thailand
+662,Pai,pyy,176,98.4405794,19.3581061,Thailand
+663,Chicago,chia,189,-87.6862,41.8373,USA
+664,Houston,houa,189,-95.3889,29.7863,USA
+665,Phoenix,phxa,189,-112.0891,33.5722,USA
+666,Philadelphia,phla,189,-75.1339,40.0077,USA
+667,San Antonio,sata,189,-98.5253,29.4658,USA
+668,San Diego,sana,189,-117.1225,32.8312,USA
+669,Dallas,dfwa,189,-96.7662,32.7936,USA
+670,San Jose,sjca,189,-121.8486,37.3019,USA
+671,Austin,aus,189,-97.7522,30.3004,USA
+672,Fort Worth,ftw,189,-97.3473,32.7811,USA
+673,Jacksonville,jaxa,189,-81.6749,30.3322,USA
+674,Columbus,cmha,189,-82.985,39.9862,USA
+675,Charlotte,clta,189,-80.8304,35.208,USA
+676,Indianapolis,ind,189,-86.1458,39.7771,USA
+677,Seattle,seaa,189,-122.3244,47.6211,USA
+678,Denver,dena,189,-104.8759,39.7621,USA
+679,Washington,wasa,189,-77.0163,38.9047,USA
+680,Boston,bos,189,-71.0846,42.3188,USA
+681,El Paso,elpa,189,-106.4309,31.8479,USA
+682,Nashville,bna,189,-86.7843,36.1715,USA
+683,Detroit,dtta,189,-83.1024,42.3834,USA
+684,Portland,pdx,189,-122.65,45.5372,USA
+685,Oklahoma City,okca,189,-97.5136,35.4676,USA
+686,Memphis,mema,189,-89.9773,35.1046,USA
+687,Louisville,sdfa,189,-85.6485,38.1663,USA
+688,Baltimore,bwi,189,-76.6144,39.3051,USA
+689,Milwaukee,mkea,189,-87.9673,43.0642,USA
+690,Albuquerque,abq,189,-106.6464,35.1053,USA
+691,Tucson,tusa,189,-110.8782,32.1545,USA
+692,Fresno,fat,189,-119.7941,36.7831,USA
+693,Mesa,msc,189,-111.718,33.4017,USA
+694,Atlanta,atla,189,-84.4224,33.7627,USA
+695,Sacramento,saca,189,-121.4683,38.5667,USA
+696,Kansas City,mkca,189,-94.5541,39.1239,USA
+697,Colorado Springs,cosa,189,-104.7606,38.8674,USA
+698,Raleigh,rdu,189,-78.6435,35.8325,USA
+699,Omaha,oma,189,-96.0522,41.2627,USA
+700,Long Beach,lgb,189,-118.1675,33.7981,USA
+701,Virginia Beach,orf,189,-76.0435,36.7335,USA
+702,Minneapolis,mspa,189,-93.2678,44.9635,USA
+703,Oakland,oak,189,-122.2165,37.7903,USA
+704,Tampa,tpaa,189,-82.4451,27.9942,USA
+706,Tulsa,tulb,189,-95.9042,36.1284,USA
+707,Bakersfield,bfl,189,-119.0359,35.3529,USA
+708,New Orleans,msya,189,-89.9288,30.0687,USA
+709,Wichita,icta,189,-97.3442,37.6896,USA
+711,Cleveland,clea,189,-81.6804,41.4767,USA
+715,Santa Ana,sna,189,-117.8819,33.7366,USA
+717,Lexington,lex,189,-84.4587,38.0423,USA
+718,Corpus Christi,crp,189,-97.3755,27.726,USA
+721,Cincinnati,cvga,189,-84.5061,39.1413,USA
+724,Pittsburgh,pita,189,-79.9762,40.4396,USA
+725,Lincoln,lnk,189,-96.6788,40.809,USA
+726,St. Louis,stla,189,-90.2451,38.6358,USA
+728,Anchorage,anca,189,-149.1091,61.1508,USA
+732,Saint Petersburg,spg,189,-82.6652,27.7931,USA
+734,Fort Wayne,fwa,189,-85.1437,41.0886,USA
+737,Laredo,lrd,189,-99.4875,27.5629,USA
+738,Madison,msn,189,-89.3931,43.0826,USA
+740,Lubbock,lbb,189,-101.8878,33.5659,USA
+741,Reno,rno,189,-119.8483,39.5497,USA
+743,Buffalo,buf,189,-78.8487,42.9016,USA
+746,Winston-Salem,int,189,-80.2611,36.1029,USA
+751,Norfolk,orfa,189,-76.259,36.8945,USA
+753,Boise,boi,189,-116.2312,43.6007,USA
+755,Richmond,ric,189,-77.4756,37.5295,USA
+757,Spokane,gega,189,-117.433,47.6671,USA
+759,Modesto,mod,189,-121.0028,37.6374,USA
+761,Des Moines,dsm,189,-93.6105,41.5725,USA
+762,San Bernardino,sbd,189,-117.2946,34.1417,USA
+763,Baton Rouge,btr,189,-91.131,30.4418,USA
+765,Salt Lake City,slc,189,-111.9306,40.7777,USA
+767,Oxnard,oxr,189,-119.1815,34.1963,USA
+772,Fayetteville,fyva,189,-94.166,36.0713,USA
+773,Grand Rapids,grr,189,-85.6562,42.962,USA
+775,Rochester,roc,189,-77.6162,43.168,USA
+776,Charleston,chs,189,-79.9628,32.8153,USA
+777,Palm Springs,pspa,189,-80.0968,26.6349,USA
+779,Branson,bkg,189,-93.2635,36.651,USA
+780,Montreal,ymqa,33,-73.5617,45.5089,Canada
+781,Calgary,yyc,33,-114.0667,51.05,Canada
+782,Edmonton,yeg,33,-113.4903,53.5344,Canada
+783,Ottawa,yowa,33,-75.695,45.4247,Canada
+784,Winnipeg,ywg,33,-97.1464,49.8844,Canada
+785,Quebec City,yqba,33,-71.2081,46.8139,Canada
+786,Hamilton,yhm,33,-79.8692,43.2567,Canada
+787,Kitchener,ykf,33,-80.4728,43.4186,Canada
+789,Victoria,yyja,33,-123.3647,48.4283,Canada
+790,Halifax,yhza,33,-63.5906,44.6475,Canada
+792,Windsor,yqg,33,-83.0,42.2833,Canada
+793,Saskatoon,yxe,33,-106.6833,52.1333,Canada
+795,Regina,yqr,33,-104.6067,50.4547,Canada
+796,St. John's,yyt,33,-52.7971,47.4817,Canada
+797,Kelowna,ylw,33,-119.4956,49.8881,Canada
+800,Rishikesh,,78,78.267612,30.086928,India
+801,Gokarna,,78,74.318841,14.547859,India
+802,Arambol,,78,73.69811692,15.69776815,India
+803,Tiruvannamalai,,78,79.0761989,12.2343228,India
+804,Darjeeling,,78,88.263176,27.0377554,India
+805,Haridwar,,78,78.1452985,29.9384473,India
+806,Kanyakumari,,78,77.5499338,8.079252,India
+807,Buddha Gaya,,78,84.9831416,24.6904398,India
+808,Sarnath,,78,83.025214,25.371556,India
+809,Kushinagar,,78,83.9162322,26.7438272,India
+810,Shrawasti,,78,81.886684,27.68320155,India
+811,Rajgir,,78,85.4207368,25.0299973,India
+812,Sankasya,,78,76.36429,30.37004,India
+813,Tirumala,,78,79.350898,13.680736,India
+814,Badrinath,,78,79.493763,30.743309,India
+815,Kedarnath,,78,79.066894,30.734627,India
+816,Prayagraj,,78,81.846311,25.435801,India
+818,Mathura,,78,77.673673,27.492413,India
+819,Vrindavan,,78,77.659339,27.565009,India
+820,Somnath,,78,70.401157,20.888047,India
+821,Dwarka,,78,68.968456,22.244197,India
+822,Jammu,,78,74.857026,32.726602,India
+823,Ujjain,,78,75.788516,23.176467,India
+824,Shirdi,,78,74.476212,19.764536,India
+825,Palolem,,78,74.023219,15.009965,India
+826,Varkala,,78,76.716336,8.737868,India
+827,Alwar,,78,76.634574,27.552991,India
+828,Amritapuri,,78,76.489564,9.094938,India
+2000,Chernihiv,,186,,,Ukraine
+2001,Cherkasy,,186,,,Ukraine
+2002,Zhytomyr,,186,,,Ukraine
+2003,Rivne,,186,,,Ukraine
+2004,Lutsk,,186,,,Ukraine
+2005,Khmelnytskyi,,186,,,Ukraine
+2006,Ternopil,,186,,,Ukraine
+2007,Mukachevo,,186,,,Ukraine
+2008,Uzhgorod,,186,,,Ukraine
+2009,Poltava,,186,,,Ukraine
+2010,Uman,,186,,,Ukraine
+2011,Mykolaiv,,186,,,Ukraine
+2014,Voznesensk,,186,,,Ukraine
+2015,Yuzhnoukrainsk,,186,,,Ukraine
+2016,Kryvyi Rih,,186,,,Ukraine
+2017,Pyatigorsk,,145,,,Russia
+2018,Dombay,,145,,,Russia
+2019,Arkhyz,,145,,,Russia
+2020,Yessentuki,,145,,,Russia
+2021,Yalta,,145,,,Ukraine
+2022,Simferopol,,145,,,Ukraine
+2023,Sevastopol,,145,,,Russia
+2023,Kerch,,186,,,Ukraine
+,Mariupol,,186,,,Ukraine
+,Novokuznetsk ,,145,,,Russia
+,Blagoveshchensk ,,145,,,Russia
+,Noyabrsk ,,145,,,Russia

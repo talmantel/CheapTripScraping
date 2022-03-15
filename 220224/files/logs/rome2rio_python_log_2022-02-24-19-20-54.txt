@@ -1,0 +1,4 @@
+2022-02-24 19:20:54.580 root         scrap_Rome2Rio INFO     logging into D:\docs\projects\CheapTripScraping\220224\files\logs\/rome2rio_python_log_2022-02-24-19-20-54.txt
+2022-02-24 19:20:54.580 root         scrap_Rome2Rio INFO     logging to : D:\docs\projects\CheapTripScraping\220224\files\logs\/rome2rio_python_log_2022-02-24-19-20-54.txt
+2022-02-24 19:20:54.581 root         scrap_Rome2Rio INFO     
+

@@ -1,0 +1,4 @@
+2021-10-18 20:39:37.484 root         scrap_Rome2Rio INFO     logging into /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-10-18-20-39-37.txt
+2021-10-18 20:39:37.484 root         scrap_Rome2Rio INFO     logging to : /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-10-18-20-39-37.txt
+2021-10-18 20:39:37.484 root         scrap_Rome2Rio INFO     
+

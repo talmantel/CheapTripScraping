@@ -1,0 +1,935 @@
+2021-11-19 12:08:56.007 root         scrap_Rome2Rio INFO     logging into /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-11-19-12-08-56.txt
+2021-11-19 12:08:56.007 root         scrap_Rome2Rio INFO     logging to : /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-11-19-12-08-56.txt
+2021-11-19 12:08:56.008 root         scrap_Rome2Rio INFO     
+
+2021-11-19 14:17:52.754 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('101', 'abz Airport')
+2021-11-19 14:17:52.764 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_abz Airport
+2021-11-19 14:17:52.765 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_abz Airport
+2021-11-19 14:17:52.765 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_abz Airport
+2021-11-19 14:17:52.765 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_abz Airport
+2021-11-19 14:17:52.765 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_abz Airport
+2021-11-19 14:17:52.765 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:52.765 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_abz Airport#0
+2021-11-19 14:17:53.021 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-abz Airport
+2021-11-19 14:17:53.021 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_abz Airport#1
+2021-11-19 14:17:53.022 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_abz Airport#2
+2021-11-19 14:17:53.022 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_abz Airport#3
+2021-11-19 14:17:53.022 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_abz Airport#4
+2021-11-19 14:17:53.026 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_abz Airport
+2021-11-19 14:17:53.034 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('102', 'agb Airport')
+2021-11-19 14:17:53.037 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_agb Airport
+2021-11-19 14:17:53.037 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_agb Airport
+2021-11-19 14:17:53.038 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_agb Airport
+2021-11-19 14:17:53.038 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_agb Airport
+2021-11-19 14:17:53.038 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_agb Airport
+2021-11-19 14:17:53.038 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_agb Airport
+2021-11-19 14:17:53.038 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_agb Airport
+2021-11-19 14:17:53.038 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_agb Airport#0
+2021-11-19 14:17:53.038 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_agb Airport#1
+2021-11-19 14:17:53.039 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_agb Airport#2
+2021-11-19 14:17:53.039 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_agb Airport#3
+2021-11-19 14:17:53.039 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_agb Airport#4
+2021-11-19 14:17:53.039 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_agb Airport#5
+2021-11-19 14:17:53.039 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_agb Airport#6
+2021-11-19 14:17:53.047 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_agb Airport
+2021-11-19 14:17:53.052 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('103', 'axd Airport')
+2021-11-19 14:17:53.056 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.056 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.056 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.056 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.056 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.057 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.057 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.057 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_axd Airport
+2021-11-19 14:17:53.057 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.057 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_axd Airport#0
+2021-11-19 14:17:53.057 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-axd Airport
+2021-11-19 14:17:53.057 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_axd Airport#1
+2021-11-19 14:17:53.058 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_axd Airport#2
+2021-11-19 14:17:53.058 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_axd Airport#3
+2021-11-19 14:17:53.058 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_axd Airport#4
+2021-11-19 14:17:53.058 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_axd Airport#5
+2021-11-19 14:17:53.058 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_axd Airport#6
+2021-11-19 14:17:53.058 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_axd Airport#7
+2021-11-19 14:17:53.065 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_axd Airport
+2021-11-19 14:17:53.069 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('104', 'ath Airport')
+2021-11-19 14:17:53.072 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ath Airport
+2021-11-19 14:17:53.072 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ath Airport
+2021-11-19 14:17:53.072 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ath Airport
+2021-11-19 14:17:53.072 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ath Airport
+2021-11-19 14:17:53.072 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ath Airport
+2021-11-19 14:17:53.072 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.072 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_ath Airport#0
+2021-11-19 14:17:53.073 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-ath Airport
+2021-11-19 14:17:53.073 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ath Airport#1
+2021-11-19 14:17:53.073 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ath Airport#2
+2021-11-19 14:17:53.073 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ath Airport#3
+2021-11-19 14:17:53.073 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ath Airport#4
+2021-11-19 14:17:53.078 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_ath Airport
+2021-11-19 14:17:53.081 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('105', 'alc Airport')
+2021-11-19 14:17:53.083 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_alc Airport
+2021-11-19 14:17:53.083 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_alc Airport
+2021-11-19 14:17:53.083 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_alc Airport
+2021-11-19 14:17:53.083 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_alc Airport
+2021-11-19 14:17:53.083 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.084 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_alc Airport#0
+2021-11-19 14:17:53.084 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-alc Airport
+2021-11-19 14:17:53.084 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_alc Airport#1
+2021-11-19 14:17:53.084 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_alc Airport#2
+2021-11-19 14:17:53.084 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_alc Airport#3
+2021-11-19 14:17:53.087 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_alc Airport
+2021-11-19 14:17:53.091 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('106', 'lei Airport')
+2021-11-19 14:17:53.093 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_lei Airport
+2021-11-19 14:17:53.093 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_lei Airport
+2021-11-19 14:17:53.093 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_lei Airport
+2021-11-19 14:17:53.094 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_lei Airport
+2021-11-19 14:17:53.094 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_lei Airport
+2021-11-19 14:17:53.094 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.094 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_lei Airport#0
+2021-11-19 14:17:53.094 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-lei Airport
+2021-11-19 14:17:53.094 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_lei Airport#1
+2021-11-19 14:17:53.094 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_lei Airport#2
+2021-11-19 14:17:53.095 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_lei Airport#3
+2021-11-19 14:17:53.095 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_lei Airport#4
+2021-11-19 14:17:53.098 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_lei Airport
+2021-11-19 14:17:53.104 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('107', 'aal Airport')
+2021-11-19 14:17:53.107 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aal Airport
+2021-11-19 14:17:53.107 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aal Airport
+2021-11-19 14:17:53.108 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aal Airport
+2021-11-19 14:17:53.108 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aal Airport
+2021-11-19 14:17:53.108 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aal Airport
+2021-11-19 14:17:53.108 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aal Airport
+2021-11-19 14:17:53.108 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aal Airport
+2021-11-19 14:17:53.108 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.108 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_aal Airport#0
+2021-11-19 14:17:53.290 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-aal Airport
+2021-11-19 14:17:53.290 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aal Airport#1
+2021-11-19 14:17:53.291 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aal Airport#2
+2021-11-19 14:17:53.291 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aal Airport#3
+2021-11-19 14:17:53.291 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aal Airport#4
+2021-11-19 14:17:53.291 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aal Airport#5
+2021-11-19 14:17:53.291 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aal Airport#6
+2021-11-19 14:17:53.299 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_aal Airport
+2021-11-19 14:17:53.305 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('108', 'aar Airport')
+2021-11-19 14:17:53.308 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aar Airport
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aar Airport
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aar Airport
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aar Airport
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aar Airport
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aar Airport
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aar Airport
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.309 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_aar Airport#0
+2021-11-19 14:17:53.458 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-aar Airport
+2021-11-19 14:17:53.458 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aar Airport#1
+2021-11-19 14:17:53.458 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aar Airport#2
+2021-11-19 14:17:53.458 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aar Airport#3
+2021-11-19 14:17:53.458 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aar Airport#4
+2021-11-19 14:17:53.458 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aar Airport#5
+2021-11-19 14:17:53.459 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aar Airport#6
+2021-11-19 14:17:53.466 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_aar Airport
+2021-11-19 14:17:53.474 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('109', 'aoi Airport')
+2021-11-19 14:17:53.477 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aoi Airport
+2021-11-19 14:17:53.477 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aoi Airport
+2021-11-19 14:17:53.477 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aoi Airport
+2021-11-19 14:17:53.477 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aoi Airport
+2021-11-19 14:17:53.477 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aoi Airport
+2021-11-19 14:17:53.478 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aoi Airport
+2021-11-19 14:17:53.478 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_aoi Airport
+2021-11-19 14:17:53.478 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.478 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_aoi Airport#0
+2021-11-19 14:17:53.478 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-aoi Airport
+2021-11-19 14:17:53.479 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aoi Airport#1
+2021-11-19 14:17:53.479 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aoi Airport#2
+2021-11-19 14:17:53.479 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aoi Airport#3
+2021-11-19 14:17:53.479 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aoi Airport#4
+2021-11-19 14:17:53.479 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aoi Airport#5
+2021-11-19 14:17:53.479 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_aoi Airport#6
+2021-11-19 14:17:53.485 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_aoi Airport
+2021-11-19 14:17:53.490 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('111', 'ams Airport')
+2021-11-19 14:17:53.492 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ams Airport
+2021-11-19 14:17:53.492 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ams Airport
+2021-11-19 14:17:53.492 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ams Airport
+2021-11-19 14:17:53.493 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ams Airport
+2021-11-19 14:17:53.493 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ams Airport
+2021-11-19 14:17:53.493 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.493 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_ams Airport#0
+2021-11-19 14:17:53.493 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-ams Airport
+2021-11-19 14:17:53.493 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ams Airport#1
+2021-11-19 14:17:53.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ams Airport#2
+2021-11-19 14:17:53.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ams Airport#3
+2021-11-19 14:17:53.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ams Airport#4
+2021-11-19 14:17:53.497 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_ams Airport
+2021-11-19 14:17:53.501 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('112', 'gzp Airport')
+2021-11-19 14:17:53.504 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_gzp Airport
+2021-11-19 14:17:53.504 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_gzp Airport
+2021-11-19 14:17:53.504 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_gzp Airport
+2021-11-19 14:17:53.504 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_gzp Airport
+2021-11-19 14:17:53.504 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_gzp Airport
+2021-11-19 14:17:53.504 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.505 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_gzp Airport#0
+2021-11-19 14:17:53.680 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-gzp Airport
+2021-11-19 14:17:53.681 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_gzp Airport#1
+2021-11-19 14:17:53.681 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_gzp Airport#2
+2021-11-19 14:17:53.681 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_gzp Airport#3
+2021-11-19 14:17:53.681 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_gzp Airport#4
+2021-11-19 14:17:53.685 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_gzp Airport
+2021-11-19 14:17:53.689 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('113', 'esb Airport')
+2021-11-19 14:17:53.692 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_esb Airport
+2021-11-19 14:17:53.692 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_esb Airport
+2021-11-19 14:17:53.692 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_esb Airport
+2021-11-19 14:17:53.693 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_esb Airport
+2021-11-19 14:17:53.693 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_esb Airport
+2021-11-19 14:17:53.693 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_esb Airport
+2021-11-19 14:17:53.693 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.693 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_esb Airport#0
+2021-11-19 14:17:53.824 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-esb Airport
+2021-11-19 14:17:53.824 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_esb Airport#1
+2021-11-19 14:17:53.824 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_esb Airport#2
+2021-11-19 14:17:53.825 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_esb Airport#3
+2021-11-19 14:17:53.825 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_esb Airport#4
+2021-11-19 14:17:53.825 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_esb Airport#5
+2021-11-19 14:17:53.830 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_esb Airport
+2021-11-19 14:17:53.833 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('114', 'ayt Airport')
+2021-11-19 14:17:53.836 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ayt Airport
+2021-11-19 14:17:53.836 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ayt Airport
+2021-11-19 14:17:53.836 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ayt Airport
+2021-11-19 14:17:53.836 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ayt Airport
+2021-11-19 14:17:53.836 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ayt Airport
+2021-11-19 14:17:53.836 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:53.836 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_ayt Airport#0
+2021-11-19 14:17:54.001 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-ayt Airport
+2021-11-19 14:17:54.001 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ayt Airport#1
+2021-11-19 14:17:54.002 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ayt Airport#2
+2021-11-19 14:17:54.002 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ayt Airport#3
+2021-11-19 14:17:54.002 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ayt Airport#4
+2021-11-19 14:17:54.005 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_ayt Airport
+2021-11-19 14:17:54.013 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('115', 'ach Airport')
+2021-11-19 14:17:54.016 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ach Airport
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ach Airport
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ach Airport
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ach Airport
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ach Airport
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ach Airport
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ach Airport
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ach Airport#0
+2021-11-19 14:17:54.017 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ach Airport#1
+2021-11-19 14:17:54.018 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ach Airport#2
+2021-11-19 14:17:54.018 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ach Airport#3
+2021-11-19 14:17:54.018 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ach Airport#4
+2021-11-19 14:17:54.018 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ach Airport#5
+2021-11-19 14:17:54.018 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ach Airport#6
+2021-11-19 14:17:54.026 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_ach Airport
+2021-11-19 14:17:54.031 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('116', 'bru Airport')
+2021-11-19 14:17:54.033 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.033 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.034 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.034 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.034 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.034 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.034 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bru Airport#0
+2021-11-19 14:17:54.034 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bru Airport
+2021-11-19 14:17:54.035 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#1
+2021-11-19 14:17:54.035 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#2
+2021-11-19 14:17:54.035 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#3
+2021-11-19 14:17:54.035 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#4
+2021-11-19 14:17:54.040 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bru Airport
+2021-11-19 14:17:54.045 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('116', 'crl Airport')
+2021-11-19 14:17:54.047 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.047 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.047 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.048 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.048 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.048 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.048 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_crl Airport#0
+2021-11-19 14:17:54.048 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-crl Airport
+2021-11-19 14:17:54.048 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#1
+2021-11-19 14:17:54.049 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#2
+2021-11-19 14:17:54.049 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#3
+2021-11-19 14:17:54.049 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#4
+2021-11-19 14:17:54.054 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_crl Airport
+2021-11-19 14:17:54.058 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('116', 'bru Airport')
+2021-11-19 14:17:54.061 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.061 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.061 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.061 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.061 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bru Airport
+2021-11-19 14:17:54.061 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.061 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bru Airport#0
+2021-11-19 14:17:54.062 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bru Airport
+2021-11-19 14:17:54.062 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#1
+2021-11-19 14:17:54.062 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#2
+2021-11-19 14:17:54.062 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#3
+2021-11-19 14:17:54.062 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bru Airport#4
+2021-11-19 14:17:54.067 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bru Airport
+2021-11-19 14:17:54.072 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('116', 'crl Airport')
+2021-11-19 14:17:54.074 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.075 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.075 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.075 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.075 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_crl Airport
+2021-11-19 14:17:54.075 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.075 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_crl Airport#0
+2021-11-19 14:17:54.075 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-crl Airport
+2021-11-19 14:17:54.076 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#1
+2021-11-19 14:17:54.076 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#2
+2021-11-19 14:17:54.076 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#3
+2021-11-19 14:17:54.076 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_crl Airport#4
+2021-11-19 14:17:54.081 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_crl Airport
+2021-11-19 14:17:54.087 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('117', 'boj Airport')
+2021-11-19 14:17:54.090 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boj Airport
+2021-11-19 14:17:54.090 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boj Airport
+2021-11-19 14:17:54.090 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boj Airport
+2021-11-19 14:17:54.090 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boj Airport
+2021-11-19 14:17:54.090 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boj Airport
+2021-11-19 14:17:54.090 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boj Airport
+2021-11-19 14:17:54.090 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boj Airport
+2021-11-19 14:17:54.091 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.091 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_boj Airport#0
+2021-11-19 14:17:54.265 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-boj Airport
+2021-11-19 14:17:54.265 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boj Airport#1
+2021-11-19 14:17:54.265 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boj Airport#2
+2021-11-19 14:17:54.265 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boj Airport#3
+2021-11-19 14:17:54.265 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boj Airport#4
+2021-11-19 14:17:54.266 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boj Airport#5
+2021-11-19 14:17:54.266 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boj Airport#6
+2021-11-19 14:17:54.272 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_boj Airport
+2021-11-19 14:17:54.278 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('118', 'bnx Airport')
+2021-11-19 14:17:54.282 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.282 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.282 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.282 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.282 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.282 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.282 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.283 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bnx Airport
+2021-11-19 14:17:54.283 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.283 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bnx Airport#0
+2021-11-19 14:17:54.454 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bnx Airport
+2021-11-19 14:17:54.455 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bnx Airport#1
+2021-11-19 14:17:54.455 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bnx Airport#2
+2021-11-19 14:17:54.455 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bnx Airport#3
+2021-11-19 14:17:54.455 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bnx Airport#4
+2021-11-19 14:17:54.455 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bnx Airport#5
+2021-11-19 14:17:54.455 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bnx Airport#6
+2021-11-19 14:17:54.455 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bnx Airport#7
+2021-11-19 14:17:54.464 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bnx Airport
+2021-11-19 14:17:54.468 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('119', 'bfs Airport')
+2021-11-19 14:17:54.470 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.470 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.470 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.470 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.470 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.471 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bfs Airport#0
+2021-11-19 14:17:54.621 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bfs Airport
+2021-11-19 14:17:54.621 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bfs Airport#1
+2021-11-19 14:17:54.621 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bfs Airport#2
+2021-11-19 14:17:54.622 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bfs Airport#3
+2021-11-19 14:17:54.625 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bfs Airport
+2021-11-19 14:17:54.629 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('119', 'bhd Airport')
+2021-11-19 14:17:54.631 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.631 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.631 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.631 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.631 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.631 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bhd Airport#0
+2021-11-19 14:17:54.766 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bhd Airport
+2021-11-19 14:17:54.766 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhd Airport#1
+2021-11-19 14:17:54.767 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhd Airport#2
+2021-11-19 14:17:54.767 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhd Airport#3
+2021-11-19 14:17:54.769 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bhd Airport
+2021-11-19 14:17:54.773 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('119', 'bfs Airport')
+2021-11-19 14:17:54.775 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.775 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.775 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.775 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bfs Airport
+2021-11-19 14:17:54.775 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.775 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bfs Airport#0
+2021-11-19 14:17:54.915 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bfs Airport
+2021-11-19 14:17:54.916 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bfs Airport#1
+2021-11-19 14:17:54.916 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bfs Airport#2
+2021-11-19 14:17:54.916 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bfs Airport#3
+2021-11-19 14:17:54.919 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bfs Airport
+2021-11-19 14:17:54.923 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('119', 'bhd Airport')
+2021-11-19 14:17:54.925 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.925 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.925 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.925 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhd Airport
+2021-11-19 14:17:54.925 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:54.925 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bhd Airport#0
+2021-11-19 14:17:55.072 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bhd Airport
+2021-11-19 14:17:55.072 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhd Airport#1
+2021-11-19 14:17:55.072 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhd Airport#2
+2021-11-19 14:17:55.072 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhd Airport#3
+2021-11-19 14:17:55.075 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bhd Airport
+2021-11-19 14:17:55.080 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('120', 'bhx Airport')
+2021-11-19 14:17:55.084 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhx Airport
+2021-11-19 14:17:55.084 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhx Airport
+2021-11-19 14:17:55.084 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhx Airport
+2021-11-19 14:17:55.084 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhx Airport
+2021-11-19 14:17:55.084 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhx Airport
+2021-11-19 14:17:55.084 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bhx Airport
+2021-11-19 14:17:55.085 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:55.085 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bhx Airport#0
+2021-11-19 14:17:55.213 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bhx Airport
+2021-11-19 14:17:55.214 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhx Airport#1
+2021-11-19 14:17:55.214 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhx Airport#2
+2021-11-19 14:17:55.214 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhx Airport#3
+2021-11-19 14:17:55.214 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhx Airport#4
+2021-11-19 14:17:55.214 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bhx Airport#5
+2021-11-19 14:17:55.220 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bhx Airport
+2021-11-19 14:17:55.224 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('121', 'boh Airport')
+2021-11-19 14:17:55.227 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boh Airport
+2021-11-19 14:17:55.227 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boh Airport
+2021-11-19 14:17:55.227 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boh Airport
+2021-11-19 14:17:55.227 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boh Airport
+2021-11-19 14:17:55.227 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boh Airport
+2021-11-19 14:17:55.227 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:55.227 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_boh Airport#0
+2021-11-19 14:17:55.370 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-boh Airport
+2021-11-19 14:17:55.370 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boh Airport#1
+2021-11-19 14:17:55.370 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boh Airport#2
+2021-11-19 14:17:55.370 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boh Airport#3
+2021-11-19 14:17:55.370 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boh Airport#4
+2021-11-19 14:17:55.375 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_boh Airport
+2021-11-19 14:17:55.381 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('122', 'brs Airport')
+2021-11-19 14:17:55.384 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brs Airport
+2021-11-19 14:17:55.384 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brs Airport
+2021-11-19 14:17:55.384 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brs Airport
+2021-11-19 14:17:55.384 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brs Airport
+2021-11-19 14:17:55.384 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brs Airport
+2021-11-19 14:17:55.385 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brs Airport
+2021-11-19 14:17:55.385 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:55.385 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_brs Airport#0
+2021-11-19 14:17:55.565 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-brs Airport
+2021-11-19 14:17:55.565 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brs Airport#1
+2021-11-19 14:17:55.566 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brs Airport#2
+2021-11-19 14:17:55.566 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brs Airport#3
+2021-11-19 14:17:55.566 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brs Airport#4
+2021-11-19 14:17:55.566 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brs Airport#5
+2021-11-19 14:17:55.572 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_brs Airport
+2021-11-19 14:17:55.578 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('123', 'bud Airport')
+2021-11-19 14:17:55.582 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bud Airport
+2021-11-19 14:17:55.582 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bud Airport
+2021-11-19 14:17:55.582 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bud Airport
+2021-11-19 14:17:55.582 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bud Airport
+2021-11-19 14:17:55.582 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bud Airport
+2021-11-19 14:17:55.582 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bud Airport
+2021-11-19 14:17:55.583 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bud Airport
+2021-11-19 14:17:55.583 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:55.583 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bud Airport#0
+2021-11-19 14:17:55.751 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bud Airport
+2021-11-19 14:17:55.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bud Airport#1
+2021-11-19 14:17:55.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bud Airport#2
+2021-11-19 14:17:55.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bud Airport#3
+2021-11-19 14:17:55.752 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bud Airport#4
+2021-11-19 14:17:55.752 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bud Airport#5
+2021-11-19 14:17:55.752 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bud Airport#6
+2021-11-19 14:17:55.759 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bud Airport
+2021-11-19 14:17:55.766 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('124', 'ber Airport')
+2021-11-19 14:17:55.769 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ber Airport
+2021-11-19 14:17:55.769 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ber Airport
+2021-11-19 14:17:55.769 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ber Airport
+2021-11-19 14:17:55.769 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ber Airport
+2021-11-19 14:17:55.769 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ber Airport
+2021-11-19 14:17:55.770 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ber Airport
+2021-11-19 14:17:55.770 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ber Airport
+2021-11-19 14:17:55.770 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:55.770 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_ber Airport#0
+2021-11-19 14:17:55.770 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-ber Airport
+2021-11-19 14:17:55.771 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ber Airport#1
+2021-11-19 14:17:55.771 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ber Airport#2
+2021-11-19 14:17:55.771 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ber Airport#3
+2021-11-19 14:17:55.771 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ber Airport#4
+2021-11-19 14:17:55.771 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ber Airport#5
+2021-11-19 14:17:55.771 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ber Airport#6
+2021-11-19 14:17:55.777 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_ber Airport
+2021-11-19 14:17:55.785 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('126', 'bre Airport')
+2021-11-19 14:17:55.787 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bre Airport
+2021-11-19 14:17:55.788 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bre Airport
+2021-11-19 14:17:55.788 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bre Airport
+2021-11-19 14:17:55.788 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bre Airport
+2021-11-19 14:17:55.788 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bre Airport
+2021-11-19 14:17:55.788 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bre Airport
+2021-11-19 14:17:55.788 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:55.788 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bre Airport#0
+2021-11-19 14:17:55.789 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bre Airport
+2021-11-19 14:17:55.789 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bre Airport#1
+2021-11-19 14:17:55.789 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bre Airport#2
+2021-11-19 14:17:55.789 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bre Airport#3
+2021-11-19 14:17:55.789 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bre Airport#4
+2021-11-19 14:17:55.789 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bre Airport#5
+2021-11-19 14:17:55.795 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bre Airport
+2021-11-19 14:17:55.800 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('127', 'bll Airport')
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bll Airport
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bll Airport
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bll Airport
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bll Airport
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bll Airport
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bll Airport
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bll Airport
+2021-11-19 14:17:55.804 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:55.805 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bll Airport#0
+2021-11-19 14:17:56.033 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bll Airport
+2021-11-19 14:17:56.033 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bll Airport#1
+2021-11-19 14:17:56.033 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bll Airport#2
+2021-11-19 14:17:56.033 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bll Airport#3
+2021-11-19 14:17:56.033 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bll Airport#4
+2021-11-19 14:17:56.033 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bll Airport#5
+2021-11-19 14:17:56.034 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bll Airport#6
+2021-11-19 14:17:56.041 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bll Airport
+2021-11-19 14:17:56.046 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('128', 'bcn Airport')
+2021-11-19 14:17:56.049 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bcn Airport
+2021-11-19 14:17:56.049 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bcn Airport
+2021-11-19 14:17:56.049 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bcn Airport
+2021-11-19 14:17:56.049 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bcn Airport
+2021-11-19 14:17:56.049 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bcn Airport
+2021-11-19 14:17:56.049 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bcn Airport
+2021-11-19 14:17:56.049 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.050 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bcn Airport#0
+2021-11-19 14:17:56.050 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bcn Airport
+2021-11-19 14:17:56.050 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bcn Airport#1
+2021-11-19 14:17:56.050 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bcn Airport#2
+2021-11-19 14:17:56.050 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bcn Airport#3
+2021-11-19 14:17:56.050 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bcn Airport#4
+2021-11-19 14:17:56.051 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bcn Airport#5
+2021-11-19 14:17:56.056 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bcn Airport
+2021-11-19 14:17:56.061 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('129', 'bio Airport')
+2021-11-19 14:17:56.063 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bio Airport
+2021-11-19 14:17:56.064 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bio Airport
+2021-11-19 14:17:56.064 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bio Airport
+2021-11-19 14:17:56.064 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bio Airport
+2021-11-19 14:17:56.064 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bio Airport
+2021-11-19 14:17:56.064 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.064 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bio Airport#0
+2021-11-19 14:17:56.065 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bio Airport
+2021-11-19 14:17:56.065 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bio Airport#1
+2021-11-19 14:17:56.065 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bio Airport#2
+2021-11-19 14:17:56.065 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bio Airport#3
+2021-11-19 14:17:56.065 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bio Airport#4
+2021-11-19 14:17:56.070 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bio Airport
+2021-11-19 14:17:56.084 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('130', 'blq Airport')
+2021-11-19 14:17:56.088 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_blq Airport
+2021-11-19 14:17:56.088 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_blq Airport
+2021-11-19 14:17:56.088 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_blq Airport
+2021-11-19 14:17:56.088 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_blq Airport
+2021-11-19 14:17:56.088 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_blq Airport
+2021-11-19 14:17:56.088 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_blq Airport
+2021-11-19 14:17:56.089 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_blq Airport
+2021-11-19 14:17:56.089 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.089 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_blq Airport#0
+2021-11-19 14:17:56.089 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-blq Airport
+2021-11-19 14:17:56.089 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_blq Airport#1
+2021-11-19 14:17:56.089 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_blq Airport#2
+2021-11-19 14:17:56.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_blq Airport#3
+2021-11-19 14:17:56.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_blq Airport#4
+2021-11-19 14:17:56.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_blq Airport#5
+2021-11-19 14:17:56.090 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_blq Airport#6
+2021-11-19 14:17:56.096 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_blq Airport
+2021-11-19 14:17:56.105 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('131', 'bgo Airport')
+2021-11-19 14:17:56.109 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bgo Airport
+2021-11-19 14:17:56.109 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bgo Airport
+2021-11-19 14:17:56.109 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bgo Airport
+2021-11-19 14:17:56.109 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bgo Airport
+2021-11-19 14:17:56.109 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bgo Airport
+2021-11-19 14:17:56.109 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bgo Airport
+2021-11-19 14:17:56.109 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bgo Airport
+2021-11-19 14:17:56.110 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.110 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bgo Airport#0
+2021-11-19 14:17:56.307 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bgo Airport
+2021-11-19 14:17:56.307 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bgo Airport#1
+2021-11-19 14:17:56.307 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bgo Airport#2
+2021-11-19 14:17:56.307 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bgo Airport#3
+2021-11-19 14:17:56.307 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bgo Airport#4
+2021-11-19 14:17:56.308 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bgo Airport#5
+2021-11-19 14:17:56.308 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bgo Airport#6
+2021-11-19 14:17:56.319 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bgo Airport
+2021-11-19 14:17:56.326 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('132', 'boo Airport')
+2021-11-19 14:17:56.329 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boo Airport
+2021-11-19 14:17:56.329 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boo Airport
+2021-11-19 14:17:56.330 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boo Airport
+2021-11-19 14:17:56.330 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boo Airport
+2021-11-19 14:17:56.330 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boo Airport
+2021-11-19 14:17:56.330 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boo Airport
+2021-11-19 14:17:56.330 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_boo Airport
+2021-11-19 14:17:56.330 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.330 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_boo Airport#0
+2021-11-19 14:17:56.494 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-boo Airport
+2021-11-19 14:17:56.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boo Airport#1
+2021-11-19 14:17:56.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boo Airport#2
+2021-11-19 14:17:56.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boo Airport#3
+2021-11-19 14:17:56.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boo Airport#4
+2021-11-19 14:17:56.494 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boo Airport#5
+2021-11-19 14:17:56.495 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_boo Airport#6
+2021-11-19 14:17:56.503 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_boo Airport
+2021-11-19 14:17:56.508 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('134', 'otp Airport')
+2021-11-19 14:17:56.511 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_otp Airport
+2021-11-19 14:17:56.511 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_otp Airport
+2021-11-19 14:17:56.511 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_otp Airport
+2021-11-19 14:17:56.512 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_otp Airport
+2021-11-19 14:17:56.512 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_otp Airport
+2021-11-19 14:17:56.512 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_otp Airport
+2021-11-19 14:17:56.512 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_otp Airport
+2021-11-19 14:17:56.512 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.512 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_otp Airport#0
+2021-11-19 14:17:56.675 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-otp Airport
+2021-11-19 14:17:56.675 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_otp Airport#1
+2021-11-19 14:17:56.676 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_otp Airport#2
+2021-11-19 14:17:56.676 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_otp Airport#3
+2021-11-19 14:17:56.676 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_otp Airport#4
+2021-11-19 14:17:56.676 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_otp Airport#5
+2021-11-19 14:17:56.676 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_otp Airport#6
+2021-11-19 14:17:56.682 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_otp Airport
+2021-11-19 14:17:56.689 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('135', 'beg Airport')
+2021-11-19 14:17:56.692 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.692 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.692 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.692 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.693 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.693 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.693 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.693 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.693 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_beg Airport#0
+2021-11-19 14:17:56.828 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-beg Airport
+2021-11-19 14:17:56.828 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#1
+2021-11-19 14:17:56.828 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#2
+2021-11-19 14:17:56.828 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#3
+2021-11-19 14:17:56.829 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#4
+2021-11-19 14:17:56.829 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#5
+2021-11-19 14:17:56.829 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#6
+2021-11-19 14:17:56.837 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_beg Airport
+2021-11-19 14:17:56.865 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('135', 'bjy Airport')
+2021-11-19 14:17:56.868 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#0
+2021-11-19 14:17:56.869 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#1
+2021-11-19 14:17:56.870 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#2
+2021-11-19 14:17:56.870 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#3
+2021-11-19 14:17:56.870 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#4
+2021-11-19 14:17:56.870 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#5
+2021-11-19 14:17:56.870 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#6
+2021-11-19 14:17:56.879 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bjy Airport
+2021-11-19 14:17:56.884 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('135', 'beg Airport')
+2021-11-19 14:17:56.888 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.888 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.888 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.888 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.888 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.888 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.888 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_beg Airport
+2021-11-19 14:17:56.889 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:56.889 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_beg Airport#0
+2021-11-19 14:17:57.034 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-beg Airport
+2021-11-19 14:17:57.034 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#1
+2021-11-19 14:17:57.034 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#2
+2021-11-19 14:17:57.034 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#3
+2021-11-19 14:17:57.034 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#4
+2021-11-19 14:17:57.035 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#5
+2021-11-19 14:17:57.035 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_beg Airport#6
+2021-11-19 14:17:57.043 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_beg Airport
+2021-11-19 14:17:57.048 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('135', 'bjy Airport')
+2021-11-19 14:17:57.052 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:57.052 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:57.052 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:57.052 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:57.052 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:57.052 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bjy Airport
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#0
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#1
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#2
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#3
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#4
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#5
+2021-11-19 14:17:57.053 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bjy Airport#6
+2021-11-19 14:17:57.062 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bjy Airport
+2021-11-19 14:17:57.072 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('136', 'bts Airport')
+2021-11-19 14:17:57.076 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.076 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.076 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.077 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.077 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.077 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.077 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.077 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bts Airport
+2021-11-19 14:17:57.077 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.077 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bts Airport#0
+2021-11-19 14:17:57.078 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bts Airport
+2021-11-19 14:17:57.078 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bts Airport#1
+2021-11-19 14:17:57.078 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bts Airport#2
+2021-11-19 14:17:57.078 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bts Airport#3
+2021-11-19 14:17:57.078 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bts Airport#4
+2021-11-19 14:17:57.078 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bts Airport#5
+2021-11-19 14:17:57.078 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bts Airport#6
+2021-11-19 14:17:57.079 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bts Airport#7
+2021-11-19 14:17:57.087 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bts Airport
+2021-11-19 14:17:57.093 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('137', 'bod Airport')
+2021-11-19 14:17:57.095 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bod Airport
+2021-11-19 14:17:57.096 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bod Airport
+2021-11-19 14:17:57.096 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bod Airport
+2021-11-19 14:17:57.096 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bod Airport
+2021-11-19 14:17:57.096 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bod Airport
+2021-11-19 14:17:57.096 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.096 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bod Airport#0
+2021-11-19 14:17:57.097 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bod Airport
+2021-11-19 14:17:57.097 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bod Airport#1
+2021-11-19 14:17:57.097 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bod Airport#2
+2021-11-19 14:17:57.097 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bod Airport#3
+2021-11-19 14:17:57.097 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bod Airport#4
+2021-11-19 14:17:57.103 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bod Airport
+2021-11-19 14:17:57.115 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('139', 'brq Airport')
+2021-11-19 14:17:57.119 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.119 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brq Airport
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#0
+2021-11-19 14:17:57.120 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#1
+2021-11-19 14:17:57.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#2
+2021-11-19 14:17:57.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#3
+2021-11-19 14:17:57.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#4
+2021-11-19 14:17:57.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#5
+2021-11-19 14:17:57.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#6
+2021-11-19 14:17:57.121 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brq Airport#7
+2021-11-19 14:17:57.133 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_brq Airport
+2021-11-19 14:17:57.139 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('140', 'bsl Airport')
+2021-11-19 14:17:57.141 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bsl Airport
+2021-11-19 14:17:57.141 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bsl Airport
+2021-11-19 14:17:57.141 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bsl Airport
+2021-11-19 14:17:57.141 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bsl Airport
+2021-11-19 14:17:57.142 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_bsl Airport
+2021-11-19 14:17:57.142 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.142 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_bsl Airport#0
+2021-11-19 14:17:57.142 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-bsl Airport
+2021-11-19 14:17:57.142 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bsl Airport#1
+2021-11-19 14:17:57.142 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bsl Airport#2
+2021-11-19 14:17:57.143 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bsl Airport#3
+2021-11-19 14:17:57.143 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_bsl Airport#4
+2021-11-19 14:17:57.146 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_bsl Airport
+2021-11-19 14:17:57.152 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('141', 'brn Airport')
+2021-11-19 14:17:57.155 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brn Airport
+2021-11-19 14:17:57.155 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brn Airport
+2021-11-19 14:17:57.155 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brn Airport
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brn Airport
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brn Airport
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_brn Airport
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brn Airport#0
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brn Airport#1
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brn Airport#2
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brn Airport#3
+2021-11-19 14:17:57.156 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brn Airport#4
+2021-11-19 14:17:57.157 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_brn Airport#5
+2021-11-19 14:17:57.163 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_brn Airport
+2021-11-19 14:17:57.170 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('142', 'cwl Airport')
+2021-11-19 14:17:57.173 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cwl Airport
+2021-11-19 14:17:57.173 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cwl Airport
+2021-11-19 14:17:57.173 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cwl Airport
+2021-11-19 14:17:57.173 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cwl Airport
+2021-11-19 14:17:57.173 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cwl Airport
+2021-11-19 14:17:57.173 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.173 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cwl Airport#0
+2021-11-19 14:17:57.311 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cwl Airport
+2021-11-19 14:17:57.312 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cwl Airport#1
+2021-11-19 14:17:57.312 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cwl Airport#2
+2021-11-19 14:17:57.312 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cwl Airport#3
+2021-11-19 14:17:57.312 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cwl Airport#4
+2021-11-19 14:17:57.318 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cwl Airport
+2021-11-19 14:17:57.325 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('145', 'cgn Airport')
+2021-11-19 14:17:57.327 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cgn Airport
+2021-11-19 14:17:57.327 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cgn Airport
+2021-11-19 14:17:57.327 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cgn Airport
+2021-11-19 14:17:57.328 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cgn Airport
+2021-11-19 14:17:57.328 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cgn Airport
+2021-11-19 14:17:57.328 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.328 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cgn Airport#0
+2021-11-19 14:17:57.328 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cgn Airport
+2021-11-19 14:17:57.328 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cgn Airport#1
+2021-11-19 14:17:57.329 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cgn Airport#2
+2021-11-19 14:17:57.329 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cgn Airport#3
+2021-11-19 14:17:57.329 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cgn Airport#4
+2021-11-19 14:17:57.333 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cgn Airport
+2021-11-19 14:17:57.338 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('146', 'cfu Airport')
+2021-11-19 14:17:57.341 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfu Airport
+2021-11-19 14:17:57.341 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfu Airport
+2021-11-19 14:17:57.342 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfu Airport
+2021-11-19 14:17:57.342 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfu Airport
+2021-11-19 14:17:57.342 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfu Airport
+2021-11-19 14:17:57.342 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfu Airport
+2021-11-19 14:17:57.342 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.342 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cfu Airport#0
+2021-11-19 14:17:57.343 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cfu Airport
+2021-11-19 14:17:57.343 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfu Airport#1
+2021-11-19 14:17:57.343 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfu Airport#2
+2021-11-19 14:17:57.343 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfu Airport#3
+2021-11-19 14:17:57.343 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfu Airport#4
+2021-11-19 14:17:57.343 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfu Airport#5
+2021-11-19 14:17:57.348 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cfu Airport
+2021-11-19 14:17:57.357 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('147', 'cph Airport')
+2021-11-19 14:17:57.360 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.361 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.361 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.361 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.361 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.361 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.361 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.361 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.362 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.362 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cph Airport#0
+2021-11-19 14:17:57.505 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cph Airport
+2021-11-19 14:17:57.505 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#1
+2021-11-19 14:17:57.505 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#2
+2021-11-19 14:17:57.506 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#3
+2021-11-19 14:17:57.506 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#4
+2021-11-19 14:17:57.506 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#5
+2021-11-19 14:17:57.506 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#6
+2021-11-19 14:17:57.506 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#7
+2021-11-19 14:17:57.514 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cph Airport
+2021-11-19 14:17:57.525 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('147', 'rke Airport')
+2021-11-19 14:17:57.529 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.529 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.529 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.529 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#0
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#1
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#2
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#3
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#4
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#5
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#6
+2021-11-19 14:17:57.530 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#7
+2021-11-19 14:17:57.541 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_rke Airport
+2021-11-19 14:17:57.548 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('147', 'cph Airport')
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cph Airport
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.552 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cph Airport#0
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cph Airport
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#1
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#2
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#3
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#4
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#5
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#6
+2021-11-19 14:17:57.731 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cph Airport#7
+2021-11-19 14:17:57.739 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cph Airport
+2021-11-19 14:17:57.746 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('147', 'rke Airport')
+2021-11-19 14:17:57.750 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.750 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.750 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_rke Airport
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#0
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#1
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#2
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#3
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#4
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#5
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#6
+2021-11-19 14:17:57.751 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_rke Airport#7
+2021-11-19 14:17:57.762 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_rke Airport
+2021-11-19 14:17:57.769 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('150', 'ork Airport')
+2021-11-19 14:17:57.771 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ork Airport
+2021-11-19 14:17:57.771 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ork Airport
+2021-11-19 14:17:57.771 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ork Airport
+2021-11-19 14:17:57.771 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ork Airport
+2021-11-19 14:17:57.771 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_ork Airport
+2021-11-19 14:17:57.771 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.771 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_ork Airport#0
+2021-11-19 14:17:57.772 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-ork Airport
+2021-11-19 14:17:57.772 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ork Airport#1
+2021-11-19 14:17:57.772 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ork Airport#2
+2021-11-19 14:17:57.772 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ork Airport#3
+2021-11-19 14:17:57.772 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_ork Airport#4
+2021-11-19 14:17:57.777 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_ork Airport
+2021-11-19 14:17:57.782 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('151', 'cag Airport')
+2021-11-19 14:17:57.783 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cag Airport
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cag Airport
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cag Airport
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cag Airport
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cag Airport#0
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cag Airport
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cag Airport#1
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cag Airport#2
+2021-11-19 14:17:57.784 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cag Airport#3
+2021-11-19 14:17:57.788 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cag Airport
+2021-11-19 14:17:57.793 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('152', 'cta Airport')
+2021-11-19 14:17:57.795 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cta Airport
+2021-11-19 14:17:57.795 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cta Airport
+2021-11-19 14:17:57.795 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cta Airport
+2021-11-19 14:17:57.795 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cta Airport
+2021-11-19 14:17:57.795 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cta Airport
+2021-11-19 14:17:57.795 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.795 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cta Airport#0
+2021-11-19 14:17:57.796 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cta Airport
+2021-11-19 14:17:57.796 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cta Airport#1
+2021-11-19 14:17:57.796 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cta Airport#2
+2021-11-19 14:17:57.796 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cta Airport#3
+2021-11-19 14:17:57.796 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cta Airport#4
+2021-11-19 14:17:57.800 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cta Airport
+2021-11-19 14:17:57.806 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('153', 'clj Airport')
+2021-11-19 14:17:57.809 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_clj Airport
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_clj Airport
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_clj Airport
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_clj Airport
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_clj Airport
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_clj Airport
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_clj Airport
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.810 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_clj Airport#0
+2021-11-19 14:17:57.961 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-clj Airport
+2021-11-19 14:17:57.961 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_clj Airport#1
+2021-11-19 14:17:57.961 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_clj Airport#2
+2021-11-19 14:17:57.961 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_clj Airport#3
+2021-11-19 14:17:57.961 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_clj Airport#4
+2021-11-19 14:17:57.961 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_clj Airport#5
+2021-11-19 14:17:57.961 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_clj Airport#6
+2021-11-19 14:17:57.969 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_clj Airport
+2021-11-19 14:17:57.974 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('154', 'cfe Airport')
+2021-11-19 14:17:57.976 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfe Airport
+2021-11-19 14:17:57.976 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfe Airport
+2021-11-19 14:17:57.976 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfe Airport
+2021-11-19 14:17:57.977 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cfe Airport
+2021-11-19 14:17:57.977 root         scrap_Rome2Rio INFO     total transits: 1
+2021-11-19 14:17:57.977 root         scrap_Rome2Rio INFO     extracing and loading data for trip anr Airport_cfe Airport#0
+2021-11-19 14:17:57.977 root         scrap_Rome2Rio INFO     total of 1 items were extracted and loaded for trip anr Airport-cfe Airport
+2021-11-19 14:17:57.977 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfe Airport#1
+2021-11-19 14:17:57.977 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfe Airport#2
+2021-11-19 14:17:57.977 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cfe Airport#3
+2021-11-19 14:17:57.980 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cfe Airport
+2021-11-19 14:17:57.988 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('155', 'cmf Airport')
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cmf Airport
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cmf Airport
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cmf Airport
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cmf Airport
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cmf Airport
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     exrtracting transists info for trip: anr Airport_cmf Airport
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cmf Airport#0
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cmf Airport#1
+2021-11-19 14:17:57.991 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cmf Airport#2
+2021-11-19 14:17:57.992 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cmf Airport#3
+2021-11-19 14:17:57.992 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cmf Airport#4
+2021-11-19 14:17:57.992 root         scrap_Rome2Rio INFO     skipping writing trip to a json file cause it not matches condition anr Airport_cmf Airport#5
+2021-11-19 14:17:57.999 root         scrap_Rome2Rio INFO     parsing hierarchy of trip anr Airport_cmf Airport
+2021-11-19 14:17:58.007 root         scrap_Rome2Rio INFO     parsing hierarchy of trip from ('100', 'anr Airport') to ('156', 'cfr Airport')

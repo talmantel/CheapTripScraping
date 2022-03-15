@@ -1,0 +1,35 @@
+2021-11-14 07:13:43.681 root         eran INFO     logging into /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-11-14-07-13-43.txt
+2021-11-14 07:13:43.681 root         eran INFO     logging to : /home/ubuntu/proj/for_python/cheaptrip/files/logs//rome2rio_python_log_2021-11-14-07-13-43.txt
+2021-11-14 07:13:43.681 root         eran INFO     
+
+2021-11-14 08:10:27.151 root         eran INFO     parsing hierarchy of trip from ('9', 'tas Airport') to ('10', 'sah Airport')
+2021-11-14 08:10:27.153 root         eran INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-11-14 08:10:27.154 root         eran INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-11-14 08:10:27.154 root         eran INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-11-14 08:10:27.154 root         eran INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-11-14 08:10:27.154 root         eran INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-11-14 08:10:27.154 root         eran INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-11-14 08:10:27.155 root         eran INFO     exrtracting transists info for trip: tas Airport_sah Airport
+2021-11-14 08:10:27.155 root         eran INFO     total transits: 1
+2021-11-14 08:10:27.155 root         eran INFO     extracing and loading data for trip tas Airport_sah Airport#0
+2021-11-14 08:10:27.335 root         eran INFO     total of 1 items were extracted and loaded for trip tas Airport-sah Airport
+2021-11-14 08:10:27.336 root         eran INFO     total transits: 1
+2021-11-14 08:10:27.336 root         eran INFO     extracing and loading data for trip tas Airport_sah Airport#1
+2021-11-14 08:10:27.485 root         eran INFO     total of 2 items were extracted and loaded for trip tas Airport-sah Airport
+2021-11-14 08:10:27.485 root         eran INFO     total transits: 1
+2021-11-14 08:10:27.485 root         eran INFO     extracing and loading data for trip tas Airport_sah Airport#2
+2021-11-14 08:10:27.621 root         eran INFO     total of 3 items were extracted and loaded for trip tas Airport-sah Airport
+2021-11-14 08:10:27.622 root         eran INFO     total transits: 1
+2021-11-14 08:10:27.622 root         eran INFO     extracing and loading data for trip tas Airport_sah Airport#3
+2021-11-14 08:10:27.762 root         eran INFO     total of 4 items were extracted and loaded for trip tas Airport-sah Airport
+2021-11-14 08:10:27.763 root         eran INFO     total transits: 1
+2021-11-14 08:10:27.763 root         eran INFO     extracing and loading data for trip tas Airport_sah Airport#4
+2021-11-14 08:10:27.903 root         eran INFO     total of 5 items were extracted and loaded for trip tas Airport-sah Airport
+2021-11-14 08:10:27.904 root         eran INFO     total transits: 1
+2021-11-14 08:10:27.904 root         eran INFO     extracing and loading data for trip tas Airport_sah Airport#5
+2021-11-14 08:10:28.068 root         eran INFO     total of 6 items were extracted and loaded for trip tas Airport-sah Airport
+2021-11-14 08:10:28.068 root         eran INFO     total transits: 1
+2021-11-14 08:10:28.069 root         eran INFO     extracing and loading data for trip tas Airport_sah Airport#6
+2021-11-14 08:10:28.202 root         eran INFO     total of 7 items were extracted and loaded for trip tas Airport-sah Airport
+2021-11-14 08:10:28.205 root         eran INFO     parsing hierarchy of trip tas Airport_sah Airport
+2021-11-14 08:10:28.208 root         eran INFO     parsing hierarchy of trip from ('9', 'tas Airport') to ('11', 'pnh Airport')

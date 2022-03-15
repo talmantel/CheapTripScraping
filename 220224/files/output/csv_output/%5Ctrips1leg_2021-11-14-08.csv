@@ -1,0 +1,8 @@
+from,to,transportation_type_id,transportation_type,price_unit,unit,price_euro,duration_minutes
+9,10,1,flight,280,USD,244.58,1415.0
+9,10,1,flight,380,USD,331.94,625.0
+9,10,1,flight,150,USD,131.03,735.0
+9,10,1,flight,190,USD,165.97,725.0
+9,10,1,flight,370,USD,323.2,720.0
+9,10,1,flight,150,USD,131.03,865.0
+9,10,1,flight,250,USD,218.38,840.0

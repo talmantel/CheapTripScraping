@@ -1,0 +1,378 @@
+id,city,airplanCode1,airplanCode2,id2,alt,lng,stateCode,country
+100,Antwerp,anr,,17,51.2211,4.3997,,Belgium
+101,Aberdeen,abz,,188,57.15,-2.11,,United Kingdom
+102,Augsburg,agb,,65,48.3717,10.8983,,Germany
+103,Alexandroupolis,axd,,67,40.85,25.8667,,Greece
+104,Athens,ath,,67,37.9794,23.7161,,Greece
+105,Alicante,alc,,166,38.3453,-0.4831,,Spain
+106,Almeria,lei,,166,36.8414197,-2.4628135,,Spain
+107,Aalborg,aal,,47,57.0337,9.9166,,Denmark
+108,Aarhus,aar,,47,56.1572,10.2107,,Denmark
+109,Ancona,aoi,,84,43.6167,13.5167,,Italy
+111,Amsterdam,ams,,124,52.35,4.9166,,Netherlands
+112,Alanya,gzp,,182,36.5436,31.9997,,Turkey
+113,Ankara,esb,,182,39.93,32.85,,Turkey
+114,Antalya,ayt,,182,36.9081,30.6956,,Turkey
+115,Altenrhein,ach,,171,47.4903839,9.5540541,,Switzerland
+116,Brussels,brus,"bru,crl",17,50.8467,4.3517,,Belgium
+117,Burgas,boj,,26,42.5,27.4667,,Bulgaria
+118,Banja Luka,bnx,,22,44.7667,17.1833,,Bosnia and Herzegovina
+119,Belfast,belf,"bfs,bhd",188,54.5964,-5.93,,United Kingdom
+120,Birmingham,bhx,,188,52.48,-1.9025,,United Kingdom
+121,Bournemouth,boh,,188,50.72,-1.88,,United Kingdom
+122,Bristol,brs,,188,51.45,-2.5833,,United Kingdom
+123,Budapest,bud,,76,47.4983,19.0408,,Hungary
+124,Berlin,ber,,65,52.5167,13.3833,,Germany
+126,Bremen,bre,,65,53.1153,8.7975,,Germany
+127,Billund,bll,,47,55.7309428,9.1159357,,Denmark
+128,Barcelona,bcn,,166,41.3825,2.1769,,Spain
+129,Bilbao,bio,,166,43.2622,-2.9533,,Spain
+130,Bologna,blq,,84,44.4939,11.3428,,Italy
+131,Bergen,bgo,,131,60.3925,5.3233,,Norway
+132,Bodo,boo,,131,67.2827,14.3751,,Norway
+134,Bucharest,otp,,144,44.4,26.0833,,Romania
+135,Belgrade,beli,"beg,bjy",155,44.8167,20.4667,,Serbia
+136,Bratislava,bts,,159,48.1447,17.1128,,Slovakia
+137,Bordeaux,bod,,61,44.84,-0.58,,France
+139,Brno,brq,,45,49.1953,16.6083,,Czech Republic
+140,Basel,bsl,,171,47.5606,7.5906,,Switzerland
+141,Bern,brn,,171,46.948,7.4474,,Switzerland
+142,Cardiff,cwl,,188,51.4816546,-3.1791934,,United Kingdom
+145,Cologne,cgn,,65,50.9422,6.9578,,Germany
+146,Corfu,cfu,,67,39.591337,19.8596189,,Greece
+147,Copenhagen,cope,"cph,rke",47,55.6786,12.5635,,Denmark
+150,Cork,ork,,82,51.9,-8.4731,,Ireland
+151,Cagliari,cag,,84,39.2224,9.104,,Italy
+152,Catania,cta,,84,37.5027,15.0873,,Italy
+153,Cluj-Napoca,clj,,144,46.78,23.5594,,Romania
+154,Clermont-Ferrand,cfe,,61,45.7831,3.0824,,France
+155,Chambery-Savoie,cmf,,61,45.57,5.9118,,France
+156,Cherbourg,cfr,,61,49.6504,-1.65,,France
+158,Doncaster,dsa,,188,53.515,-1.133,,United Kingdom
+159,Dortmund,dtm,,65,51.5139,7.4653,,Germany
+160,Dresden,drs,,65,51.0493,13.7384,,Germany
+161,Duesseldorf,duss,"dus,nrn,mgl",65,51.2254018,6.7763137,,Germany
+162,Dublin,dub,,82,53.3425,-6.2658,,Ireland
+163,Dalaman,dlm,,182,36.8125748,28.8831401,,Turkey
+164,Dubrovnik,dbv,,42,42.6403,18.1083,,Croatia
+165,East Midlands,ema,,188,52.7965611,-0.6717948,,United Kingdom
+166,Edinburgh,edi,,188,55.953,-3.189,,United Kingdom
+167,Exeter,ext,,188,50.7167,-3.5333,,United Kingdom
+169,Esbjerg,ebj,,47,55.467,8.45,,Denmark
+171,Eilat,etm,"etm,vda",83,29.5569348,34.9497949,,Israel
+172,Eindhoven,ein,,124,51.43,5.5,,Netherlands
+174,Frankfurt,fran,"fra,hhn",65,50.1136,8.6797,,Germany
+175,Friedrichshafen,fdh,,65,47.6542,9.4792,,Germany
+176,Fuerteventura,fue,,166,28.4003769,-14.0048697,,Spain
+177,Florence,flr,,84,43.7714,11.2542,,Italy
+178,Floro,fro,,131,61.5986,5.0172,,Norway
+179,Faro,fao,,142,37.0167,-7.9333,,Portugal
+180,Funchal,fnc,,142,32.65,-16.9167,,Portugal
+181,Graz,grz,,10,47.0667,15.4333,,Austria
+183,Guernsey,gci,,188,57.1669969,-7.374733,,United Kingdom
+184,Glasgow,glas,"gla,pik",188,55.8609,-4.2514,,United Kingdom
+185,Gloucestershire,glo,,188,51.7643786,-2.1880662,,United Kingdom
+186,Granada,grx,,166,37.1781,-3.6008,,Spain
+187,Girona,gro,,166,41.9833,2.8167,,Spain
+189,Genoa,goa,,84,44.4072,8.934,,Italy
+190,Groningen,grq,,124,53.2204,6.58,,Netherlands
+191,Gdansk,gdn,,141,54.3667,18.6333,,Poland
+192,Geneva,gva,,171,46.2,6.15,,Switzerland
+193,Gothenburg,goth,"got,gse",170,57.6717,11.981,,Sweden
+194,Humberside,huy,,188,53.5713963,-0.3534607,,United Kingdom
+196,Hamburg,hamb,"ham,lbc",65,53.55,10,,Germany
+197,Hannover,haj,,65,52.3744,9.7386,,Germany
+200,Heraklion,her,,67,35.3400127,25.1343475,,Greece
+201,Helsinki,hel,,60,60.1756,24.9342,,Finland
+202,Innsbruck,inn,,10,47.2683,11.3933,,Austria
+203,Inverness,inv,,188,57.4781,-4.2233,,United Kingdom
+204,Debrecen,deb,,76,47.53,21.6392,,Hungary
+205,Ibiza,ibz,,166,38.9089,1.4328,,Spain
+206,Izmir,izmi,"adb,igl",182,38.4147331,27.1434119,,Turkey
+207,Istanbul,ista,"ist,saw",182,41.01,28.9603,,Turkey
+208,Jonkoping,jkg,,170,57.7825634,14.165719,,Sweden
+209,Klagenfurt,klu,,10,46.6167,14.3,,Austria
+210,Karlsruhe Baden-Baden,fkb,,65,49.0167,8.4,,Germany
+211,Kortrijk,kjk,,17,50.8276429,3.2659884,,Belgium
+212,Kaunas,kun,,101,54.9,23.9333,,Lithuania
+213,Katowice,ktw,,141,50.25,19,,Poland
+214,Krakow,krk,,141,50.0614,19.9372,,Poland
+215,Kosice,ksc,,159,48.7172272,21.2496774,,Slovakia
+216,Karlovy Vary,klv,,45,50.2306,12.8725,,Czech Republic
+217,Karlstad,ksd,,170,59.3671,13.4999,,Sweden
+218,Kuressaare,ure,,56,58.2533,22.4861,,Estonia
+219,Linz,lnz,,10,48.3,14.2833,,Austria
+220,Liege,lgg,,17,50.625,5.5907,,Belgium
+221,Land's End,leq,,188,50.0662633,-5.7148222,,United Kingdom
+222,Liverpool,lpl,,188,53.4,-2.9833,,United Kingdom
+224,Leeds,lba,,188,53.7997,-1.5492,,United Kingdom
+225,London,lond,"ltn,lhr,lgw,stn,lcy,sen",188,51.5072,-0.1275,,United Kingdom
+227,Lanzarote,ace,,166,29.013,-13.634,,Spain
+228,Las Palmas de Gran Canaria,lpa,,166,28.09973,-15.41343,,Spain
+230,Lamezia Terme,suf,,84,38.9645069,16.3021451,,Italy
+231,Larnaca,lca,,44,34.9233,33.6305,,Cyprus
+232,Liepaja,lpx,,95,56.5083,21.0111,,Latvia
+233,Luxembourg,lux,,102,49.6106,6.1328,,Luxembourg
+235,Lisbon,lis,,142,38.7452,-9.1604,,Portugal
+236,Ljubljana,lju,,160,46.05,14.5167,,Slovenia
+237,Lappeenranta,lpp,,60,61.0583,28.1861,,Finland
+239,Lille,lil,,61,50.6278,3.0583,,France
+240,Lyon,lyon,"lys,lyn",61,45.76,4.84,,France
+241,Lugano,lug,,171,46.0103,8.9625,,Switzerland
+242,Lulea,lla,,170,65.5831187,22.1459535,,Sweden
+243,Manchester,man,,188,53.4794,-2.2453,,United Kingdom
+244,Mannheim,mhg,,65,49.4878,8.4661,,Germany
+245,Memmingen,fmm,,65,47.9878,10.1811,,Germany
+246,Muenster,fmo,,65,51.9625101,7.6251879,,Germany
+247,Munich,muc,,65,48.1372,11.5755,,Germany
+248,Madrid,mad,,166,40.4189,-3.6919,,Spain
+249,Malaga,agp,,166,36.7213028,-4.4216366,,Spain
+250,Mahon,mah,,82,51.8922026,-8.4042476,,Ireland
+251,Murcia,rmu,,166,37.9866,-1.1415,,Spain
+252,Milan,mila,"mxp, bgy, lin",84,45.4669,9.19,,Italy
+253,Malta,mla,,108,42.9853,-73.7879,,Malta
+255,Maastricht,mst,,124,50.853,5.677,,Netherlands
+257,Milas,bjv,,182,37.2745504,27.8085702,,Turkey
+259,Marseille,mrs,,61,43.2964,5.37,,France
+260,Metz,etz,,61,49.1203,6.1778,,France
+261,Montpellier,mpl,,61,43.6119,3.8772,,France
+262,Malmo,mmx,,170,55.6052931,13.0001566,,Sweden
+263,Norwich,nwi,,188,52.63,1.297,,United Kingdom
+264,Newcastle,ncl,,188,55.0077,-1.6578,,United Kingdom
+265,Newquay,nqy,,188,50.412,-5.0757,,United Kingdom
+266,Nuremberg,nue,,65,49.4528,11.0778,,Germany
+267,Naples,nap,,84,40.8333,14.25,,Italy
+268,Constanta,cnd,,144,44.1733,28.6383,,Romania
+269,Nantes,nte,,61,47.2181,-1.5528,,France
+270,Nice,nce,,61,43.7034,7.2663,,France
+271,Norrkoping,nrk,,170,58.5909124,16.1903511,,Sweden
+272,Ostend,ost,,17,51.2258565,2.919496,,Belgium
+273,Alderney,aci,,188,49.72837,-2.2254277,,United Kingdom
+274,Oviedo,ovd,,166,43.3634,-5.8423,,Spain
+275,Olbia,olb,,84,40.9143,9.5151,,Italy
+276,Ohrid,ohd,,130,41.1169,20.8019,,North Macedonia
+277,Oslo,oslo,"osl, trf",131,59.9111,10.7528,,Norway
+279,Ostrava,osr,,45,49.8356,18.2925,,Czech Republic
+280,Plovdiv,pdv,,26,42.1433,24.7489,,Bulgaria
+281,Plymouth,plh,,188,50.3714,-4.1422,,United Kingdom
+282,Paderborn,pad,,65,51.7167,8.7667,,Germany
+283,Rostock,rlg,,65,54.0833,12.1333,,Germany
+284,Palma Majorca,pmi,,166,39.568631,2.6482482,,Spain
+285,Palermo,pmo,,84,38.1157,13.3613,,Italy
+286,Pescara,psr,,84,42.4643,14.2142,,Italy
+287,Pisa,psa,,84,43.7167,10.4,,Italy
+288,Paphos,pfo,,44,34.7761,32.4265,,Cyprus
+289,Palanga,plg,,101,55.9167,21.0639,,Lithuania
+290,Ponta Delgada,pdl,,142,37.74,-25.67,,Portugal
+291,Porto,opo,,142,41.1495,-8.6108,,Portugal
+292,Poprad,tat,,159,49.05,20.3,,Slovakia
+293,Paris,pari,"cdg, ory, bva, lbg",61,48.8566,2.3522,,France
+294,Pula,puy,,42,44.8667,13.8333,,Croatia
+295,Podgorica,tgd,,117,42.4397,19.2661,,Montenegro
+296,Pardubice,ped,,45,50.0386,15.7792,,Czech Republic
+297,Prague,prg,,45,50.0833,14.4167,,Czech Republic
+299,Rhodes,rho,,67,36.4412,28.2225,,Greece
+300,Reykjavik,reyk,"kef, rkv",77,64.145981,-21.9422367,,Iceland
+301,Reus,reu,,166,41.1555564,1.1076133,,Spain
+302,Rijeka,rjk,,42,45.3297,14.4322,,Croatia
+303,Rome,rome,"fco, cia",84,41.8931,12.4828,,Italy
+304,Rimini,rmi,,84,44.0594,12.5683,,Italy
+305,Riga,rix,,95,56.9475,24.1069,,Latvia
+306,Rotterdam,rtm,,124,51.92,4.48,,Netherlands
+307,Ronneby,rnb,,170,56.3,15.283333,,Sweden
+308,Salzburg,szg,,10,47.7972,13.0477,,Austria
+309,Sofia,sof,,26,42.6975,23.3241,,Bulgaria
+310,Sarajevo,sjj,,22,43.8667,18.4167,,Bosnia and Herzegovina
+311,Southampton,sou,,188,50.9,-1.4,,United Kingdom
+312,Swansea,sws,,188,41.7571,-71.212,,United Kingdom
+314,Poznan,poz,,141,52.4,16.9167,,Poland
+315,Saarbruecken,saar,"scn, zqw",65,49.234362,6.996379,,Germany
+316,Stuttgart,str,,65,48.7761,9.1775,,Germany
+317,Santorini,jtr,,67,36.4071112,25.4566637,,Greece
+318,Shannon,snn,,82,52.7137,-8.8686,,Ireland
+319,Salamanca,slm,,166,20.5703,-101.1972,,Spain
+320,Santiago de Compostela,scq,,166,42.8805,-8.5457,,Spain
+321,Sevilla,svq,,166,37.3828,-5.9731,,Spain
+323,Skopje,skp,,130,41.9833,21.4333,,North Macedonia
+325,Stavanger,svg,,131,58.9701,5.7333,,Norway
+326,Strasbourg,sxb,,61,48.5833,7.7458,,France
+327,Split,spu,,42,43.51,16.45,,Croatia
+329,Stockholm,stoc,"arn, bma, nyo, bst",170,59.3294,18.0686,,Sweden
+330,Tirana,tia,,2,41.33,19.82,,Albania
+331,Thessaloniki,skg,,67,40.6333,22.95,,Greece
+332,Tenerife,tene,"tfs, tfn",166,28.217,-16.589,,Spain
+334,Trieste,trs,,84,45.6361,13.8042,,Italy
+335,Turin,trn,,84,45.0667,7.7,,Italy
+336,Tel-Aviv,tlv,,83,32.0833,34.8,,Israel
+337,Terceira Island,ter,,142,38.7211653,-27.217639,,Portugal
+338,Timisoara,tsr,,144,45.7597,21.23,,Romania
+339,Trabzon,tzx,,182,41.005,39.7225,,Turkey
+340,Tampere,tmp,,60,61.4981,23.7608,,Finland
+341,Turku,tku,,60,60.4517,22.27,,Finland
+342,Toulouse,tls,,61,43.6045,1.444,,France
+343,Tivat,tiv,,117,42.43,18.7,,Montenegro
+345,Tallinn,tll,,56,59.4372,24.745,,Estonia
+346,Tartu,tay,,56,58.38,26.7225,,Estonia
+347,Umea,ume,,170,63.8256568,20.2630745,,Sweden
+348,Vienna,vie,,10,48.2083,16.3731,,Austria
+349,Varna,var,,26,43.2078,27.9169,,Bulgaria
+351,Valencia,vlc,,166,10.1667,-68,,Spain
+352,Valladolid,vll,,166,41.652,-4.7286,,Spain
+353,Venice,veni,"vce, tsf",84,45.4397,12.3319,,Italy
+354,Verona,vero,"vrn, vbs",84,45.4386,10.9928,,Italy
+356,Vilnius,vno,,101,54.6833,25.2833,,Lithuania
+357,Iasi,ias,,144,47.1622,27.5889,,Romania
+358,Vaxjo,vxo,,170,56.8787183,14.8094385,,Sweden
+359,Visby,vby,,170,57.629,18.3071,,Sweden
+361,Weeze,nrn,,65,51.6267298,6.2011559,,Germany
+362,Westerland,gwt,,65,54.91,8.3075,,Germany
+364,Warsaw,waw,"waw, wmi",141,52.2167,21.0333,,Poland
+365,Wroclaw,wro,,141,51.1077,17.0353,,Poland
+366,Zweibruecken,zqw,,65,49.248655,7.3641981,,Germany
+367,Zaragoza,zaz,,166,41.6483,-0.883,,Spain
+368,Zagreb,zag,,42,45.8,15.95,,Croatia
+369,Zadar,zad,,42,44.1167,15.2167,,Croatia
+370,Zurich,zrh,,171,47.3744489,8.5410422,,Switzerland
+371,Chisinau,kiv,,114,47.0056,28.8575,,Moldova
+372,Minsk,msqa,"msq, mhp",16,53.9022,27.5618,,Belarus
+373,Gomel,gme,,16,52.4417,30.9833,,Belarus
+374,Brest,bqt,,16,52.0847,23.6569,,Belarus
+375,Vitebsk,vtb,,16,55.1833,30.1667,,Belarus
+376,Hrodna,gna,,16,53.6667,23.8167,,Belarus
+377,Kiev,kiev,"kbp, iev",186,50.4500336,30.5241361,,Ukraine
+378,Kherson,khe,,186,46.6333,32.6,,Ukraine
+379,Chernivtsi,cwc,,186,48.2908,25.9344,,Ukraine
+380,Odesa,ods,,186,46.4775,30.7326,,Ukraine
+381,Zaporizhia,ozh,,186,47.8507859,35.1182867,,Ukraine
+382,Vinnytsia,vin,,186,49.2372,28.4672,,Ukraine
+383,Lviv,lwo,,186,49.8419,24.0315,,Ukraine
+384,Dnipro,dnk,,186,48.45,34.9833,,Ukraine
+385,Kharkiv,hrk,,186,50,36.2292,,Ukraine
+386,Ivano-Frankivsk,ifo,,186,48.9228,24.7106,,Ukraine
+387,Moscow,mosc,"svo, dme, vko, osf, zia",145,55.7558,37.6178,,Russia
+388,Saint Petersburg,led,,145,59.95,30.3167,,Russia
+389,Sochi,aer,,145,43.5853,39.7203,,Russia
+390,Novosibirsk,ovb,,145,55.0333,82.9167,,Russia
+391,Ekaterinburg,svx,,145,56.8356,60.6128,,Russia
+392,Krasnodar,krr,,145,45.0333,38.9833,,Russia
+393,Anapa,aaq,,145,44.8944,37.3167,,Russia
+394,Kaliningrad,kgd,,145,54.7167,20.5,,Russia
+396,Samara,kuf,,145,53.1833,50.1167,,Russia
+397,Irkutsk,ikt,,145,52.2833,104.3,,Russia
+398,Krasnoyarsk,kja,,145,56.0167,92.8667,,Russia
+399,Ufa,ufa,,145,54.7333,55.9667,,Russia
+400,Kazan,kzn,,145,55.7908,49.1144,,Russia
+401,Mineralnye Vody,mrv,,145,44.2008,43.1125,,Russia
+402,Tyumen,tjm,,145,57.15,65.5333,,Russia
+403,Khabarovsk,khv,,145,48.4833,135.0667,,Russia
+404,Surgut,sgc,,145,61.25,73.4333,,Russia
+405,Vladivostok,vvo,,145,43.1167,131.9,,Russia
+406,Yakutsk,yaku,"yks, gyg",145,62.0272,129.7319,,Russia
+407,Perm,pee,,145,58.0139,56.2489,,Russia
+408,Chelyabinsk,cek,,145,55.15,61.4,,Russia
+409,Novy Urengoy,nux,,145,66.089142,76.70356,,Russia
+410,Murmansk,mmk,,145,68.9667,33.0833,,Russia
+411,Nizhniy Novgorod,goj,,145,56.3269,44.0075,,Russia
+412,Volgograd,vog,,145,48.7,44.4833,,Russia
+413,Yuzhno-Sakhalinsk,uus,,145,46.95,142.7333,,Russia
+414,Arkhangelsk,arh,,145,64.55,40.5333,,Russia
+415,Omsk,oms,,145,54.9667,73.3833,,Russia
+416,Makhachkala,mcx,,145,42.9833,47.4833,,Russia
+417,Gelendzik,gdz,,145,44.5608,38.0767,,Russia
+418,Petropavlovsk-Kamchatsky,pkc,,145,53.0167,158.65,,Russia
+419,Naberezhnye Chelny,nbc,,145,55.7,52.3333,,Russia
+420,Tomsk,tof,,145,56.4886,84.9522,,Russia
+421,Nizhnevartovsk,njc,,145,60.9389,76.595,,Russia
+422,Orenburg,ren,,145,51.7667,55.1,,Russia
+423,Voronezh,voz,,145,51.6717,39.2106,,Russia
+424,Syktyvkar,scw,,145,61.6667,50.8167,,Russia
+425,Barnaul,bax,,145,53.3567,83.7872,,Russia
+426,Astrakhan,asf,,145,46.3333,48.0167,,Russia
+427,Norilsk,nsk,,145,69.3333,88.2167,,Russia
+428,Belgorod,ego,,145,50.6,36.6,,Russia
+429,Salehard,sly,,145,66.5333,66.6333,,Russia
+430,Chita,hta,,145,52.0333,113.5,,Russia
+431,Izhevsk,ijk,,145,56.85,53.2167,,Russia
+432,Khanty-Mansiysk,hma,,145,61,69,,Russia
+433,Saratov,sarb,"rtw, gsv",145,51.5333,46,,Russia
+434,Stavropol,stw,,145,45.05,41.9833,,Russia
+437,Kemerovo,kej,,145,55.3333,86.0667,,Russia
+438,Abakan,aba,,145,53.7167,91.4167,,Russia
+439,Grozny,grv,,145,43.3125,45.6986,,Russia
+441,Vladikavkaz,ogz,,145,43.0167,44.65,,Russia
+442,Ulyanovsk,ulya,"ulv, uly",145,54.3167,48.3667,,Russia
+444,Penza,pez,,145,53.2,45,,Russia
+445,Saransk,skx,,145,54.1833,45.1833,,Russia
+446,Nadym,nym,,145,65.5333,72.5167,,Russia
+447,Magnitogorsk,mqf,,145,53.3833,59.0333,,Russia
+448,Rostov on Don,rov,,145,47.2333,39.7167,,Russia
+449,Cheboksary,scy,,145,56.1333,47.25,,Russia
+451,Nalchik,nal,,145,43.4833,43.6167,,Russia
+452,Cherepovets,cee,,145,59.1333,37.9167,,Russia
+453,Magas,igt,,145,43.1667,44.8167,,Russia
+454,Kirov,kvx,,145,58.6,49.65,,Russia
+455,Naryan-Mar,nnm,,145,67.6378,53.0067,,Russia
+456,Bratsk,btk,,145,56.1667,101.6167,,Russia
+457,Elista,esl,,145,46.3167,44.2667,,Russia
+458,Gorno-Altaysk,rgk,,145,51.96,85.96,,Russia
+460,Tambov,tbw,,145,52.7167,41.4333,,Russia
+461,Vorkuta,vkt,,145,67.5,64.0333,,Russia
+462,Neryungri,ner,,145,56.6583,124.725,,Russia
+463,Ivanovo,iwa,,145,57,41,,Russia
+464,Anadyr,dyr,,145,64.7333,177.5167,,Russia
+465,Kursk,urs,,145,51.7372,36.1872,,Russia
+466,Kogalym,kgp,,145,62.26798,74.4889068,,Russia
+467,Kurgan,kro,,145,55.4408,65.3411,,Russia
+468,Petrozavodsk,pes,,145,61.7833,34.35,,Russia
+469,Orsk,osw,,145,51.2145,58.5441,,Russia
+471,Kaluga,klf,,145,54.5333,36.2667,,Russia
+472,Okha,ohh,,145,53.5833,142.9333,,Russia
+473,Briansk,bzk,,145,53.2423778,34.3668288,,Russia
+475,Kyzyl,kyz,,145,51.7167,94.45,,Russia
+476,Tiksi,iks,,145,71.6269,128.835,,Russia
+477,Yaroslavl,iar,,145,57.6167,39.85,,Russia
+478,Pevek,pwe,,145,69.7,170.3167,,Russia
+480,Velikij Ustyug,vus,,145,60.7589,46.3039,,Russia
+481,Aldan,adh,,145,58.6,125.3833,,Russia
+483,Beloyarsky,eyk,,145,63.7156353,66.6667691,,Russia
+484,Bodaybo,odo,,145,57.8506,114.1933,,Russia
+485,Ust-Kut,ukx,,145,56.780561,105.7489287,,Russia
+486,Usinsk,usk,,145,65.9998,57.5414,,Russia
+487,Nyagan,nya,,145,62.1333,65.3833,,Russia
+489,Lensk,ulk,,145,60.7167,114.9,,Russia
+490,Batagay,bqj,,145,67.656,134.635,,Russia
+491,Uraj,urj,,145,60.1333,64.7833,,Russia
+492,Nikolaevsk-na-Amure,nli,,145,53.15,140.7333,,Russia
+493,Berezovo,ezv,,145,54.0930506,39.2975747,,Russia
+494,Bugulma,uua,,145,54.5333,52.7833,,Russia
+498,Belaya Gora,bgn,,145,68.53701,146.187286,,Russia
+501,Lipetsk,lpk,,145,52.6167,39.6,,Russia
+502,Nyurba,nyr,,145,63.2833,118.3333,,Russia
+504,Ust-Maya,ums,,145,60.4566,134.5433,,Russia
+505,Iturup,itu,,145,44.9906085,147.8382321,,Russia
+507,Keperveyem,kpw,,145,67.8415768,166.1428991,,Russia
+508,Deputatsky,dpt,,145,69.3396494,139.9468635,,Russia
+510,Ust-Nera,usr,,145,64.5666,143.2,,Russia
+512,Terney,nei,,145,45.0504046,136.6137293,,Russia
+513,Olenyok,onk,,145,68.525,112.45,,Russia
+514,Cherskiy,cyx,,145,68.7501,161.33,,Russia
+515,Kavalerovo,kvr,,145,44.2702,135.0498,,Russia
+516,Igarka,iaa,,145,67.4667,86.5667,,Russia
+517,Igrim,irm,,145,63.1933,64.4194,,Russia
+519,Ust-Kuyga,ukg,,145,70.00177,135.549835,,Russia
+520,Hatanga,htg,,145,72.0411,102.465,,Russia
+521,Dalnegorsk,dhg,,145,44.5539,135.5661,,Russia
+522,Nogliki,ngk,,145,51.8333,143.1667,,Russia
+523,Chokurdah,ckh,,145,70.6183,147.8946,,Russia
+526,Tynda,tyd,,145,55.15,124.7167,,Russia
+528,Podkamennaya Tunguska,tgp,,145,61.5995,90.1236,,Russia
+529,Zhigansk,zix,,145,66.7697,123.3711,,Russia
+530,Dikson,dks,,145,73.507,80.5451,,Russia
+531,Verkhnevilyuysk,vhv,,145,63.4457,120.3167,,Russia
+532,Vilyuysk,vyi,,145,63.75,121.6167,,Russia
+533,Dalnerechensk,dlr,,145,45.9333,133.7333,,Russia
+534,Svetlaya,etl,,145,65.2215948,41.0060242,,Russia
+535,Komsomolsk Na Amure,kxk,,145,50.550877,137.020782,,Russia
+538,Plastun,tly,,145,44.7589818,136.286379,,Russia
+543,Ukhta,uct,,145,63.5667,53.7,,Russia
+546,Pristina,prn,,91,42.6667,21.1667,,Kosovo

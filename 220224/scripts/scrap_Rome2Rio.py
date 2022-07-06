@@ -61,7 +61,7 @@ start_time = time.time()
 # settings
 debug = 0
 limit_cities = 100  # limit cities to search
-limit_combination = 999999 # limit cities combination
+limit_combination = 999999  # limit cities combination
 limit_trip_options = 999999 # limit trip options
 limit_generate_json = 999999 # limit total no. og json files to be generated
 filter_diff_lat = 0 # filter abdolute of coordinate latitude diff
@@ -589,7 +589,7 @@ def extract_transits_from_list(trip_ids, trip, check_list, tab, map_path='[2]->[
         raise("error occured")
 
 
-def generate_trip_json(cities_path, base_url, base_html_path, base_json_path, limit_generate_json = 100, ebug=0):
+def generate_trip_json(cities_path, base_url, base_html_path, base_json_path, limit_generate_json = 100, debug=0):
     """
     generate cities combination for all involved cities
     """

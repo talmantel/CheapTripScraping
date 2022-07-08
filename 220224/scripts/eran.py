@@ -759,10 +759,11 @@ def main():
 
 if __name__ == "__main__":
     # calling main function
-    main()
+    main
 
     diff_sec = round(time.time() - start_time)
     diff_time = time.strftime("%H:%M:%S", time.gmtime(diff_sec))
     logging.info('\n')
     logging.info(f'--- total python duration: {diff_time} ---')
+  
   

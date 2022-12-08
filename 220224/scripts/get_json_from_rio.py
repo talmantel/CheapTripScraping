@@ -15,8 +15,8 @@ city_data_list = []
 
 def getjson():
     with open(
-            r'../files/output/csv_bbox/bbox_out.csv',
-            'r') as file:
+            '../CheapTripScraping/220224/files/output/csv_bbox/bbox_out.csv','r'
+        ) as file:
         start = int(8)
         finish = int(2023)
         for item in file.readlines():

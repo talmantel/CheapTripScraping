@@ -1,0 +1,33 @@
+,from,from_bb_id,to,to_bb_id,transport,from_airport,from_airport_id,to_airport,to_airport_id,price,distance,duration,path_num
+0,New York Penn Station,-1,Jamaica,-1,train,,,,,538.12,18.02471,1260,0
+1,Jamaica Station-Station D,-1,Terminal 4,-1,tram,,,,,1032.12,8.405338,600,0
+2,New York JFK,-1,Tokyo Haneda,-1,flight,JFK,-1,HND,-1,79331.75,,51300,0
+3,Haneda Airport Terminal 1,-1,Hamamatsucho,-1,tram,,,,,462.04,16.85772,1380,0
+4,Hamamatsucho,-1,Tokyo,-1,train,,,,,90.19,3.170076,420,0
+5,New York Penn Station,-1,Newark Airport Railroad Station,-1,train,,,,,1785.55,20.15746,1440,1
+6,Newark Liberty Airport Station,-1,Terminal B,-1,tram,,,,,732.47,2.572454,300,1
+7,Newark,-1,Tokyo Haneda,-1,flight,EWR,-1,HND,-1,83528.14,,51900,1
+8,Haneda Airport Terminal 1,-1,Hamamatsucho,-1,tram,,,,,462.04,16.85772,1380,1
+9,Hamamatsucho,-1,Tokyo,-1,train,,,,,90.19,3.170076,420,1
+10,New York Penn Station,-1,Jamaica,-1,train,,,,,538.12,18.02471,1260,2
+11,Jamaica Station-Station D,-1,Terminal 4,-1,tram,,,,,1032.12,8.405338,600,2
+12,New York JFK,-1,Tokyo Narita,-1,flight,JFK,-1,NRT,-1,73139.72,,50400,2
+13,Narita Airport Terminal 2·3 Station,-1,Tokyo station,-1,train,,,,,3172.47,74.92237,3480,2
+14,W 4 St-Wash Sq,-1,Jackson Hts-Roosevelt Av,-1,subway,,,,,183.78,12.38635,1500,3
+15,74 St/Roosevelt Av Station,-1,Laguardia Rd/94 St,-1,bus,,,,,656.8,5.504088,360,3
+16,New York La Guardia,-1,Tokyo Haneda,-1,flight,LGA,-1,HND,-1,89563.68,,57600,3
+17,Haneda Airport Terminal 1,-1,Hamamatsucho,-1,tram,,,,,462.04,16.85772,1380,3
+18,Hamamatsucho,-1,Tokyo,-1,train,,,,,90.19,3.170076,420,3
+19,New York Penn Station,-1,Newark Airport Railroad Station,-1,train,,,,,1785.55,20.15746,1440,4
+20,Newark Liberty Airport Station,-1,Terminal B,-1,tram,,,,,732.47,2.572454,300,4
+21,Newark,-1,Tokyo Narita,-1,flight,EWR,-1,NRT,-1,69791.01,,52200,4
+22,Narita Airport Terminal 2·3 Station,-1,Tokyo station,-1,train,,,,,3172.47,74.92237,3480,4
+23,New York Skyports Seaplane Base,-1,Tokyo Haneda,-1,flight,NYS,-1,HND,-1,72981.26,,63300,5
+24,Haneda Airport Terminal 1,-1,Hamamatsucho,-1,tram,,,,,462.04,16.85772,1380,5
+25,Hamamatsucho,-1,Tokyo,-1,train,,,,,90.19,3.170076,420,5
+26,New York Penn Station,-1,Washington Union Station,-1,train,,,,,2721.43,360.9741,10440,6
+27,"Union Station, Red Line Center Platform",-1,"Metro Center, Red Line Track 2 Platform",-1,subway,,,,,133.43,2.099465,360,6
+28,"Metro Center, Blue/Orange/Silver Line Center Platform",-1,"Washington Dulles International Airport, Silver Line Center Platform",-1,subway,,,,,342.58,42.78455,3180,6
+29,Washington Dulles,-1,Tokyo Haneda,-1,flight,IAD,-1,HND,-1,91092.55,,49500,6
+30,Haneda Airport Terminal 1,-1,Hamamatsucho,-1,tram,,,,,462.04,16.85772,1380,6
+31,Hamamatsucho,-1,Tokyo,-1,train,,,,,90.19,3.170076,420,6

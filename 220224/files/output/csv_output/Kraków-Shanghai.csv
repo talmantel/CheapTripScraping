@@ -1,28 +1,28 @@
-,from,from_bb_id,to,to_bb_id,transport,from_airport,from_airport_id,to_airport,to_airport_id,price,distance,duration,path_num
-0,Kraków Główny,-1,Kraków Lotnisko,-1,train,,,,,,11.55128,1080.0,0
-1,Krakow,-1,Shanghai Pudong,-1,flight,KRK,-1,PVG,-1,3320.32,,48600.0,0
-2,Pudong International Airport,-1,Longyang Road,-1,train,,,,,50,24.78895,480.0,0
-3,Longyang Road,-1,West Nanjing Road,-1,subway,,,,,3,11.32921,960.0,0
-4,Kraków Główny,-1,Kraków Lotnisko,-1,train,,,,,,11.55128,1080.0,1
-5,Krakow,-1,Shanghai Hongqiao,-1,flight,KRK,-1,SHA,-1,6278.49,,65400.0,1
-6,Hongqiao Airport T1,-1,South Shaanxi Road,-1,subway,,,,,3,11.56468,1320.0,1
-7,Kraków,-1,Budapest,-1,shuttle,,,,,371.03,392.4118,21600.0,2
-8,Keleti pályaudvar,-1,Deák Ferenc tér,-1,subway,,,,,4.19,2.48874,300.0,2
-9,Deák Ferenc tér M,-1,Liszt Ferenc Airport 2,-1,bus,,,,,16.63,20.7071,1860.0,2
-10,Budapest,-1,Shanghai Pudong,-1,flight,BUD,-1,PVG,-1,3322.47,,37500.0,2
-11,Pudong International Airport,-1,Longyang Road,-1,train,,,,,50,24.78895,480.0,2
-12,Longyang Road,-1,West Nanjing Road,-1,subway,,,,,3,11.32921,960.0,2
-13,Krakow Glowny,-1,Warszawa Centralna,-1,train,,,,,43.28,291.7361,8280.0,3
-14,Dw. Centralny 02,-1,Lotnisko Chopina - Odloty 01,-1,bus,,,,,4.77,7.593537,1440.0,3
-15,Warsaw Chopin,-1,Shanghai Hongqiao,-1,flight,WAW,-1,SHA,-1,6386.32,,45900.0,3
-16,Hongqiao Airport T1,-1,South Shaanxi Road,-1,subway,,,,,3,11.56468,1320.0,3
-17,Krakow Glowny,-1,Katowice,-1,train,,,,,18.6,76.70889,3120.0,4
-18,Katowice Dworzec PKP,-1,Katowice Airport,-1,bus,,,,,,34.37758,2940.0,4
-19,Katowice,-1,Shanghai Hongqiao,-1,flight,KTW,-1,SHA,-1,6056.55,,62100.0,4
-20,Hongqiao Airport T1,-1,South Shaanxi Road,-1,subway,,,,,3,11.56468,1320.0,4
-21,Krakow Glowny,-1,Warszawa Centralna,-1,train,,,,,43.28,291.7361,8280.0,5
-22,Dw. Centralny 02,-1,Lotnisko Chopina - Odloty 01,-1,bus,,,,,4.77,7.593537,1440.0,5
-23,Warsaw Chopin,-1,Shanghai Pudong,-1,flight,WAW,-1,PVG,-1,3515.01,,43500.0,5
-24,Pudong International Airport,-1,Longyang Road,-1,train,,,,,50,24.78895,480.0,5
-25,Longyang Road,-1,West Nanjing Road,-1,subway,,,,,3,11.32921,960.0,5
-26,Kraków,-1,Shanghai Station,-1,car,,,,,10329.14,10177.65,423786.74,6
+,from,from_bb_id,to,to_bb_id,transport,from_airport,from_airport_id,to_airport,to_airport_id,price,distance,duration,path_num,path_name
+0,Kraków Główny,-1,Kraków Lotnisko,-1,train,,,,,,11.55128,1080.0,0,Fly Krakow to Shanghai Pudong
+1,Krakow,-1,Shanghai Pudong,-1,flight,KRK,-1,PVG,-1,3326.61,,48600.0,0,Fly Krakow to Shanghai Pudong
+2,Pudong International Airport,-1,Longyang Road,-1,train,,,,,50,24.78895,480.0,0,Fly Krakow to Shanghai Pudong
+3,Longyang Road,-1,West Nanjing Road,-1,subway,,,,,3,11.32921,960.0,0,Fly Krakow to Shanghai Pudong
+4,Kraków Główny,-1,Kraków Lotnisko,-1,train,,,,,,11.55128,1080.0,1,Fly Krakow to Shanghai Hongqiao
+5,Krakow,-1,Shanghai Hongqiao,-1,flight,KRK,-1,SHA,-1,6290.39,,65400.0,1,Fly Krakow to Shanghai Hongqiao
+6,Hongqiao Airport T1,-1,South Shaanxi Road,-1,subway,,,,,3,11.56468,1320.0,1,Fly Krakow to Shanghai Hongqiao
+7,Kraków,-1,Budapest,-1,shuttle,,,,,370.92,392.4118,21600.0,2,"Shuttle to Budapest, fly to Shanghai Pudong"
+8,Keleti pályaudvar,-1,Deák Ferenc tér,-1,subway,,,,,4.18,2.48874,300.0,2,"Shuttle to Budapest, fly to Shanghai Pudong"
+9,Deák Ferenc tér M,-1,Liszt Ferenc Airport 2,-1,bus,,,,,16.57,20.7071,1860.0,2,"Shuttle to Budapest, fly to Shanghai Pudong"
+10,Budapest,-1,Shanghai Pudong,-1,flight,BUD,-1,PVG,-1,3328.77,,37500.0,2,"Shuttle to Budapest, fly to Shanghai Pudong"
+11,Pudong International Airport,-1,Longyang Road,-1,train,,,,,50,24.78895,480.0,2,"Shuttle to Budapest, fly to Shanghai Pudong"
+12,Longyang Road,-1,West Nanjing Road,-1,subway,,,,,3,11.32921,960.0,2,"Shuttle to Budapest, fly to Shanghai Pudong"
+13,Krakow Glowny,-1,Warszawa Centralna,-1,train,,,,,43.15,291.7361,8280.0,3,"Train to Warsaw Chopin, fly to Shanghai Hongqiao"
+14,Dw. Centralny 02,-1,Lotnisko Chopina - Odloty 01,-1,bus,,,,,4.73,7.593537,1440.0,3,"Train to Warsaw Chopin, fly to Shanghai Hongqiao"
+15,Warsaw Chopin,-1,Shanghai Hongqiao,-1,flight,WAW,-1,SHA,-1,6398.43,,45900.0,3,"Train to Warsaw Chopin, fly to Shanghai Hongqiao"
+16,Hongqiao Airport T1,-1,South Shaanxi Road,-1,subway,,,,,3,11.56468,1320.0,3,"Train to Warsaw Chopin, fly to Shanghai Hongqiao"
+17,Krakow Glowny,-1,Katowice,-1,train,,,,,18.6,76.70889,3120.0,4,"Train to Katowice, fly to Shanghai Hongqiao"
+18,Katowice Dworzec PKP,-1,Katowice Airport,-1,bus,,,,,,34.37758,2940.0,4,"Train to Katowice, fly to Shanghai Hongqiao"
+19,Katowice,-1,Shanghai Hongqiao,-1,flight,KTW,-1,SHA,-1,6068.04,,62100.0,4,"Train to Katowice, fly to Shanghai Hongqiao"
+20,Hongqiao Airport T1,-1,South Shaanxi Road,-1,subway,,,,,3,11.56468,1320.0,4,"Train to Katowice, fly to Shanghai Hongqiao"
+21,Krakow Glowny,-1,Warszawa Centralna,-1,train,,,,,43.15,291.7361,8280.0,5,"Train to Warsaw Chopin, fly to Shanghai Pudong"
+22,Dw. Centralny 02,-1,Lotnisko Chopina - Odloty 01,-1,bus,,,,,4.73,7.593537,1440.0,5,"Train to Warsaw Chopin, fly to Shanghai Pudong"
+23,Warsaw Chopin,-1,Shanghai Pudong,-1,flight,WAW,-1,PVG,-1,3521.67,,43500.0,5,"Train to Warsaw Chopin, fly to Shanghai Pudong"
+24,Pudong International Airport,-1,Longyang Road,-1,train,,,,,50,24.78895,480.0,5,"Train to Warsaw Chopin, fly to Shanghai Pudong"
+25,Longyang Road,-1,West Nanjing Road,-1,subway,,,,,3,11.32921,960.0,5,"Train to Warsaw Chopin, fly to Shanghai Pudong"
+26,Kraków,-1,Shanghai Station,-1,car,,,,,10348.73,10177.65,423786.74,6,Drive

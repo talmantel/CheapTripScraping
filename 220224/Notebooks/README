@@ -1,0 +1,6 @@
+To run MainScrapper_test_notebook.ipynb:
+* https://colab.research.google.com/
+* Download or open file MainScrapper_test_notebook.ipynb
+* Run->Run all (CTRL+F9)
+* To change cities use corresponding cell with from_city, to_city = ... and CTRL+F9
+* To make output in file "../files/output/csv_output/" uncomment corresponding line in last code cell

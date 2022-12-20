@@ -1,0 +1,10 @@
+,from,from_bb_id,to,to_bb_id,transport,price,distance,duration,path_num
+0,Στ.Μοναστηρακι,-1,Στ.Αεροδρομιου,-1,subway,55.62,32.93563,2520,0
+1,Athens,-1,Rio De Janeiro-Galeao,-1,flight,2421.69,,58500,0
+2,Avenida Vinte De Janeiro próximo ao 1455,-1,Rua Equador,-1,bus,15.46,15.23257,3420,0
+3,Στ.Μοναστηρακι,-1,Στ.Αεροδρομιου,-1,subway,55.62,32.93563,2520,1
+4,Athens,-1,Rio De Janeiro Santos Dumont,-1,flight,2487.65,,64200,1
+5,Στ.Μοναστηρακι,-1,Στ.Αεροδρομιου,-1,subway,55.62,32.93563,2520,2
+6,Athens,-1,Santa Ynez,-1,flight,2145.72,,66000,2
+7,Aeroporto Regional Presidente Itamar Franco,-1,Juiz de Fora,-1,bus,20.85,44.74411,3000,2
+8,Juiz de Fora Bus Station,-1,Rio de Janeiro,-1,bus,57.14,185.9684,10800,2

@@ -1,18 +1,18 @@
-,from,from_bb_id,to,to_bb_id,transport,from_airport,from_airport_id,to_airport,to_airport_id,price,distance,duration,path_num,path_name
-0,"Farragut West, Blue/Orange/Silver Line Track 2 Platform",-1,"Washington Dulles International Airport, Silver Line Center Platform",-1,subway,,,,,2.37,41.46412,2940,0,"Subway to Washington Dulles, fly"
-1,Washington Dulles,-1,Rome,-1,flight,IAD,-1,FCO,-1,386.11,,31500,0,"Subway to Washington Dulles, fly"
-2,Fiumicino Aeroporto,-1,Roma Termini,-1,train,,,,,7.2,31.6223,1920,0,"Subway to Washington Dulles, fly"
-3,"Farragut West, Blue/Orange/Silver Line Track 2 Platform",-1,"Ronald Reagan Washington National Airport, Yellow/Blue Line Track 2 Platform",-1,subway,,,,,1.2,9.662436,960,1,Fly from Reagan Washington
-4,Reagan Washington,-1,Rome,-1,flight,DCA,-1,FCO,-1,427.74,,36900,1,Fly from Reagan Washington
-5,Fiumicino Aeroporto,-1,Roma Termini,-1,train,,,,,7.2,31.6223,1920,1,Fly from Reagan Washington
-6,Washington Union Station,-1,Bwi Thurgood Marshall Airport Station,-1,train,,,,,12.14,47.57575,1560,2,"Train to Baltimore, fly"
-7,BWI Amtrak/MARC Station,-1,Upper Level Terminal - Concourses B & C,-1,bus,,,,,0.0,3.337675,240,2,"Train to Baltimore, fly"
-8,Baltimore,-1,Rome,-1,flight,BWI,-1,FCO,-1,253.58,,36900,2,"Train to Baltimore, fly"
-9,Fiumicino Aeroporto,-1,Roma Termini,-1,train,,,,,7.2,31.6223,1920,2,"Train to Baltimore, fly"
-10,Washington Union Station,-1,Philadelphia,-1,train,,,,,15.88,213.1885,5400,3,"Train to Philadelphia, fly"
-11,Gray 30th Street,-1,Airport Terminal A,-1,train,,,,,0.0,12.76836,1080,3,"Train to Philadelphia, fly"
-12,Philadelphia,-1,Rome,-1,flight,PHL,-1,FCO,-1,515.44,,29940,3,"Train to Philadelphia, fly"
-13,Fiumicino Aeroporto,-1,Roma Termini,-1,train,,,,,7.2,31.6223,1920,3,"Train to Philadelphia, fly"
-14,Washington Union Station,-1,Newark Liberty International Airport,-1,train,,,,,18.77,341.5491,10620,4,"Train to Newark, fly"
-15,Newark,-1,Rome,-1,flight,EWR,-1,FCO,-1,211.43,,29400,4,"Train to Newark, fly"
-16,Fiumicino Aeroporto,-1,Roma Termini,-1,train,,,,,7.2,31.6223,1920,4,"Train to Newark, fly"
+,path_id,path_name,from_node,to_node,from_id,to_id,transport,from_airport,to_airport,from_airport_id,to_airport_id,price,currency,price_local,currency_local,distance_km,duration_min
+0,0,"Subway to Washington Dulles, fly","Farragut West, Blue/Orange/Silver Line Track 2 Platform","Washington Dulles International Airport, Silver Line Center Platform",-1,-1,subway,,,,,2,EUR,2,USD,41,49
+1,0,"Subway to Washington Dulles, fly",Washington Dulles,Rome,-1,-1,flight,IAD,FCO,-1,303,380,EUR,,,,525
+2,0,"Subway to Washington Dulles, fly",Fiumicino Aeroporto,Roma Termini,303,303,train,,,,,7,EUR,,,31,32
+3,1,Fly from Reagan Washington,"Farragut West, Blue/Orange/Silver Line Track 2 Platform","Ronald Reagan Washington National Airport, Yellow/Blue Line Track 2 Platform",-1,-1,subway,,,,,1,EUR,1,USD,9,16
+4,1,Fly from Reagan Washington,Reagan Washington,Rome,-1,-1,flight,DCA,FCO,-1,303,420,EUR,,,,615
+5,1,Fly from Reagan Washington,Fiumicino Aeroporto,Roma Termini,303,303,train,,,,,7,EUR,,,31,32
+6,2,"Train to Baltimore, fly",Washington Union Station,Bwi Thurgood Marshall Airport Station,-1,-1,train,,,,,12,EUR,12,USD,47,26
+7,2,"Train to Baltimore, fly",BWI Amtrak/MARC Station,Upper Level Terminal - Concourses B & C,-1,-1,bus,,,,,0,EUR,0,USD,3,4
+8,2,"Train to Baltimore, fly",Baltimore,Rome,-1,-1,flight,BWI,FCO,-1,303,250,EUR,,,,615
+9,2,"Train to Baltimore, fly",Fiumicino Aeroporto,Roma Termini,303,303,train,,,,,7,EUR,,,31,32
+10,3,"Train to Philadelphia, fly",Washington Union Station,Philadelphia,-1,-1,train,,,,,15,EUR,16,USD,213,90
+11,3,"Train to Philadelphia, fly",Gray 30th Street,Airport Terminal A,-1,-1,train,,,,,0,EUR,0,USD,12,18
+12,3,"Train to Philadelphia, fly",Philadelphia,Rome,-1,-1,flight,PHL,FCO,-1,303,500,EUR,,,,499
+13,3,"Train to Philadelphia, fly",Fiumicino Aeroporto,Roma Termini,303,303,train,,,,,7,EUR,,,31,32
+14,4,"Train to Newark, fly",Washington Union Station,Newark Liberty International Airport,-1,42,train,,,,,18,EUR,20,USD,341,177
+15,4,"Train to Newark, fly",Newark,Rome,-1,-1,flight,EWR,FCO,-1,303,210,EUR,,,,490
+16,4,"Train to Newark, fly",Fiumicino Aeroporto,Roma Termini,303,303,train,,,,,7,EUR,,,31,32

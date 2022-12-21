@@ -1,0 +1,37 @@
+,path_id,path_name,from_node,to_node,from_id,to_id,transport,from_airport,to_airport,from_airport_id,to_airport_id,price,currency_code,price_local,local_currency_code,distance,duration
+0,0,Train,London St Pancras Intl,Paris Nord,-1,-1,train,,,,,110,CHF,110,EUR,450,141
+1,0,Train,Gare du Nord,Gare de Lyon,-1,-1,train,,,,,1,CHF,1,EUR,5,7
+2,0,Train,Paris Gare De Lyon,Basel Sbb,-1,-1,train,,,,,80,CHF,80,EUR,521,186
+3,1,Bus,London Victoria Green Line Station,Luxembourg P+R Bouillon,-1,-1,bus,,,,,23,CHF,23,EUR,833,630
+4,1,Bus,"Luxembourg, P+R Bouillon",Basel SBB,-1,-1,bus,,,,,19,CHF,19,EUR,370,280
+5,2,Bus via Reims,London Victoria Green Line Station,Reims Central Train Station,-1,-1,bus,,,,,19,CHF,35,BGN,648,900
+6,2,Bus via Reims,Reims Central Train Station,Basel Meret-Oppenheim-Strasse,-1,-1,bus,,,,,15,CHF,30,BGN,501,375
+7,3,"Drive, Eurotunnel",London,Folkestone,-1,-1,car,,,,,20,CHF,,,107,82
+8,3,"Drive, Eurotunnel",Folkestone,Calais-Fréthun,-1,-1,cartrain,,,,,,,,,55,35
+9,3,"Drive, Eurotunnel",Calais-Fréthun,Basel,-1,-1,car,,,,,130,CHF,,,730,410
+10,4,"Drive, car ferry",London,Dover,-1,-1,car,,,,,23,CHF,,,125,94
+11,4,"Drive, car ferry",Dover,Dunkirk,-1,-1,carferry,,,,,90,CHF,80,GBP,65,120
+12,4,"Drive, car ferry",Dunkirk,Basel,-1,-1,car,,,,,130,CHF,,,726,416
+13,5,Fly London Heathrow to Basel,London Paddington,Heathrow Terminals 2 & 3,-1,-1,train,,,,,5,CHF,4,GBP,23,14
+14,5,Fly London Heathrow to Basel,London Heathrow,Basel,-1,-1,flight,LHR,BSL,-1,-1,35,CHF,,,,95
+15,5,Fly London Heathrow to Basel,Basel EuroAirport,"Basel, Kannenfeldplatz",-1,-1,bus,,,,,3,CHF,,,6,9
+16,6,"Train to London Gatwick, fly to Basel",London Victoria,Gatwick Airport,-1,-1,train,,,,,10,CHF,9,GBP,42,33
+17,6,"Train to London Gatwick, fly to Basel",London Gatwick,Basel,-1,-1,flight,LGW,BSL,-1,-1,35,CHF,,,,95
+18,6,"Train to London Gatwick, fly to Basel",Basel EuroAirport,"Basel, Kannenfeldplatz",-1,-1,bus,,,,,3,CHF,,,6,9
+19,7,"Fly London City to Zurich, train",Bank DLR Station,London City Airport DLR Station,-1,-1,train,,,,,1,CHF,1,GBP,9,21
+20,7,"Fly London City to Zurich, train",London City,Zurich,-1,-1,flight,LCY,ZRH,-1,-1,80,CHF,,,,90
+21,7,"Fly London City to Zurich, train",Zürich Flughafen,Zürich HB,-1,-1,train,,,,,3,CHF,,,10,12
+22,7,"Fly London City to Zurich, train",Zuerich Hb,Basel Sbb,-1,-1,train,,,,,23,CHF,23,EUR,87,54
+23,8,"Fly London Heathrow to Zurich, train",London Paddington,Heathrow Terminals 2 & 3,-1,-1,train,,,,,5,CHF,4,GBP,23,14
+24,8,"Fly London Heathrow to Zurich, train",London Heathrow,Zurich,-1,-1,flight,LHR,ZRH,-1,-1,50,CHF,,,,100
+25,8,"Fly London Heathrow to Zurich, train",Zürich Flughafen,Zürich HB,-1,-1,train,,,,,3,CHF,,,10,12
+26,8,"Fly London Heathrow to Zurich, train",Zuerich Hb,Basel Sbb,-1,-1,train,,,,,23,CHF,23,EUR,87,54
+27,9,"Train to London Gatwick, fly to Zurich, train",London Victoria,Gatwick Airport,-1,-1,train,,,,,10,CHF,9,GBP,42,33
+28,9,"Train to London Gatwick, fly to Zurich, train",London Gatwick,Zurich,-1,-1,flight,LGW,ZRH,-1,-1,50,CHF,,,,105
+29,9,"Train to London Gatwick, fly to Zurich, train",Zürich Flughafen,Zürich HB,-1,-1,train,,,,,3,CHF,,,10,12
+30,9,"Train to London Gatwick, fly to Zurich, train",Zuerich Hb,Basel Sbb,-1,-1,train,,,,,23,CHF,23,EUR,87,54
+31,10,"Train to London Luton, fly to Zurich, train",London St Pancras International LL,Luton Airport Parkway,-1,-1,train,,,,,7,CHF,6,GBP,46,31
+32,10,"Train to London Luton, fly to Zurich, train",Luton Airport Parkway Rail Station,Airport Bus Station,-1,-1,bus,,,,,,,,,2,6
+33,10,"Train to London Luton, fly to Zurich, train",London Luton,Zurich,-1,-1,flight,LTN,ZRH,-1,-1,65,CHF,,,,100
+34,10,"Train to London Luton, fly to Zurich, train",Zürich Flughafen,Zürich HB,-1,-1,train,,,,,3,CHF,,,10,12
+35,10,"Train to London Luton, fly to Zurich, train",Zuerich Hb,Basel Sbb,-1,-1,train,,,,,23,CHF,23,EUR,87,54

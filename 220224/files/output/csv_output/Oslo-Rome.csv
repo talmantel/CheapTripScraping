@@ -1,31 +1,31 @@
-path_id,path_name,from_node,to_node,from_id,to_id,transport,from_airport,to_airport,from_airport_id,to_airport_id,price,currency,price_local,currency_local,distance_km,duration_min
-0,"Train to Oslo, fly to Rome",Oslo S,Oslo lufthavn stasjon,277,-1,train,"","","","",15,EUR,,NOK,,22
-0,"Train to Oslo, fly to Rome",Oslo,Rome,-1,-1,flight,OSL,FCO,,,45,EUR,"","","",185
-0,"Train to Oslo, fly to Rome",Fiumicino Aeroporto,Roma Termini,303,303,train,"","","","",7,EUR,"","",,32
-1,"Train to Oslo Sandefjord, fly to Rome",Oslo S,Torp stasjon,277,-1,train,"","","","",14,EUR,,NOK,,93
-1,"Train to Oslo Sandefjord, fly to Rome",Torp stasjon,Sandefjord lufthavn Torp,-1,-1,bus,"","","","",12,EUR,,NOK,,4
-1,"Train to Oslo Sandefjord, fly to Rome",Oslo Sandefjord,Rome,-1,-1,flight,TRF,FCO,,,60,EUR,"","","",280
-1,"Train to Oslo Sandefjord, fly to Rome",Fiumicino Aeroporto,Roma Termini,303,303,train,"","","","",7,EUR,"","",,32
-2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Oslo S,Torp stasjon,277,-1,train,"","","","",14,EUR,,NOK,,93
-2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Torp stasjon,Sandefjord lufthavn Torp,-1,-1,bus,"","","","",12,EUR,,NOK,,4
-2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Oslo Sandefjord,Rome Ciampino,-1,-1,flight,TRF,CIA,,,45,EUR,"","","",405
-2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Rome Ciampino Airport,Ciampino Station,303,303,bus,"","","","",2,EUR,"","",,10
-2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Ciampino,Roma Termini,303,303,train,"","","","",1,EUR,"","",,16
-3,Train,Oslo S,Göteborg Centralstation,277,193,train,"","","","",55,EUR,,SEK,,210
-3,Train,Göteborg Centralstation,Hamburg-Altona,193,196,train,"","","","",60,EUR,,SEK,,647
-3,Train,Hamburg-Altona,Basel SBB,196,140,train,"","","","",130,EUR,"","",,409
-3,Train,Basel SBB,Lugano,140,241,train,"","","","",80,EUR,,CHF,,175
-3,Train,Lugano,Milano Centrale,241,252,train,"","","","",21,EUR,,CHF,,75
-3,Train,Milano Centrale,Roma Termini,252,303,train,"","","","",30,EUR,"","",,192
-4,"Train, night train",Oslo S,Göteborg Centralstation,277,193,train,"","","","",55,EUR,,SEK,,210
-4,"Train, night train",Göteborg Centralstation,Malmö Centralstation,193,262,train,"","","","",1,EUR,,SEK,,191
-4,"Train, night train",Malmö Centralstation,Salzburg Hbf,262,308,train,"","","","",55,EUR,,SEK,,1110
-4,"Train, night train",Salzburg Hbf,Roma Termini,308,303,nighttrain,"","","","",70,EUR,"","",,763
-5,Bus,Oslo,Wrocław,277,365,bus,"","","","",50,EUR,,PLN,,1440
-5,Bus,Wrocław,Roma,365,303,bus,"","","","",55,EUR,,PLN,,1360
-6,"Night bus, bus",Oslo,Prague,277,297,nightbus,"","","","",65,EUR,"","",,1346
-6,"Night bus, bus",Prague Florenc Central Bus Station,Rome Tiburtina,297,303,bus,"","","","",40,EUR,"","",,1215
-7,"Drive, car train",Oslo,Hamburg Altona,277,196,car,"","","","",210,EUR,"","",,628
-7,"Drive, car train",Hamburg Altona,Verona Porta Nuova Station,196,354,cartrain,"","","","",100,EUR,"","",,955
-7,"Drive, car train",Verona Porta Nuova Station,Rome,354,303,car,"","","","",85,EUR,"","",,282
-8,Drive,Oslo,Rome,277,303,car,"","","","",550,EUR,"","",,1515
+,path_id,path_name,from_node,to_node,from_id,to_id,transport,from_airport,to_airport,from_airport_id,to_airport_id,price,currency,price_local,currency_local,distance_km,duration_min
+0,0,"Train to Oslo, fly to Rome",Oslo S,Oslo lufthavn stasjon,277,-1,train,,,,,15,EUR,160,NOK,46,22
+1,0,"Train to Oslo, fly to Rome",Oslo,Rome,-1,-1,flight,OSL,FCO,277,303,45,EUR,,,,185
+2,0,"Train to Oslo, fly to Rome",Fiumicino Aeroporto,Roma Termini,303,303,train,,,,,7,EUR,,,31,32
+3,1,"Train to Oslo Sandefjord, fly to Rome",Oslo S,Torp stasjon,277,-1,train,,,,,14,EUR,150,NOK,113,93
+4,1,"Train to Oslo Sandefjord, fly to Rome",Torp stasjon,Sandefjord lufthavn Torp,-1,-1,bus,,,,,12,EUR,120,NOK,1,4
+5,1,"Train to Oslo Sandefjord, fly to Rome",Oslo Sandefjord,Rome,-1,-1,flight,TRF,FCO,277,303,60,EUR,,,,280
+6,1,"Train to Oslo Sandefjord, fly to Rome",Fiumicino Aeroporto,Roma Termini,303,303,train,,,,,7,EUR,,,31,32
+7,2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Oslo S,Torp stasjon,277,-1,train,,,,,14,EUR,150,NOK,113,93
+8,2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Torp stasjon,Sandefjord lufthavn Torp,-1,-1,bus,,,,,12,EUR,120,NOK,1,4
+9,2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Oslo Sandefjord,Rome Ciampino,-1,-1,flight,TRF,CIA,277,303,45,EUR,,,,405
+10,2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Rome Ciampino Airport,Ciampino Station,303,303,bus,,,,,2,EUR,,,4,10
+11,2,"Train to Oslo Sandefjord, fly to Rome Ciampino",Ciampino,Roma Termini,303,303,train,,,,,1,EUR,,,13,16
+12,3,Train,Oslo S,Göteborg Centralstation,277,193,train,,,,,55,EUR,650,SEK,332,210
+13,3,Train,Göteborg Centralstation,Hamburg-Altona,193,196,train,,,,,60,EUR,700,SEK,818,647
+14,3,Train,Hamburg-Altona,Basel SBB,196,140,train,,,,,130,EUR,,,831,409
+15,3,Train,Basel SBB,Lugano,140,241,train,,,,,80,EUR,75,CHF,251,175
+16,3,Train,Lugano,Milano Centrale,241,252,train,,,,,21,EUR,21,CHF,76,75
+17,3,Train,Milano Centrale,Roma Termini,252,303,train,,,,,30,EUR,,,562,192
+18,4,"Train, night train",Oslo S,Göteborg Centralstation,277,193,train,,,,,55,EUR,650,SEK,332,210
+19,4,"Train, night train",Göteborg Centralstation,Malmö Centralstation,193,262,train,,,,,1,EUR,21,SEK,290,191
+20,4,"Train, night train",Malmö Centralstation,Salzburg Hbf,262,308,train,,,,,55,EUR,650,SEK,1421,1110
+21,4,"Train, night train",Salzburg Hbf,Roma Termini,308,303,nighttrain,,,,,70,EUR,,,908,763
+22,5,Bus,Oslo,Wrocław,277,365,bus,,,,,50,EUR,230,PLN,1558,1440
+23,5,Bus,Wrocław,Roma,365,303,bus,,,,,55,EUR,250,PLN,1716,1360
+24,6,"Night bus, bus",Oslo,Prague,277,297,nightbus,,,,,65,EUR,,,1546,1346
+25,6,"Night bus, bus",Prague Florenc Central Bus Station,Rome Tiburtina,297,303,bus,,,,,40,EUR,,,1470,1215
+26,7,"Drive, car train",Oslo,Hamburg Altona,277,196,car,,,,,210,EUR,,,1064,628
+27,7,"Drive, car train",Hamburg Altona,Verona Porta Nuova Station,196,354,cartrain,,,,,100,EUR,,,1150,955
+28,7,"Drive, car train",Verona Porta Nuova Station,Rome,354,303,car,,,,,85,EUR,,,501,282
+29,8,Drive,Oslo,Rome,277,303,car,,,,,550,EUR,,,2773,1515

@@ -1,0 +1,21 @@
+,path_id,path_name,from_node,to_node,from_id,to_id,transport,transport_id,from_airport,to_airport,from_airport_id,to_airport_id,price_EUR,price_local,currency_local,distance_km,duration_min
+0,0,Train,Moskva Kurskaia,St Petersburg Glavny,-1,-1,train,3,,,-1,-1,14,,,643,252
+1,1,Train via Biblioteka Imeni Lenina,Moskva Oktiabrskaia,St Petersburg Glavny,-1,-1,train,3,,,-1,-1,14,,,641,224
+2,2,Train via Biblioteka Imeni Lenina #2,"Moscow, Leningradsky Station",St. Petersburg Finlyandskiy Station,-1,-1,train,3,,,-1,-1,13,,,658,500
+3,3,Bus,Okhotny Ryad,Severniy Rechnoy Vokzal,-1,-1,bus,2,,,-1,-1,0,,,19,21
+4,3,Bus,Severniy Rechnoy Vokzal,Rechnoy Vokzal,-1,-1,walk,6,,,-1,-1,,,,1,9
+5,3,Bus,Moscow Severnye Vorota bus station,Saint Petersburg Bus station,-1,-1,bus,2,,,-1,-1,9,,,683,600
+6,4,Rideshare,Moscow,Saint Petersburg,-1,-1,rideshare,8,,,387,388,11,16,EUR,704,687
+7,5,Drive,Moscow,Saint Petersburg,-1,-1,car,4,,,387,388,36,,,702,433
+8,6,"Fly from Moscow Vnukovo, line 2 subway",Kievsky Rail Terminal,Moscow Vnukovo Airport,-1,-1,train,3,,,-1,-1,4,,,33,37
+9,6,"Fly from Moscow Vnukovo, line 2 subway",Moscow Vnukovo,Pulkovo,-1,-1,flight,1,VKO,LED,-1,-1,15,,,,70
+10,6,"Fly from Moscow Vnukovo, line 2 subway",Pulkovo (LED),"Аэропорт ""Пулково 1""",-1,-1,walk,6,,,-1,-1,,,,1,9
+11,6,"Fly from Moscow Vnukovo, line 2 subway","Аэропорт ""Пулково 1""",Авиационная Ул.,-1,-1,bus,2,,,-1,-1,0,,,11,27
+12,7,"Fly from Moscow Sheremetyevo, line 2 subway",Okhotny Ryad,Sheremetyevo Airport,-1,-1,bus,2,,,-1,-1,0,,,41,43
+13,7,"Fly from Moscow Sheremetyevo, line 2 subway",Moscow Sheremetyevo,Pulkovo,-1,-1,flight,1,SVO,LED,-1,-1,15,,,,80
+14,7,"Fly from Moscow Sheremetyevo, line 2 subway",Pulkovo (LED),"Аэропорт ""Пулково 1""",-1,-1,walk,6,,,-1,-1,,,,1,9
+15,7,"Fly from Moscow Sheremetyevo, line 2 subway","Аэропорт ""Пулково 1""",Авиационная Ул.,-1,-1,bus,2,,,-1,-1,0,,,11,27
+16,8,"Fly from Moscow Domodedovo, line 2 subway",Paveletsky Rail Terminal,Moscow Domodedovo Airport,-1,-1,train,3,,,-1,-1,1,,,46,48
+17,8,"Fly from Moscow Domodedovo, line 2 subway",Moscow Domodedovo,Pulkovo,-1,-1,flight,1,DME,LED,-1,-1,16,,,,90
+18,8,"Fly from Moscow Domodedovo, line 2 subway",Pulkovo (LED),"Аэропорт ""Пулково 1""",-1,-1,walk,6,,,-1,-1,,,,1,9
+19,8,"Fly from Moscow Domodedovo, line 2 subway","Аэропорт ""Пулково 1""",Авиационная Ул.,-1,-1,bus,2,,,-1,-1,0,,,11,27

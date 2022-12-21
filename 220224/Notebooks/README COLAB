@@ -7,6 +7,6 @@ To run COLAB_MainScrapper_test_notebook.ipynb:
     3. select the files and click upload button
 * Run->Run all (CTRL+F9)
 * The output file will appear in the same folder after a slight delay.
-* To change the cities use corresponding cell with from_city, to_city = ... and -> CTRL+F9
+* To change the cities use corresponding cell with from_city, to_city = ... and -> CTRL+F10
 
 WARNING!!!! After closing the session all files will be deleted.

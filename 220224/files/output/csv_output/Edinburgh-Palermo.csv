@@ -1,0 +1,33 @@
+,path_id,path_name,from_node,to_node,from_id,to_id,transport,transport_id,from_airport,to_airport,from_airport_id,to_airport_id,price_EUR,price_local,currency_local,distance_km,duration_min
+0,0,Fly Edinburgh to Palermo,Edinburgh,Palermo,-1,-1,flight,0,EDI,PMO,166,285,30,,,,210
+1,0,Fly Edinburgh to Palermo,Punta Raisi,Palermo Notarbartolo,-1,285,train,1,,,,,2,,,29,42
+2,1,"Fly Edinburgh to Trapani, bus",Edinburgh,Trapani,-1,-1,flight,0,EDI,TPS,166,-1,45,,,,350
+3,1,"Fly Edinburgh to Trapani, bus",Trapani Birgi Airport,Palermo Viale Lazio,-1,285,bus,2,,,,,6,,,115,80
+4,2,"Train to Glasgow, fly to Palermo",Edinburgh,Glasgow Queen Street,166,184,train,1,,,,,11,10,GBP,75,51
+5,2,"Train to Glasgow, fly to Palermo",Glasgow,Palermo,-1,-1,flight,0,GLA,PMO,184,285,40,,,,345
+6,2,"Train to Glasgow, fly to Palermo",Punta Raisi,Palermo Notarbartolo,-1,285,train,1,,,,,2,,,29,42
+7,3,Train via Milan,Edinburgh,London Kings Cross,166,225,train,1,,,,,55,50,GBP,627,258
+8,3,Train via Milan,London St Pancras Intl,Marne La Vallee Chessy,225,-1,train,1,,,,,120,,,492,144
+9,3,Train via Milan,Marne La Vallee Chessy,Lyon Part Dieu,-1,240,train,1,,,,,45,,,417,111
+10,3,Train via Milan,Lyon Part Dieu,Milano Centrale,240,252,train,1,,,,,30,,,444,287
+11,3,Train via Milan,Milano Centrale,Roma Termini,252,303,train,1,,,,,30,,,562,192
+12,3,Train via Milan,Roma Termini,Palermo Centrale,303,285,train,1,,,,,50,,,868,719
+13,4,Train,Edinburgh,London Kings Cross,166,225,train,1,,,,,55,50,GBP,627,258
+14,4,Train,London St Pancras Intl,Marne La Vallee Chessy,225,-1,train,1,,,,,120,,,492,144
+15,4,Train,Marne-la-Vallée-Chessy TGV,Saint-Jean-de-Maurienne-Arvan,-1,-1,train,1,,,,,90,,,579,235
+16,4,Train,St Jean De Maurienne Arvan,Oulx-Cesana-Clav.-S.,-1,-1,train,1,,,,,19,,,52,59
+17,4,Train,Oulx-Cesana-Clav.-S.,Roma Termini,-1,303,train,1,,,,,50,,,778,344
+18,4,Train,Roma Termini,Palermo Centrale,303,285,train,1,,,,,50,,,868,719
+19,5,"Train, bus, ferry",Edinburgh,London Kings Cross,166,225,train,1,,,,,55,50,GBP,627,258
+20,5,"Train, bus, ferry",London St Pancras Intl,Moutiers Salins Brides L Bains,225,-1,train,1,,,,,210,,,1048,545
+21,5,"Train, bus, ferry",Moutiers Salins Brides L Bains,Chambery Challes Les Eaux,-1,155,train,1,,,,,29,29,CHF,74,78
+22,5,"Train, bus, ferry",Chambéry,Genoa,155,189,bus,2,,,,,19,,,372,295
+23,5,"Train, bus, ferry",Genoa,Palermo,189,285,ferry,4,,,,,60,,,790,1260
+24,6,Bus via Rome,Edinburgh Bus Station,London Victoria Coach Station,166,225,bus,2,,,,,30,,,723,555
+25,6,Bus via Rome,London Victoria Coach Station,Paris,225,293,bus,2,,,,,15,,,514,570
+26,6,Bus via Rome,Paris,Rome Tiburtina Bus station,293,303,bus,2,,,,,65,,,1483,1220
+27,6,Bus via Rome,Rome Tiburtina Bus Station,Palermo Via Tommaso Fazello,303,285,bus,2,,,,,40,,,958,705
+28,7,Bus,Edinburgh,London Victoria Coach Station,166,225,bus,2,,,,,30,,,638,550
+29,7,Bus,London Victoria Green Line Station,Saarbrücken Bus Station,225,315,bus,2,,,,,27,50,BGN,907,1110
+30,7,Bus,Saarbrucken Dudweilerstrasse,Porto Empedocle Bus Station,315,-1,bus,2,,,,,154,,,2079,2110
+31,7,Bus,Porto Empedocle,Palermo - Via Basile,-1,285,bus,2,,,,,10,,,148,161

@@ -1,0 +1,12 @@
+To run COLAB_MainScrapper_test_notebook.ipynb:
+* https://colab.research.google.com/
+* Download from Github or local disc file COLAB_MainScrapper_test_notebook.ipynb
+* Upload to the in-session storage two .csv files 'airport codes short.csv' and 'bbox short.csv':
+    1. click on the lowest icon in the form of a folder on the left-side panel (4 icons will appear at the top left)
+    2. click on the 1st button on the top left
+    3. select the files and click upload button
+* Run->Run all (CTRL+F9)
+* The output file will appear in the same folder after a slight delay.
+* To change the cities use corresponding cell with from_city, to_city = ... and -> CTRL+F9
+
+WARNING!!!! After closing the session all files will be deleted.

@@ -1,5 +1,6 @@
 package com.example.demo.firestore.transportation_types_components.service;
 
+import com.example.demo.Constants;
 import com.example.demo.classes.TransportationType;
 import com.example.demo.parser.CSVtoJson;
 import com.google.api.core.ApiFuture;
@@ -18,7 +19,7 @@ import java.util.concurrent.ExecutionException;
 @Service
 public class TransportationTypeService {
 
-    final static String COMMON_PATH = "K://Programming/Graphs(from_Roman)/demo/src/main/resources/db/txt/";
+    final static String COMMON_PATH = Constants.COMMON_PATH;
 
     public String createTransportationType(TransportationType type) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();

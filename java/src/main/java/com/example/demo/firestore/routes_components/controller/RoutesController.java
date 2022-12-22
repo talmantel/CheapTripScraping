@@ -26,7 +26,7 @@ public class RoutesController {
     }
 
     @PutMapping("/updateRoute")
-    public String updateRoute(@RequestParam Route route) throws InterruptedException, ExecutionException {
+    public String updateRoute(@RequestBody Route route) throws InterruptedException, ExecutionException {
         return service.updateRoute(route);
     }
 

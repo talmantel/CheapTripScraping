@@ -1,5 +1,6 @@
 package com.example.demo.firestore.routes_components.service;
 
+import com.example.demo.Constants;
 import com.example.demo.classes.Route;
 import com.example.demo.parser.CSVtoJson;
 import com.google.api.core.ApiFuture;
@@ -25,7 +26,7 @@ public class RoutesService {
     final static String FIXED_ROUTES_WITHOUT_RIDE_SHARE_FILENAME = "cheap_trip_fixed_routes_without_ride_share";
     final static String FLYING_ROUTES_FILENAME = "cheap_trip_flying_routes";
 
-    final static String COMMON_PATH = "K://Programming/Graphs(from_Roman)/demo/src/main/resources/db/txt/";
+    final static String COMMON_PATH = Constants.COMMON_PATH;
     final static int AMOUNT_OF_STRINGS = 20;
 
     final static String CSV_ROUTES_TEST = "test2.csv";

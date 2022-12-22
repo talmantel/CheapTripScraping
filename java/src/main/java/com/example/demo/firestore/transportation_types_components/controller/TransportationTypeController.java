@@ -28,7 +28,7 @@ public class TransportationTypeController {
     }
 
     @PutMapping("/updateTransportationType")
-    public String updateCurrency(@RequestParam TransportationType type) throws InterruptedException, ExecutionException {
+    public String updateCurrency(@RequestBody TransportationType type) throws InterruptedException, ExecutionException {
         return service.updateTransportationType(type);
     }
 

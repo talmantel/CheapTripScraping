@@ -1,6 +1,0 @@
-,path_id,path_name,from_node,to_node,from_id,to_id,transport,transport_id,from_airport,to_airport,from_airport_id,to_airport_id,price_EUR,price_local,currency_local,distance_km,duration_min
-0,0,Fly to Palermo,Reykjavik Keflavik Nas,Palermo,-1,-1,flight,0,KEF,PMO,300,285,70,,,,400
-1,0,Fly to Palermo,Punta Raisi,Palermo Notarbartolo,-1,285,train,1,,,,,2,,,29,42
-2,1,"Fly to Catania, train",Reykjavik Keflavik Nas,Catania,-1,-1,flight,0,KEF,CTA,300,152,65,,,,415
-3,1,"Fly to Catania, train",Catania Airport,Catania Via Archimede,152,152,bus,2,,,,,3,,,11,10
-4,1,"Fly to Catania, train",Catania Centrale,Palermo Centrale,152,285,train,1,,,,,16,,,240,189

@@ -1,4 +1,44 @@
 from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,from_id,to_id,transport,transport_id,from_airport,to_airport,from_airport_id,to_airport_id,price_EUR,price_local,currency_local,distance_km,duration_min
+387, 'Moscow',388, 'Saint Petersburg',0,Train,Moskva Kurskaia,St Petersburg Glavny,-1,-1,train,3,,,-1,-1,14,,,643,252
+387, 'Moscow',388, 'Saint Petersburg',1,Train via Biblioteka Imeni Lenina,Moskva Oktiabrskaia,St Petersburg Glavny,-1,-1,train,3,,,-1,-1,14,,,641,224
+387, 'Moscow',388, 'Saint Petersburg',2,Train via Biblioteka Imeni Lenina #2,"Moscow, Leningradsky Station",St. Petersburg Finlyandskiy Station,-1,-1,train,3,,,-1,-1,13,,,658,500
+387, 'Moscow',388, 'Saint Petersburg',3,Bus,Okhotny Ryad,Severniy Rechnoy Vokzal,-1,-1,bus,2,,,-1,-1,0,,,19,21
+387, 'Moscow',388, 'Saint Petersburg',3,Bus,Severniy Rechnoy Vokzal,Rechnoy Vokzal,-1,-1,walk,6,,,-1,-1,,,,1,9
+387, 'Moscow',388, 'Saint Petersburg',3,Bus,Moscow Severnye Vorota bus station,Saint Petersburg Bus station,-1,-1,bus,2,,,-1,-1,9,,,683,600
+387, 'Moscow',388, 'Saint Petersburg',4,Rideshare,Moscow,Saint Petersburg,-1,-1,rideshare,8,,,387,388,11,16,EUR,704,687
+387, 'Moscow',388, 'Saint Petersburg',5,Drive,Moscow,Saint Petersburg,-1,-1,car,4,,,387,388,36,,,702,433
+387, 'Moscow',388, 'Saint Petersburg',6,"Fly from Moscow Vnukovo, line 2 subway",Kievsky Rail Terminal,Moscow Vnukovo Airport,-1,-1,train,3,,,-1,-1,4,,,33,37
+387, 'Moscow',388, 'Saint Petersburg',6,"Fly from Moscow Vnukovo, line 2 subway",Moscow Vnukovo,Pulkovo,-1,-1,flight,1,VKO,LED,-1,-1,15,,,,75
+387, 'Moscow',388, 'Saint Petersburg',6,"Fly from Moscow Vnukovo, line 2 subway",Pulkovo (LED),"Аэропорт ""Пулково 1""",-1,-1,walk,6,,,-1,-1,,,,1,9
+387, 'Moscow',388, 'Saint Petersburg',6,"Fly from Moscow Vnukovo, line 2 subway","Аэропорт ""Пулково 1""",Авиационная Ул.,-1,-1,bus,2,,,-1,-1,0,,,11,27
+387, 'Moscow',388, 'Saint Petersburg',7,"Fly from Moscow Sheremetyevo, line 2 subway",Okhotny Ryad,Sheremetyevo Airport,-1,-1,bus,2,,,-1,-1,0,,,41,43
+387, 'Moscow',388, 'Saint Petersburg',7,"Fly from Moscow Sheremetyevo, line 2 subway",Moscow Sheremetyevo,Pulkovo,-1,-1,flight,1,SVO,LED,-1,-1,15,,,,80
+387, 'Moscow',388, 'Saint Petersburg',7,"Fly from Moscow Sheremetyevo, line 2 subway",Pulkovo (LED),"Аэропорт ""Пулково 1""",-1,-1,walk,6,,,-1,-1,,,,1,9
+387, 'Moscow',388, 'Saint Petersburg',7,"Fly from Moscow Sheremetyevo, line 2 subway","Аэропорт ""Пулково 1""",Авиационная Ул.,-1,-1,bus,2,,,-1,-1,0,,,11,27
+387, 'Moscow',388, 'Saint Petersburg',8,"Fly from Moscow Domodedovo, line 2 subway",Paveletsky Rail Terminal,Moscow Domodedovo Airport,-1,-1,train,3,,,-1,-1,1,,,46,48
+387, 'Moscow',388, 'Saint Petersburg',8,"Fly from Moscow Domodedovo, line 2 subway",Moscow Domodedovo,Pulkovo,-1,-1,flight,1,DME,LED,-1,-1,16,,,,90
+387, 'Moscow',388, 'Saint Petersburg',8,"Fly from Moscow Domodedovo, line 2 subway",Pulkovo (LED),"Аэропорт ""Пулково 1""",-1,-1,walk,6,,,-1,-1,,,,1,9
+387, 'Moscow',388, 'Saint Petersburg',8,"Fly from Moscow Domodedovo, line 2 subway","Аэропорт ""Пулково 1""",Авиационная Ул.,-1,-1,bus,2,,,-1,-1,0,,,11,27
+388, 'Saint Petersburg',387, 'Moscow',0,Train via Biblioteka Imeni Lenina,St Petersburg Glavny,Moskva Oktiabrskaia,-1,-1,train,3,,,-1,-1,14,,,641,215
+388, 'Saint Petersburg',387, 'Moscow',1,Train,St Petersburg Glavny,Moskva Kurskaia,-1,-1,train,3,,,-1,-1,14,,,643,237
+388, 'Saint Petersburg',387, 'Moscow',2,Train via Moskva Vostochnaya,Saint-Peterburg Glavny,Moskva Vostochnaya,-1,-1,train,3,,,-1,-1,14,,,647,601
+388, 'Saint Petersburg',387, 'Moscow',3,Bus,Saint Petersburg Bus station,Moscow Severnye Vorota bus station,-1,-1,bus,2,,,-1,-1,9,,,687,600
+388, 'Saint Petersburg',387, 'Moscow',3,Bus,Rechnoy Vokzal,Severniy Rechnoy Vokzal,-1,-1,walk,6,,,-1,-1,,,,1,9
+388, 'Saint Petersburg',387, 'Moscow',3,Bus,Severniy Rechnoy Vokzal,Okhotny Ryad,-1,-1,bus,2,,,-1,-1,0,,,50,21
+388, 'Saint Petersburg',387, 'Moscow',4,Rideshare,Saint Petersburg,Moscow,-1,-1,rideshare,8,,,388,387,9,14,EUR,710,687
+388, 'Saint Petersburg',387, 'Moscow',5,Drive,Saint Petersburg,Moscow,-1,-1,car,4,,,388,387,36,,,708,438
+388, 'Saint Petersburg',387, 'Moscow',6,"Line 2 subway, fly to Moscow Sheremetyevo","Ст. Метро ""Московская""","Аэропорт ""Пулково 1""",-1,-1,bus,2,,,-1,-1,0,,,10,28
+388, 'Saint Petersburg',387, 'Moscow',6,"Line 2 subway, fly to Moscow Sheremetyevo","Аэропорт ""Пулково 1""",Pulkovo (LED),-1,-1,walk,6,,,-1,-1,,,,1,10
+388, 'Saint Petersburg',387, 'Moscow',6,"Line 2 subway, fly to Moscow Sheremetyevo",Pulkovo,Moscow Sheremetyevo,-1,-1,flight,1,LED,SVO,-1,-1,15,,,,85
+388, 'Saint Petersburg',387, 'Moscow',6,"Line 2 subway, fly to Moscow Sheremetyevo",Sheremetyevo Airport,Okhotny Ryad,-1,-1,bus,2,,,-1,-1,0,,,81,42
+388, 'Saint Petersburg',387, 'Moscow',7,"Line 2 subway, fly to Moscow Vnukovo","Ст. Метро ""Московская""","Аэропорт ""Пулково 1""",-1,-1,bus,2,,,-1,-1,0,,,10,28
+388, 'Saint Petersburg',387, 'Moscow',7,"Line 2 subway, fly to Moscow Vnukovo","Аэропорт ""Пулково 1""",Pulkovo (LED),-1,-1,walk,6,,,-1,-1,,,,1,10
+388, 'Saint Petersburg',387, 'Moscow',7,"Line 2 subway, fly to Moscow Vnukovo",Pulkovo,Moscow Vnukovo,-1,-1,flight,1,LED,VKO,-1,-1,15,,,,70
+388, 'Saint Petersburg',387, 'Moscow',7,"Line 2 subway, fly to Moscow Vnukovo",Moscow Vnukovo Airport,Kievsky Rail Terminal,-1,-1,train,3,,,-1,-1,4,,,33,38
+388, 'Saint Petersburg',387, 'Moscow',8,"Line 2 subway, fly to Moscow Domodedovo","Ст. Метро ""Московская""","Аэропорт ""Пулково 1""",-1,-1,bus,2,,,-1,-1,0,,,10,28
+388, 'Saint Petersburg',387, 'Moscow',8,"Line 2 subway, fly to Moscow Domodedovo","Аэропорт ""Пулково 1""",Pulkovo (LED),-1,-1,walk,6,,,-1,-1,,,,1,10
+388, 'Saint Petersburg',387, 'Moscow',8,"Line 2 subway, fly to Moscow Domodedovo",Pulkovo,Moscow Domodedovo,-1,-1,flight,1,LED,DME,-1,-1,16,,,,95
+388, 'Saint Petersburg',387, 'Moscow',8,"Line 2 subway, fly to Moscow Domodedovo",Moscow Domodedovo Airport,Paveletsky Rail Terminal,-1,-1,train,3,,,-1,-1,1,,,46,47
 100, 'Antwerp',102, 'Augsburg',0,Train,Anvers-Central,Bruxelles-Nord,100,116,train,3,,,-1,-1,6,,,44,41
 100, 'Antwerp',102, 'Augsburg',0,Train,Bruxelles-Nord,Frankfurt(M) Flughafen Fernbf,116,174,train,3,,,-1,-1,30,,,384,163
 100, 'Antwerp',102, 'Augsburg',0,Train,Frankfurt,Augsburg Hbf,174,102,train,3,,,174,-1,65,,,357,182
@@ -16,7 +56,7 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',102, 'Augsburg',5,"Fly Brussels to Frankfurt, train",Brussels,Frankfurt,-1,-1,flight,1,BRU,FRA,116,174,70,,,,60
 100, 'Antwerp',102, 'Augsburg',5,"Fly Brussels to Frankfurt, train",Frankfurt,Augsburg Hbf,174,102,train,3,,,174,-1,65,,,357,182
 100, 'Antwerp',102, 'Augsburg',6,"Fly Brussels to Zurich, train",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,,,39,30
-100, 'Antwerp',102, 'Augsburg',6,"Fly Brussels to Zurich, train",Brussels,Zurich,-1,-1,flight,1,BRU,ZRH,116,370,80,,,,65
+100, 'Antwerp',102, 'Augsburg',6,"Fly Brussels to Zurich, train",Brussels,Zurich,-1,-1,flight,1,BRU,ZRH,116,370,85,,,,65
 100, 'Antwerp',102, 'Augsburg',6,"Fly Brussels to Zurich, train",Zuerich Flughafen,Buchloe,-1,-1,train,3,,,-1,-1,80,80,CHF,254,160
 100, 'Antwerp',102, 'Augsburg',6,"Fly Brussels to Zurich, train",Buchloe,Augsburg Hbf,-1,102,train,3,,,-1,-1,7,,,40,27
 100, 'Antwerp',104, 'Athens',0,Fly from Brussels,Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,,,39,30
@@ -39,7 +79,7 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',104, 'Athens',5,Bus,Antwerp,Belgrade,100,135,bus,2,,,100,135,60,7500,RSD,1796,1765
 100, 'Antwerp',104, 'Athens',5,Bus,Belgrade,Athens,135,104,bus,2,,,135,104,70,,,1133,870
 100, 'Antwerp',104, 'Athens',6,Bus via Sofia,Antwerpen,Sofia,100,309,bus,2,,,-1,309,220,,,2226,2100
-100, 'Antwerp',104, 'Athens',6,Bus via Sofia,Sofia,Athens,309,104,bus,2,,,309,104,67,131,BGN,792,690
+100, 'Antwerp',104, 'Athens',6,Bus via Sofia,Sofia,Athens,309,104,bus,2,,,309,104,68,131,BGN,792,690
 100, 'Antwerp',104, 'Athens',7,"Train, bus",Anvers-Central,Bruxelles-Nord,100,116,train,3,,,-1,-1,6,,,44,41
 100, 'Antwerp',104, 'Athens',7,"Train, bus",Bruxelles-Nord,Luxembourg,116,233,train,3,,,-1,233,20,,,225,186
 100, 'Antwerp',104, 'Athens',7,"Train, bus",Luxembourg,Metz Ville,233,260,train,3,,,233,-1,3,,,62,61
@@ -89,7 +129,7 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',108, 'Aarhus',4,"Train to Amsterdam Schiphol, fly to Aalborg, train",Amsterdam Schiphol,Aalborg,-1,-1,flight,1,AMS,AAL,111,107,87,,,,75
 100, 'Antwerp',108, 'Aarhus',4,"Train to Amsterdam Schiphol, fly to Aalborg, train",Aalborg Lufthavn St.,Aarhus H,107,108,train,3,,,-1,-1,16,,,144,102
 100, 'Antwerp',108, 'Aarhus',5,"Fly Brussels to Copenhagen, train",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',108, 'Aarhus',5,"Fly Brussels to Copenhagen, train",Brussels,Copenhagen,-1,-1,flight,1,BRU,CPH,116,147,54,,,,90
+100, 'Antwerp',108, 'Aarhus',5,"Fly Brussels to Copenhagen, train",Brussels,Copenhagen,-1,-1,flight,1,BRU,CPH,116,147,55,,,,90
 100, 'Antwerp',108, 'Aarhus',5,"Fly Brussels to Copenhagen, train",Copenhagen (CPH),CPH Lufthavn,147,147,walk,6,,,-1,-1,,,,1,12
 100, 'Antwerp',108, 'Aarhus',5,"Fly Brussels to Copenhagen, train",CPH Lufthavn,Aarhus H,147,108,train,3,,,-1,-1,31,,,337,194
 100, 'Antwerp',108, 'Aarhus',6,Train via Osnabrück,Anvers-Central,Breda,100,-1,train,3,,,-1,-1,7,7,EUR,56,34
@@ -131,7 +171,7 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',113, 'Ankara',2,"Train, train to Eindhoven, fly",Ankara Airport,Ankara,-1,113,bus,2,,,-1,113,1,,,29,30
 100, 'Antwerp',113, 'Ankara',3,Bus via Sarajevo,Antwerp,Utrecht Central Station,100,-1,bus,2,,,100,-1,9,8,EUR,121,105
 100, 'Antwerp',113, 'Ankara',3,Bus via Sarajevo,Utrecht,Sarajevo,-1,310,bus,2,,,-1,310,71,130,BAM,1709,1180
-100, 'Antwerp',113, 'Ankara',3,Bus via Sarajevo,Sarajevo,Istanbul,310,207,bus,2,,,310,207,28,27,EUR,1151,840
+100, 'Antwerp',113, 'Ankara',3,Bus via Sarajevo,Sarajevo,Istanbul,310,207,bus,2,,,310,207,28,28,EUR,1151,840
 100, 'Antwerp',113, 'Ankara',3,Bus via Sarajevo,Istanbul,Ankara,207,113,bus,2,,,207,113,3,,,459,390
 100, 'Antwerp',113, 'Ankara',4,"Train, bus",Anvers-Central,Bruxelles-Nord,100,116,train,3,,,-1,-1,6,6,EUR,44,41
 100, 'Antwerp',113, 'Ankara',4,"Train, bus",Bruxelles-Nord,Frankfurt(M) Flughafen Fernbf,116,174,train,3,,,-1,-1,30,30,EUR,384,163
@@ -141,7 +181,7 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',113, 'Ankara',4,"Train, bus",Istanbul Pendik,Ankara,-1,113,train,3,,,-1,113,5,,,519,242
 100, 'Antwerp',113, 'Ankara',5,"Train, bus, night train",Anvers-Central,Bruxelles-Nord,100,116,train,3,,,-1,-1,6,6,EUR,44,41
 100, 'Antwerp',113, 'Ankara',5,"Train, bus, night train",Bruxelles-Nord,Liege-Guillemins,116,220,train,3,,,-1,-1,10,10,EUR,99,38
-100, 'Antwerp',113, 'Ankara',5,"Train, bus, night train",Liege Gare des Guillemins,Bucharest,220,134,bus,2,,,-1,134,137,120,GBP,2318,1471
+100, 'Antwerp',113, 'Ankara',5,"Train, bus, night train",Liege Gare des Guillemins,Bucharest,220,134,bus,2,,,-1,134,136,120,GBP,2318,1471
 100, 'Antwerp',113, 'Ankara',5,"Train, bus, night train",Gara Bucureşti Nord,Halkali,134,-1,nighttrain,3,,,-1,-1,16,30,BGN,763,1059
 100, 'Antwerp',113, 'Ankara',5,"Train, bus, night train",Halkali,Mustafa Kemal,-1,-1,walk,6,,,-1,-1,,,,2,28
 100, 'Antwerp',113, 'Ankara',5,"Train, bus, night train",Mustafa Kemal,Pendik,-1,-1,train,3,,,-1,-1,0,,,53,77
@@ -180,7 +220,7 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',115, 'Altenrhein',4,Train via Luxembourg,Anvers-Central,Bruxelles-Nord,100,116,train,3,,,-1,-1,6,6,EUR,44,41
 100, 'Antwerp',115, 'Altenrhein',4,Train via Luxembourg,Bruxelles-Nord,Luxembourg,116,233,train,3,,,-1,233,19,20,EUR,225,186
 100, 'Antwerp',115, 'Altenrhein',4,Train via Luxembourg,Luxembourg,Mulhouse Ville,233,-1,train,3,,,233,-1,56,55,EUR,314,150
-100, 'Antwerp',115, 'Altenrhein',4,Train via Luxembourg,Mulhouse,Zürich HB,-1,370,train,3,,,-1,-1,30,30,EUR,122,80
+100, 'Antwerp',115, 'Altenrhein',4,Train via Luxembourg,Mulhouse,Zürich HB,-1,370,train,3,,,-1,-1,29,30,EUR,122,80
 100, 'Antwerp',115, 'Altenrhein',4,Train via Luxembourg,Zürich HB,Rorschach,370,-1,train,3,,,-1,-1,29,,,102,90
 100, 'Antwerp',115, 'Altenrhein',4,Train via Luxembourg,"Rorschach, Hauptbahnhof Süd","Altenrhein, Schulhaus",-1,115,bus,2,,,-1,-1,,,,4,10
 100, 'Antwerp',115, 'Altenrhein',5,Bus,Antwerp,Zurich Bus Station,100,370,bus,2,,,100,-1,30,30,EUR,726,695
@@ -192,31 +232,31 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',115, 'Altenrhein',6,"Night bus, train",Zürich HB,Rorschach,370,-1,train,3,,,-1,-1,36,,,102,90
 100, 'Antwerp',115, 'Altenrhein',6,"Night bus, train","Rorschach, Hauptbahnhof Süd","Altenrhein, Schulhaus",-1,115,bus,2,,,-1,-1,,,,4,10
 100, 'Antwerp',115, 'Altenrhein',7,Drive,Antwerp,Altenrhein,100,115,car,4,,,100,115,132,,,748,421
-100, 'Antwerp',117, 'Burgas',0,"Train, train to Eindhoven, fly to Burgas",Anvers-Central,Breda,100,-1,train,3,,,-1,-1,7,7,EUR,56,34
-100, 'Antwerp',117, 'Burgas',0,"Train, train to Eindhoven, fly to Burgas",Breda,Eindhoven Centraal,-1,172,train,3,,,-1,-1,10,10,EUR,58,38
-100, 'Antwerp',117, 'Burgas',0,"Train, train to Eindhoven, fly to Burgas","Eindhoven, Station","Eindhoven, Airport",172,172,bus,2,,,-1,-1,2,2,EUR,9,24
-100, 'Antwerp',117, 'Burgas',0,"Train, train to Eindhoven, fly to Burgas",Eindhoven,Burgas,-1,-1,flight,1,EIN,BOJ,172,117,42,,,,375
-100, 'Antwerp',117, 'Burgas',0,"Train, train to Eindhoven, fly to Burgas",Sarafovo,Burgas South,117,117,bus,2,,,-1,-1,1,2,BGN,15,16
-100, 'Antwerp',117, 'Burgas',1,"Fly Brussels to Bucharest Otopeni, shuttle",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',117, 'Burgas',1,"Fly Brussels to Bucharest Otopeni, shuttle",Brussels,Bucharest Otopeni,-1,-1,flight,1,BRU,OTP,116,134,61,,,,150
-100, 'Antwerp',117, 'Burgas',1,"Fly Brussels to Bucharest Otopeni, shuttle",Bucharest Otopeni Airport,Burgas,-1,117,shuttle,9,,,-1,117,150,140,EUR,361,300
+100, 'Antwerp',117, 'Burgas',0,"Fly Brussels to Bucharest Otopeni, shuttle",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
+100, 'Antwerp',117, 'Burgas',0,"Fly Brussels to Bucharest Otopeni, shuttle",Brussels,Bucharest Otopeni,-1,-1,flight,1,BRU,OTP,116,134,61,,,,150
+100, 'Antwerp',117, 'Burgas',0,"Fly Brussels to Bucharest Otopeni, shuttle",Bucharest Otopeni Airport,Burgas,-1,117,shuttle,9,,,-1,117,141,140,EUR,361,300
+100, 'Antwerp',117, 'Burgas',1,"Train, train to Eindhoven, fly to Varna, shuttle",Anvers-Central,Breda,100,-1,train,3,,,-1,-1,7,7,EUR,56,34
+100, 'Antwerp',117, 'Burgas',1,"Train, train to Eindhoven, fly to Varna, shuttle",Breda,Eindhoven Centraal,-1,172,train,3,,,-1,-1,10,10,EUR,58,38
+100, 'Antwerp',117, 'Burgas',1,"Train, train to Eindhoven, fly to Varna, shuttle","Eindhoven, Station","Eindhoven, Airport",172,172,bus,2,,,-1,-1,2,2,EUR,9,24
+100, 'Antwerp',117, 'Burgas',1,"Train, train to Eindhoven, fly to Varna, shuttle",Eindhoven,Varna,-1,-1,flight,1,EIN,VAR,172,349,24,,,,170
+100, 'Antwerp',117, 'Burgas',1,"Train, train to Eindhoven, fly to Varna, shuttle",Varna Airport,Burgas,349,117,shuttle,9,,,-1,117,56,55,EUR,139,120
 100, 'Antwerp',117, 'Burgas',2,"Train to Amsterdam Schiphol, fly to Bucharest Otopeni, shuttle",Anvers-Central,Schiphol Airport,100,111,train,3,,,-1,-1,52,50,EUR,146,55
 100, 'Antwerp',117, 'Burgas',2,"Train to Amsterdam Schiphol, fly to Bucharest Otopeni, shuttle",Amsterdam Schiphol,Bucharest Otopeni,-1,-1,flight,1,AMS,OTP,111,134,66,,,,165
-100, 'Antwerp',117, 'Burgas',2,"Train to Amsterdam Schiphol, fly to Bucharest Otopeni, shuttle",Bucharest Otopeni Airport,Burgas,-1,117,shuttle,9,,,-1,117,150,140,EUR,361,300
-100, 'Antwerp',117, 'Burgas',3,"Train, train to Eindhoven, fly to Varna, shuttle",Anvers-Central,Breda,100,-1,train,3,,,-1,-1,7,7,EUR,56,34
-100, 'Antwerp',117, 'Burgas',3,"Train, train to Eindhoven, fly to Varna, shuttle",Breda,Eindhoven Centraal,-1,172,train,3,,,-1,-1,10,10,EUR,58,38
-100, 'Antwerp',117, 'Burgas',3,"Train, train to Eindhoven, fly to Varna, shuttle","Eindhoven, Station","Eindhoven, Airport",172,172,bus,2,,,-1,-1,2,2,EUR,9,24
-100, 'Antwerp',117, 'Burgas',3,"Train, train to Eindhoven, fly to Varna, shuttle",Eindhoven,Varna,-1,-1,flight,1,EIN,VAR,172,349,24,,,,170
-100, 'Antwerp',117, 'Burgas',3,"Train, train to Eindhoven, fly to Varna, shuttle",Varna Airport,Burgas,349,117,shuttle,9,,,-1,117,56,55,EUR,139,120
-100, 'Antwerp',117, 'Burgas',4,"Bus to Charleroi, fly to Varna, shuttle",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',117, 'Burgas',4,"Bus to Charleroi, fly to Varna, shuttle",Brussels Zaventem Airport Parking P16,Charleroi Airport,-1,-1,bus,2,,,-1,-1,12,12,EUR,72,30
-100, 'Antwerp',117, 'Burgas',4,"Bus to Charleroi, fly to Varna, shuttle",Charleroi,Varna,-1,-1,flight,1,CRL,VAR,116,349,52,,,,175
-100, 'Antwerp',117, 'Burgas',4,"Bus to Charleroi, fly to Varna, shuttle",Varna Airport,Burgas,349,117,shuttle,9,,,-1,117,56,55,EUR,139,120
-100, 'Antwerp',117, 'Burgas',5,"Fly Brussels to Istanbul, bus",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',117, 'Burgas',5,"Fly Brussels to Istanbul, bus",Brussels,Istanbul,-1,-1,flight,1,BRU,IST,116,207,89,,,,200
-100, 'Antwerp',117, 'Burgas',5,"Fly Brussels to Istanbul, bus",Istanbul (IST),Ataturk Airport Havalimani,-1,207,taxi,5,,,-1,-1,16,330,TRY,42,31
-100, 'Antwerp',117, 'Burgas',5,"Fly Brussels to Istanbul, bus",Ataturk Airport Havalimani,Otogar,207,207,train,3,,,-1,-1,1,4,TRY,12,21
-100, 'Antwerp',117, 'Burgas',5,"Fly Brussels to Istanbul, bus",Istanbul,Burgas South,207,117,bus,2,,,207,-1,19,19,EUR,324,300
+100, 'Antwerp',117, 'Burgas',2,"Train to Amsterdam Schiphol, fly to Bucharest Otopeni, shuttle",Bucharest Otopeni Airport,Burgas,-1,117,shuttle,9,,,-1,117,141,140,EUR,361,300
+100, 'Antwerp',117, 'Burgas',3,"Bus to Charleroi, fly to Varna, shuttle",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
+100, 'Antwerp',117, 'Burgas',3,"Bus to Charleroi, fly to Varna, shuttle",Brussels Zaventem Airport Parking P16,Charleroi Airport,-1,-1,bus,2,,,-1,-1,12,12,EUR,72,30
+100, 'Antwerp',117, 'Burgas',3,"Bus to Charleroi, fly to Varna, shuttle",Charleroi,Varna,-1,-1,flight,1,CRL,VAR,116,349,52,,,,175
+100, 'Antwerp',117, 'Burgas',3,"Bus to Charleroi, fly to Varna, shuttle",Varna Airport,Burgas,349,117,shuttle,9,,,-1,117,56,55,EUR,139,120
+100, 'Antwerp',117, 'Burgas',4,"Fly Brussels to Istanbul, bus",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
+100, 'Antwerp',117, 'Burgas',4,"Fly Brussels to Istanbul, bus",Brussels,Istanbul,-1,-1,flight,1,BRU,IST,116,207,89,,,,200
+100, 'Antwerp',117, 'Burgas',4,"Fly Brussels to Istanbul, bus",Istanbul (IST),Ataturk Airport Havalimani,-1,207,taxi,5,,,-1,-1,16,330,TRY,42,31
+100, 'Antwerp',117, 'Burgas',4,"Fly Brussels to Istanbul, bus",Ataturk Airport Havalimani,Otogar,207,207,train,3,,,-1,-1,1,4,TRY,12,21
+100, 'Antwerp',117, 'Burgas',4,"Fly Brussels to Istanbul, bus",Istanbul,Burgas South,207,117,bus,2,,,207,-1,19,19,EUR,324,300
+100, 'Antwerp',117, 'Burgas',5,"Train, train to Eindhoven, fly to Burgas",Anvers-Central,Breda,100,-1,train,3,,,-1,-1,7,7,EUR,56,34
+100, 'Antwerp',117, 'Burgas',5,"Train, train to Eindhoven, fly to Burgas",Breda,Eindhoven Centraal,-1,172,train,3,,,-1,-1,10,10,EUR,58,38
+100, 'Antwerp',117, 'Burgas',5,"Train, train to Eindhoven, fly to Burgas","Eindhoven, Station","Eindhoven, Airport",172,172,bus,2,,,-1,-1,2,2,EUR,9,24
+100, 'Antwerp',117, 'Burgas',5,"Train, train to Eindhoven, fly to Burgas",Eindhoven,Burgas,-1,-1,flight,1,EIN,BOJ,172,117,42,,,,375
+100, 'Antwerp',117, 'Burgas',5,"Train, train to Eindhoven, fly to Burgas",Sarafovo,Burgas South,117,117,bus,2,,,-1,-1,1,2,BGN,15,16
 100, 'Antwerp',117, 'Burgas',6,"Train, train to Dusseldorf, fly to Burgas",Anvers-Central,Bruxelles-Nord,100,116,train,3,,,-1,-1,6,6,EUR,44,41
 100, 'Antwerp',117, 'Burgas',6,"Train, train to Dusseldorf, fly to Burgas",Bruxelles-Nord,Koeln Hbf,116,145,train,3,,,-1,-1,19,19,EUR,216,101
 100, 'Antwerp',117, 'Burgas',6,"Train, train to Dusseldorf, fly to Burgas",Köln Hbf,D-Flughafen Bf,145,161,train,3,,,-1,-1,11,11,EUR,48,30
@@ -242,80 +282,3 @@ from_city_id,from_city,to_city_id,to_city,path_id,path_name,from_node,to_node,fr
 100, 'Antwerp',117, 'Burgas',12,"Drive, car train",Antwerp,Villach Hbf/Bbf,100,-1,car,4,,,100,-1,188,,,1093,568
 100, 'Antwerp',117, 'Burgas',12,"Drive, car train",Edirne,Burgas,-1,117,car,4,,,-1,117,28,,,203,158
 100, 'Antwerp',117, 'Burgas',13,Drive,Antwerp,Burgas,100,117,car,4,,,100,117,404,,,2450,1331
-100, 'Antwerp',119, 'Belfast',0,Fly Brussels to Belfast City,Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',119, 'Belfast',0,Fly Brussels to Belfast City,Brussels,Belfast City,-1,-1,flight,1,BRU,BHD,116,119,91,,,,220
-100, 'Antwerp',119, 'Belfast',0,Fly Brussels to Belfast City,Belfast City Airport,Belfast Europa Bus Centre,119,119,bus,2,,,-1,-1,3,,,6,13
-100, 'Antwerp',119, 'Belfast',1,"Train to Amsterdam Schiphol, fly to Belfast City",Anvers-Central,Schiphol Airport,100,111,train,3,,,-1,-1,51,50,EUR,146,55
-100, 'Antwerp',119, 'Belfast',1,"Train to Amsterdam Schiphol, fly to Belfast City",Amsterdam Schiphol,Belfast City,-1,-1,flight,1,AMS,BHD,111,119,62,,,,90
-100, 'Antwerp',119, 'Belfast',1,"Train to Amsterdam Schiphol, fly to Belfast City",Belfast City Airport,Belfast Europa Bus Centre,119,119,bus,2,,,-1,-1,3,,,6,13
-100, 'Antwerp',119, 'Belfast',2,"Train to Amsterdam Schiphol, fly to Belfast (Aldergrove)",Anvers-Central,Schiphol Airport,100,111,train,3,,,-1,-1,51,50,EUR,146,55
-100, 'Antwerp',119, 'Belfast',2,"Train to Amsterdam Schiphol, fly to Belfast (Aldergrove)",Amsterdam Schiphol,Belfast (Aldergrove),-1,-1,flight,1,AMS,BFS,111,119,51,,,,100
-100, 'Antwerp',119, 'Belfast',2,"Train to Amsterdam Schiphol, fly to Belfast (Aldergrove)",Belfast,Belfast Europa Bus Centre,-1,119,bus,2,,,119,-1,5,,,32,45
-100, 'Antwerp',119, 'Belfast',3,"Fly Brussels to Dublin, bus",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',119, 'Belfast',3,"Fly Brussels to Dublin, bus",Brussels,Dublin,-1,-1,flight,1,BRU,DUB,116,162,18,,,,100
-100, 'Antwerp',119, 'Belfast',3,"Fly Brussels to Dublin, bus",Dublin Airport,"Belfast, Glengall Street",-1,119,bus,2,,,-1,-1,9,,,157,110
-100, 'Antwerp',119, 'Belfast',4,"Train to Amsterdam Schiphol, fly to Dublin, bus",Anvers-Central,Schiphol Airport,100,111,train,3,,,-1,-1,51,50,EUR,146,55
-100, 'Antwerp',119, 'Belfast',4,"Train to Amsterdam Schiphol, fly to Dublin, bus",Amsterdam Schiphol,Dublin,-1,-1,flight,1,AMS,DUB,111,162,23,,,,95
-100, 'Antwerp',119, 'Belfast',4,"Train to Amsterdam Schiphol, fly to Dublin, bus",Dublin Airport,"Belfast, Glengall Street",-1,119,bus,2,,,-1,-1,9,,,157,110
-100, 'Antwerp',119, 'Belfast',5,"Train, bus and ferry",Anvers-Central,Brussel-Zuid / Bruxelles-Midi,100,116,train,3,,,-1,-1,40,40,EUR,47,35
-100, 'Antwerp',119, 'Belfast',5,"Train, bus and ferry",Brussel-Zuid / Bruxelles-Midi,London St Pancras Intl,116,225,train,3,,,-1,-1,102,100,EUR,371,125
-100, 'Antwerp',119, 'Belfast',5,"Train, bus and ferry",London Kings Cross,Glasgow Central,225,184,train,3,,,-1,-1,62,,,706,354
-100, 'Antwerp',119, 'Belfast',5,"Train, bus and ferry",Glasgow Central,Troon,184,-1,train,3,,,-1,-1,8,,,55,47
-100, 'Antwerp',119, 'Belfast',5,"Train, bus and ferry",Troon,Stranraer,-1,-1,train,3,,,-1,-1,15,,,103,95
-100, 'Antwerp',119, 'Belfast',5,"Train, bus and ferry",Stranraer,Stranraer Port Rodie,-1,-1,walk,6,,,-1,-1,,,,1,9
-100, 'Antwerp',119, 'Belfast',6,"Train, bus, car ferry",Anvers-Central,Bruxelles-Midi,100,116,train,3,,,-1,-1,6,6,EUR,48,55
-100, 'Antwerp',119, 'Belfast',6,"Train, bus, car ferry",Brussel-Zuid / Bruxelles-Midi,London St Pancras Intl,116,225,train,3,,,-1,-1,102,100,EUR,371,125
-100, 'Antwerp',119, 'Belfast',6,"Train, bus, car ferry",London Finchley Road Station,"Liverpool One Bus Station, Canning Place",225,222,bus,2,,,-1,-1,18,18,EUR,345,315
-100, 'Antwerp',119, 'Belfast',6,"Train, bus, car ferry","Liverpool One Bus Station, Canning Place",Liverpool,222,222,walk,6,,,-1,222,,,,1,15
-100, 'Antwerp',119, 'Belfast',6,"Train, bus, car ferry",Liverpool,Isle of Man Douglas,222,-1,carferry,10,,,222,-1,15,,,131,165
-100, 'Antwerp',119, 'Belfast',6,"Train, bus, car ferry",Isle of Man Douglas,Belfast,-1,119,carferry,10,,,-1,119,12,12,EUR,106,255
-100, 'Antwerp',119, 'Belfast',7,"Bus, bus and ferry",Antwerp,London Victoria Coach Station,100,225,bus,2,,,100,-1,19,20,EUR,387,510
-100, 'Antwerp',119, 'Belfast',7,"Bus, bus and ferry",London Victoria Coach Station,Glasgow Buchanan Bus Station,225,184,bus,2,,,-1,-1,16,,,648,480
-100, 'Antwerp',119, 'Belfast',8,"Bus, car ferry",Antwerp,London - Victoria Coach Station,100,225,bus,2,,,100,-1,15,14,EUR,421,585
-100, 'Antwerp',119, 'Belfast',8,"Bus, car ferry","Belgravia, Victoria Coach Station",Liverpool ONE Bus Station,225,222,bus,2,,,-1,-1,17,,,378,390
-100, 'Antwerp',119, 'Belfast',8,"Bus, car ferry",Liverpool ONE Bus Station,Liverpool,222,222,walk,6,,,-1,222,,,,1,14
-100, 'Antwerp',119, 'Belfast',8,"Bus, car ferry",Liverpool,Isle of Man Douglas,222,-1,carferry,10,,,222,-1,15,,,131,165
-100, 'Antwerp',119, 'Belfast',8,"Bus, car ferry",Isle of Man Douglas,Belfast,-1,119,carferry,10,,,-1,119,12,12,EUR,106,255
-100, 'Antwerp',121, 'Bournemouth',0,Train,Anvers-Central,Brussel-Zuid / Bruxelles-Midi,100,116,train,3,,,-1,-1,40,40,EUR,47,35
-100, 'Antwerp',121, 'Bournemouth',0,Train,Brussel-Zuid / Bruxelles-Midi,London St Pancras Intl,116,225,train,3,,,-1,-1,102,100,EUR,371,125
-100, 'Antwerp',121, 'Bournemouth',0,Train,London Waterloo,Bournemouth,225,121,train,3,,,-1,121,51,,,173,114
-100, 'Antwerp',121, 'Bournemouth',1,Bus,Antwerp,London Victoria Coach Station,100,225,bus,2,,,100,-1,19,20,EUR,387,510
-100, 'Antwerp',121, 'Bournemouth',1,Bus,London Victoria Coach Station,"Bournemouth Station, off Holdenhurst Rd",225,121,bus,2,,,-1,-1,7,,,171,150
-100, 'Antwerp',121, 'Bournemouth',2,"Bus, night bus",Antwerp,London - Victoria Coach Station,100,225,bus,2,,,100,-1,15,14,EUR,421,585
-100, 'Antwerp',121, 'Bournemouth',3,"Drive, Eurotunnel",Antwerp,Calais-Fréthun,100,-1,car,4,,,100,-1,34,,,213,131
-100, 'Antwerp',121, 'Bournemouth',3,"Drive, Eurotunnel",Folkestone,Bournemouth,-1,121,car,4,,,-1,121,51,,,270,168
-100, 'Antwerp',121, 'Bournemouth',4,"Drive, car ferry",Antwerp,Dunkirk,100,-1,car,4,,,100,-1,29,,,181,116
-100, 'Antwerp',121, 'Bournemouth',4,"Drive, car ferry",Dunkirk,Dover,-1,-1,carferry,10,,,-1,-1,91,,,65,120
-100, 'Antwerp',121, 'Bournemouth',4,"Drive, car ferry",Dover,Bournemouth,-1,121,car,4,,,-1,121,51,,,285,178
-100, 'Antwerp',121, 'Bournemouth',5,"Train to Rotterdam, fly to London City, train",Anvers-Central,Rotterdam Centraal,100,306,train,3,,,-1,-1,45,45,EUR,93,32
-100, 'Antwerp',121, 'Bournemouth',5,"Train to Rotterdam, fly to London City, train","Rotterdam, Rotterdam Centraal perron AA","Rotterdam, Rotterdam Airport",306,306,bus,2,,,-1,-1,2,2,EUR,7,19
-100, 'Antwerp',121, 'Bournemouth',5,"Train to Rotterdam, fly to London City, train",Rotterdam,London City,-1,-1,flight,1,RTM,LCY,306,225,68,,,,55
-100, 'Antwerp',121, 'Bournemouth',5,"Train to Rotterdam, fly to London City, train",London City Airport DLR Station,Canning Town DLR Station,-1,225,train,3,,,-1,-1,1,,,3,6
-100, 'Antwerp',121, 'Bournemouth',5,"Train to Rotterdam, fly to London City, train",London Waterloo,Bournemouth,225,121,train,3,,,-1,121,51,,,173,114
-100, 'Antwerp',121, 'Bournemouth',6,"Train to Amsterdam Schiphol, fly to Southampton, train",Anvers-Central,Schiphol Airport,100,111,train,3,,,-1,-1,51,50,EUR,146,55
-100, 'Antwerp',121, 'Bournemouth',6,"Train to Amsterdam Schiphol, fly to Southampton, train",Amsterdam Schiphol,Southampton,-1,-1,flight,1,AMS,SOU,111,311,85,,,,70
-100, 'Antwerp',121, 'Bournemouth',6,"Train to Amsterdam Schiphol, fly to Southampton, train",Southampton Airport Parkway,Bournemouth,311,121,train,3,,,-1,121,16,,,53,45
-100, 'Antwerp',121, 'Bournemouth',7,"Fly Brussels to London Heathrow, train",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',121, 'Bournemouth',7,"Fly Brussels to London Heathrow, train",Brussels,London Heathrow,-1,-1,flight,1,BRU,LHR,116,225,51,,,,65
-100, 'Antwerp',121, 'Bournemouth',7,"Fly Brussels to London Heathrow, train",Heathrow Terminals 2 & 3,Hayes And Harlington Station,-1,-1,train,3,,,-1,-1,2,,,6,6
-100, 'Antwerp',121, 'Bournemouth',7,"Fly Brussels to London Heathrow, train",Hayes & Harlington,Reading,-1,-1,train,3,,,-1,-1,7,,,40,33
-100, 'Antwerp',121, 'Bournemouth',7,"Fly Brussels to London Heathrow, train",Reading,Bournemouth,-1,121,train,3,,,-1,121,45,,,121,83
-100, 'Antwerp',121, 'Bournemouth',8,"Fly Brussels to Birmingham, train",Anvers-Central,Brussels Airport - Zaventem,100,-1,train,3,,,-1,-1,11,11,EUR,39,30
-100, 'Antwerp',121, 'Bournemouth',8,"Fly Brussels to Birmingham, train",Brussels,Birmingham,-1,-1,flight,1,BRU,BHX,116,120,31,,,,70
-100, 'Antwerp',121, 'Bournemouth',8,"Fly Brussels to Birmingham, train",Birmingham (BHX),Birmingham International,120,-1,walk,6,,,-1,-1,,,,1,9
-100, 'Antwerp',121, 'Bournemouth',8,"Fly Brussels to Birmingham, train",Birmingham International,Bournemouth,-1,121,train,3,,,-1,121,85,,,266,182
-100, 'Antwerp',121, 'Bournemouth',9,"Train to Amsterdam Schiphol, fly to London Gatwick, train",Anvers-Central,Schiphol Airport,100,111,train,3,,,-1,-1,51,50,EUR,146,55
-100, 'Antwerp',121, 'Bournemouth',9,"Train to Amsterdam Schiphol, fly to London Gatwick, train",Amsterdam Schiphol,London Gatwick,-1,-1,flight,1,AMS,LGW,111,225,40,,,,70
-100, 'Antwerp',121, 'Bournemouth',9,"Train to Amsterdam Schiphol, fly to London Gatwick, train",Gatwick Airport,Clapham Junction,-1,225,train,3,,,-1,-1,9,,,38,24
-100, 'Antwerp',121, 'Bournemouth',9,"Train to Amsterdam Schiphol, fly to London Gatwick, train",Clapham Junction,Bournemouth,225,121,train,3,,,-1,121,51,,,167,107
-100, 'Antwerp',121, 'Bournemouth',10,"Train to Amsterdam Schiphol, fly to Bristol, train",Anvers-Central,Schiphol Airport,100,111,train,3,,,-1,-1,51,50,EUR,146,55
-100, 'Antwerp',121, 'Bournemouth',10,"Train to Amsterdam Schiphol, fly to Bristol, train",Amsterdam Schiphol,Bristol,-1,-1,flight,1,AMS,BRS,111,122,40,,,,75
-100, 'Antwerp',121, 'Bournemouth',10,"Train to Amsterdam Schiphol, fly to Bristol, train",Bristol Airport,Bristol Temple Meads,-1,122,shuttle,9,,,-1,-1,9,,,13,19
-100, 'Antwerp',121, 'Bournemouth',10,"Train to Amsterdam Schiphol, fly to Bristol, train",Bristol Temple Meads,Southampton Central,122,311,train,3,,,-1,-1,32,,,123,100
-100, 'Antwerp',121, 'Bournemouth',10,"Train to Amsterdam Schiphol, fly to Bristol, train",Southampton Central,Bournemouth,311,121,train,3,,,-1,121,14,,,46,35
-100, 'Antwerp',121, 'Bournemouth',11,"Train, train to Eindhoven, fly to London Stansted",Anvers-Central,Breda,100,-1,train,3,,,-1,-1,7,7,EUR,56,34
-100, 'Antwerp',121, 'Bournemouth',11,"Train, train to Eindhoven, fly to London Stansted",Breda,Eindhoven Centraal,-1,172,train,3,,,-1,-1,10,10,EUR,58,38
-100, 'Antwerp',121, 'Bournemouth',11,"Train, train to Eindhoven, fly to London Stansted","Eindhoven, Station","Eindhoven, Airport",172,172,bus,2,,,-1,-1,2,2,EUR,9,24
-100, 'Antwerp',121, 'Bournemouth',11,"Train, train to Eindhoven, fly to London Stansted",Eindhoven,London Stansted,-1,-1,flight,1,EIN,STN,172,225,23,,,,65
-100, 'Antwerp',121, 'Bournemouth',11,"Train, train to Eindhoven, fly to London Stansted",Stansted Airport,Tottenham Hale,-1,225,train,3,,,-1,-1,15,,,50,35
-100, 'Antwerp',121, 'Bournemouth',11,"Train, train to Eindhoven, fly to London Stansted",London Waterloo,Bournemouth,225,121,train,3,,,-1,121,51,,,173,114

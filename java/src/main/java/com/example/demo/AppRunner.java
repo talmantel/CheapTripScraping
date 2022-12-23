@@ -13,7 +13,6 @@ import java.io.IOException;
 import java.util.Objects;
 
 @SpringBootApplication
-@EnableScheduling
 public class AppRunner {
 
 	public static void main(String[] args) throws IOException {

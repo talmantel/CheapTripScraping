@@ -3,12 +3,20 @@ package com.example.demo.parser;
 import com.example.demo.Constants;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 
 public class ParserInitializer {
     final static String COMMON_PATH = Constants.COMMON_PATH;
     final static String OUTCOME_PATH = Constants.OUTCOME_PATH;
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
+
+//        System.out.println(Arrays.toString(CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)));
+
+
+        CSVtoJson.jsonToFile(CSVtoJson.travelDataToJson(
+                CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)
+        ), OUTCOME_PATH + "new_travel_data.json");
 
          // Parse countries to Json
 //        CSVtoJson.jsonToFile(CSVtoJson.countriesToJson(

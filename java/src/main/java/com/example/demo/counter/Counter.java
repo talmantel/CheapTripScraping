@@ -14,9 +14,9 @@ import java.util.List;
 public class Counter {
 
     public static void main(String[] args) {
-        calculateRoutes(Constants.allowed_Transportation_Types_FixedRoutes,Constants.fixedRoutesDb);
+//        calculateRoutes(Constants.allowed_Transportation_Types_FixedRoutes,Constants.fixedRoutesDb);
         calculateRoutes(Constants.allowed_Transportation_Types_Routes,Constants.routesDb);
-        calculateRoutes(Constants.allowed_Transportation_Types_FlyingRoutes,Constants.flyingRoutesDb);
+//        calculateRoutes(Constants.allowed_Transportation_Types_FlyingRoutes,Constants.flyingRoutesDb);
     }
 
     private static void calculateRoutes(String allowedTransportationTypes, String saveToTable) {
@@ -42,7 +42,6 @@ public class Counter {
                 locations.add(new Location(id, name, country_id,latitude,longitude,name_ru));
                 routeGraph.addVertex(id);
             }
-            //System.out.println(routeGraph.vertexSet());
             System.out.println("getting data");
             statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data where transportation_type in " + allowedTransportationTypes )/*+ allowedTransportationTypes)*/;
             statement.execute();
@@ -57,9 +56,11 @@ public class Counter {
                     System.out.println("Updating Price from: " + fromID + ", to: " + toID);
                     if(routeGraph.getEdgeWeight(e) > price) routeGraph.setEdgeWeight(e, price);
                 } else {
-                    System.out.println("Adding to graph from: " + fromID + ", to: " + toID);
-                    e = routeGraph.addEdge(fromID, toID);
-                    routeGraph.setEdgeWeight(e, price);
+                    if (fromID != toID) {
+                        System.out.println("Adding to graph from: " + fromID + ", to: " + toID);
+                        e = routeGraph.addEdge(fromID, toID);
+                        routeGraph.setEdgeWeight(e, price);
+                    }
                 }
             }
             for(Location from : locations){
@@ -73,11 +74,16 @@ public class Counter {
                     List<DefaultEdge> edgeList = path.getEdgeList();
                     System.out.println("edgelist size = " + edgeList.size());
                     if(edgeList == null || edgeList.size() == 0) continue;
+
                     for(int i = 0; i < edgeList.size(); i++){
                         DefaultEdge edge = edgeList.get(i);
                         int edgeFrom = routeGraph.getEdgeSource(edge);
                         int edgeTo = routeGraph.getEdgeTarget(edge);
-                        if(i != 0) query.append("OR "); query.append(" HAVING (`from` = ").append(edgeFrom).append(" and `to` = ").append(edgeTo).append(") ");
+                        if(i != 0) query.append("OR "); if( i == 0) {
+                            query.append(" HAVING (`from` = ").append(edgeFrom).append(" and `to` = ").append(edgeTo).append(") ");
+                        } else {
+                            query.append(" (`from` = ").append(edgeFrom).append(" and `to` = ").append(edgeTo).append(") ");
+                        }
                     } query.append(" ORDER BY FIELD(`from`, ");
                     for(int i = 0; i < edgeList.size(); i++){
                         int edgeFrom = routeGraph.getEdgeSource(edgeList.get(i));

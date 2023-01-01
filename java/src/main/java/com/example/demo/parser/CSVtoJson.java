@@ -4,16 +4,35 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 
 public class CSVtoJson {
 
     public static String[] CSVoString(String fileName) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
-        String line = bufferedReader.readLine();
+
+        File file = new File(fileName);
+        FileReader fr = new FileReader(file);
+        BufferedReader reader = new BufferedReader(fr);
+        String line = "";
+        String add = "";
+        while (add != null) {
+            add = reader.readLine();
+            line = line + add;
+        }
+        System.out.println(line);
+
+//        BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+//        String line = bufferedReader.readLine();
+//        System.out.println(line);
         String[] lines = line.split("\\),\\(");
         for (int i = 0; i < lines.length; i++) {
             lines[i] = lines[i].replaceAll("[(')]", "");
+            lines[i] = lines[i].replaceAll("null", "");
         }
+//        for (int j = 0; j < lines.length; j++){
+//            System.out.println(lines[j]);
+//        }
         return lines;
     }
 
@@ -106,15 +125,17 @@ public class CSVtoJson {
         int k = input.length;
         JsonObject[] output = new JsonObject[k];
         for (int i = 0; i < k; i++){
-            String [] arr = input[i].split(",");
-            JsonObject object = new JsonObject();
-            object.addProperty("id", Integer.parseInt(arr[0]));
-            object.addProperty("from", Integer.parseInt(arr[1]));
-            object.addProperty("to", Integer.parseInt(arr[2]));
-            object.addProperty("transportation_type", Integer.parseInt(arr[3]));
-            object.addProperty("euro_price", Float.parseFloat(arr[4]));
-            object.addProperty("time_in_minutes", Integer.parseInt(arr[5]));
-            output[i] = object;
+            if (input[i] != null) {
+                String [] arr = input[i].split(",");
+                JsonObject object = new JsonObject();
+                object.addProperty("id", Integer.parseInt(arr[0]));
+                object.addProperty("from", Integer.parseInt(arr[1]));
+                object.addProperty("to", Integer.parseInt(arr[2]));
+                object.addProperty("transportation_type", Integer.parseInt(arr[3]));
+                object.addProperty("euro_price", Float.parseFloat(arr[4]));
+                object.addProperty("time_in_minutes", Integer.parseInt(arr[5]));
+                output[i] = object;
+            }
         }
         return output;
     }

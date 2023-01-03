@@ -3,27 +3,31 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import polars as pl
-from currency_converter import CurrencyConverter
+from currency_converter import CurrencyConverter, SINGLE_DAY_ECB_URL
 from pathlib import Path
+from itertools import permutations
 
-# necessary pathes setting up
+# set up necessary inputs
 BBOXES_CSV = '../files/csv/bbox short.csv'
 AIRPORTS_CSV = '../files/csv/airport codes short.csv'
 LOC_AIRPORTS_CSV = '../files/csv/locations with airports.csv'
-CITY_PAIRS_CSV = '../files/csv/city_pairs.csv'
 
-# outputs 
+# set up outputs 
 ALL_DIRECT_ROUTES_CSV = '../files/output/csv_output/all_direct_routes.csv'
 ALL_DIRECT_ROUTES_JSON = '../files/output/json_output/all_direct_routes.json'
 NO_ID_TRANSPORT_CSV = '../files/output/csv_output/no_id_transport.csv'
 
-NOT_FOUND = -1
+# set up all dataframes
+df_bb = pl.read_csv(BBOXES_CSV, has_header=False, new_columns=['id', 'lat_1', 'lat_2', 'lon_1', 'lon_2'])
+df_airports = pl.read_csv(AIRPORTS_CSV, has_header=False, new_columns=['code', 'city_id'])
+df_loc_airports = pl.read_csv(LOC_AIRPORTS_CSV, columns=['id', 'city'])
 
 # create currency converter class instances
-cc = CurrencyConverter()
+cc = CurrencyConverter(SINGLE_DAY_ECB_URL)
 
-# default currency
+# default settings
 DEFAULT_CUR = 'EUR'
+NOT_FOUND = -1
 
 # this function makes scrapping from the base_url
 def get_url(url, english=True):
@@ -42,7 +46,7 @@ def get_url(url, english=True):
             
         
     except:        
-        print("Invalid page!")
+        #print("Invalid page!")
         return []
         
 """ if r.status_code != 200:
@@ -72,114 +76,84 @@ class Cities:
         
         
 # founds bboxes from the coordinates
-def get_bb_id(coords: float) -> int:
-        try:
-            df = pl.read_csv(BBOXES_CSV, has_header=False, new_columns=['id', 'lat_1', 'lat_2', 'lon_1', 'lon_2'])
-            
-            cond_1 = (coords[0] >= df['lat_1']) & (coords[0] <= df['lat_2'])
-            cond_2 = (coords[1] >= df['lon_1']) & (coords[1] <= df['lon_2'])
+def get_bb_id(coords):
+    try:           
+        cond_1 = (coords[0] >= df_bb['lat_1']) & (coords[0] <= df_bb['lat_2'])
+        cond_2 = (coords[1] >= df_bb['lon_1']) & (coords[1] <= df_bb['lon_2'])
         
-            filter_df = df.filter(cond_1 & cond_2)
+        filter_df = df_bb.filter(cond_1 & cond_2)
             
-            return filter_df['id'][0]
+        return filter_df['id'][0]
         
-        except:
-            return NOT_FOUND    
+    except:
+        return NOT_FOUND    
 
 
 # founds airport id for the airport`s code likes 'THR', 'AUB', 'GKO'
-def get_airport_id(code: str) -> int:
+def get_airport_id(code):
     try:
-        df = pl.read_csv(AIRPORTS_CSV, has_header=False, new_columns=['code', 'id'])
-        filter_df = df.filter(df['code'] == code.lower())
+        filter_df = df_airports.filter(df_airports['code'] == code.lower())
         
-        return filter_df['id'][0] 
+        return filter_df['city_id'][0]
     
     except:
         return NOT_FOUND  
 
 
-def get_airport_id_for_loc(location: str) -> int:
+def get_airport_id_for_loc(location):
     try:
-        df = pl.read_csv(LOC_AIRPORTS_CSV, has_header=True)
-        filter_df = df.filter(df['city'] == location)
+        filter_df = df_loc_airports.filter(df_loc_airports['city'] in (location.split()))
             
         return filter_df['id'][0]
         
     except:
         return NOT_FOUND
-        
-    
-# main data dictionary structure set up
-data = {'from_city_id':[],
-        'from_city':[],
-        'to_city_id':[],
-        'to_city':[],
-        'path_id':[],
-        'path_name':[],
-        'from_node':[],
-        'to_node':[], 
-        'from_id':[], 
-        'to_id':[], 
-        'transport':[],
-        'transport_id':[], 
-        'from_airport':[], 
-        'to_airport':[],
-        'from_airport_id':[], 
-        'to_airport_id':[],
-        'price_EUR':[],
-        #'currency':[], # this key is may be unnecessary
-        'price_local':[], 
-        'currency_local':[],
-        'distance_km':[], 
-        'duration_min':[]
+
+# main data dictionary initialize      
+data = {
+        'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
+        'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
+        'from_airport':[], 'to_airport':[], 'from_airport_id':[], 'to_airport_id':[], 'price_EUR':[], 
+        'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
 }
 
-# dict for store the rare transport type
-no_id_transport = {
-        'from_city_id':[],
-        'from_city':[],
-        'to_city_id':[],
-        'to_city':[],
-        'path_id':[],
-        'path_name':[],
-        'from_node':[],
-        'to_node':[], 
-        'from_id':[], 
-        'to_id':[],
-        'transport':[], 
-        #'transport_id':[], 
-        'from_airport':[], 
-        'to_airport':[],
-        'from_airport_id':[], 
-        'to_airport_id':[],
-        'price_EUR':[],
-        'price_local':[], 
-        'currency_local':[],
-        'distance_km':[], 
-        'duration_min':[]
-} 
+# set up output columns
+output_columns = ['from_city_id', 'to_city_id', 'path_id', 'from_id', 'to_id', 
+                  'transport_id', 'price_EUR', 'duration_min']
+
+# set for store no id transport
+no_id_transport = set()
 
 # transport codes manually set up
-used_transport_types = ['fly', 'flight', 'bus', 'train', 'nighttrain', 'drive', 'car', 'taxi', 'walk', 'towncar', 
-                        'rideshare', 'shuttle', 'carferry']
-used_transport_id = {'fly': 1, 'flight': 1, 'bus': 2, 'train': 3, 'nighttrain': 3, 'drive': 4, 'car': 4, 'taxi': 5, 
-                    'walk': 6, 'towncar': 7, 'rideshare': 8, 'shuttle': 9, 'carferry': 10}
+used_transport_types = ['fly', 'flight', 'bus', 'nightbus', 'train', 'nighttrain', 
+                        'rideshare', 'ferry', 'carferry']
+used_transport_id = {'fly': 1, 'flight': 1, 'bus': 2, 'nightbus': 2, 'train': 3, 'nighttrain': 3, 
+                     'rideshare': 8, 'ferry': 10, 'carferry': 10}
 
-# set up start and end points of path
-#from_city, to_city = 'Madrid', 'Oslo'
+# create city id pairs from 'airport codes short.csv'
+id_pairs_from_airports = set()
+for pair in permutations(df_airports['city_id'].unique(), 2):
+    id_pairs_from_airports.add(pair)
 
-#with open(CITY_PAIRS_CSV, 'r') as f:
-city_pairs_df = pd.read_csv(CITY_PAIRS_CSV, header=None)
-#print(city_pairs_df)
-for city_pair in city_pairs_df.head(10).itertuples(index=False, name=None):
-    from_city = city_pair[0].partition(',')[2][:-1]
-    from_city_id = city_pair[0].partition(',')[0][1:]
-    to_city = city_pair[1].partition(',')[2][:-1]
-    to_city_id = city_pair[1].partition(',')[0][1:]
-    #print(from_city_id, from_city, to_city_id, to_city)
+# create city id pairs from 'locations with airports.csv'
+id_pairs_from_loc_airports = set()
+for pair in permutations(df_loc_airports['id'].unique(), 2):
+    id_pairs_from_loc_airports.add(pair)
+
+# intersection of two lists gives avaliable id pairs
+avaliable_id_pairs = id_pairs_from_airports.intersection(id_pairs_from_loc_airports)
+
+# dict for id city_name binding    
+dict_id_city_name = dict(zip(df_loc_airports['id'], df_loc_airports['city']))
+
+# loop for each city pair
+for n, pair in enumerate(avaliable_id_pairs):
+    from_city_id, to_city_id = pair[0], pair[1]
+    from_city, to_city = dict_id_city_name[from_city_id], dict_id_city_name[to_city_id]
     
-# extract all avaliable pathes
+    if n == 10: break
+    
+    # extract all avaliable pathes for each pair
     try:
         c = Cities()
         c.scrap_routes(from_city, to_city)
@@ -191,9 +165,9 @@ for city_pair in city_pairs_df.head(10).itertuples(index=False, name=None):
     # extraction all direct routes from all pathes and filling the main data dictionary
     for path_id, path in enumerate(pathes):
         for route in path[8][:-1]:
-            
+                
             # for fly and flights only                     
-            if route[0] in (used_transport_types[:2]): 
+            if route[0] in used_transport_types[:2]: 
                 data['from_city_id'].append(from_city_id)
                 data['from_city'].append(from_city)
                 data['to_city_id'].append(to_city_id)
@@ -210,20 +184,17 @@ for city_pair in city_pairs_df.head(10).itertuples(index=False, name=None):
                 data['to_airport'].append(route[3][0])
                 data['from_airport_id'].append(get_airport_id(route[2][0]))
                 data['to_airport_id'].append(get_airport_id(route[3][0]))
-                if route[11][0][1] not in (DEFAULT_CUR, ''):
-                    try:
-                        price_EUR = cc.convert(route[11][0][0], route[11][0][1], DEFAULT_CUR)
-                    except:
-                        continue
-                    data['price_EUR'].append(round(price_EUR))
+                    
+                if route[11][0][1] in cc.currencies:
+                    data['price_EUR'].append(round(cc.convert(route[11][0][0], route[11][0][1])))
                 else:
-                    data['price_EUR'].append(route[11][0][0])
-                #data['currency'].append(DEFAULT_CUR)
+                    data['price_EUR'].append(NOT_FOUND)  
+                        
                 data['price_local'].append('')
                 data['currency_local'].append('')
                 data['distance_km'].append('')
-                data['duration_min'].append(int(route[4] / 60)) # sec to min
-            
+                data['duration_min'].append(round(route[4] / 60)) # sec to min
+                
             # for used types of vehicles            
             elif route[1] in used_transport_types[2:]: 
                 data['from_city_id'].append(from_city_id)
@@ -242,61 +213,40 @@ for city_pair in city_pairs_df.head(10).itertuples(index=False, name=None):
                 data['to_airport'].append('')
                 data['from_airport_id'].append(get_airport_id_for_loc(route[6][1]))
                 data['to_airport_id'].append(get_airport_id_for_loc(route[7][1]))
-                if route[13][0][1] not in (DEFAULT_CUR, ''):
-                    try:
-                        price_EUR = cc.convert(route[13][0][0], route[13][0][1], DEFAULT_CUR)
-                    except:
-                        continue
-                    if price_EUR <= 1.0: price_EUR == 1.0
-                    data['price_EUR'].append(round(price_EUR))
+                    
+                if route[13][0][1] in cc.currencies:
+                    data['price_EUR'].append(round(cc.convert(route[13][0][0], route[13][0][1])))
                 else:
-                    data['price_EUR'].append(route[13][0][0])
-                #data['currency'].append(DEFAULT_CUR)           # may be unnecessary
+                    data['price_EUR'].append(NOT_FOUND)
+
                 data['price_local'].append(route[14][0][0])
                 data['currency_local'].append(route[14][0][1])
                 data['distance_km'].append(round(route[5]))
                 data['duration_min'].append(round(route[3] / 60)) # sec to min
-            
-            # for no id transport types
+                
+                # for no id transport types
             else:
-                no_id_transport['from_city_id'].append(from_city_id)
-                no_id_transport['from_city'].append(from_city)
-                no_id_transport['to_city_id'].append(to_city_id)
-                no_id_transport['to_city'].append(to_city)
-                no_id_transport['path_id'].append(path_id)
-                no_id_transport['path_name'].append(path[4])
-                no_id_transport['from_node'].append(route[6][1])
-                no_id_transport['to_node'].append(route[7][1])
-                no_id_transport['from_id'].append(get_bb_id(route[6][2:4]))
-                no_id_transport['to_id'].append(get_bb_id(route[7][2:4]))
-                no_id_transport['transport'].append(route[1])
-                no_id_transport['from_airport'].append('')
-                no_id_transport['to_airport'].append('')
-                no_id_transport['from_airport_id'].append(get_airport_id_for_loc(route[6][1]))
-                no_id_transport['to_airport_id'].append(get_airport_id_for_loc(route[7][1]))
-                
-                if route[13][0][1] not in (DEFAULT_CUR, ''):
-                    try:
-                        price_EUR = cc.convert(route[13][0][0], route[13][0][1], DEFAULT_CUR)
-                    except:
-                        continue
-                    if price_EUR <= 1.0: price_EUR == 1.0
-                    no_id_transport['price_EUR'].append(round(price_EUR))
-                else:
-                    no_id_transport['price_EUR'].append(route[13][0][0])
+                no_id_transport.add(route[1])
+                    
+    #print(data)                                        
+    tmp_df = pd.DataFrame(data)
+    print(tmp_df)
         
-                no_id_transport['price_local'].append(route[14][0][0])
-                no_id_transport['currency_local'].append(route[14][0][1])
-                no_id_transport['distance_km'].append(round(route[5]))
-                no_id_transport['duration_min'].append(round(route[3] / 60)) # sec to min
-                
-                                    
-tmp_df = pd.DataFrame(data)
-nidt_df = pd.DataFrame(no_id_transport)
+    # ouputs in csv and json files
+    if n==0:
+        tmp_df.to_csv(ALL_DIRECT_ROUTES_CSV, mode='w', index=False, columns=output_columns)
+    else:
+        tmp_df.to_csv(ALL_DIRECT_ROUTES_CSV, mode='a', index=False, header=False, columns=output_columns)
+    
+    #tmp_df.to_json(ALL_DIRECT_ROUTES_JSON, orient=)
 
-# ouputs in csv and json files
-tmp_df.to_csv(ALL_DIRECT_ROUTES_CSV, index=False)
-tmp_df.to_json(ALL_DIRECT_ROUTES_JSON)
-
+    data = {
+        'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
+        'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
+        'from_airport':[], 'to_airport':[], 'from_airport_id':[], 'to_airport_id':[], 'price_EUR':[], 
+        'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
+    }    
+   
 #output rare transport types
+nidt_df = pd.DataFrame(no_id_transport)
 nidt_df.to_csv(NO_ID_TRANSPORT_CSV, index=False)

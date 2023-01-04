@@ -3,10 +3,14 @@ package com.example.demo.counter;
 import com.example.demo.Constants;
 import com.example.demo.classes.DirectRoute;
 import com.example.demo.classes.Location;
+import com.example.demo.classes.Route;
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
+
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,17 +24,22 @@ public class Counter {
     }
 
     private static void calculateRoutes(String allowedTransportationTypes, String saveToTable) {
-
+        String finalString = "";
+        StringBuilder builder = new StringBuilder();
+        String obj = null;
+        int finalCount = 287661;
         try {
             Connection conn = DriverManager.getConnection(Constants.DB_URL, Constants.DB_USER, Constants.DB_PASSWORD);
             System.out.println("DB is connected, " + conn);
             System.out.println("Started scanning routes");
             System.out.println("Getting locations");
+            //PreparedStatement statement = conn.prepareStatement("select * from locations_short");
             PreparedStatement statement = conn.prepareStatement("select * from locations");
             statement.execute();
 
             ResultSet locationsResultSet = statement.getResultSet();
             ArrayList<Location> locations = new ArrayList<>();
+
             SimpleDirectedWeightedGraph<Integer, DefaultEdge> routeGraph = new SimpleDirectedWeightedGraph<>(DefaultEdge.class);
             while (locationsResultSet.next()) {
                 int id = locationsResultSet.getInt("id");
@@ -43,6 +52,7 @@ public class Counter {
                 routeGraph.addVertex(id);
             }
             System.out.println("getting data");
+            //statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data_short where transportation_type in " + allowedTransportationTypes )/*+ allowedTransportationTypes)*/;
             statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data where transportation_type in " + allowedTransportationTypes )/*+ allowedTransportationTypes)*/;
             statement.execute();
             ResultSet travelDataResultSet = statement.getResultSet();
@@ -63,14 +73,21 @@ public class Counter {
                     }
                 }
             }
-            for(Location from : locations){
+//            for(Location from : locations){
+            System.out.println("start counting FROM till " + locations.get(190));
+//            for(int t = 0; t < 190; t++){
+//            for(int t = 190; t < 380; t++){
+            for(int t = 380; t < 570; t++){
+//            for(int t = 570; t < locations.size(); t++){
+                Location from = locations.get(t);
                 System.out.println("Scanning from: " + from);
                 for(Location to : locations){
                     if(to.getId() == from.getId()) continue;
                     System.out.println("--Scanning route from: " + from + " to: " + to);
                     GraphPath<Integer, DefaultEdge> path = DijkstraShortestPath.findPathBetween(routeGraph, from.getId(), to.getId());
-                    StringBuilder query = new StringBuilder("select * from travel_data where transportation_type in " + allowedTransportationTypes);
                     if(path == null) continue;
+                    StringBuilder query = new StringBuilder("select * from travel_data where transportation_type in " + allowedTransportationTypes);
+//                    StringBuilder query = new StringBuilder("select * from travel_data_short where transportation_type in " + allowedTransportationTypes);
                     List<DefaultEdge> edgeList = path.getEdgeList();
                     System.out.println("edgelist size = " + edgeList.size());
                     if(edgeList == null || edgeList.size() == 0) continue;
@@ -135,16 +152,33 @@ public class Counter {
         directRoutes.add(directRoute);
         System.out.println("----Travel: " + directRoutes);
 
-        statement = conn.prepareStatement("insert into " + saveToTable +" (`from`, `to`, euro_price, travel_data) values (" +
-                from.getId() + ", " +
-                to.getId() + ", " +
-                totalPrice + ", '" +
-                travelData + "')");
-        statement.execute();
+//        statement = conn.prepareStatement("insert into " + saveToTable +" (`from`, `to`, euro_price, travel_data) values (" +
+//                from.getId() + ", " +
+//                to.getId() + ", " +
+//                totalPrice + ", '" +
+//                travelData + "')");
+//        statement.execute();
+                obj = "(" + finalCount + "," + from.getId() + "," + to.getId() + "," + totalPrice + "," + travelData + ")";
+                builder.append(obj);
+                builder.append(",");
+                finalCount++;
                 }
-            } conn.close();
+            }
+            finalString = builder.toString();
+            stringToFile(finalString);
+            conn.close();
+
         } catch (SQLException e) {
             System.out.println("No connection with DB");
+        }
+    }
+    public static void stringToFile(String routes) {
+        try (FileWriter file = new FileWriter(Constants.PATH_ALT + Constants.STRING_FILE_ROUTES)) {
+            //System.out.println(routes);
+            file.write(routes);
+            file.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

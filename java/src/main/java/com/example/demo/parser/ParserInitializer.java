@@ -13,10 +13,13 @@ public class ParserInitializer {
 
 //        System.out.println(Arrays.toString(CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)));
 
+        //id changer
+//        System.out.println(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + Constants.STRING_FILE_TRANSFORM)));
+        CSVtoJson.stringToFile(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + "new_routesah.csv")), Constants.PATH_ALT + "PPP.csv");
 
-        CSVtoJson.jsonToFile(CSVtoJson.travelDataToJson(
-                CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)
-        ), OUTCOME_PATH + "new_travel_data.json");
+//        CSVtoJson.jsonToFile(CSVtoJson.travelDataToJson(
+//                CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)
+//        ), OUTCOME_PATH + "new_travel_data.json");
 
          // Parse countries to Json
 //        CSVtoJson.jsonToFile(CSVtoJson.countriesToJson(

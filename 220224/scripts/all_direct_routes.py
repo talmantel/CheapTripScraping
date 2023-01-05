@@ -2,20 +2,31 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 import json
-import polars as pl
-from currency_converter import CurrencyConverter, SINGLE_DAY_ECB_URL
 from pathlib import Path
 from itertools import permutations
+import time
+
+
+import polars as pl
+from progress.bar import IncrementalBar
+from currency_converter import CurrencyConverter, SINGLE_DAY_ECB_URL
+
+# Progress bar class
+class AweBar(IncrementalBar):
+    suffix = '%(index)d/%(max)d - %(percent).1f%% - %(elapsed)d s - %(remaining_hours)d h'
+    @property
+    def remaining_hours(self):
+        return self.eta // 3600
 
 # set up necessary inputs
-BBOXES_CSV = '../files/csv/bbox short.csv'
-AIRPORTS_CSV = '../files/csv/airport codes short.csv'
-LOC_AIRPORTS_CSV = '../files/csv/locations with airports.csv'
+BBOXES_CSV = Path('../files/csv/bbox short.csv')
+AIRPORTS_CSV = Path('../files/csv/airport codes short.csv')
+LOC_AIRPORTS_CSV = Path('../files/csv/locations with airports.csv')
 
 # set up outputs 
-ALL_DIRECT_ROUTES_CSV = '../files/output/csv_output/all_direct_routes.csv'
-ALL_DIRECT_ROUTES_JSON = '../files/output/json_output/all_direct_routes.json'
-NO_ID_TRANSPORT_CSV = '../files/output/csv_output/no_id_transport.csv'
+ALL_DIRECT_ROUTES_CSV = Path('../files/output/csv_output/all_direct_routes.csv')
+ALL_DIRECT_ROUTES_JSON = Path('../files/output/json_output/all_direct_routes.json')
+NO_ID_TRANSPORT_CSV = Path('../files/output/csv_output/no_id_transport.csv')
 
 # set up all dataframes
 df_bb = pl.read_csv(BBOXES_CSV, has_header=False, new_columns=['id', 'lat_1', 'lat_2', 'lon_1', 'lon_2'])
@@ -43,8 +54,7 @@ def get_url(url, english=True):
 
         #print(json.dumps(parsed, indent=4, sort_keys=True))
         return parsed    
-            
-        
+                
     except:        
         #print("Invalid page!")
         return []
@@ -118,15 +128,14 @@ data = {
 }
 
 # set up output columns
-output_columns = ['from_city_id', 'to_city_id', 'path_id', 'from_id', 'to_id', 
-                  'transport_id', 'price_EUR', 'duration_min']
+output_columns = ('from_id', 'to_id', 'transport_id', 'price_EUR', 'duration_min')
 
 # set for store no id transport
 no_id_transport = set()
 
 # transport codes manually set up
-used_transport_types = ['fly', 'flight', 'bus', 'nightbus', 'train', 'nighttrain', 
-                        'rideshare', 'ferry', 'carferry']
+used_transport_types = ('fly', 'flight', 'bus', 'nightbus', 'train', 'nighttrain', 
+                        'rideshare', 'ferry', 'carferry')
 used_transport_id = {'fly': 1, 'flight': 1, 'bus': 2, 'nightbus': 2, 'train': 3, 'nighttrain': 3, 
                      'rideshare': 8, 'ferry': 10, 'carferry': 10}
 
@@ -146,16 +155,24 @@ avaliable_id_pairs = id_pairs_from_airports.intersection(id_pairs_from_loc_airpo
 # dict for id city_name binding    
 dict_id_city_name = dict(zip(df_loc_airports['id'], df_loc_airports['city']))
 
-# loop for each city pair
+# progress bar
+bar = AweBar('Processed', max = len(avaliable_id_pairs))
+
+
+c = Cities()
+
+# main loop for each city pair
 for n, pair in enumerate(avaliable_id_pairs):
     from_city_id, to_city_id = pair[0], pair[1]
     from_city, to_city = dict_id_city_name[from_city_id], dict_id_city_name[to_city_id]
     
-    if n == 10: break
+    #if n == 10: break
+    
+    bar.next()
+    time.sleep(1)
     
     # extract all avaliable pathes for each pair
     try:
-        c = Cities()
         c.scrap_routes(from_city, to_city)
         pathes = c.routes[(from_city, to_city)]
         if pathes == []: raise Exception(f'Invalid page! {from_city}-{to_city}')
@@ -176,8 +193,10 @@ for n, pair in enumerate(avaliable_id_pairs):
                 data['path_name'].append(path[4])
                 data['from_node'].append(route[2][1])
                 data['to_node'].append(route[3][1])
-                data['from_id'].append(get_bb_id(route[2][2:4]))
-                data['to_id'].append(get_bb_id(route[3][2:4]))
+                data['from_id'].append(get_airport_id(route[2][0]))
+                data['to_id'].append(get_airport_id(route[3][0]))
+                #data['from_id'].append(get_bb_id(route[2][2:4]))
+                #data['to_id'].append(get_bb_id(route[3][2:4]))
                 data['transport'].append(route[0])
                 data['transport_id'].append(used_transport_id[route[0]])
                 data['from_airport'].append(route[2][0])
@@ -227,18 +246,23 @@ for n, pair in enumerate(avaliable_id_pairs):
                 # for no id transport types
             else:
                 no_id_transport.add(route[1])
-                    
-    #print(data)                                        
-    tmp_df = pd.DataFrame(data)
-    print(tmp_df)
-        
+    
+    temp_df = pd.DataFrame(data, columns=output_columns)
+    
+    cond_1 = temp_df['from_id'] != temp_df['to_id']
+    cond_2 = (temp_df['from_id'] != NOT_FOUND) & (temp_df['to_id'] != NOT_FOUND)
+    cond_3 = temp_df['price_EUR'] != NOT_FOUND
+    
+    df_filter = temp_df[cond_1 & cond_2 & cond_3]
+    df_filter.drop_duplicates(subset=['from_id', 'to_id', 'transport_id'], inplace=True)
+            
     # ouputs in csv and json files
     if n==0:
-        tmp_df.to_csv(ALL_DIRECT_ROUTES_CSV, mode='w', index=False, columns=output_columns)
+        df_filter.to_csv(ALL_DIRECT_ROUTES_CSV, mode='w', index=False, columns=output_columns)
     else:
-        tmp_df.to_csv(ALL_DIRECT_ROUTES_CSV, mode='a', index=False, header=False, columns=output_columns)
-    
-    #tmp_df.to_json(ALL_DIRECT_ROUTES_JSON, orient=)
+        df_filter.to_csv(ALL_DIRECT_ROUTES_CSV, mode='a', index=False, header=False, columns=output_columns)
+        
+        #tmp_df.to_json(ALL_DIRECT_ROUTES_JSON, orient=)
 
     data = {
         'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
@@ -246,7 +270,9 @@ for n, pair in enumerate(avaliable_id_pairs):
         'from_airport':[], 'to_airport':[], 'from_airport_id':[], 'to_airport_id':[], 'price_EUR':[], 
         'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
     }    
-   
+        
 #output rare transport types
 nidt_df = pd.DataFrame(no_id_transport)
 nidt_df.to_csv(NO_ID_TRANSPORT_CSV, index=False)
+
+bar.finish()

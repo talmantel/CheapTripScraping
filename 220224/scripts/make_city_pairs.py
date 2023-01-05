@@ -8,25 +8,27 @@ LOC_AIRPORTS_CSV = '../files/csv/locations with airports.csv'
 AIRPORTS_CSV = '../files/csv/airport codes short.csv'
 CITY_PAIRS_CSV = '../files/csv/city_pairs.csv'
 
-
-# create city id pairs from 'airport codes short.csv'
 df_airports = pl.read_csv(AIRPORTS_CSV, has_header=False, new_columns=['code', 'city_id'])
+df_loc_airports = pl.read_csv(LOC_AIRPORTS_CSV, columns=['id', 'city'])
 
+# create city id pairs from 'airport codes short.csv' 
 id_pairs_from_airports = set()
 for pair in permutations(df_airports['city_id'].unique(), 2):
     id_pairs_from_airports.add(pair)
-
-# create city id pairs from 'locations with airports.csv'
-df_loc_airports = pl.read_csv(LOC_AIRPORTS_CSV, columns=['id', 'city'])
+print(f'id_pairs_from_airports:  {len(id_pairs_from_airports)}')
 
 dict_id_city_name = dict(zip(df_loc_airports['id'], df_loc_airports['city']))
 
+# create city id pairs from 'locations with airports.csv'
 id_pairs_from_loc_airports = set()
 for pair in permutations(df_loc_airports['id'].unique(), 2):
     id_pairs_from_loc_airports.add(pair)
+print(f'id_pairs_from_loc_airports:  {len(id_pairs_from_loc_airports)}')
 
 #intersection of two lists
 avaliable_id_pairs = id_pairs_from_airports.intersection(id_pairs_from_loc_airports)
+print(f'avaliable_id_pairs:  {len(avaliable_id_pairs)}')
+
 
 output_dict = {
                 'from_id':[],

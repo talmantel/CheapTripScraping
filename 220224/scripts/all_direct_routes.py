@@ -110,7 +110,7 @@ def get_airport_id(code):
         return NOT_FOUND  
 
 
-def get_airport_id_for_loc(location):
+def get_airport_id_for_loc(location: str):
     try:
         filter_df = df_loc_airports.filter(df_loc_airports['city'] in (location.split()))
             
@@ -128,7 +128,7 @@ data = {
 }
 
 # set up output columns
-output_columns = ('from_id', 'to_id', 'transport_id', 'price_EUR', 'duration_min')
+output_columns = ['from_id', 'to_id', 'transport_id', 'price_EUR', 'duration_min']
 
 # set for store no id transport
 no_id_transport = set()

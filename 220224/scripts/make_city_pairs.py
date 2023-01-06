@@ -1,57 +1,31 @@
-import pandas as pd
-import polars as pl
-from pathlib import Path
 from itertools import permutations
 
 
-LOC_AIRPORTS_CSV = '../files/csv/locations with airports.csv'
-AIRPORTS_CSV = '../files/csv/airport codes short.csv'
-CITY_PAIRS_CSV = '../files/csv/city_pairs.csv'
-
-df_airports = pl.read_csv(AIRPORTS_CSV, has_header=False, new_columns=['code', 'city_id'])
-df_loc_airports = pl.read_csv(LOC_AIRPORTS_CSV, columns=['id', 'city'])
-
-# create city id pairs from 'airport codes short.csv' 
-id_pairs_from_airports = set()
-for pair in permutations(df_airports['city_id'].unique(), 2):
-    id_pairs_from_airports.add(pair)
-print(f'id_pairs_from_airports:  {len(id_pairs_from_airports)}')
-
-dict_id_city_name = dict(zip(df_loc_airports['id'], df_loc_airports['city']))
-
-# create city id pairs from 'locations with airports.csv'
-id_pairs_from_loc_airports = set()
-for pair in permutations(df_loc_airports['id'].unique(), 2):
-    id_pairs_from_loc_airports.add(pair)
-print(f'id_pairs_from_loc_airports:  {len(id_pairs_from_loc_airports)}')
-
-#intersection of two lists
-avaliable_id_pairs = id_pairs_from_airports.intersection(id_pairs_from_loc_airports)
-print(f'avaliable_id_pairs:  {len(avaliable_id_pairs)}')
+from settings import df_bb, df_airports, df_city_countries
 
 
-output_dict = {
-                'from_id':[],
-                'from_city':[],
-                'to_id':[],
-                'to_city':[]    
-}
-# loop for each city pair
-for pair in avaliable_id_pairs:
-    from_id, to_id = pair[0], pair[1]
-    from_city, to_city = dict_id_city_name[from_id], dict_id_city_name[to_id]
-    output_dict['from_id'].append(from_id)
-    output_dict['from_city'].append(from_city)
-    output_dict['to_id'].append(to_id)
-    output_dict['to_city'].append(to_city)
+def gen_city_country_pairs() -> tuple:
+   
+    union_bb_airports = set(df_bb['id_city']).union(df_airports['id_city'])
     
-    print(from_id, from_city, to_id, to_city)
-
-df = pd.DataFrame(output_dict, columns=['from_id', 'from_city', 'to_id', 'to_city'],)
+    intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(union_bb_airports)
     
-df.to_csv(CITY_PAIRS_CSV, mode='a', index=False)
+    for from_id_city, to_id_city in permutations(intersect_city_countries_bb_airports, 2):
+        
+        # get the city name and country name
+        from_city_id, from_city, from_country = df_city_countries.filter(df_city_countries['id_city'] == from_id_city).row(0)
+        to_city_id, to_city, to_country = df_city_countries.filter(df_city_countries['id_city'] == to_id_city).row(0)
+    
+        yield from_city_id, from_city, from_country, to_city_id, to_city, to_country
+    
+    
 
-print(len(avaliable_id_pairs))
-
+if __name__ == '__main__':
+    
+    for _ in range(10):
+        print(gen_city_country_pairs())
+    """ with open('all_city_country_pairs.csv', 'w') as f:    
+        for i, (from_city_id, from_city, from_country, to_city_id, to_city, to_country) in enumerate(gen_city_country_pairs()):
+            f.writelines(f'{i}, {from_city_id}, {from_city}, {from_country}, {to_city_id}, {to_city}, {to_country}\n') """
 
     

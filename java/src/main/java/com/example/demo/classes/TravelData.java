@@ -24,7 +24,16 @@ public class TravelData {
         this.time_in_minutes = time_in_minutes;
     }
 
-    public TravelData(){}
+    public TravelData(int from, int to, int transportation_type, float euro_price, int time_in_minutes) {
+        this.from = from;
+        this.to = to;
+        this.transportation_type = transportation_type;
+        this.euro_price = euro_price;
+        this.time_in_minutes = time_in_minutes;
+    }
+
+    public TravelData() {
+    }
 
     @Override
     public String toString() {
@@ -37,6 +46,6 @@ public class TravelData {
     }
 
     public String getName() {
-        return ""+id;
+        return "" + id;
     }
 }

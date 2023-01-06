@@ -11,11 +11,13 @@ public class ParserInitializer {
     final static String OUTCOME_PATH = Constants.OUTCOME_PATH;
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
 
+        System.out.println(Arrays.toString(CSVtoJson.CSVoString(Constants.PATH_ALT + "all_direct_routes.csv")));
+
 //        System.out.println(Arrays.toString(CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)));
 
         //id changer
 //        System.out.println(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + Constants.STRING_FILE_TRANSFORM)));
-        CSVtoJson.stringToFile(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + "new_routesah.csv")), Constants.PATH_ALT + "PPP.csv");
+//        CSVtoJson.stringToFile(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + "new_routesah.csv")), Constants.PATH_ALT + "PPP.csv");
 
 //        CSVtoJson.jsonToFile(CSVtoJson.travelDataToJson(
 //                CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)

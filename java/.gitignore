@@ -5,6 +5,7 @@ target/
 !**/src/test/**/target/
 Constants.java
 resources
+desktop
 
 ### STS ###
 .apt_generated

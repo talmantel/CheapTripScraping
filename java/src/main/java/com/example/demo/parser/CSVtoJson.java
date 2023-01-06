@@ -14,10 +14,27 @@ public class CSVtoJson {
         BufferedReader reader = new BufferedReader(fr);
         String line = "";
         String add = "";
+//        long counter = 1; // in case of id needed
+//        while (add != null) {
+//            add = reader.readLine();
+//            //if csv delimeter only commas and enters
+//            String str = "(" + counter + "," + add + "),";
+//            counter++;
+//            line = line + str;
+//        }
         while (add != null) {
+            String str = "";
             add = reader.readLine();
-            line = line + add;
+            if (add == null) {
+                str = "";
+            } else {
+                str = "(" + add + "),";
+            }
+            System.out.println(str);
+            line = line + str;
         }
+
+        System.out.println(line);
         String[] lines = line.split("\\),\\(");
         for (int i = 0; i < lines.length; i++) {
             lines[i] = lines[i].replaceAll("[(')]", "");

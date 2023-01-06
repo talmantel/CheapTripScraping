@@ -178,7 +178,7 @@ if __name__ == '__main__':
     #bar = AweBar('Processed', max = len(avaliable_id_pairs))
     city_pairs = []
     for i, item in enumerate(gen_city_country_pairs(), start=1):
-        if i == 10: break
+        if i == 101: break
         city_pairs.append(item)
         
         

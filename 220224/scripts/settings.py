@@ -20,7 +20,7 @@ df_airports = pl.read_csv(AIRPORT_CODES_CSV, has_header=False, new_columns=['cod
 df_city_countries = pl.read_csv(CITY_COUNTRY_CSV, has_header=False, new_columns=['id_city', 'city', 'country'])
 
 # set up output columns
-output_columns = ['from_city_id', 'to_city_id', 'from_id', 'to_id', 'transport_id', 'price_EUR', 'duration_min']
+output_columns = ['from_city_id', 'to_city_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'price_max_EUR', 'duration_min']
 
 # set for store no id transport
 no_id_transport_set = set()

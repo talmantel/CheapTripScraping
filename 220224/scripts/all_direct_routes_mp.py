@@ -60,8 +60,8 @@ def extract_data(city_country, pathes):
     data = {
         'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
         'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
-        'from_airport':[], 'to_airport':[], 'from_airport_id':[], 'to_airport_id':[], 'price_EUR':[], 
-        'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
+        'from_airport':[], 'to_airport':[], 'from_airport_id':[], 'to_airport_id':[], 'price_min_EUR':[], 
+        'price_max_EUR':[], 'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
     }     
         
     # transport codes manually set up
@@ -100,9 +100,11 @@ def extract_data(city_country, pathes):
                 data['to_airport_id'].append(get_airport_id(route[3][0]))
                     
                 if route[11][0][1] in cc.currencies:
-                    data['price_EUR'].append(round(cc.convert(route[11][0][0], route[11][0][1])))
+                    data['price_min_EUR'].append(round(cc.convert(route[11][0][0], route[11][0][1])))
+                    data['price_max_EUR'].append(round(cc.convert(route[11][2][0], route[11][2][1])))
                 else:
-                    data['price_EUR'].append(NOT_FOUND)  
+                    data['price_min_EUR'].append(NOT_FOUND)  
+                    data['price_max_EUR'].append(NOT_FOUND)
                         
                 data['price_local'].append('')
                 data['currency_local'].append('')
@@ -131,9 +133,11 @@ def extract_data(city_country, pathes):
                # data['to_airport_id'].append(get_airport_id_for_loc(route[7][1]))
                     
                 if route[13][0][1] in cc.currencies:
-                    data['price_EUR'].append(round(cc.convert(route[13][0][0], route[13][0][1])))
+                    data['price_min_EUR'].append(round(cc.convert(route[13][0][0], route[13][0][1])))
+                    data['price_max_EUR'].append(round(cc.convert(route[13][2][0], route[13][2][1])))
                 else:
-                    data['price_EUR'].append(NOT_FOUND)
+                    data['price_min_EUR'].append(NOT_FOUND)  
+                    data['price_max_EUR'].append(NOT_FOUND)
 
                 data['price_local'].append(route[14][0][0])
                 data['currency_local'].append(route[14][0][1])

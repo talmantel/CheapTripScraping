@@ -161,7 +161,8 @@ def data_analyze(data):
         
     cond_1 = temp_df['from_id'] != temp_df['to_id']
     cond_2 = (temp_df['from_id'] != NOT_FOUND) & (temp_df['to_id'] != NOT_FOUND)
-    cond_3 = (temp_df['price_EUR'] != NOT_FOUND) & (temp_df['price_EUR'] != 0)
+    cond_3 = (temp_df['price_min_EUR'] != NOT_FOUND) & (temp_df['price_min_EUR'] != 0)
+    cond_4 = (temp_df['price_max_EUR'] != NOT_FOUND) & (temp_df['price_max_EUR'] != 0)
         
     df_filter = temp_df[cond_1 & cond_2 & cond_3]    
     #if df_filter.empty: continue     
@@ -177,7 +178,7 @@ if __name__ == '__main__':
     #bar = AweBar('Processed', max = len(avaliable_id_pairs))
     city_pairs = []
     for i, item in enumerate(gen_city_country_pairs(), start=1):
-        if i == 101: break
+        if i == 10: break
         city_pairs.append(item)
         
         

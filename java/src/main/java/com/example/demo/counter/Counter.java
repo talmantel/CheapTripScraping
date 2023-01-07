@@ -52,7 +52,6 @@ public class Counter {
                 routeGraph.addVertex(id);
             }
             System.out.println("getting data");
-            //statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data_short where transportation_type in " + allowedTransportationTypes )/*+ allowedTransportationTypes)*/;
             statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data where transportation_type in " + allowedTransportationTypes)/*+ allowedTransportationTypes)*/;
             statement.execute();
             ResultSet travelDataResultSet = statement.getResultSet();
@@ -84,7 +83,6 @@ public class Counter {
                     List<DefaultEdge> edgeList = path.getEdgeList();
                     System.out.println("edgelist size = " + edgeList.size());
                     if (edgeList == null || edgeList.size() == 0) continue;
-
                     for (int i = 0; i < edgeList.size(); i++) {
                         DefaultEdge edge = edgeList.get(i);
                         int edgeFrom = routeGraph.getEdgeSource(edge);

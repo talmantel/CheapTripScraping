@@ -18,7 +18,6 @@ def gen_city_country_pairs() -> tuple:
     
         yield from_city_id, from_city, from_country, to_city_id, to_city, to_country
     
-    
 
 if __name__ == '__main__':
     

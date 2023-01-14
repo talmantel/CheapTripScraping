@@ -1,0 +1,25 @@
+root - ERROR -  2023/01/12 03:40:8.929956 GMT+2 On https://www.rome2rio.com/map/Tehran-Iran/Naypyidaw-Myanmar exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/220224/scripts/ferry_routes_mt.py", line 79, in scrap_routine
+    parsed = json.loads(dis["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR -  2023/01/12 03:40:9.029301 GMT+2 On https://www.rome2rio.com/map/Tehran-Iran/Phnom Penh-Cambodia exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/220224/scripts/ferry_routes_mt.py", line 79, in scrap_routine
+    parsed = json.loads(dis["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR -  2023/01/12 03:40:10.834147 GMT+2 On https://www.rome2rio.com/map/Tehran-Iran/Dushanbe-Tajikistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/220224/scripts/ferry_routes_mt.py", line 79, in scrap_routine
+    parsed = json.loads(dis["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR -  2023/01/12 03:40:11.740684 GMT+2 On https://www.rome2rio.com/map/Tehran-Iran/Bishkek-Kyrgyzstan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/220224/scripts/ferry_routes_mt.py", line 79, in scrap_routine
+    parsed = json.loads(dis["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR -  2023/01/12 03:40:13.180462 GMT+2 On https://www.rome2rio.com/map/Tehran-Iran/Yerevan-Armenia exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/220224/scripts/ferry_routes_mt.py", line 79, in scrap_routine
+    parsed = json.loads(dis["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable

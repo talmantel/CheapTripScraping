@@ -6,8 +6,8 @@ def main(tt):
 
     print(data)
 
-    transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('bus', 'nightbus'), 'train': ('train', 'nighttrain'), 
-                                'share':'rideshare', 'ferry': ('busferry', 'ferry', 'carferry', 'trainferry')}
+    transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 'train': ('train', 'nighttrain'), 
+                                'share':'rideshare', 'ferry': ('ferry', 'carferry', 'trainferry')}
     
     transport_id = (1, 2, 3, 8, 10)
     
@@ -34,6 +34,7 @@ def in_coords(coords) -> str:
     return get_id_from_bb(coords)
 
 if __name__ == '__main__':
-   #main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
+    #main()
+   main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
     
    # print(in_coords((49.19347, 16.61441)))

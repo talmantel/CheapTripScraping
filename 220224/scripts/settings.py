@@ -5,20 +5,20 @@ DEFAULT_CUR = 'EUR'
 NOT_FOUND = -1
 
 # logs set up
-LOGS_DIR = Path('logs/logs_all_direct_routes')
+LOGS_DIR = Path('../../logs/logs_all_direct_routes')
 LOGS_FERRY_DIR = Path('logs/logs_ferry')
 
 # set up necessary inputs
-INPUT_CSV_DIR = Path('220224/files/csv')
+INPUT_CSV_DIR = Path('../files/csv')
 AIRPORT_CODES_CSV = INPUT_CSV_DIR/'airport codes short.csv'
 BBOXES_CSV = INPUT_CSV_DIR/'bbox_short.csv'
 CITY_COUNTRY_CSV = INPUT_CSV_DIR/'Full_list_with_countries_CLEANED_for_scraping.csv'
 
 
 # set up outputs 
-OUTPUT_JSON_DIR = Path('220224/files/output/json_output')
+OUTPUT_JSON_DIR = Path('../files/output/json_output')
 OUTPUT_JSON_FERRY_DIR = OUTPUT_JSON_DIR/'ferry'
-OUTPUT_CSV_DIR = Path('220224/files/output/csv_output')
+OUTPUT_CSV_DIR = Path('../files/output/csv_output')
 ALL_DIRECT_ROUTES_CSV = OUTPUT_CSV_DIR/'all_direct_routes.csv'
 FERRY_ROUTES_CSV = OUTPUT_CSV_DIR/'ferry_routes.csv'
 NO_ID_TRANSPORT_CSV = OUTPUT_CSV_DIR/'no_id_transport.csv'

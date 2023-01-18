@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class PostProcessFileAnalyzer {
     public static void main(String[] args) throws IOException {
-        pushCountIntoDB(travelDataCounterFromFile(Constants.COMMON_PATH + "routes.csv"));
+        pushCountIntoDB(travelDataCounterFromFile(Constants.COMMON_PATH + "new_routes.csv"));
     }
 
     public static HashMap<Integer, Long> travelDataCounterFromFile(String filename) throws IOException {
@@ -22,9 +22,11 @@ public class PostProcessFileAnalyzer {
             for (int j = 4; j < arr.length; j++) {
                 if (!map.containsKey(Integer.parseInt(arr[j]))) {
                     map.put(Integer.parseInt(arr[j]), (long) 1);
+                    System.out.println("put into the data " + Integer.parseInt(arr[j]));
                 } else {
                     long number = map.get(Integer.parseInt(arr[j]));
                     map.put(Integer.parseInt(arr[j]), number + 1);
+                    System.out.println("put into the data " + Integer.parseInt(arr[j]));
                 }
             }
         }

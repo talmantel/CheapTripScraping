@@ -9,10 +9,11 @@ import java.util.concurrent.ExecutionException;
 public class ParserInitializer {
     final static String COMMON_PATH = Constants.COMMON_PATH;
     final static String OUTCOME_PATH = Constants.OUTCOME_PATH;
+
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
 
-        System.out.println(Arrays.toString(CSVtoJson.CSVoString(Constants.PATH_ALT + "all_direct_routes.csv")));
-
+        String str = CSVtoJson.CSVoStringLine("K:/Programming/Graphs(from_Roman)/CheapTripScraping1/java/src/main/resources/db/state/travel_data_newest.csv");
+        CSVtoJson.stringToFile(str, "K:/Programming/Graphs(from_Roman)/CheapTripScraping1/java/src/main/resources/db/state/travel_data_new.csv");
 //        System.out.println(Arrays.toString(CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)));
 
         //id changer
@@ -23,7 +24,7 @@ public class ParserInitializer {
 //                CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)
 //        ), OUTCOME_PATH + "new_travel_data.json");
 
-         // Parse countries to Json
+        // Parse countries to Json
 //        CSVtoJson.jsonToFile(CSVtoJson.countriesToJson(
 //                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_countries.csv")),OUTCOME_PATH + "cheap_trip_countries.json");
 

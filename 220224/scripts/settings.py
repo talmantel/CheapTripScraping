@@ -10,7 +10,7 @@ LOGS_FERRY_DIR = Path('logs/logs_ferry')
 
 # set up necessary inputs
 INPUT_CSV_DIR = Path('../files/csv')
-AIRPORT_CODES_CSV = INPUT_CSV_DIR/'airport codes short.csv'
+AIRPORT_CODES_CSV = INPUT_CSV_DIR/'airport_codes_short.csv'
 BBOXES_CSV = INPUT_CSV_DIR/'bbox_short.csv'
 CITY_COUNTRY_CSV = INPUT_CSV_DIR/'Full_list_with_countries_CLEANED_for_scraping.csv'
 

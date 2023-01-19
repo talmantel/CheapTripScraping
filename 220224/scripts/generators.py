@@ -8,9 +8,11 @@ from functions import get_id_pair
 
 def gen_city_country_pairs() -> tuple:
    
-    union_bb_airports = set(df_bb['id_city']).union(df_airports['id_city'])
+    #union_bb_airports = set(df_bb['id_city']).union(df_airports['id_city'])
     
-    intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(union_bb_airports)
+    #intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(union_bb_airports)
+    
+    intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(df_bb['id_city'])
     
     for from_id_city, to_id_city in permutations(intersect_city_countries_bb_airports, 2):
         

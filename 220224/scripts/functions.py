@@ -61,10 +61,10 @@ def get_id_pair(fname: str) -> tuple:
         
 if __name__ == '__main__':
     
-    print(get_id_pair('10-Tel-Aviv-20-Clermont-Ferrand'))
+    #print(get_id_pair('10-Tel-Aviv-20-Clermont-Ferrand'))
     
-    """ print(get_airport_id('syd'),  type(get_airport_id('syd')))
+    print(get_id_from_acode('fra'),  get_id_from_acode('hhn'))
     
-    print(get_bb_id([38.4511,68.9642]), type(get_bb_id([38.4511,68.9642]))) """
+    #print(get_bb_id([38.4511,68.9642]), type(get_bb_id([38.4511,68.9642]))) """
     
     

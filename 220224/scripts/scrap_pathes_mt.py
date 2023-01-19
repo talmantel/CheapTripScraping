@@ -55,7 +55,7 @@ def scrap_routine(cities_countries_pairs):
               
         parsed = json.loads(dis["content"])[2][1]
         
-        print(f'Start data recording in {from_city_id}-{from_city}-{to_city_id}-{to_city}.json.gz')
+        print(f'Start data recording in {from_city_id}-{to_city_id}-{from_city}-{to_city}.json.gz')
         
         compress_json.dump(parsed, filepath) 
                 

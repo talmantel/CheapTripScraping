@@ -15,7 +15,7 @@ from functions import get_id_from_bb, get_id_from_acode, AweBar
 
 logging.basicConfig(filename=LOGS_DIR/'extract_routes.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
- # create currency converter class instances
+ # create currency converter class instance
 cc = CurrencyConverter(SINGLE_DAY_ECB_URL)
 
 # set for store no id transport
@@ -46,15 +46,16 @@ def output_csv(response: pd.DataFrame):
 def data_extraction(pathes) -> None:
      
     # main data dictionary initialize
-    data = {'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
-        'from_airport':[], 'to_airport':[], 'price_min_EUR':[], 'price_max_EUR':[], 'price_local':[], 
-        'currency_local':[], 'distance_km':[], 'duration_min':[]
+    data = {'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
+            'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
+            'from_airport':[], 'to_airport':[], 'price_min_EUR':[], 'price_max_EUR':[], 'price_local':[], 
+            'currency_local':[], 'distance_km':[], 'duration_min':[]
     }     
         
     # transport set up
-    transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 'train': ('train', 'nighttrain', 'cartrain'), 
-                        'share':'rideshare', 'ferry': ('ferry', 'carferry')}
-    transport_id = (1, 2, 3, 8, 10)
+    transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 
+                       'train': ('train', 'nighttrain', 'cartrain'), 'ferry': ('ferry', 'carferry')}
+    transport_id = (1, 2, 3, 10)
     transport_types_id = {types: id for types, id in zip(transport_types, transport_id)}
     
     print('Start data extraction...')

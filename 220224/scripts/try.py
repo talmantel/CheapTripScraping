@@ -7,9 +7,9 @@ def main(tt):
     print(data)
 
     transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 'train': ('train', 'nighttrain'), 
-                                'share':'rideshare', 'ferry': ('ferry', 'carferry', 'trainferry')}
+                                'ferry': ('ferry', 'carferry', 'trainferry')}
     
-    transport_id = (1, 2, 3, 8, 10)
+    transport_id = (1, 2, 3, 10)
     
     transport_types_id = {types: id for types, id in zip(transport_types, transport_id)}
     

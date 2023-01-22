@@ -10,15 +10,15 @@ from currency_converter import CurrencyConverter, SINGLE_DAY_ECB_URL
 
 from settings import ALL_DIRECT_ROUTES_CSV, NO_ID_TRANSPORT_CSV, NOT_FOUND, LOGS_DIR, OUTPUT_JSON_DIR, min_output_columns
 from settings import OUTPUT_CSV_DIR
-#from generators import gen_jsons
-from functions import get_id_from_bb, get_id_from_acode, AweBar
+from generators import gen_jsons
+from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
 
 
 logging.basicConfig(filename=LOGS_DIR/'extract_routes.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
- # create currency converter class instance
-cc = CurrencyConverter(SINGLE_DAY_ECB_URL)
-
+# get currency exchange rates for EUR and update date
+cur_date, euro_rates = get_exchange_rates()
+ 
 # set for store no id transport
 no_id_transport_set = set()
 
@@ -49,14 +49,19 @@ def output_csv(response: pd.DataFrame):
     print(f'Output results duration is: {time.perf_counter() - start_time}')
    
     
-def data_extraction(from_city_id, to_city_id, pathes) -> None:
+def data_extraction(pathes) -> None:
     
     # main data dictionary initialize
-    data = {'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
+    """  data = {'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
             'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
             'from_airport':[], 'to_airport':[], 'price_min_EUR':[], 'price_max_EUR':[], 
             'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
-    }     
+    }      """
+        
+    data = { 
+            'from_id':[], 'to_id':[], 'transport_id':[], 'price_min_EUR':[], 'duration_min':[]
+    }       
+    
         
     # transport set up
     transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 
@@ -87,8 +92,8 @@ def data_extraction(from_city_id, to_city_id, pathes) -> None:
                 """ data['from_airport'].append(route[2][0])
                 data['to_airport'].append(route[3][0]) """
                                         
-                if route[11][0][1] in cc.currencies:
-                    data['price_min_EUR'].append(round(cc.convert(route[11][0][0], route[11][0][1])))
+                if route[11][0][1] in euro_rates.keys():
+                    data['price_min_EUR'].append(round(route[11][0][0] / euro_rates[route[11][0][1]]['value']))
                     #data['price_max_EUR'].append(round(cc.convert(route[11][2][0], route[11][2][1])))
                 else:
                     data['price_min_EUR'].append(NOT_FOUND)  
@@ -121,12 +126,12 @@ def data_extraction(from_city_id, to_city_id, pathes) -> None:
                     """ data['from_airport'].append('')
                     data['to_airport'].append('') """
                             
-                    if route[13][0][1] in cc.currencies:
-                        data['price_min_EUR'].append(round(cc.convert(route[13][0][0], route[13][0][1])))
+                    if route[13][0][1] in euro_rates.keys():
+                        data['price_min_EUR'].append(round(route[13][0][0] / euro_rates[route[13][0][1]]['value']))
                         # data['price_max_EUR'].append(round(cc.convert(route[13][2][0], route[13][2][1])))
                     else:
                         data['price_min_EUR'].append(NOT_FOUND)  
-                        #data['price_max_EUR'].append(NOT_FOUND)
+                        # data['price_max_EUR'].append(NOT_FOUND)
                         un_currencies.add(route[13][0][1])
 
                     """ data['price_local'].append(route[14][0][0])
@@ -169,33 +174,35 @@ def data_analyze(response_data):
         
         
 def gen_jsons():
-    """_Summary_ 
-                unzips files' content into json
-        Generates:
-                json: str
-    """   
+       
     # assign directory
     directory = OUTPUT_JSON_DIR
     # iterate over files in
     files = Path(directory).glob(f'*.json.gz') 
     for file in files:
         from_id, to_id = file.name.split('-')[0], file.name.split('-')[2]
-        data_extraction(from_id, to_id, compress_json.load(str(file)))
+        data_extraction(compress_json.load(str(file)))
 
 
 def main():
+
+    answer = input(f'Last currency exchange rates update: {cur_date} days ago. Continue? (y/n) ')
+    if answer in ('Y', 'y'):
     
-    print('Start process...')
+        print('Start process...')
+        
+        start_time = time.perf_counter()
+        
+        add_header_to_output_csv()
+        
     
-    start_time = time.perf_counter()
-    
-    add_header_to_output_csv()
-    
-    gen_jsons()
-    
-    output_no_id_transport()
-    
-    print(f'Elapsed {(time.perf_counter() - start_time)/3600}h') 
+        
+        gen_jsons()
+        #output_csv(data_analyze(data_extraction(map(data_extraction, gen_jsons()))))
+        
+        output_no_id_transport()
+        
+        print(f'Elapsed {(time.perf_counter() - start_time)/3600}h') 
     
     
 if __name__ == '__main__':

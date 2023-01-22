@@ -9,7 +9,6 @@ from functions import get_id_pair
 def gen_city_country_pairs() -> tuple:
    
     #union_bb_airports = set(df_bb['id_city']).union(df_airports['id_city'])
-    
     #intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(union_bb_airports)
     
     intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(df_bb['id_city'])
@@ -23,17 +22,18 @@ def gen_city_country_pairs() -> tuple:
         yield from_city_id, from_city, from_country, to_city_id, to_city, to_country
     
     
-def gen_jsons() -> tuple:
+def gen_jsons():
     """_Summary_ 
                 unzips files' content into json
         Generates:
                 json: str
-    """
+    """   
     # assign directory
     directory = OUTPUT_JSON_DIR
     # iterate over files in
-    files = Path(directory).glob('*.json.gz')
+    files = Path(directory).glob('*.json.gz') 
     for file in files:
+        from_id, to_id = file.name.split('-')[0], file.name.split('-')[2]
         yield compress_json.load(str(file))
 
 

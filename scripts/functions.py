@@ -1,5 +1,8 @@
 from progress.bar import IncrementalBar
 from settings import df_bb, df_airports, NOT_FOUND
+from pathlib import Path
+import json
+from datetime import datetime
 
 
 # Progress bar class
@@ -48,23 +51,33 @@ def get_id_pair(fname: str) -> tuple:
     return id_pair, city_pair
 
 
-
-""" def get_airport_id_for_loc(location: str):
+def get_exchange_rates() -> tuple:
+    target_file = Path('../files/currencies/exchange_rates_EUR.json')
     try:
-        filter_df = df_loc_airports.filter(df_loc_airports['city'] in (location.split()))
-            
-        return filter_df['id'][0]
         
-    except:
-        return NOT_FOUND """
+        with open(target_file, mode='r') as f:
+            currencies = json.load(f)
+            
+        up_to_date = currencies['meta']['last_updated_at']
+        up_to_date = datetime.today().date() - datetime.strptime(up_to_date, '%Y-%m-%dT%H:%M:%SZ').date()
+        
+        EUR_rates = currencies['data']
+
+        return up_to_date.days, EUR_rates
+            
+    except FileNotFoundError:
+        print(f'File not found: {target_file}')
+        
+    
 
         
 if __name__ == '__main__':
     
     #print(get_id_pair('10-Tel-Aviv-20-Clermont-Ferrand'))
     
-    print(get_id_from_acode('fra'),  get_id_from_acode('hhn'))
+    #print(get_id_from_acode('fra'),  get_id_from_acode('hhn'))
     
     #print(get_bb_id([38.4511,68.9642]), type(get_bb_id([38.4511,68.9642]))) """
     
-    
+    #get_exchange_rates()
+    pass

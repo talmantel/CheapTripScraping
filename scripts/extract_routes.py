@@ -9,6 +9,7 @@ from pathlib import Path
 from currency_converter import CurrencyConverter, SINGLE_DAY_ECB_URL
 
 from settings import ALL_DIRECT_ROUTES_CSV, NO_ID_TRANSPORT_CSV, NOT_FOUND, LOGS_DIR, OUTPUT_JSON_DIR, min_output_columns
+from settings import OUTPUT_CSV_DIR
 #from generators import gen_jsons
 from functions import get_id_from_bb, get_id_from_acode, AweBar
 
@@ -21,12 +22,17 @@ cc = CurrencyConverter(SINGLE_DAY_ECB_URL)
 # set for store no id transport
 no_id_transport_set = set()
 
+# set for store unknown currencies
+un_currencies = set()
+
 
 def output_no_id_transport():
     print('Start no id transport output...')
     start_time = time.perf_counter()
     nidt_df = pd.DataFrame(no_id_transport_set)
+    uncurr_df = pd.DataFrame(un_currencies)
     nidt_df.to_csv(NO_ID_TRANSPORT_CSV, index=False, header='no_id_transport')
+    uncurr_df.to_csv(OUTPUT_CSV_DIR/'un_currencies.csv', index=False)
     print(f'Output no id transport duration is: {time.perf_counter() - start_time}')
     
     
@@ -43,13 +49,13 @@ def output_csv(response: pd.DataFrame):
     print(f'Output results duration is: {time.perf_counter() - start_time}')
    
     
-def data_extraction(pathes) -> None:
-     
+def data_extraction(from_city_id, to_city_id, pathes) -> None:
+    
     # main data dictionary initialize
     data = {'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
             'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
-            'from_airport':[], 'to_airport':[], 'price_min_EUR':[], 'price_max_EUR':[], 'price_local':[], 
-            'currency_local':[], 'distance_km':[], 'duration_min':[]
+            'from_airport':[], 'to_airport':[], 'price_min_EUR':[], 'price_max_EUR':[], 
+            'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
     }     
         
     # transport set up
@@ -69,28 +75,29 @@ def data_extraction(pathes) -> None:
                 """ data['from_city_id'].append(from_city_id)
                 data['from_city'].append(from_city)
                 data['to_city_id'].append(to_city_id)
-                data['to_city'].append(to_city) """
+                data['to_city'].append(to_city)
                 data['path_id'].append(path_id)
                 data['path_name'].append(path[4])
                 data['from_node'].append(route[2][1])
-                data['to_node'].append(route[3][1])
+                data['to_node'].append(route[3][1]) """
                 data['from_id'].append(get_id_from_acode(route[2][0]))
                 data['to_id'].append(get_id_from_acode(route[3][0]))
-                data['transport'].append(route[0])
+                #data['transport'].append(route[0])
                 data['transport_id'].append(transport_types_id['fly'])
-                data['from_airport'].append(route[2][0])
-                data['to_airport'].append(route[3][0])
+                """ data['from_airport'].append(route[2][0])
+                data['to_airport'].append(route[3][0]) """
                                         
                 if route[11][0][1] in cc.currencies:
                     data['price_min_EUR'].append(round(cc.convert(route[11][0][0], route[11][0][1])))
-                    data['price_max_EUR'].append(round(cc.convert(route[11][2][0], route[11][2][1])))
+                    #data['price_max_EUR'].append(round(cc.convert(route[11][2][0], route[11][2][1])))
                 else:
                     data['price_min_EUR'].append(NOT_FOUND)  
-                    data['price_max_EUR'].append(NOT_FOUND)
+                    #data['price_max_EUR'].append(NOT_FOUND)
+                    un_currencies.add(route[11][0][1])
                             
-                data['price_local'].append('')
+                """ data['price_local'].append('')
                 data['currency_local'].append('')
-                data['distance_km'].append('')
+                data['distance_km'].append('') """
                 data['duration_min'].append(round(route[4] / 60)) # sec to min
                     
             # for other used types of vehicles            
@@ -102,28 +109,29 @@ def data_extraction(pathes) -> None:
                     """ data['from_city_id'].append(from_city_id)
                     data['from_city'].append(from_city)
                     data['to_city_id'].append(to_city_id)
-                    data['to_city'].append(to_city) """
+                    data['to_city'].append(to_city)
                     data['path_id'].append(path_id)
                     data['path_name'].append(path[4])
                     data['from_node'].append(route[6][1])
-                    data['to_node'].append(route[7][1])
+                    data['to_node'].append(route[7][1]) """
                     data['from_id'].append(get_id_from_bb(route[6][2:4]))
                     data['to_id'].append(get_id_from_bb(route[7][2:4]))
-                    data['transport'].append(route[1])
+                    # data['transport'].append(route[1])
                     data['transport_id'].append(transport_types_id[ttype])
-                    data['from_airport'].append('')
-                    data['to_airport'].append('')
+                    """ data['from_airport'].append('')
+                    data['to_airport'].append('') """
                             
                     if route[13][0][1] in cc.currencies:
                         data['price_min_EUR'].append(round(cc.convert(route[13][0][0], route[13][0][1])))
-                        data['price_max_EUR'].append(round(cc.convert(route[13][2][0], route[13][2][1])))
+                        # data['price_max_EUR'].append(round(cc.convert(route[13][2][0], route[13][2][1])))
                     else:
                         data['price_min_EUR'].append(NOT_FOUND)  
-                        data['price_max_EUR'].append(NOT_FOUND)
+                        #data['price_max_EUR'].append(NOT_FOUND)
+                        un_currencies.add(route[13][0][1])
 
-                    data['price_local'].append(route[14][0][0])
+                    """ data['price_local'].append(route[14][0][0])
                     data['currency_local'].append(route[14][0][1])
-                    data['distance_km'].append(round(route[5]))
+                    data['distance_km'].append(round(route[5])) """
                     data['duration_min'].append(round(route[3] / 60)) # sec to min
                 
                 
@@ -169,10 +177,11 @@ def gen_jsons():
     # assign directory
     directory = OUTPUT_JSON_DIR
     # iterate over files in
-    files = Path(directory).glob('*.json.gz')    
-    for file in files:    
-        data_extraction(compress_json.load(str(file)))
-        
+    files = Path(directory).glob(f'*.json.gz') 
+    for file in files:
+        from_id, to_id = file.name.split('-')[0], file.name.split('-')[2]
+        data_extraction(from_id, to_id, compress_json.load(str(file)))
+
 
 def main():
     

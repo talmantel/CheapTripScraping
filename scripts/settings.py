@@ -16,7 +16,7 @@ CITY_COUNTRY_CSV = INPUT_CSV_DIR/'Full_list_with_countries_CLEANED_for_scraping.
 
 
 # set up outputs 
-OUTPUT_JSON_DIR = Path('../files/output/json_output')
+OUTPUT_JSON_DIR = Path('../files/output/json_output/2_run_jsons_r2r')
 OUTPUT_JSON_FERRY_DIR = OUTPUT_JSON_DIR/'ferry'
 OUTPUT_CSV_DIR = Path('../files/output/csv_output')
 ALL_DIRECT_ROUTES_CSV = OUTPUT_CSV_DIR/'all_direct_routes.csv'
@@ -35,7 +35,7 @@ output_columns_ferry = ['from_city_id', 'from_city', 'to_city_id', 'to_city', 'p
                         'transport', 'transport_id', 'price_min_EUR', 'price_max_EUR', 'price_local', 'currency_local', 
                         'distance_km', 'duration_min']
 
-min_output_columns = ['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min']
+min_output_columns = ['from_id', 'from_node', 'transport_id', 'price_min_EUR', 'duration_min']
 
 all_output_columns = ['from_city_id', 'from_city', 'to_city_id', 'to_city', 'path_id', 'path_name', 
                       'from_node', 'to_node', 'from_id', 'to_id', 'transport', 'transport_id', 

@@ -70,9 +70,7 @@ def gen_missing_pairs() -> tuple:
         to_city, to_country = id_city_country[to_city_id][0], id_city_country[to_city_id][1]
         
         yield from_city_id, from_city, from_country, to_city_id, to_city, to_country
-        #print(from_city_id, from_city, from_country, to_city_id, to_city, to_country)
         
-    #print(f'Total cities: {len(all_cities)}, processed: {len(processed_cities)}, missed: {len(missing_cities)}')
 
 
 if __name__ == '__main__':

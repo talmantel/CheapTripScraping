@@ -1,76 +1,64 @@
 import pandas as pd
-import time
-import concurrent.futures
 import logging
-import DateTime
+from datetime import datetime
 import compress_json
 from pathlib import Path
 
-from currency_converter import CurrencyConverter, SINGLE_DAY_ECB_URL
 
-from settings import ALL_DIRECT_ROUTES_CSV, NO_ID_TRANSPORT_CSV, NOT_FOUND, LOGS_DIR, OUTPUT_JSON_DIR, min_output_columns
-from settings import OUTPUT_CSV_DIR
+from config import NOT_FOUND, LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, output_columns, raw_csv
 from generators import gen_jsons
 from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
+from exchange import update_exchange_rates
 
 
-logging.basicConfig(filename=LOGS_DIR/'extract_routes.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=LOGS_DIR/'extraction.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 # get currency exchange rates for EUR and update date
-cur_date, euro_rates = get_exchange_rates()
- 
+ago_days, euro_rates = get_exchange_rates()
+
 # set for store no id transport
-no_id_transport_set = set()
+no_id_transport = set()
 
 # set for store unknown currencies
 un_currencies = set()
+      
 
-
-def output_no_id_transport():
-    print('Start no id transport output...')
-    start_time = time.perf_counter()
-    nidt_df = pd.DataFrame(no_id_transport_set)
-    uncurr_df = pd.DataFrame(un_currencies)
-    nidt_df.to_csv(NO_ID_TRANSPORT_CSV, index=False, header='no_id_transport')
-    uncurr_df.to_csv(OUTPUT_CSV_DIR/'un_currencies.csv', index=False)
-    print(f'Output no id transport duration is: {time.perf_counter() - start_time}')
-    
-    
 def add_header_to_output_csv():
-    with open(ALL_DIRECT_ROUTES_CSV, mode='w') as f:
-        f.writelines(",".join(min_output_columns) + '\n')
+    with open(OUTPUT_CSV_DIR/raw_csv, mode='w') as f:
+        f.writelines(",".join(output_columns) + '\n')
         
 
 # outputs in csv and json files
 def output_csv(response: pd.DataFrame):
-    print('Start output to file...')
-    start_time = time.perf_counter()
-    response.to_csv(ALL_DIRECT_ROUTES_CSV, mode='a', index=False, header=False)
-    print(f'Output results duration is: {time.perf_counter() - start_time}')
-   
+    response.to_csv(OUTPUT_CSV_DIR/raw_csv, mode='a', index=False, header=False)
+
+
+def data_analyze(response_data):
+    
+    temp_df = pd.DataFrame(response_data, columns=output_columns, index=None)
+    
+    temp_df.drop_duplicates(inplace=True)
+        
+    cond_1 = temp_df['from_id'] != temp_df['to_id']
+    cond_2 = (temp_df['from_id'] != NOT_FOUND) & (temp_df['to_id'] != NOT_FOUND)
+    cond_3 = temp_df['price_min_EUR'] > 0
+    
+    #df_filter = temp_df
+    df_filter = temp_df[cond_1 & cond_2 & cond_3]        
+        
+    output_csv(df_filter)
+        
     
 def data_extraction(pathes) -> None:
     
-    # main data dictionary initialize
-    """  data = {'from_city_id':[], 'from_city':[], 'to_city_id':[], 'to_city':[], 'path_id':[], 'path_name':[], 
-            'from_node':[], 'to_node':[], 'from_id':[], 'to_id':[], 'transport':[], 'transport_id':[], 
-            'from_airport':[], 'to_airport':[], 'price_min_EUR':[], 'price_max_EUR':[], 
-            'price_local':[], 'currency_local':[], 'distance_km':[], 'duration_min':[]
-    }      """
-        
-    data = { 
-            'from_id':[], 'to_id':[], 'transport_id':[], 'price_min_EUR':[], 'duration_min':[]
-    }       
+    # main data dictionary initialize        
+    data = {'from_id':[], 'to_id':[], 'transport_id':[], 'price_min_EUR':[], 'duration_min':[]}       
     
-        
     # transport set up
     transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 
-                       'train': ('train', 'nighttrain', 'cartrain'), 'ferry': ('ferry', 'carferry')}
-    transport_id = (1, 2, 3, 10)
+                       'train': ('train', 'nighttrain', 'cartrain'), 'share': 'rideshare', 'ferry': ('ferry', 'carferry')}
+    transport_id = (1, 2, 3, 8, 10)
     transport_types_id = {types: id for types, id in zip(transport_types, transport_id)}
-    
-    print('Start data extraction...')
-    start_time = time.perf_counter()
     
     # extraction all direct routes from all pathes and filling the main data dictionary
     for path_id, path in enumerate(pathes):
@@ -141,69 +129,44 @@ def data_extraction(pathes) -> None:
                 
                 
                 except StopIteration:
-                    no_id_transport_set.add(route[1]) # for no id transport types
+                    no_id_transport.add(route[1]) # for no id transport types
                     continue
                 except:
-                    logging.error(f'{DateTime.DateTime()} the exception occurred', exc_info=True)
+                    logging.error(f'{datetime.today()} the exception occurred', exc_info=True)
                     continue
              
-                              
-    print(f'Extract data duration is: {time.perf_counter() - start_time}')
-        
     data_analyze(data)
 
-
-def data_analyze(response_data):
-    
-    print('Start data analyzing...')
-    start_time = time.perf_counter()
-    
-    temp_df = pd.DataFrame(response_data, columns=min_output_columns, index=None)
-    temp_df = temp_df.drop_duplicates()
-        
-    cond_1 = temp_df['from_id'] != temp_df['to_id']
-    cond_2 = (temp_df['from_id'] != NOT_FOUND) & (temp_df['to_id'] != NOT_FOUND)
-    cond_3 = temp_df['price_min_EUR'] > 0
-    
-    #df_filter = temp_df
-    df_filter = temp_df[cond_1 & cond_2 & cond_3]        
-    
-    print(f'Data analyzing duration is: {time.perf_counter() - start_time}')
-        
-    output_csv(df_filter)
-        
         
 def gen_jsons():
-       
-    # assign directory
-    directory = OUTPUT_JSON_DIR
-    # iterate over files in
-    files = Path(directory).glob(f'*.json.gz') 
+    
+    add_header_to_output_csv()
+    
+    # iterate over the files in
+    files = Path(OUTPUT_JSON_DIR).glob(f'*.json.gz') 
     for file in files:
-        from_id, to_id = file.name.split('-')[0], file.name.split('-')[2]
         data_extraction(compress_json.load(str(file)))
+        
+    output_no_id_transport()    
 
 
-def main():
-
-    answer = input(f'Last currency exchange rates update: {cur_date} days ago. Continue? (y/n) ')
-    if answer in ('Y', 'y'):
+def output_no_id_transport():
+    nidt_df = pd.DataFrame(no_id_transport)
+    uncurr_df = pd.DataFrame(un_currencies)
+    nidt_df.to_csv(OUTPUT_CSV_DIR/'no_id_transport.csv', index=False)
+    uncurr_df.to_csv(OUTPUT_CSV_DIR/'un_currencies.csv', index=False)
     
-        print('Start process...')
-        
-        start_time = time.perf_counter()
-        
-        add_header_to_output_csv()
-        
+
+def extract_data():
+    print('Start data extraction...')
+    answer = input(f'Last currency exchange rates update: {ago_days} days ago. Update rates before extraction? (y/n) ')
+    if answer in ('Y', 'y'): update_exchange_rates()     
+    gen_jsons()
     
-        
-        gen_jsons()
-        #output_csv(data_analyze(data_extraction(map(data_extraction, gen_jsons()))))
-        
-        output_no_id_transport()
-        
-        print(f'Elapsed {(time.perf_counter() - start_time)/3600}h') 
     
     
 if __name__ == '__main__':
-    main()
+    
+    OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
+    
+    extract_data()

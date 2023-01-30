@@ -1,4 +1,4 @@
-from settings import output_columns_ferry
+from scripts.config import output_columns_ferry
 from functions import get_id_from_bb
 from pathlib import Path
 import json

@@ -1,8 +1,9 @@
 from itertools import permutations
 from pathlib import Path
 import compress_json
+import string
 
-from settings import df_bb, df_airports, df_city_countries, OUTPUT_JSON_DIR, CITY_COUNTRY_CSV
+from config import df_bb, df_airports, df_city_countries, OUTPUT_JSON_DIR, CITY_COUNTRY_CSV
 from functions import get_id_pair
 
 
@@ -11,29 +12,24 @@ def gen_city_country_pairs() -> tuple:
     #union_bb_airports = set(df_bb['id_city']).union(df_airports['id_city'])
     #intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(union_bb_airports)
     
-    intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(df_bb['id_city'])
+    city_countries_bboxes = set(df_city_countries['id_city']).intersection(df_bb['id_city'])
     
-    for from_id_city, to_id_city in permutations(intersect_city_countries_bb_airports, 2):
+    for from_id_city, to_id_city in permutations(city_countries_bboxes, 2):
         
         # get the city name and country name
         from_city_id, from_city, from_country = df_city_countries.filter(df_city_countries['id_city'] == from_id_city).row(0)
         to_city_id, to_city, to_country = df_city_countries.filter(df_city_countries['id_city'] == to_id_city).row(0)
     
-        yield from_city_id, from_city, from_country, to_city_id, to_city, to_country
+        yield from_city_id, to_city_id, from_city, from_country, to_city, to_country
     
     
-def gen_jsons():
-    """_Summary_ 
-                unzips files' content into json
-        Generates:
-                json: str
-    """   
+# unzips files' content into json    
+def gen_jsons() -> str:
     # assign directory
-    directory = OUTPUT_JSON_DIR
+    source_dir = OUTPUT_JSON_DIR
     # iterate over files in
-    files = Path(directory).glob('*.json.gz') 
+    files = Path(source_dir).glob('*.json.gz') 
     for file in files:
-        from_id, to_id = file.name.split('-')[0], file.name.split('-')[2]
         yield compress_json.load(str(file))
 
 
@@ -46,7 +42,7 @@ def gen_missing_pairs() -> tuple:
             id_city_country[line[0]] = line[1:]
     
     all_cities = set()
-    with open('all_city_country_pairs_3.csv') as f:
+    with open('all_city_country_pairs.csv') as f:
         for line in f.readlines():
             all_cities.add(tuple(line.split(',')[:2]))
             
@@ -72,6 +68,11 @@ def gen_missing_pairs() -> tuple:
         yield from_city_id, from_city, from_country, to_city_id, to_city, to_country
         
 
+def gen_injection():
+    letters = string.ascii_lowercase * 3
+    for item in permutations(letters, 3):
+        yield '-' + ''.join(item)
+
 
 if __name__ == '__main__':
     
@@ -81,5 +82,14 @@ if __name__ == '__main__':
     """ with open('all_city_country_pairs_3.csv', 'w') as f:    
         for i, (from_city_id, from_city, from_country, to_city_id, to_city, to_country) in enumerate(gen_city_country_pairs()):
             f.writelines(f'{from_city_id},{to_city_id},{from_city},{from_country},{to_city},{to_country}\n') """
-
+    """ xs = gen_city_country_pairs()
+    for x in xs:
+        print(x) """
+    """ print(next(x))
+    print(next(x)) """
+    
+    """ x = gen_injection()
+    print(next(x))
+    print(next(x))
+    print(next(x)) """
     

@@ -1,13 +1,14 @@
 import pandas as pd
 import logging
 from datetime import datetime
-from compress_json import load
+import compress_json
 from pathlib import Path
+import time
 
 
 from config import NOT_FOUND, LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, output_columns, raw_csv
 from generators import gen_jsons
-from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
+from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, AweBar
 from exchange import update_exchange_rates
 
 
@@ -143,11 +144,11 @@ def gen_jsons():
     add_header_to_output_csv()
     
     # iterate over the files in
-    files = Path(OUTPUT_JSON_DIR).glob(f'*.json.gz') 
+    files = Path(OUTPUT_JSON_DIR).glob(f'*.json.gz')     
     for file in files:
-        data_extraction(load(str(file)))
+        data_extraction(compress_json.load(str(file)))
         
-    output_no_id_transport()    
+    output_no_id_transport()
 
 
 def output_no_id_transport():
@@ -158,15 +159,15 @@ def output_no_id_transport():
     
 
 def extract_data():
+    OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
     print('Start data extraction...')
-    answer = input(f'Last currency exchange rates update: {ago_days} days ago. Update rates before extraction? (y/n) ')
+    answer = input(f'Last currency exchange rates update: {ago_days} days ago.\
+                   Update rates before extraction? (y/n) ')
     if answer in ('Y', 'y'): update_exchange_rates()     
     gen_jsons()
     print('Data extraction finished successfully!\n')
     
     
 if __name__ == '__main__':
-    
-    OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
     
     extract_data()

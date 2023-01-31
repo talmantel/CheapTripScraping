@@ -2,7 +2,16 @@ from config import df_bb, df_airports, NOT_FOUND
 from pathlib import Path
 import json
 from datetime import datetime, date
+from progress.bar import IncrementalBar
 
+        
+# Progress bar class
+class AweBar(IncrementalBar):
+    suffix = '%(index)d/%(max)d - %(percent).1f%% - %(elapsed)d s - %(remaining_hours)d h'
+    @property
+    def remaining_hours(self):
+        return self.eta // 3600
+            
         
 # seeks for city id by the given coordinates
 def get_id_from_bb(coords: list) -> int:

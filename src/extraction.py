@@ -1,7 +1,7 @@
 import pandas as pd
 import logging
 from datetime import datetime
-import compress_json
+from compress_json import load
 from pathlib import Path
 
 
@@ -145,7 +145,7 @@ def gen_jsons():
     # iterate over the files in
     files = Path(OUTPUT_JSON_DIR).glob(f'*.json.gz') 
     for file in files:
-        data_extraction(compress_json.load(str(file)))
+        data_extraction(load(str(file)))
         
     output_no_id_transport()    
 
@@ -162,7 +162,7 @@ def extract_data():
     answer = input(f'Last currency exchange rates update: {ago_days} days ago. Update rates before extraction? (y/n) ')
     if answer in ('Y', 'y'): update_exchange_rates()     
     gen_jsons()
-    
+    print('Data extraction finished successfully!\n')
     
     
 if __name__ == '__main__':

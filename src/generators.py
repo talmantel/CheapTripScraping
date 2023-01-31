@@ -3,20 +3,16 @@ from pathlib import Path
 import compress_json
 import string
 
-from config import df_bb, df_airports, df_city_countries, OUTPUT_JSON_DIR, CITY_COUNTRY_CSV
-from functions import get_id_pair
+from config import df_bb, df_city_countries, OUTPUT_JSON_DIR
 
 
 def gen_city_country_pairs() -> tuple:
-   
-    #union_bb_airports = set(df_bb['id_city']).union(df_airports['id_city'])
-    #intersect_city_countries_bb_airports = set(df_city_countries['id_city']).intersection(union_bb_airports)
     
     city_countries_bboxes = set(df_city_countries['id_city']).intersection(df_bb['id_city'])
     
     for from_id_city, to_id_city in permutations(city_countries_bboxes, 2):
         
-        # get the city name and country name
+        # get the cities' and countries' names
         from_city_id, from_city, from_country = df_city_countries.filter(df_city_countries['id_city'] == from_id_city).row(0)
         to_city_id, to_city, to_country = df_city_countries.filter(df_city_countries['id_city'] == to_id_city).row(0)
     
@@ -31,43 +27,9 @@ def gen_jsons() -> str:
     files = Path(source_dir).glob('*.json.gz') 
     for file in files:
         yield compress_json.load(str(file))
-
-
-def gen_missing_pairs() -> tuple:
-    
-    id_city_country = dict()
-    with open(CITY_COUNTRY_CSV, 'r') as f:
-        for line in f.readlines():
-            line = tuple(line[:-1].split(','))
-            id_city_country[line[0]] = line[1:]
-    
-    all_cities = set()
-    with open('all_city_country_pairs.csv') as f:
-        for line in f.readlines():
-            all_cities.add(tuple(line.split(',')[:2]))
-            
-    # print(all_cities)
         
-    processed_cities = set()
-    files = Path(OUTPUT_JSON_DIR).glob('*.json.gz')
-    for file in files:
-        id_pair, _ = get_id_pair(file.name[:file.name.find('.')])
-        processed_cities.add(id_pair)
-    
-    # print(processed_cities)
-    
-    missing_cities = all_cities.symmetric_difference(processed_cities)
-    
-    # print(len(missing_cities))
-
-    for from_city_id, to_city_id in missing_cities:
         
-        from_city, from_country = id_city_country[from_city_id][0], id_city_country[from_city_id][1]
-        to_city, to_country = id_city_country[to_city_id][0], id_city_country[to_city_id][1]
-        
-        yield from_city_id, from_city, from_country, to_city_id, to_city, to_country
-        
-
+# generates short string triples like '-abc' in order to avoid missing city-country pair mystic effect
 def gen_injection():
     letters = string.ascii_lowercase * 3
     for item in permutations(letters, 3):

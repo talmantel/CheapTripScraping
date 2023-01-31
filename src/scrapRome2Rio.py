@@ -9,9 +9,9 @@ def main():
     
     scrap_json()
     
-    #extract_data()
+    extract_data()
     
-    #treat_data()
+    treat_data()
 
 
 if __name__ == '__main__':

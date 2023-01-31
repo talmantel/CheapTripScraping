@@ -4,16 +4,13 @@ from config import OUTPUT_CSV_DIR, raw_csv
 
 def treat_data():
     
-    print('Start treatment...')
+    print('Start treatment process...')
     
     # 1. Reading raw csv
     df_raw= pd.read_csv(OUTPUT_CSV_DIR/raw_csv, index_col=None)
 
     # 2. Removing full duplicates
     df_val = df_raw.drop_duplicates(ignore_index=True)
-
-    """ 3. Save results for validation
-    df_val.to_csv(OUTPUT_CSV_DIR/'all_direct_routes.csv', index=False) """
     
     # 3a. Filter applying
     # set up limits
@@ -30,7 +27,7 @@ def treat_data():
     df_val_filtered = df_val.drop(filter.index, axis=0) 
     
     # 3c. Write to csv
-    df_val_filtered.to_csv(OUTPUT_CSV_DIR/'all_direct_routes_filt.csv', index=False)
+    df_val_filtered.to_csv(OUTPUT_CSV_DIR/'all_direct_routes_val.csv', index=False)
     
     # 4. Sorting by price in ascending order
     df = df_val.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], 
@@ -56,7 +53,9 @@ def treat_data():
         
     res_df = pd.concat(frames)
 
-    res_df.to_csv(f'{OUTPUT_CSV_DIR}/treat_run.csv')
+    res_df.to_csv(f'{OUTPUT_CSV_DIR}/all_direct_routes_trp.csv')
+    
+    print('Data treatment finished successfully!\n')
     
     
 if __name__ == '__main__':

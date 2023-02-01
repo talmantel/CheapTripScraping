@@ -17,8 +17,6 @@ logging.basicConfig(filename=LOGS_DIR/'scraping.log', filemode='w', format='%(na
 session = requests.Session()
 inject = gen_injection()
 
-""" success_counter = 0
-missed =  """
 
 def missed_pairs(missed_pairs):
     

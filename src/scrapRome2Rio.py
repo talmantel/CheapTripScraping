@@ -1,5 +1,3 @@
-import time
-
 from scraping import scrap_json
 from extraction import extract_data
 from treatment import treat_data

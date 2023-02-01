@@ -149,7 +149,7 @@ def output_no_id_transport():
     uncurr_df.to_csv(OUTPUT_CSV_DIR/'un_currencies.csv', index=False)
     
 
-def extract_data(source_dir: str=OUTPUT_JSON_DIR):
+def extract_data(source_dir=OUTPUT_JSON_DIR):
     OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
     print('Start data extraction...')
     

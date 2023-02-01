@@ -28,7 +28,7 @@ def treat_data():
     df_val_filtered = df_val.drop(filter.index, axis=0) 
     
     # 3c. Write to csv
-    df_val_filtered.to_csv(OUTPUT_CSV_DIR/'all_direct_routes_val.csv', index=False)
+    df_val_filtered.to_csv(OUTPUT_CSV_DIR/'all_direct_routes_validation.csv', index=False)
     
     # 4. Sorting by price in ascending order
     df = df_val.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], 
@@ -54,7 +54,7 @@ def treat_data():
         
     res_df = pd.concat(frames)
 
-    res_df.to_csv(f'{OUTPUT_CSV_DIR}/all_direct_routes_trp.csv')
+    res_df.to_csv(f'{OUTPUT_CSV_DIR}/all_direct_routes_triples.csv')
     
     print('Data treatment finished successfully!\n')
     

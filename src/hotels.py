@@ -8,6 +8,7 @@ def get_hotels():
     
     booking = dict()
     source_dir = Path('../files/output/json_output/2_run_jsons_r2r')
+    target_dir = Path('../files/hotels')
     
     for _, to_id, pathes in gen_jsons(source_dir):
         if to_id not in EXCLUDED_CITIES:
@@ -18,7 +19,8 @@ def get_hotels():
                         print(to_id, route[6][:-1])
                         break
     
-    with open(OUTPUT_CSV_DIR/'booking.json', mode='w') as file:
+    target_dir.mkdir(parents=True, exist_ok=True)
+    with open(target_dir/'booking.json', mode='w') as file:
         json.dump(booking, file, sort_keys=True)
     
     print(booking.keys(), len(booking.keys()))

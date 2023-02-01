@@ -28,10 +28,16 @@ df_airports = pl.read_csv(AIRPORT_CODES_CSV, has_header=False, new_columns=['cod
 df_city_countries = pl.read_csv(CITY_COUNTRY_CSV, has_header=False, new_columns=['id_city', 'city', 'country'])
 
 # set up output columns
-output_columns = ['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min']
+output_columns = ('origin_id', 'destination_id', 'path_id', 'route_id', 'from_id', 'to_id', 
+                  'transport_id', 'price_min_EUR', 'duration_min')
 
 # these items can be extracted from the scrapped json
-avaliable_data = ['from_city_id', 'from_city', 'to_city_id', 'to_city', 'path_id', 'path_name', 
+avaliable_data = ('from_city_id', 'from_city', 'to_city_id', 'to_city', 'path_id', 'path_name', 
                   'from_node', 'to_node', 'from_id', 'to_id', 'transport', 'transport_id', 
                   'from_airport', 'to_airport', 'price_min_EUR', 'price_max_EUR', 'price_local', 
-                  'currency_local', 'distance_km', 'duration_min']
+                  'currency_local', 'distance_km', 'duration_min')
+
+EXCLUDED_CITIES = ('19', '47', '185', '221', '361', 
+                   '49', '110', '143', '144', '182', 
+                   '188', '223', '238', '298', '313', 
+                   '322', '328', '344', '355')

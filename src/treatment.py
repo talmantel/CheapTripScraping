@@ -7,7 +7,8 @@ def treat_data():
     print('Start treatment process...')
     
     # 1. Reading raw csv
-    df_raw= pd.read_csv(OUTPUT_CSV_DIR/raw_csv, index_col=None)
+    df_raw= pd.read_csv(OUTPUT_CSV_DIR/raw_csv, index_col=None, 
+                        usecols=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
 
     # 2. Removing full duplicates
     df_val = df_raw.drop_duplicates(ignore_index=True)

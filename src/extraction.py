@@ -4,18 +4,16 @@ from datetime import datetime
 import compress_json
 from pathlib import Path
 import time
+import json
 
 
 from config import NOT_FOUND, LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, output_columns, raw_csv
-from generators import gen_jsons
-from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, AweBar
+from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, get_id_pair
 from exchange import update_exchange_rates
+from generators import gen_jsons
 
 
 logging.basicConfig(filename=LOGS_DIR/'extraction.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
-
-# get currency exchange rates for EUR and update date
-ago_days, euro_rates = get_exchange_rates()
 
 # set for store no id transport
 no_id_transport = set()
@@ -38,39 +36,44 @@ def data_analyze(response_data):
     
     temp_df = pd.DataFrame(response_data, columns=output_columns, index=None)
     
-    temp_df.drop_duplicates(inplace=True)
+    temp_df.drop_duplicates(output_columns, inplace=True)
         
     cond_1 = temp_df['from_id'] != temp_df['to_id']
     cond_2 = (temp_df['from_id'] != NOT_FOUND) & (temp_df['to_id'] != NOT_FOUND)
     cond_3 = temp_df['price_min_EUR'] > 0
     
     #df_filter = temp_df
-    df_filter = temp_df[cond_1 & cond_2 & cond_3]        
+    df_filter = temp_df[cond_1 & cond_2 & cond_3]   
         
     output_csv(df_filter)
         
     
-def data_extraction(pathes) -> None:
+def data_extraction(origin_id, destination_id, pathes, euro_rates) -> None:
     
     # main data dictionary initialize        
-    data = {'from_id':[], 'to_id':[], 'transport_id':[], 'price_min_EUR':[], 'duration_min':[]}       
+    data = {'origin_id':[], 'destination_id':[], 'path_id':[], 'route_id':[], 'from_id':[], 'to_id':[], 
+            'transport_id':[], 'price_min_EUR':[], 'duration_min':[]}       
     
     # transport set up
-    transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 
-                       'train': ('train', 'nighttrain', 'cartrain'), 'share': 'rideshare', 'ferry': ('ferry', 'carferry')}
+    transport_types = {'fly': ('fly', 'flight', 'plane'), 
+                       'bus': ('busferry', 'bus', 'nightbus'), 
+                       'train': ('train', 'nighttrain', 'cartrain'), 
+                       'share': 'rideshare', 
+                       'ferry': ('ferry', 'carferry')}
     transport_id = (1, 2, 3, 8, 10)
     transport_types_id = {types: id for types, id in zip(transport_types, transport_id)}
     
     # extraction all direct routes from all pathes and filling the main data dictionary
-    for path_id, path in enumerate(pathes):
-        for route in path[8][:-1]:
-                            
+    for path_id, path in enumerate(pathes, start=1):
+        for route_id, route in enumerate(path[8], start=1):
+                                        
             if route[0] in transport_types['fly']:
-                """ data['from_city_id'].append(from_city_id)
-                data['from_city'].append(from_city)
-                data['to_city_id'].append(to_city_id)
-                data['to_city'].append(to_city)
+                data['origin_id'].append(origin_id)
+                data['destination_id'].append(destination_id)
                 data['path_id'].append(path_id)
+                data['route_id'].append(route_id)
+                """ data['from_city'].append(from_city)
+                data['to_city'].append(to_city)
                 data['path_name'].append(path[4])
                 data['from_node'].append(route[2][1])
                 data['to_node'].append(route[3][1]) """
@@ -100,11 +103,12 @@ def data_extraction(pathes) -> None:
                 
                     ttype = next(k for k, v in transport_types.items() if route[1] in v)
                     
-                    """ data['from_city_id'].append(from_city_id)
-                    data['from_city'].append(from_city)
-                    data['to_city_id'].append(to_city_id)
-                    data['to_city'].append(to_city)
+                    data['origin_id'].append(origin_id)
+                    data['destination_id'].append(destination_id)
                     data['path_id'].append(path_id)
+                    data['route_id'].append(route_id)
+                    """ data['from_city'].append(from_city)
+                    data['to_city'].append(to_city)
                     data['path_name'].append(path[4])
                     data['from_node'].append(route[6][1])
                     data['to_node'].append(route[7][1]) """
@@ -127,8 +131,7 @@ def data_extraction(pathes) -> None:
                     data['currency_local'].append(route[14][0][1])
                     data['distance_km'].append(round(route[5])) """
                     data['duration_min'].append(round(route[3] / 60)) # sec to min
-                
-                
+                    
                 except StopIteration:
                     no_id_transport.add(route[1]) # for no id transport types
                     continue
@@ -138,19 +141,7 @@ def data_extraction(pathes) -> None:
              
     data_analyze(data)
 
-        
-def gen_jsons():
     
-    add_header_to_output_csv()
-    
-    # iterate over the files in
-    files = Path(OUTPUT_JSON_DIR).glob(f'*.json.gz')     
-    for file in files:
-        data_extraction(compress_json.load(str(file)))
-        
-    output_no_id_transport()
-
-
 def output_no_id_transport():
     nidt_df = pd.DataFrame(no_id_transport)
     uncurr_df = pd.DataFrame(un_currencies)
@@ -158,16 +149,30 @@ def output_no_id_transport():
     uncurr_df.to_csv(OUTPUT_CSV_DIR/'un_currencies.csv', index=False)
     
 
-def extract_data():
+def extract_data(source_dir: str=OUTPUT_JSON_DIR):
     OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
     print('Start data extraction...')
-    answer = input(f'Last currency exchange rates update: {ago_days} days ago.\
-                   Update rates before extraction? (y/n) ')
-    if answer in ('Y', 'y'): update_exchange_rates()     
-    gen_jsons()
+    
+    # get currency exchange rates for EUR and update date
+    ago_days, euro_rates = get_exchange_rates()
+    
+    answer = input(f'Last currency exchange rates update: {ago_days} days ago. '
+                   f'Update rates before extraction? (y/n) ')
+    
+    if answer in ('Y', 'y'): 
+        update_exchange_rates()
+        _, euro_rates = get_exchange_rates()     
+    
+    add_header_to_output_csv()
+    
+    for from_id, to_id, pathes in gen_jsons(source_dir):
+        data_extraction(from_id, to_id, pathes, euro_rates)
+        
+    output_no_id_transport()
+    
     print('Data extraction finished successfully!\n')
     
     
 if __name__ == '__main__':
-    
+    #source_dir = Path('../files/output/json_output/2_run_jsons_r2r')
     extract_data()

@@ -1,21 +1,20 @@
-from scripts.config import output_columns_ferry
 from functions import get_id_from_bb
 from pathlib import Path
 import json
 from datetime import datetime
 
 def main(tt):
-    data = dict.fromkeys(output_columns_ferry, [])
 
-    print(data)
-
-    transport_types = {'fly': ('fly', 'flight', 'plane'), 'bus': ('busferry', 'bus', 'nightbus'), 'train': ('train', 'nighttrain'), 
-                                'ferry': ('ferry', 'carferry', 'trainferry')}
+    transport_types = {'fly': ('fly', 'flight', 'plane'), 
+                       'bus': ('busferry', 'bus', 'nightbus'), 
+                       'train': ('train', 'nighttrain'), 
+                       'ferry': ('ferry', 'carferry', 'trainferry')}
     
     transport_id = (1, 2, 3, 10)
     
     transport_types_id = {types: id for types, id in zip(transport_types, transport_id)}
     
+    print(*zip(transport_types.keys(), transport_id))
     print(transport_types_id)
     print(transport_types['fly'])
     
@@ -28,7 +27,7 @@ def main(tt):
             elif  ttype != 'fly':
                 print(f'{t} in {ttype}: {transport_types_id[ttype]}')
         except:
-            print(f'{t} is not in {list(transport_types.keys())}')
+            print(f'{t} is not in {transport_types.values()}')
             continue
     
     print()
@@ -62,6 +61,7 @@ def get_exchange_rates():
 
 if __name__ == '__main__':
     # main()
-    # main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
+    #main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
+    print(int('008'))
     # print(in_coords((49.19347, 16.61441)))
-    get_exchange_rates()
+    #get_exchange_rates()

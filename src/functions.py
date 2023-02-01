@@ -4,6 +4,7 @@ import json
 from datetime import datetime, date
 from progress.bar import IncrementalBar
 
+
         
 # Progress bar class
 class AweBar(IncrementalBar):
@@ -38,17 +39,22 @@ def get_id_from_acode(code: str) -> int:
         return NOT_FOUND  
 
 
-def get_id_pair(fname: str) -> tuple:
+def get_id_pair(fname: str, old_file_name: bool=True) -> tuple:
     spec_cities = ('Tel-Aviv', 'Cluj-Napoca', 'Clermont-Ferrand', 'Chambery-Savoie', 'Ivano-Frankivsk', 'Winston-Salem',
                    'Yuzhno-Sakhalinsk', 'Petropavlovsk-Kamchatsky', 'Khanty-Mansiysk', 'Gorno-Altaysk', 'Ust-Kut', 
                    'Nikolaevsk-na-Amure', 'Ust-Maya', 'Ust-Nera', 'Ust-Kuyga', 'Naryan-Mar')
     fn = fname
     for city in spec_cities:
         fn = fn.replace(city, city.replace('-', ' '))
-    id_pair = tuple(fn.split('-')[::2])
-    city_pair = tuple(fn.split('-')[1::2])
     
-    return id_pair, city_pair
+    if old_file_name:
+        from_id, to_id = fn.split('-')[::2]
+        #from_city, to_city = fn.split('-')[1::2]
+        return from_id, to_id #, from_city, to_city
+    
+    from_id, to_id = fn.split('-')[:2]
+    #from_city, to_city = fn.split('-')[2:4]
+    return from_id, to_id #, from_city, to_city
 
 
 def get_exchange_rates() -> tuple:
@@ -66,15 +72,16 @@ def get_exchange_rates() -> tuple:
             
     except FileNotFoundError:
         print(f'File not found: {source_file}')
+          
         
     
 if __name__ == '__main__':
     
-    #print(get_id_pair('10-Tel-Aviv-20-Clermont-Ferrand'))
+    print(get_id_pair('10-Tel-Aviv-20-Clermont-Ferrand'))
     
     #print(get_id_from_acode('fra'),  get_id_from_acode('hhn'))
     
     #print(get_bb_id([38.4511,68.9642]), type(get_bb_id([38.4511,68.9642]))) """
     
-    print(get_exchange_rates())
+    #print(get_exchange_rates())
     pass

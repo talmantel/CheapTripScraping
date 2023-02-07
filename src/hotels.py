@@ -1,26 +1,26 @@
-from generators import gen_jsons
-from config import OUTPUT_CSV_DIR, EXCLUDED_CITIES
 import json
-from pathlib import Path
 
+
+from config import EXCLUDED_CITIES, HOTELS_DIR, OLD_OUTPUT_JSON_DIR, NUMBER_OF_CITIES
+from generators import gen_jsons
+        
         
 def get_hotels():
     
     booking = dict()
-    source_dir = Path('../files/output/json_output/2_run_jsons_r2r')
-    target_dir = Path('../files/hotels')
     
-    for _, to_id, pathes in gen_jsons(source_dir):
-        if to_id not in EXCLUDED_CITIES:
-            for path in pathes:
-                for route in path[8]:
-                    if route[0] == 'hotel': 
-                        booking[to_id] = route[6][:-1]
-                        print(to_id, route[6][:-1])
-                        break
+    for _, to_id, pathes in gen_jsons(OLD_OUTPUT_JSON_DIR):
+        
+        if (to_id in EXCLUDED_CITIES) or (to_id in booking.keys()): continue
+        
+        booking[to_id] = pathes[0][8][-1][6][:-1]
+        
+        print(to_id, booking[to_id])
+        
+        if len(booking.keys()) == NUMBER_OF_CITIES: break
     
-    target_dir.mkdir(parents=True, exist_ok=True)
-    with open(target_dir/'booking.json', mode='w') as file:
+    HOTELS_DIR.mkdir(parents=True, exist_ok=True)
+    with open(HOTELS_DIR/'booking.json', mode='w') as file:
         json.dump(booking, file, sort_keys=True)
     
     print(booking.keys(), len(booking.keys()))

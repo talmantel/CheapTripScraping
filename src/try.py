@@ -7,10 +7,11 @@ def main(tt):
 
     transport_types = {'fly': ('fly', 'flight', 'plane'), 
                        'bus': ('busferry', 'bus', 'nightbus'), 
-                       'train': ('train', 'nighttrain'), 
+                       'train': ('train', 'nighttrain'),
+                       'share': 'rideshare', 
                        'ferry': ('ferry', 'carferry', 'trainferry')}
     
-    transport_id = (1, 2, 3, 10)
+    transport_id = (1, 2, 3, 8, 10)
     
     transport_types_id = {types: id for types, id in zip(transport_types, transport_id)}
     
@@ -30,7 +31,8 @@ def main(tt):
             print(f'{t} is not in {transport_types.values()}')
             continue
     
-    print()
+    print(('nighttrain') in list(transport_types.values()))
+    print(''.join(transport_types.values()))
     
 def in_coords(coords) -> str:
     return get_id_from_bb(coords)
@@ -61,7 +63,7 @@ def get_exchange_rates():
 
 if __name__ == '__main__':
     # main()
-    #main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
-    print(int('008'))
+    main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
+    # print(int('008'))
     # print(in_coords((49.19347, 16.61441)))
     #get_exchange_rates()

@@ -24,14 +24,15 @@ public class TravelDataService {
 
     public String createData(TravelData data) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection(TRAVEL_DATA_FILENAME).document(data.getName()).set(data);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection(TRAVEL_DATA_FILENAME).document(data.getName()).set(data);
 
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
     public TravelData getData(int id) throws ExecutionException, InterruptedException, NullPointerException {
         Firestore firestore = FirestoreClient.getFirestore();
-        DocumentReference reference = firestore.collection(TRAVEL_DATA_FILENAME).document(id+"");
+        DocumentReference reference = firestore.collection(TRAVEL_DATA_FILENAME).document(id + "");
         ApiFuture<DocumentSnapshot> future = reference.get();
         DocumentSnapshot snapshot = future.get();
 
@@ -45,17 +46,18 @@ public class TravelDataService {
 
     public String updateData(TravelData data) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection(TRAVEL_DATA_FILENAME).document(data.getName()).set(data);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection(TRAVEL_DATA_FILENAME).document(data.getName()).set(data);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public String deleteData(int id){
+    public String deleteData(int id) {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> delete = firestore.collection(TRAVEL_DATA_FILENAME).document(id+"").delete();
+        ApiFuture<WriteResult> delete = firestore.collection(TRAVEL_DATA_FILENAME).document(id + "").delete();
         return "Successfully deleted " + id;
     }
 
-    public void createAllData () throws IOException, ExecutionException, InterruptedException {
+    public void createAllData() throws IOException, ExecutionException, InterruptedException {
         JsonObject[] datas = CSVtoJson.travelDataToJson(CSVtoJson.CSVoString(COMMON_PATH + CSV_TRAVEL_DATA));
         int all = datas.length;
         for (int i = 0; i < AMOUNT_OF_STRINGS; i++) {

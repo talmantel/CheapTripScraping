@@ -43,7 +43,8 @@ public class Counter {
             ResultSet locationsResultSet = statement.getResultSet();
             ArrayList<Location> locations = new ArrayList<>();
 
-            SimpleDirectedWeightedGraph<Integer, DefaultEdge> routeGraph = new SimpleDirectedWeightedGraph<>(DefaultEdge.class);
+            SimpleDirectedWeightedGraph<Integer, DefaultEdge> routeGraph =
+                    new SimpleDirectedWeightedGraph<>(DefaultEdge.class);
             while (locationsResultSet.next()) {
                 int id = locationsResultSet.getInt("id");
                 String name = locationsResultSet.getString("name");
@@ -55,8 +56,10 @@ public class Counter {
                 routeGraph.addVertex(id);
             }
             System.out.println("getting data");
-//            statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data where transportation_type in " + allowedTransportationTypes)/*+ allowedTransportationTypes)*/;
-            statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data_newest where transportation_type in " + allowedTransportationTypes)/*+ allowedTransportationTypes)*/;
+//            statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data.csv where
+//            transportation_type in " + allowedTransportationTypes)/*+ allowedTransportationTypes)*/;
+            statement = conn.prepareStatement("select `from`, `to`, euro_price from travel_data_newest where " +
+                    "transportation_type in " + allowedTransportationTypes)/*+ allowedTransportationTypes)*/;
             statement.execute();
             ResultSet travelDataResultSet = statement.getResultSet();
             System.out.println(travelDataResultSet);
@@ -88,9 +91,11 @@ public class Counter {
                 for (Location to : locations) {
                     if (to.getId() == from.getId()) continue;
                     System.out.println("--Scanning route from: " + from + " to: " + to);
-                    GraphPath<Integer, DefaultEdge> path = DijkstraShortestPath.findPathBetween(routeGraph, from.getId(), to.getId());
+                    GraphPath<Integer, DefaultEdge> path = DijkstraShortestPath.findPathBetween(routeGraph,
+                            from.getId(), to.getId());
                     if (path == null) continue;
-                    StringBuilder query = new StringBuilder("select * from travel_data_newest where transportation_type in " + allowedTransportationTypes);
+                    StringBuilder query = new StringBuilder("select * from travel_data_newest where " +
+                            "transportation_type in " + allowedTransportationTypes);
                     List<DefaultEdge> edgeList = path.getEdgeList();
                     System.out.println("edgelist size = " + edgeList.size());
                     if (edgeList == null || edgeList.size() == 0) continue;
@@ -141,7 +146,8 @@ public class Counter {
                             if (travelData.length() > 0)
                                 travelData.append(",");
                             travelData.append(bestTravelOptionID);
-                            DirectRoute directRoute = new DirectRoute(bestTravelOptionID, currentFromID, currentToID, minPrice);
+                            DirectRoute directRoute = new DirectRoute(bestTravelOptionID, currentFromID, currentToID,
+                                    minPrice);
                             directRoutes.add(directRoute);
                             System.out.println("----Travel: " + directRoutes);
                             currentFromID = fromID;
@@ -165,7 +171,8 @@ public class Counter {
                     directRoutes.add(directRoute);
                     System.out.println("----Travel: " + directRoutes);
                     System.out.println("save_table");
-//                    statement = conn.prepareStatement("insert into " + saveToTable + " (`from`, `to`, euro_price, travel_data) values (" +
+//                    statement = conn.prepareStatement("insert into " + saveToTable + " (`from`, `to`, euro_price,
+//                    travel_data.csv) values (" +
 //                            from.getId() + ", " +
 //                            to.getId() + ", " +
 //                            totalPrice + ", '" +

@@ -15,6 +15,26 @@ public class TablesInitializer {
     public static void locationTableMaker(Connection connection) {
 
         try {
+            String query = "CREATE TABLE IF NOT EXISTS locations_old(\n" +
+                    "     id INT,\n" +
+                    "     name VARCHAR(50),\n" +
+                    "     country_id INT,\n" +
+                    "     latitude DOUBLE,\n" +
+                    "     longitude DOUBLE,\n" +
+                    "     name_ru VARCHAR(60),\n" +
+                    "     PRIMARY KEY(id)\n" +
+                    ");";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.execute();
+            stringMaker("Table 'locations' created");
+        } catch (SQLException e) {
+            stringMaker("An error occurred while table 'locations' creating");
+        }
+    }
+
+    public static void locationTableMakerAlt(Connection connection) {
+
+        try {
             String query = "CREATE TABLE IF NOT EXISTS locations(\n" +
                     "     id INT,\n" +
                     "     name VARCHAR(50),\n" +
@@ -39,6 +59,7 @@ public class TablesInitializer {
                     "     `from` INT,\n" +
                     "     `to` INT,\n" +
                     "     euro_price FLOAT,\n" +
+                    "     trip_duration INT,\n" +
                     "     travel_data VARCHAR(255),\n" +
                     "     PRIMARY KEY (id)\n" +
                     ");";
@@ -76,6 +97,7 @@ public class TablesInitializer {
                     "     `from` INT,\n" +
                     "     `to` INT,\n" +
                     "     euro_price FLOAT,\n" +
+                    "     trip_duration INT,\n" +
                     "     travel_data VARCHAR(255),\n" +
                     "     PRIMARY KEY (id)\n" +
                     ");";
@@ -94,6 +116,7 @@ public class TablesInitializer {
                     "     `from` INT,\n" +
                     "     `to` INT,\n" +
                     "     euro_price FLOAT,\n" +
+                    "     trip_duration INT,\n" +
                     "     travel_data VARCHAR(255),\n" +
                     "     PRIMARY KEY (id)\n" +
                     ");";

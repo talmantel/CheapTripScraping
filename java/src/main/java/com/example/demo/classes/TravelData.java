@@ -4,10 +4,12 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Comparator;
+
 @Data
 @Getter
 @Setter
-public class TravelData {
+public class TravelData implements Comparable<TravelData> {
     private int id;
     private int from;
     private int to;
@@ -47,5 +49,13 @@ public class TravelData {
 
     public String getName() {
         return "" + id;
+    }
+
+    @Override
+    public int compareTo(TravelData o) {
+        return Comparator.comparing(TravelData::getFrom)
+                .thenComparing(TravelData::getTo)
+                .thenComparing(TravelData::getTransportation_type)
+                .thenComparing(TravelData::getEuro_price).reversed().compare(this, o);
     }
 }

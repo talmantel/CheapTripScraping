@@ -52,6 +52,7 @@ public class Counters {
                 double longitude = locationsResultSet.getDouble("longitude");
                 String name_ru = locationsResultSet.getString("name_ru");
                 locations.add(new Location(id, name, country_id, latitude, longitude, name_ru));
+                //locations.add(new Location(id, name, latitude, longitude));
                 routeGraph.addVertex(id);
             }
             System.out.println("getting data");
@@ -158,18 +159,41 @@ public class Counters {
                     DirectRoute directRoute = new DirectRoute(bestTravelOptionID, currentFromID, currentToID, minPrice);
                     directRoutes.add(directRoute);
                     System.out.println("----Travel: " + directRoutes);
+                    String[] arr = travelData.toString().split(",");
+                    int duration = 0;
+                    for (int i = 0; i < arr.length; i++) {
+                        int id = Integer.parseInt(arr[i]);
+                        int minutes = 0;
+                        String q = "SELECT time_in_minutes FROM travel_data WHERE id = " + id;
+                        System.out.println(q);
+                        PreparedStatement statement2 = connection.prepareStatement(q);
+                        statement2.execute();
+                        ResultSet set = statement2.getResultSet();
+                        while (set.next()) {
+                            minutes = set.getInt("time_in_minutes");
+                            System.out.println(minutes);
+                        }
+                        duration = duration + minutes;
+                        System.out.println("duration - " + duration);
+                    }
                     if (stringSave) {
-                        obj = "(" + finalCount + "," + from.getId() + "," + to.getId() + "," + totalPrice + "," + travelData + ")";
+                        obj = "(" + finalCount + ","
+                                + from.getId() + ","
+                                + to.getId() + ","
+                                + totalPrice + ","
+                                + duration + ","
+                                + travelData + ")";
                         builder.append(obj);
                         builder.append(",");
                         finalCount++;
                     }
                     if (databaseSave) {
-                        statement = connection.prepareStatement("insert into " + saveToTable + "(`from`, `to`, " +
-                                "euro_price, travel_data) values (" +
+                        statement = connection.prepareStatement("insert into " + saveToTable + " (`from`, `to`, euro_price," +
+                                "trip_duration, travel_data) values (" +
                                 from.getId() + ", " +
                                 to.getId() + ", " +
-                                totalPrice + ", '" +
+                                totalPrice + ", " +
+                                duration + ", '" +
                                 travelData + "')");
                         statement.execute();
                     }

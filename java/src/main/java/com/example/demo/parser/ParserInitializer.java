@@ -3,7 +3,6 @@ package com.example.demo.parser;
 import com.example.demo.Constants;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
 
 public class ParserInitializer {
@@ -12,13 +11,17 @@ public class ParserInitializer {
 
     public static void main(String[] args) throws IOException, ExecutionException, InterruptedException {
 
-        String str = CSVtoJson.CSVoStringLine("K:/Programming/Graphs(from_Roman)/CheapTripScraping1/java/src/main/resources/db/state/travel_data_newest.csv");
-        CSVtoJson.stringToFile(str, "K:/Programming/Graphs(from_Roman)/CheapTripScraping1/java/src/main/resources/db/state/travel_data_new.csv");
+        String str = CSVtoJson.CSVoStringLine("K:/Programming/Graphs(from_Roman)" +
+                "/CheapTripScraping1/java/src/main/resources/db/state/travel_data_newest.csv");
+        CSVtoJson.stringToFile(str, "K:/Programming/Graphs(from_Roman)" +
+                "/CheapTripScraping1/java/src/main/resources/db/state/travel_data_new.csv");
 //        System.out.println(Arrays.toString(CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)));
 
         //id changer
-//        System.out.println(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + Constants.STRING_FILE_TRANSFORM)));
-//        CSVtoJson.stringToFile(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + "new_routesah.csv")), Constants.PATH_ALT + "PPP.csv");
+//        System.out.println(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + Constants
+//        .STRING_FILE_TRANSFORM)));
+//        CSVtoJson.stringToFile(CSVtoJson.idChanger(CSVtoJson.CSVoString(Constants.PATH_ALT + "new_routesah.csv")),
+//        Constants.PATH_ALT + "PPP.csv");
 
 //        CSVtoJson.jsonToFile(CSVtoJson.travelDataToJson(
 //                CSVtoJson.CSVoString(COMMON_PATH + Constants.TRAVEL_DATA_NEW)
@@ -26,27 +29,33 @@ public class ParserInitializer {
 
         // Parse countries to Json
 //        CSVtoJson.jsonToFile(CSVtoJson.countriesToJson(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_countries.csv")),OUTCOME_PATH + "cheap_trip_countries.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_countries.csv")),OUTCOME_PATH +
+//                "cheap_trip_countries.json");
 
         // Parse currencies to Json
 //        CSVtoJson.jsonToFile(CSVtoJson.currenciesToJson(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_currencies.csv")),OUTCOME_PATH + "cheap_trip_currencies.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_currencies.csv")),OUTCOME_PATH +
+//                "cheap_trip_currencies.json");
 
         // Parse fixed route to Json
 //        CSVtoJson.jsonToFile(CSVtoJson.routesToJsonAlt(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_fixed_routes.csv")),OUTCOME_PATH + "cheap_trip_fixed_routes.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_fixed_routes.csv")),OUTCOME_PATH +
+//                "cheap_trip_fixed_routes.json");
 
         // Parse fixed route without ride
 //        CSVtoJson.jsonToFile(CSVtoJson.routesToJsonAlt(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_fixed_routes_without_ride_share.csv")),OUTCOME_PATH + "cheap_trip_fixed_routes_without_ride_share.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_fixed_routes_without_ride_share.csv")),OUTCOME_PATH
+//                + "cheap_trip_fixed_routes_without_ride_share.json");
 
         // Parse flying routes
 //        CSVtoJson.jsonToFile(CSVtoJson.routesToJsonAlt(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_flying_routes.csv")),OUTCOME_PATH + "cheap_trip_flying_routes.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_flying_routes.csv")),OUTCOME_PATH +
+//                "cheap_trip_flying_routes.json");
 
         // Parse locations
 //        CSVtoJson.jsonToFile(CSVtoJson.locationsToJson(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_locations.csv")),OUTCOME_PATH + "cheap_trip_locations.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_locations.csv")),OUTCOME_PATH +
+//                "cheap_trip_locations.json");
 
         // Parse routes
 //        CSVtoJson.jsonToFile(CSVtoJson.routesToJsonAlt(
@@ -54,14 +63,17 @@ public class ParserInitializer {
 
         // Parse routes without ride
 //        CSVtoJson.jsonToFile(CSVtoJson.routesToJsonAlt(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_routes_without_ride_share.csv")),OUTCOME_PATH + "cheap_trip_routes_without_ride_share.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_routes_without_ride_share.csv")),OUTCOME_PATH +
+//                "cheap_trip_routes_without_ride_share.json");
 
         // Parse transportation type
 //        CSVtoJson.jsonToFile(CSVtoJson.transportationTypesToJson(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_transportation_types.csv")),OUTCOME_PATH + "cheap_trip_transportation_types.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_transportation_types.csv")),OUTCOME_PATH +
+//                "cheap_trip_transportation_types.json");
 
         // Parse travel data
 //        CSVtoJson.jsonToFile(CSVtoJson.travelDataToJson(
-//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_travel_data.csv")),OUTCOME_PATH + "cheap_trip_travel_data.json");
+//                CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_travel_data.csv")),OUTCOME_PATH +
+//                "cheap_trip_travel_data.json");
     }
 }

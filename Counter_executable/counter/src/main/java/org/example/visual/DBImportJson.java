@@ -27,9 +27,6 @@ public class DBImportJson {
     JCheckBox importLocations;
     JCheckBox importTransportationTypes;
     JCheckBox importTravelData;
-    JCheckBox importRoutes;
-    JCheckBox importFixedRoutes;
-    JCheckBox importFlyingRoutes;
 
     JCheckBox importRoutesCounter;
 
@@ -45,7 +42,7 @@ public class DBImportJson {
 
     public DBImportJson() {
 
-        importList = new DBImportList(false,false,false,false,false,false,false,false, false,false,false);
+        importList = new DBImportList(false,false,false,false,false,false,false,false);
 
         importFrame = new JFrame("Импорт баз данных в формате Json");
         importPanel = new JPanel();
@@ -57,9 +54,6 @@ public class DBImportJson {
         importLocations = new JCheckBox("Сформировать locations.json");
         importTransportationTypes = new JCheckBox("Сформировать transportation_types.json");
         importTravelData = new JCheckBox("Сформировать travel_data.json");
-        importRoutes = new JCheckBox("Сформировать routes.json");
-        importFixedRoutes = new JCheckBox("Сформировать fixed_routes.json");
-        importFlyingRoutes = new JCheckBox("Сформировать flying_routes.json");
         importRoutesCounter = new JCheckBox("Сформировать travel_data_counter_routes.json");
         importFixedRoutesCounter = new JCheckBox("Сформировать travel_data_counter_fixed_routes.json");
         importFlyingRoutesCounter = new JCheckBox("Сформировать travel_data_counter_flying_routes.json");
@@ -105,24 +99,6 @@ public class DBImportJson {
                     importList.setImportTravelData(true);
                 } else {
                     importList.setImportTravelData(false);
-                }
-
-                if (importRoutes.isSelected()) {
-                    importList.setImportRoutes(true);
-                } else {
-                    importList.setImportRoutes(false);
-                }
-
-                if (importFixedRoutes.isSelected()) {
-                    importList.setImportFixedRoutes(true);
-                } else {
-                    importList.setImportFixedRoutes(false);
-                }
-
-                if (importFlyingRoutes.isSelected()) {
-                    importList.setImportFlyingRoutes(true);
-                } else {
-                    importList.setImportFlyingRoutes(false);
                 }
 
                 if (importRoutesCounter.isSelected()) {
@@ -178,27 +154,6 @@ public class DBImportJson {
                     stringMaker("Parsing 'travel_data' to Json finished");
                 }
 
-                if (importList.isImportRoutes() && !pathField.getText().equals("")) {
-                    stringMaker("Parsing 'routes' to Json...");
-                    ParserDBtoJson.jsonToFile(ParserDBtoJson.routesToJson(connectionMaker(credentials)),
-                            pathField.getText()+"/routes.json");
-                    stringMaker("Parsing 'routes' to Json finished");
-                }
-
-                if (importList.isImportFixedRoutes() && !pathField.getText().equals("")) {
-                    stringMaker("Parsing 'fixed_routes' to Json...");
-                    ParserDBtoJson.jsonToFile(ParserDBtoJson.fixedRoutesToJson(connectionMaker(credentials)),
-                            pathField.getText()+"/fixed_routes.json");
-                    stringMaker("Parsing 'fixed_routes' to Json finished");
-                }
-
-                if (importList.isImportFlyingRoutes() && !pathField.getText().equals("")) {
-                    stringMaker("Parsing 'flying_routes' to Json...");
-                    ParserDBtoJson.jsonToFile(ParserDBtoJson.flyingRoutesToJson(connectionMaker(credentials)),
-                            pathField.getText()+"/flying_routes.json");
-                    stringMaker("Parsing 'flying_routes' to Json finished");
-                }
-
                 if (importList.isImportRoutesCounter() && !pathField.getText().equals("")) {
                     stringMaker("Parsing 'travel_data_counter_routes' to Json...");
                     ParserDBtoJson.jsonToFile(ParserDBtoJson.travelDataCounterRoutesToJson(connectionMaker(credentials)),
@@ -223,15 +178,12 @@ public class DBImportJson {
         });
 
         importPanel.setBorder(BorderFactory.createEmptyBorder(20,20,20,20));
-        importPanel.setLayout(new GridLayout(13, 2, 0, 10));
+        importPanel.setLayout(new GridLayout(10, 2, 0, 10));
         importPanel.add(importCountries);
         importPanel.add(importCurrencies);
         importPanel.add(importLocations);
         importPanel.add(importTransportationTypes);
         importPanel.add(importTravelData);
-        importPanel.add(importRoutes);
-        importPanel.add(importFixedRoutes);
-        importPanel.add(importFlyingRoutes);
         importPanel.add(importRoutesCounter);
         importPanel.add(importFixedRoutesCounter);
         importPanel.add(importFlyingRoutesCounter);

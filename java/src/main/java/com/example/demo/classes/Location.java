@@ -24,6 +24,13 @@ public class Location {
         this.name_ru = name_ru;
     }
 
+    public Location(int id, String name, double latitude, double longitude) {
+        this.id = id;
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude = longitude;
+    }
+
     public String toString() {
         return "id=" + id +
                 ", name='" + name + '\'' +

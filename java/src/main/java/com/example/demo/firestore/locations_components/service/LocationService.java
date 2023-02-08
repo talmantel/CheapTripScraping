@@ -22,7 +22,8 @@ public class LocationService {
 
     public String createLocation(Location location) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_locations").document(location.getName()).set(location);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_locations").document(location.getName()).set(location);
 
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
@@ -43,18 +44,20 @@ public class LocationService {
 
     public String updateLocation(Location location) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_locations").document(location.getName()).set(location);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_locations").document(location.getName()).set(location);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public String deleteLocation(String name){
+    public String deleteLocation(String name) {
         Firestore firestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> delete = firestore.collection("cheap_trip_locations").document(name).delete();
         return "Successfully deleted " + name;
     }
 
-    public void createAllLocations () throws IOException, ExecutionException, InterruptedException {
-        JsonObject[] locations = CSVtoJson.locationsToJson(CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_locations.csv"));
+    public void createAllLocations() throws IOException, ExecutionException, InterruptedException {
+        JsonObject[] locations = CSVtoJson.locationsToJson(CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_locations" +
+                ".csv"));
         for (int i = 0; i < locations.length; i++) {
             JsonObject obj = locations[i];
             int id = obj.get("id").getAsInt();
@@ -63,7 +66,7 @@ public class LocationService {
             double latitude = obj.get("latitude").getAsDouble();
             double longitude = obj.get("longitude").getAsDouble();
             String name_ru = obj.get("name_ru").getAsString();
-            Location location = new Location(id,name, country_id, latitude, longitude, name_ru);
+            Location location = new Location(id, name, country_id, latitude, longitude, name_ru);
             createLocation(location);
         }
     }

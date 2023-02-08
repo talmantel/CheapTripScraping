@@ -17,7 +17,11 @@ public class CounterMenu {
     JButton StartCountingButton;
     JButton ImportToJsonButton;
 
-    JButton ImportFromLocationsCSVButton;
+    JButton ImportRoutesJsonButton;
+
+    JButton ImportRoutesCSVButton;
+
+    JButton ImportSQLButton;
 
     public CounterMenu (){
         counterMenuFrame = new JFrame();
@@ -28,8 +32,9 @@ public class CounterMenu {
         DBDeleteButton = new JButton("Удаление таблиц");
         StartCountingButton = new JButton("Управление расчетом");
         ImportToJsonButton = new JButton("Импорт баз данных в формате .json");
-        ImportFromLocationsCSVButton = new JButton("Импорт from locations в формате .csv");
-
+        ImportRoutesJsonButton = new JButton("Импорт routes в формате .json");
+        ImportRoutesCSVButton = new JButton("Импорт routes в формате .csv");
+        ImportSQLButton = new JButton("Импорт SQL файлов таблиц базы данных");
 
         DBSettingsButton.setSize(40,40);
         DBSettingsButton.addActionListener(new ActionListener() {
@@ -79,11 +84,27 @@ public class CounterMenu {
             }
         });
 
-        ImportFromLocationsCSVButton.setSize(40,40);
-        ImportFromLocationsCSVButton.addActionListener(new ActionListener() {
+        ImportRoutesJsonButton.setSize(40,40);
+        ImportRoutesJsonButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DBImportRoutesJson routesJson = new DBImportRoutesJson();
+            }
+        });
+
+        ImportRoutesCSVButton.setSize(40,40);
+        ImportRoutesCSVButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 DBImportCSV importCSV = new DBImportCSV();
+            }
+        });
+
+        ImportSQLButton.setSize(40,40);
+        ImportSQLButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DBImportSQL importSQL = new DBImportSQL();
             }
         });
 
@@ -96,7 +117,9 @@ public class CounterMenu {
         counterMenuPanel.add(DBDeleteButton);
         counterMenuPanel.add(StartCountingButton);
         counterMenuPanel.add(ImportToJsonButton);
-        counterMenuPanel.add(ImportFromLocationsCSVButton);
+        counterMenuPanel.add(ImportRoutesJsonButton);
+        counterMenuPanel.add(ImportRoutesCSVButton);
+        counterMenuPanel.add(ImportSQLButton);
 
         counterMenuFrame.add(counterMenuPanel, BorderLayout.CENTER);
         counterMenuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

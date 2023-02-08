@@ -22,7 +22,8 @@ public class CurrencyService {
 
     public String createCurrency(Currency currency) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_currencies").document(currency.getName()).set(currency);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_currencies").document(currency.getName()).set(currency);
 
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
@@ -43,18 +44,20 @@ public class CurrencyService {
 
     public String updateCurrency(Currency currency) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_currencies").document(currency.getName()).set(currency);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_currencies").document(currency.getName()).set(currency);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public String deleteCurrency(String name){
+    public String deleteCurrency(String name) {
         Firestore firestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> delete = firestore.collection("cheap_trip_currencies").document(name).delete();
         return "Successfully deleted " + name;
     }
 
-    public void createAllCurrencies () throws IOException, ExecutionException, InterruptedException {
-        JsonObject[] currencies = CSVtoJson.currenciesToJson(CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_currencies.csv"));
+    public void createAllCurrencies() throws IOException, ExecutionException, InterruptedException {
+        JsonObject[] currencies = CSVtoJson.currenciesToJson(CSVtoJson.CSVoString(COMMON_PATH +
+                "cheap_trip_currencies.csv"));
         for (int i = 0; i < currencies.length; i++) {
             JsonObject obj = currencies[i];
             int id = obj.get("id").getAsInt();
@@ -63,7 +66,7 @@ public class CurrencyService {
             String symbol = obj.get("symbol").getAsString();
             float one_euro_rate = obj.get("one_euro_rate").getAsFloat();
             String rtr_symbol = obj.get("rtr_symbol").getAsString();
-            Currency currency = new Currency(id,name, code, symbol, one_euro_rate, rtr_symbol);
+            Currency currency = new Currency(id, name, code, symbol, one_euro_rate, rtr_symbol);
             createCurrency(currency);
         }
     }

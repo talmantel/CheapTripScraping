@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ParserDBtoJson {
 
@@ -166,6 +167,7 @@ public class ParserDBtoJson {
                 int from = routesSet.getInt("from");
                 int to = routesSet.getInt("to");
                 float euro_price = routesSet.getFloat("euro_price");
+                int trip_duration = routesSet.getInt("trip_duration");
                 String travel_data = routesSet.getString("travel_data");
                 JsonArray array = new JsonArray();
                 String [] travel = travel_data.split(",");
@@ -178,8 +180,8 @@ public class ParserDBtoJson {
                 object.addProperty("from",from);
                 object.addProperty("to", to);
                 object.addProperty("euro_price", euro_price);
+                object.addProperty("trip_duration", trip_duration);
                 object.add("travel_data", array);
-
                 list.add(object);
             }
         } catch (SQLException e) {
@@ -187,6 +189,8 @@ public class ParserDBtoJson {
         }
         return list;
     }
+
+
 
     public static ArrayList<JsonObject> fixedRoutesToJson(Connection connection) {
         ArrayList<JsonObject> list = new ArrayList<>();
@@ -200,6 +204,7 @@ public class ParserDBtoJson {
                 int from = fixesRoutesSet.getInt("from");
                 int to = fixesRoutesSet.getInt("to");
                 float euro_price = fixesRoutesSet.getFloat("euro_price");
+                int trip_duration = fixesRoutesSet.getInt("trip_duration");
                 String travel_data = fixesRoutesSet.getString("travel_data");
                 JsonArray array = new JsonArray();
                 String [] travel = travel_data.split(",");
@@ -212,6 +217,7 @@ public class ParserDBtoJson {
                 object.addProperty("from",from);
                 object.addProperty("to", to);
                 object.addProperty("euro_price", euro_price);
+                object.addProperty("trip_duration", trip_duration);
                 object.add("travel_data", array);
 
                 list.add(object);
@@ -234,6 +240,7 @@ public class ParserDBtoJson {
                 int from = flyingRoutesSet.getInt("from");
                 int to = flyingRoutesSet.getInt("to");
                 float euro_price = flyingRoutesSet.getFloat("euro_price");
+                int trip_duration = flyingRoutesSet.getInt("trip_duration");
                 String travel_data = flyingRoutesSet.getString("travel_data");
 
                 JsonArray array = new JsonArray();
@@ -246,6 +253,7 @@ public class ParserDBtoJson {
                 object.addProperty("from",from);
                 object.addProperty("to", to);
                 object.addProperty("euro_price", euro_price);
+                object.addProperty("trip_duration", trip_duration);
                 object.add("travel_data", array);
 
                 list.add(object);
@@ -346,7 +354,6 @@ public class ParserDBtoJson {
                 object.addProperty("euro_price", euro_price);
                 object.addProperty("time_in_minutes", time_in_minutes);
                 object.addProperty("count", count);
-
                 list.add(object);
             }
         } catch (SQLException e) {
@@ -367,5 +374,50 @@ public class ParserDBtoJson {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void routesFromLocationsToJson(Connection connection, String tableType,  String path) {
+        List<Integer> lostLocations = new ArrayList<>();
+        try {
+            String query1 = "SELECT * FROM locations";
+            PreparedStatement statement = connection.prepareStatement(query1);
+            statement.execute();
+            ResultSet locationsResultSet = statement.getResultSet();
+            while (locationsResultSet.next()) {
+                int locationId = locationsResultSet.getInt("id");
+                String query2 = "SELECT * FROM " + tableType + " WHERE `from` = " + locationId;
+                PreparedStatement statement1 = connection.prepareStatement(query2);
+                statement1.execute();
+                ResultSet fromResultSet = statement1.getResultSet();
+                ArrayList<JsonObject> list = new ArrayList<>();
+                while (fromResultSet.next()) {
+                    int id = fromResultSet.getInt("id");
+                    int from = fromResultSet.getInt("from");
+                    int to = fromResultSet.getInt("to");
+                    float euro_price = fromResultSet.getFloat("euro_price");
+                    int trip_duration = fromResultSet.getInt("trip_duration");
+                    String travel_data = fromResultSet.getString("travel_data");
+                    String[] arr = travel_data.split(",");
+                    JsonArray routes = new JsonArray();
+                    for (int i = 0; i < arr.length; i++) {
+                        routes.add(Integer.parseInt(arr[i]));
+                    }
+                    JsonObject object = new JsonObject();
+                    object.addProperty("to", to);
+                    object.addProperty("euro_price", euro_price);
+                    object.addProperty("trip_duration", trip_duration);
+                    object.add("travel_data", routes);
+                    list.add(object);
+                }
+                if (!list.isEmpty()) {
+                    jsonToFile(list, path + "/from_" + locationId + ".json");
+                } else {
+                    lostLocations.add(locationId);
+                }
+            }
+        } catch (SQLException e) {
+            stream.println("routesFromLocationsToJson -" + tableType + ": problem");
+        }
+        stream.println("Lost locations in " + tableType + ": " + lostLocations);
     }
 }

@@ -35,7 +35,8 @@ public class PostProcessFileAnalyzer {
 
     public static void pushCountIntoDB(HashMap<Integer, Long> map) {
         try {
-            Connection connection = DriverManager.getConnection(Constants.DB_URL, Constants.DB_USER, Constants.DB_PASSWORD);
+            Connection connection = DriverManager.getConnection(Constants.DB_URL, Constants.DB_USER,
+                    Constants.DB_PASSWORD);
             for (Map.Entry entry : map.entrySet()) {
                 int id = (int) entry.getKey();
                 String query = "SELECT * FROM travel_data_count WHERE id = " + id;

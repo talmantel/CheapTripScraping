@@ -23,12 +23,14 @@ public class CountryService {
     public String createCountry(Country country) throws ExecutionException, InterruptedException {
 
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_countries").document(country.getCountry_name()).set(country);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_countries").document(country.getCountry_name()).set(country);
 
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public Country getCountry(String country_name) throws ExecutionException, InterruptedException, NullPointerException {
+    public Country getCountry(String country_name) throws ExecutionException, InterruptedException,
+            NullPointerException {
         Firestore firestore = FirestoreClient.getFirestore();
         DocumentReference reference = firestore.collection("cheap_trip_countries").document(country_name);
         ApiFuture<DocumentSnapshot> future = reference.get();
@@ -44,18 +46,20 @@ public class CountryService {
 
     public String updateCountry(Country country) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_countries").document(country.getCountry_name()).set(country);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_countries").document(country.getCountry_name()).set(country);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public String deleteCountry(String country_name){
+    public String deleteCountry(String country_name) {
         Firestore firestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> delete = firestore.collection("cheap_trip_countries").document(country_name).delete();
         return "Successfully deleted " + country_name;
     }
 
-    public void createAllCountries () throws IOException, ExecutionException, InterruptedException {
-        JsonObject[] countries = CSVtoJson.countriesToJson(CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_countries.csv"));
+    public void createAllCountries() throws IOException, ExecutionException, InterruptedException {
+        JsonObject[] countries = CSVtoJson.countriesToJson(CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_countries" +
+                ".csv"));
         for (int i = 0; i < countries.length; i++) {
             JsonObject obj = countries[i];
             String country_name = obj.get("country_name").getAsString();

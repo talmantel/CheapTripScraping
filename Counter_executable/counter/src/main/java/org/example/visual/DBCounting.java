@@ -71,7 +71,7 @@ public class DBCounting {
                 }
 
                 if (allRoutes.isSelected()) {
-                    String allowed_transportation_types = "(1,2,3,5,7,8,9,10)";
+                    String allowed_transportation_types = "(1,2,3,5,7,9,10)";
                     stringMaker("Counting routes...");
                     Counters.calculateRoutes(connectionMaker(credentials),
                             allowed_transportation_types,
@@ -95,7 +95,7 @@ public class DBCounting {
                 }
 
                 if (fixedRoutes.isSelected()) {
-                    String allowed_transportation_types = "(2,3,5,7,8,9,10)";
+                    String allowed_transportation_types = "(2,3,5,7,9,10)";
                     stringMaker("Counting fixed_routes...");
                        Counters.calculateRoutes(connectionMaker(credentials),
                             allowed_transportation_types,

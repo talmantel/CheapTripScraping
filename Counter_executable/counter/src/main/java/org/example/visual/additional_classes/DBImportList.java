@@ -7,10 +7,6 @@ public class DBImportList {
     boolean importLocations;
     boolean importTransportationTypes;
     boolean importTravelData;
-    boolean importRoutes;
-    boolean importFixedRoutes;
-    boolean importFlyingRoutes;
-
     boolean importRoutesCounter;
     boolean importFixedRoutesCounter;
     boolean importFlyingRoutesCounter;
@@ -20,9 +16,6 @@ public class DBImportList {
                          boolean importLocations,
                          boolean importTransportationTypes,
                          boolean importTravelData,
-                         boolean importRoutes,
-                         boolean importFixedRoutes,
-                         boolean importFlyingRoutes,
                          boolean importRoutesCounter,
                          boolean importFixedRoutesCounter,
                          boolean importFlyingRoutesCounter) {
@@ -31,13 +24,9 @@ public class DBImportList {
         this.importLocations = importLocations;
         this.importTransportationTypes = importTransportationTypes;
         this.importTravelData = importTravelData;
-        this.importRoutes = importRoutes;
-        this.importFixedRoutes = importFixedRoutes;
-        this.importFlyingRoutes = importFlyingRoutes;
         this.importRoutesCounter = importRoutesCounter;
         this.importFixedRoutesCounter = importFixedRoutesCounter;
         this.importFlyingRoutesCounter = importFlyingRoutesCounter;
-
     }
 
     public boolean isImportRoutesCounter() {
@@ -104,27 +93,4 @@ public class DBImportList {
         this.importTravelData = importTravelData;
     }
 
-    public boolean isImportRoutes() {
-        return importRoutes;
-    }
-
-    public void setImportRoutes(boolean importRoutes) {
-        this.importRoutes = importRoutes;
-    }
-
-    public boolean isImportFixedRoutes() {
-        return importFixedRoutes;
-    }
-
-    public void setImportFixedRoutes(boolean importFixedRoutes) {
-        this.importFixedRoutes = importFixedRoutes;
-    }
-
-    public boolean isImportFlyingRoutes() {
-        return importFlyingRoutes;
-    }
-
-    public void setImportFlyingRoutes(boolean importFlyingRoutes) {
-        this.importFlyingRoutes = importFlyingRoutes;
-    }
 }

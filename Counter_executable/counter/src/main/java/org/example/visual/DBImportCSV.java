@@ -48,7 +48,8 @@ public class DBImportCSV {
                 if (!routesPath.getText().equals("")) {
                     stringMaker("Parsing from locations to csv (routes)...");
                     String path = routesPath.getText();
-                    ParserDBtoCSV.csvExtractRoutes(connectionMaker(credentials),path);
+                    ParserDBtoCSV.csvExtractRoutesCommon(connectionMaker(credentials),"routes", path);
+                    ParserDBtoCSV.csvExtractRoutesPartly(connectionMaker(credentials),"routes",path);
                     stringMaker("Parsing from locations to csv (routes) finished");
                 } else {
                     stringMaker("Didn't chosen folder for saving routes");
@@ -71,7 +72,8 @@ public class DBImportCSV {
                 if (!fixedRoutesPath.getText().equals("")) {
                     stringMaker("Parsing from locations to csv (fixed_routes)...");
                     String path = fixedRoutesPath.getText();
-                    ParserDBtoCSV.csvExtractFixedRoutes(connectionMaker(credentials),path);
+                    ParserDBtoCSV.csvExtractRoutesCommon(connectionMaker(credentials),"fixed_routes",path);
+                    ParserDBtoCSV.csvExtractRoutesPartly(connectionMaker(credentials),"fixed_routes",path);
                     stringMaker("Parsing from locations to csv (fixed_routes) finished");
                 } else {
                     stringMaker("Didn't chosen folder for saving fixed_routes");
@@ -93,7 +95,8 @@ public class DBImportCSV {
                 if (!flyingRoutesPath.getText().equals("")) {
                     stringMaker("Parsing from locations to csv (flying routes)...");
                     String path = flyingRoutesPath.getText();
-                    ParserDBtoCSV.csvExtractFlyingRoutes(connectionMaker(credentials),path);
+                    ParserDBtoCSV.csvExtractRoutesCommon(connectionMaker(credentials),"flying_routes",path);
+                    ParserDBtoCSV.csvExtractRoutesPartly(connectionMaker(credentials),"flying_routes",path);
                     stringMaker("Parsing from locations to csv (flying_routes) finished");
                 } else {
                     stringMaker("Didn't chosen folder for saving flying_routes");

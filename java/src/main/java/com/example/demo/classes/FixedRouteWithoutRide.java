@@ -15,13 +15,14 @@ public class FixedRouteWithoutRide {
         this.travel_data = travel_data;
     }
 
-    public FixedRouteWithoutRide(){}
+    public FixedRouteWithoutRide() {
+    }
 
     public String toString() {
         return "id=" + id +
                 ", from=" + from +
                 ", to=" + to +
                 ", euro_price=" + euro_price +
-                ", travel_data='" + travel_data;
+                ", travel_data.csv='" + travel_data;
     }
 }

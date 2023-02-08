@@ -18,7 +18,7 @@ public class TravelDataService1 {
     DatabaseReference ref = database.getReference("/");
 
     public void postTravelData(TravelData data) {
-        DatabaseReference locationsRef = ref.child("travel_data");
+        DatabaseReference locationsRef = ref.child("travel_data.csv");
 
         Map<String, Object> datas = new HashMap<>();
         String strId = data.getId() + "";
@@ -35,7 +35,7 @@ public class TravelDataService1 {
     }
 
     public void getTravelData(int id) {
-        ref.child("travel_data").addListenerForSingleValueEvent(new ValueEventListener() {
+        ref.child("travel_data.csv").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 int count = 0;

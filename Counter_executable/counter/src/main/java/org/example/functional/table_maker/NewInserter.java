@@ -55,6 +55,13 @@ public class NewInserter {
     public static void insertNewLocations (String [] input, Connection connection) {
         int k = input.length;
         try {
+
+            String queryDrop = "DROP TABLE locations_old";
+            PreparedStatement statement0 = connection.prepareStatement(queryDrop);
+            statement0.execute();
+
+            TablesInitializer.locationTableMakerAlt(connection);
+
             for (int i = 0; i < k; i++) {
                 String[] arr = input[i].split(",");
                 String query = "INSERT INTO locations (id, name, country_id, latitude, longitude, name_ru) VALUES (" +
@@ -71,6 +78,59 @@ public class NewInserter {
             stringMaker("Table 'locations' successfully loaded");
         } catch (SQLException E) {
             stringMaker("insertNewLocations: Problem with the connection with database");
+        }
+    }
+
+    public static void creatingNewLocations (String [] input, Connection connection) {
+        int k = input.length;
+        try {
+            String initQuery = "CREATE TABLE locations_new (id INT, " +
+                    "name VARCHAR(50), " +
+                    "latitude FLOAT, " +
+                    "longitude FLOAT, " +
+                    "PRIMARY KEY(id));";
+            System.out.println(initQuery);
+            PreparedStatement statement0 = connection.prepareStatement(initQuery);
+            statement0.execute();
+
+            OldInserter.insertDefaultLocationsNew(connection);
+
+            for (int i = 0; i < k; i++) {
+                String[] arr = input[i].split(",");
+                String query = "INSERT INTO locations_new (id, name, latitude, longitude) VALUES (" +
+                        Integer.parseInt(arr[0]) + ",'"
+                        + arr[1] + "',"
+                        + Float.parseFloat(arr[2]) +  ","
+                        + Float.parseFloat(arr[3]) + ");";
+                System.out.println(query);
+                PreparedStatement statement = connection.prepareStatement(query);
+                statement.execute();
+            }
+
+            TablesInitializer.locationTableMakerAlt(connection);
+
+            String query1 = "INSERT INTO locations SELECT locations_new.id,\n" +
+                    "                                                   locations_new.name,\n" +
+                    "                                                   locations_old.country_id,\n" +
+                    "                                                   locations_new.latitude,\n" +
+                    "                                                   locations_new.longitude,\n" +
+                    "                                                   locations_old.name_ru\n" +
+                    "FROM locations_new JOIN locations_old ON locations_new.id = locations_old.id;";
+            PreparedStatement statement1 = connection.prepareStatement(query1);
+            System.out.println(query1);
+            statement1.execute();
+            String query2 = "DROP TABLE locations_new;";
+            System.out.println(query2);
+            String query3 = "DROP TABLE locations_old;";
+            System.out.println(query3);
+            PreparedStatement statement2 = connection.prepareStatement(query2);
+            statement2.execute();
+            PreparedStatement statement3 = connection.prepareStatement(query3);
+            statement3.execute();
+            connection.close();
+            stringMaker("Table 'locations' successfully loaded");
+        } catch (SQLException E) {
+            stringMaker("creatingNewLocations: Problem with the connection with database");
         }
     }
 

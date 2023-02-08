@@ -146,7 +146,7 @@ public class DBLoading {
                     locations = true;
                     try {
                         stream.println("Inserting locations...");
-                        NewInserter.insertNewLocations(ParserCSVtoString.CSVoString(locationsAddress.getText()),
+                        NewInserter.creatingNewLocations((ParserCSVtoString.CSVoString(locationsAddress.getText())),
                                 connectionMaker(credentials));
                         stream.println("Insertion of locations completed");
                     } catch (IOException e1) {
@@ -197,7 +197,7 @@ public class DBLoading {
                     OldInserter.insertDefaultCurrencies(connectionMaker(credentials));
                 }
                 if (usingStandardTables.isSelected() && !locations) {
-                    OldInserter.insertDefaultLocations(connectionMaker(credentials));
+                    OldInserter.insertDefaultLocationsOld(connectionMaker(credentials));
                 }
                 if (usingStandardTables.isSelected() && !transportation_types) {
                     OldInserter.insertDefaultTransportationTypes(connectionMaker(credentials));

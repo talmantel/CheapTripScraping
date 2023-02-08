@@ -38,13 +38,14 @@ public class RoutesService {
 
     public String createRoute(Route route) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection(ROUTES_FILENAME_TEST).document(route.getName()).set(route);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection(ROUTES_FILENAME_TEST).document(route.getName()).set(route);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
     public Route getRoute(int id) throws ExecutionException, InterruptedException, NullPointerException {
         Firestore firestore = FirestoreClient.getFirestore();
-        DocumentReference reference = firestore.collection(ROUTES_FILENAME_TEST).document(id+"");
+        DocumentReference reference = firestore.collection(ROUTES_FILENAME_TEST).document(id + "");
         ApiFuture<DocumentSnapshot> future = reference.get();
         DocumentSnapshot snapshot = future.get();
 
@@ -58,17 +59,18 @@ public class RoutesService {
 
     public String updateRoute(Route route) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection(ROUTES_FILENAME_TEST).document(route.getName()).set(route);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection(ROUTES_FILENAME_TEST).document(route.getName()).set(route);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public String deleteRoute(int id){
+    public String deleteRoute(int id) {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> delete = firestore.collection(ROUTES_FILENAME).document(id+"").delete();
+        ApiFuture<WriteResult> delete = firestore.collection(ROUTES_FILENAME).document(id + "").delete();
         return "Successfully deleted " + id;
     }
 
-    public void createAllRoutes () throws Exception {
+    public void createAllRoutes() throws Exception {
         JsonObject[] routes = CSVtoJson.routesToJsonAlt(CSVtoJson.CSVoString(COMMON_PATH + CSV_ROUTES_TEST));
         int all = routes.length;
         for (int i = 0; i < all; i++) {
@@ -79,16 +81,16 @@ public class RoutesService {
             int to = obj.get("to").getAsInt();
             float euro_price = obj.get("euro_price").getAsFloat();
 
-            JsonArray array = obj.getAsJsonArray("travel_data");
+            JsonArray array = obj.getAsJsonArray("travel_data.csv");
             ArrayList<Integer> travel_data = new ArrayList<>();
             for (int j = 0; j < array.size(); j++) {
                 travel_data.add(array.get(j).getAsInt());
             }
-//            int [] travel_data = new int[array.size()];
+//            int [] travel_data.csv = new int[array.size()];
 //            for (int j = 0; j < array.size(); j++) {
-//                travel_data[j] = array.get(j).getAsInt();
+//                travel_data.csv[j] = array.get(j).getAsInt();
 //            }
-            Route route = new Route(id,from, to, euro_price, travel_data);
+            Route route = new Route(id, from, to, euro_price, travel_data);
             try {
                 createRoute(route);
             } catch (Exception e) {

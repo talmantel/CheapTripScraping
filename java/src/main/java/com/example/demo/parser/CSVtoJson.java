@@ -119,7 +119,7 @@ public class CSVtoJson {
             for (int j = 4; j < arr.length; j++) {
                 dataList.add(Integer.parseInt(arr[j]));
             }
-            object.add("travel_data", dataList);
+            object.add("travel_data.csv", dataList);
             output[i] = object;
             System.out.println(jsonObjectToString(object));
         }

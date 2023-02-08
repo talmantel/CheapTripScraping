@@ -57,7 +57,8 @@ public class TransportationTypeService1 {
     public void postAllTransportationTypes() throws IOException {
         Gson gson = new Gson();
         String filename = Constants.TRANSPORTATION_TYPES_END_PATH;
-        JsonObject[] objects = CSVtoJson.transportationTypesToJson(CSVtoJson.CSVoString(Constants.COMMON_PATH + filename));
+        JsonObject[] objects =
+                CSVtoJson.transportationTypesToJson(CSVtoJson.CSVoString(Constants.COMMON_PATH + filename));
         for (int i = 0; i < objects.length; i++) {
             TransportationType type = gson.fromJson(objects[i], TransportationType.class);
             postTransportationType(type);

@@ -7,9 +7,10 @@ public class FixedRoute {
     private int from;
     private int to;
     private float euro_price;
-    private ArrayList<Integer> travel_data;;
+    private ArrayList<Integer> travel_data;
+    ;
 
-    public FixedRoute (int id, int from, int to, float euro_price, ArrayList<Integer> travel_data) {
+    public FixedRoute(int id, int from, int to, float euro_price, ArrayList<Integer> travel_data) {
         this.id = id;
         this.from = from;
         this.to = to;
@@ -17,13 +18,14 @@ public class FixedRoute {
         this.travel_data = travel_data;
     }
 
-    public FixedRoute(){}
+    public FixedRoute() {
+    }
 
     public String toString() {
-        return  "id=" + id +
+        return "id=" + id +
                 ", from=" + from +
                 ", to=" + to +
                 ", euro_price=" + euro_price +
-                ", travel_data='" + travel_data;
+                ", travel_data.csv='" + travel_data;
     }
 }

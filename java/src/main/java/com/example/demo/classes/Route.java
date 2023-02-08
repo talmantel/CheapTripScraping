@@ -24,18 +24,19 @@ public class Route {
         this.travel_data = travel_data;
     }
 
-    public Route(){}
+    public Route() {
+    }
 
     public String toString() {
         return "id=" + id +
                 ", from=" + from +
                 ", to=" + to +
                 ", euro_price=" + euro_price +
-                ", travel_data='" + travel_data;
+                ", travel_data.csv='" + travel_data;
     }
 
     public String getName() {
-        return ""+id;
+        return "" + id;
     }
 
 //    public String dataArrayToString(int [] array){

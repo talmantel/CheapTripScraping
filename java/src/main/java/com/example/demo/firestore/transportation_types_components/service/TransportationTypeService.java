@@ -23,12 +23,14 @@ public class TransportationTypeService {
 
     public String createTransportationType(TransportationType type) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_transportation_types").document(type.getName()).set(type);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_transportation_types").document(type.getName()).set(type);
 
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public TransportationType getTransportationType(String name) throws ExecutionException, InterruptedException, NullPointerException {
+    public TransportationType getTransportationType(String name) throws ExecutionException, InterruptedException,
+            NullPointerException {
         Firestore firestore = FirestoreClient.getFirestore();
         DocumentReference reference = firestore.collection("cheap_trip_transportation_types").document(name);
         ApiFuture<DocumentSnapshot> future = reference.get();
@@ -44,23 +46,25 @@ public class TransportationTypeService {
 
     public String updateTransportationType(TransportationType type) throws ExecutionException, InterruptedException {
         Firestore firestore = FirestoreClient.getFirestore();
-        ApiFuture<WriteResult> collectionsApiFuture = firestore.collection("cheap_trip_transportation_types").document(type.getName()).set(type);
+        ApiFuture<WriteResult> collectionsApiFuture =
+                firestore.collection("cheap_trip_transportation_types").document(type.getName()).set(type);
         return collectionsApiFuture.get().getUpdateTime().toString();
     }
 
-    public String deleteTransportationType(String name){
+    public String deleteTransportationType(String name) {
         Firestore firestore = FirestoreClient.getFirestore();
         ApiFuture<WriteResult> delete = firestore.collection("cheap_trip_transportation_types").document(name).delete();
         return "Successfully deleted " + name;
     }
 
-    public void createAllTransportationTypes () throws IOException, ExecutionException, InterruptedException {
-        JsonObject[] transportationTypes = CSVtoJson.transportationTypesToJson(CSVtoJson.CSVoString(COMMON_PATH + "cheap_trip_transportation_types.csv"));
+    public void createAllTransportationTypes() throws IOException, ExecutionException, InterruptedException {
+        JsonObject[] transportationTypes = CSVtoJson.transportationTypesToJson(CSVtoJson.CSVoString(COMMON_PATH +
+                "cheap_trip_transportation_types.csv"));
         for (int i = 0; i < transportationTypes.length; i++) {
             JsonObject obj = transportationTypes[i];
             int id = obj.get("id").getAsInt();
             String name = obj.get("name").getAsString();
-            TransportationType type = new TransportationType(id,name);
+            TransportationType type = new TransportationType(id, name);
             createTransportationType(type);
         }
     }

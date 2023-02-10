@@ -48,8 +48,8 @@ if __name__ == '__main__':
     
     pass
 
-    """ x = gen_jsons()
-    print(next(x)) """
+    x = gen_jsons(OUTPUT_JSON_DIR)
+    print(next(x))
     """ print(next(x))
-    print(next(x)) """
+    print(next(x))"""
     

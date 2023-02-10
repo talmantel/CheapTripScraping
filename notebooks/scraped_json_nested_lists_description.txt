@@ -10,6 +10,20 @@
         *   start_point[] = [i][8][j][6]
         *   end_point[] = [i][8][j][7]
         *   all_points[] = [i][8][j][18]
+
+        """ data['from_city'].append(from_city)
+                    data['to_city'].append(to_city)
+                    data['path_name'].append(path[4])
+                    data['from_node'].append(route[6][1])
+                    data['to_node'].append(route[7][1])
+                    data['transport'].append(route[1])
+                    data['from_airport'].append('')
+                    data['to_airport'].append('')       
+                    data['price_max_EUR'].append(round(cc.convert(route[13][2][0], route[13][2][1])))
+                    data['price_local'].append(route[14][0][0])
+                    data['currency_local'].append(route[14][0][1])
+                    data['distance_km'].append(round(route[5])) """
+
     FLIGHT
         *   estimate_price[] = [i][8][j][11]
         *   estimate_price[] Local = ''
@@ -20,3 +34,16 @@
         *   end_point[] = [i][8][j][3]
         *   all_points[] = [i][8][j][18] 
         *   aiport code = [i][8][j][2] 
+
+        """ data['from_city'].append(from_city)
+                data['to_city'].append(to_city)
+                data['path_name'].append(path[4])
+                data['from_node'].append(route[2][1])
+                data['to_node'].append(route[3][1])
+                data['transport'].append(route[0])
+                data['from_airport'].append(route[2][0])
+                data['to_airport'].append(route[3][0])
+                data['price_max_EUR'].append(round(cc.convert(route[11][2][0], route[11][2][1])))   
+                data['price_local'].append('')
+                data['currency_local'].append('')
+                data['distance_km'].append('') """

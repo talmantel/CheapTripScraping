@@ -15,7 +15,9 @@ def main(tt):
     
     transport_types_id = {types: id for types, id in zip(transport_types, transport_id)}
     
-    print(*zip(transport_types.keys(), transport_id))
+    #print(zip(transport_types, transport_id))
+    
+    #print(*zip(transport_types.keys(), transport_id))
     print(transport_types_id)
     print(transport_types['fly'])
     
@@ -32,7 +34,7 @@ def main(tt):
             continue
     
     print(('nighttrain') in list(transport_types.values()))
-    print(''.join(transport_types.values()))
+    
     
 def in_coords(coords) -> str:
     return get_id_from_bb(coords)
@@ -59,11 +61,16 @@ def get_exchange_rates():
     print(today, up_to_date, (today - up_to_date).days)
     
     #return up_to_date, EUR_rates
+    
+def make_tuple(i, j, k, l, m):
+    return type(i, j, k, l, m)
 
 
 if __name__ == '__main__':
     # main()
-    main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
+    #main(['flight', 'nightbus', 'nighttrain', 'car', 'trainferry', 'rideshare', 'plane'])
     # print(int('008'))
     # print(in_coords((49.19347, 16.61441)))
     #get_exchange_rates()
+    print(make_tuple(1, 2, 3, 4, 5))
+    

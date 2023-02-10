@@ -1,44 +1,30 @@
 import pandas as pd
-from config import OUTPUT_CSV_DIR, raw_csv
+from config import RAW_CSV, VALIDATION_CSV, TRIPLES_CSV
 
 
 def treat_data():
     
     print('Start treatment process...')
     
-    # 1. Reading raw csv
-    df_raw= pd.read_csv(OUTPUT_CSV_DIR/raw_csv, index_col=None, 
-                        usecols=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+    # Reading raw csv
+    df_raw= pd.read_csv(RAW_CSV, index_col=None, 
+                        usecols=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min', 'distance_km', 'frequency_tpw'])
 
-    # 2. Removing full duplicates
-    df_val = df_raw.drop_duplicates(ignore_index=True)
+    # Removing full duplicates
+    df_val = df_raw.drop_duplicates(ignore_index=True) 
     
-    # 3a. Filter applying
-    # set up limits
-    euro_zone_codes = range(100, 371)
-    price_limit, duration_limit = 5, 60
-    # set up conditions
-    in_euro_zone = 'from_id in @euro_zone_codes and to_id in @euro_zone_codes'
-    price_less_limit = 'price_min_EUR < @price_limit'
-    duration_more_limit = 'duration_min > @duration_limit'
-    # applying filter
-    filter = df_val.query(in_euro_zone + ' and ' + price_less_limit + ' and ' + duration_more_limit)
-
-    # 3b. Drop filtered rows
-    df_val_filtered = df_val.drop(filter.index, axis=0) 
+    # Write to csv for validation purposes
+    df_val.to_csv(VALIDATION_CSV, index=False)
     
-    # 3c. Write to csv
-    df_val_filtered.to_csv(OUTPUT_CSV_DIR/'all_direct_routes_validation.csv', index=False)
-    
-    # 4. Sorting by price in ascending order
+    # Sorting by price in ascending order
     df = df_val.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], 
                             ignore_index=True, 
                             ascending=True)
 
-    # 5. Removing duplicates by triples ('from_id', 'to_id', 'transport_id')
+    # Removing duplicates by triples ('from_id', 'to_id', 'transport_id')
     df = df.drop_duplicates(['from_id', 'to_id', 'transport_id'], ignore_index=True)
 
-    # 6. Create index in resulting csv files and cutting small files 'from_id.csv' type
+    # Create index in resulting csv files and cutting small files 'from_id.csv' type
     frames = []
     for from_id in df['from_id'].unique():
         
@@ -52,9 +38,10 @@ def treat_data():
         
         frames.append(temp_df)
         
-    res_df = pd.concat(frames)
+    df_triples = pd.concat(frames)
 
-    res_df.to_csv(f'{OUTPUT_CSV_DIR}/all_direct_routes_triples.csv')
+    # Output 
+    df_triples.to_csv(TRIPLES_CSV, columns=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
     
     print('Data treatment finished successfully!\n')
     

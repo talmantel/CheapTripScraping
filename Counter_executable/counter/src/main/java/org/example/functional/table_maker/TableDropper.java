@@ -12,6 +12,8 @@ public class TableDropper {
 
     public static Console console = CounterMenuTest.console;
     public static PrintStream stream = new PrintStream(console);
+
+    // drop 'transportation_types'
     public static void transportationTypesDropper (Connection connection) {
         try {
             String query = "DROP TABLE transportation_types";
@@ -23,6 +25,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'countries'
     public static void countryDropper (Connection connection) {
         try {
             String query = "DROP TABLE countries";
@@ -34,6 +37,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'currencies'
     public static void currenciesDropper (Connection connection) {
         try {
             String query = "DROP TABLE currencies";
@@ -45,6 +49,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'locations'
     public static void locationsDropper (Connection connection) {
         try {
             String query = "DROP TABLE locations";
@@ -56,6 +61,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'travel_data'
     public static void travelDataDropper (Connection connection) {
         try {
             String query = "DROP TABLE travel_data";
@@ -67,6 +73,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'routes'
     public static void routesDropper (Connection connection) {
         try {
             String query = "DROP TABLE routes";
@@ -78,6 +85,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'flying_routes'
     public static void flyingRoutesDropper (Connection connection) {
         try {
             String query = "DROP TABLE flying_routes";
@@ -89,6 +97,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'fixed_routes'
     public static void fixedRoutesDropper (Connection connection) {
         try {
             String query = "DROP TABLE fixed_routes";
@@ -100,6 +109,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'travel_data_counter_routes'
     public static void travelDataCounterRoutesDropper(Connection connection) {
         try {
             String query = "DROP TABLE travel_data_counter_routes";
@@ -111,6 +121,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'travel_data_counter_fixed_routes'
     public static void travelDataCounterFixedRoutesDropper(Connection connection) {
         try {
             String query = "DROP TABLE travel_data_counter_fixed_routes";
@@ -122,6 +133,7 @@ public class TableDropper {
         }
     }
 
+    // drop 'travel_data_counter_flying_routes'
     public static void travelDataCounterFlyingRoutesDropper(Connection connection) {
         try {
             String query = "DROP TABLE travel_data_counter_flying_routes";
@@ -133,6 +145,7 @@ public class TableDropper {
         }
     }
 
+    // drop schema
     public static void schemaDrop (Connection connection, String schema) {
         try {
             String query = "DROP SCHEMA " + schema;

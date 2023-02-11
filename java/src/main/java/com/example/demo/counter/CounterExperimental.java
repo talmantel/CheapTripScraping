@@ -3,10 +3,10 @@ package com.example.demo.counter;
 import com.example.demo.Constants;
 import com.example.demo.classes.DirectRoute;
 import com.example.demo.classes.Location;
-import com.example.demo.classes.Route;
 import org.jgrapht.GraphPath;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 
 import java.io.FileWriter;
@@ -17,13 +17,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CounterAlt {
+public class CounterExperimental {
 
     public static void main(String[] args) {
-        //calculateRoutes(Constants.allowed_Transportation_Types_FixedRoutes, "fixed_routes");
-        calculateRoutes("(1)", "routes_alt");
-        //calculateRoutes(Constants.allowed_Transportation_Types_FlyingRoutes, "flying_routes");
-        //getAmount("110054,810055,770039,590005,850009,160005,180065,930277");
+        calculateRoutes("(1)", "flying_routes");
     }
 
     private static void calculateRoutes(String allowedTransportationTypes, String saveToTable) {
@@ -75,14 +72,15 @@ public class CounterAlt {
                     }
                 }
             }
+            DijkstraShortestPath<Integer, DefaultEdge> dijkstraShortestPath =
+                    new DijkstraShortestPath<>(routeGraph);
             HashMap<Integer, Long> dataCounter = new HashMap<>();
             for (Location from : locations) {
                 System.out.println("Scanning from: " + from);
                 for (Location to : locations) {
                     if (to.getId() == from.getId()) continue;
                     System.out.println("--Scanning route from: " + from + " to: " + to);
-                    GraphPath<Integer, DefaultEdge> path = DijkstraShortestPath.findPathBetween(routeGraph,
-                            from.getId(), to.getId());
+                    GraphPath<Integer, DefaultEdge> path = dijkstraShortestPath.getPath(from.getId(), to.getId());
                     if (path == null) continue;
                     StringBuilder query = new StringBuilder("select * from travel_data where " +
                             "transportation_type in " + allowedTransportationTypes);
@@ -187,26 +185,8 @@ public class CounterAlt {
                     System.out.println(queryo);
                     statement = conn.prepareStatement(queryo);
                     statement.execute();
-//                    obj = "(" + finalCount + "," + from.getId() + "," + to.getId() + "," + totalPrice + "," +
-//                    travelData + ")";
-//                    builder.append(obj);
-//                    builder.append(",");
-//                    finalCount++;
                 }
             }
-//            finalString = builder.toString();
-//            stringToFile(finalString);
-//            System.out.println("map count");
-//            for (Map.Entry entry : dataCounter.entrySet()) {
-//                int id = (int) entry.getKey();
-//                System.out.println(id);
-//                long count = (long) entry.getValue();
-//                System.out.println(count);
-//                String query = "INSERT INTO travel_data_count_alternative (id, count) VALUES (" +
-//                        id + "," + count + ")";
-//                statement = conn.prepareStatement(query);
-//                statement.execute();
-//            }
             String createCounterTableQuery = "CREATE TABLE travel_data_additional_counter_" + saveToTable + " (id " +
                     "INT, count LONG);";
             statement = conn.prepareStatement(createCounterTableQuery);
@@ -336,4 +316,5 @@ public class CounterAlt {
         }
     }
 }
+
 

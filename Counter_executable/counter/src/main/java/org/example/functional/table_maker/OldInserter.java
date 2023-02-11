@@ -12,6 +12,8 @@ public class OldInserter {
 
     public static Console console = CounterMenuTest.console;
     public static PrintStream stream = new PrintStream(console);
+
+    // Adding default table 'countries'
     public static void insertDefaultCountries(Connection connection) {
         try {
             String query = "INSERT INTO countries\n" +
@@ -82,6 +84,7 @@ public class OldInserter {
         }
     }
 
+    // Adding default table 'currencies'
     public static void insertDefaultCurrencies(Connection connection) {
         try {
             String query = "INSERT INTO currencies\n" +
@@ -149,6 +152,7 @@ public class OldInserter {
         }
     }
 
+    // Adding default table 'locations'
     public static void insertDefaultLocationsOld(Connection connection) {
         try {
             String queryDrop = "DROP TABLE locations_old";
@@ -524,6 +528,7 @@ public class OldInserter {
         }
     }
 
+    // Adding default table 'locations'
     public static void insertDefaultLocationsNew(Connection connection) {
         try {
             TablesInitializer.locationTableMakerAlt(connection);
@@ -895,6 +900,7 @@ public class OldInserter {
         }
     }
 
+    // Adding default table 'transportation_types'
     public static void insertDefaultTransportationTypes(Connection connection) {
         try {
             String query = "INSERT INTO transportation_types\n" +

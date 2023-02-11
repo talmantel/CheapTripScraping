@@ -18,7 +18,6 @@ public class DBCounting {
     public static PrintStream stream = new PrintStream(console);
     DBCredentials credentials = CounterMenuTest.credentials;
     DBCounterTypes counterTypes;
-
     JFrame countingFrame;
     JPanel countingPanel;
     JCheckBox flyingRoutes;
@@ -28,21 +27,20 @@ public class DBCounting {
     JCheckBox stringSave;
     JTextField placeForStringToSave;
     JLabel placeToSaveLabel;
-
     JButton countButton;
 
     public DBCounting () {
         counterTypes = new DBCounterTypes(true,false,false, true, false, false);
-        countingFrame = new JFrame("Управление расчетом");
+        countingFrame = new JFrame("Counter settings");
         countingPanel = new JPanel();
-        allRoutes = new JCheckBox("Расчет 'routes'");
+        allRoutes = new JCheckBox("Calculation of 'routes'");
         flyingRoutes = new JCheckBox("Расчет 'flying_routes'");
         fixedRoutes = new JCheckBox("Расчет 'fixed_routes'");
-        databaseSave = new JCheckBox("Сохранение результатов в выбранную базу данных");
-        stringSave = new JCheckBox("Сохранение результатов в файл формата .csv");
-        placeToSaveLabel = new JLabel("Адрес папки сохранения файла .csv");
+        databaseSave = new JCheckBox("Save data into the database");
+        stringSave = new JCheckBox("Save results into .csv file");
+        placeToSaveLabel = new JLabel("Folder where to save file .csv");
         placeForStringToSave = new JTextField(40);
-        countButton = new JButton("Запуск расчета");
+        countButton = new JButton("Start counting");
 
         JPanel placePanel = new JPanel();
         placePanel.add(placeToSaveLabel);

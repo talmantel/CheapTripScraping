@@ -3,7 +3,7 @@ package org.example.functional.table_maker;
 import org.example.CounterMenuTest;
 import org.example.visual.Console;
 
-import java.io.PrintStream;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -11,6 +11,8 @@ import java.sql.SQLException;
 public class NewInserter {
     public static Console console = CounterMenuTest.console;
     public static PrintStream stream = new PrintStream(console);
+
+    // Adding table 'countries' from CSV
     public static void insertNewCountries (String [] input, Connection connection) {
         int k = input.length;
         try {
@@ -30,6 +32,7 @@ public class NewInserter {
         }
     }
 
+    // Adding table 'currencies' from CSV
     public static void insertNewCurrencies (String [] input, Connection connection) {
         int k = input.length;
         try {
@@ -52,6 +55,7 @@ public class NewInserter {
         }
     }
 
+    // Adding new table 'locations' (6 columns) after getting (4 columns) from CSV
     public static void insertNewLocations (String [] input, Connection connection) {
         int k = input.length;
         try {
@@ -81,6 +85,7 @@ public class NewInserter {
         }
     }
 
+    // Adding new 'locations' table (4 columns)
     public static void creatingNewLocations (String [] input, Connection connection) {
         int k = input.length;
         try {
@@ -134,6 +139,7 @@ public class NewInserter {
         }
     }
 
+    // Adding new table 'transportation_type' from CSV
     public static void insertNewTransportationTypes (String [] input, Connection connection) {
         int k = input.length;
         try {
@@ -152,6 +158,7 @@ public class NewInserter {
         }
     }
 
+    // Adding new table 'travel_data' from CSV ('id' column is in the file)
     public static void insertNewTravelDataWithIndexes (String [] input, Connection connection) {
         int k = input.length;
         try {
@@ -175,6 +182,7 @@ public class NewInserter {
         }
     }
 
+    // Adding new table 'travel_data' from CSV ('id' column is not in the file)
     public static void insertNewTravelDataWithoutIndexes (String [] input, Connection connection) {
         int k = input.length;
         int count = 1;
@@ -197,6 +205,32 @@ public class NewInserter {
         } catch (SQLException E) {
             stringMaker("insertNewTravelDataWithoutIndexes: Problem with the connection with database");
         }
+    }
+
+    // from CSV parser
+    public static String[] CSVoString(String fileName) throws IOException {
+        File file = new File(fileName);
+        FileReader fr = new FileReader(file);
+        BufferedReader reader = new BufferedReader(fr);
+        String line = "";
+        String add = "";
+        while (add != null) {
+            String str = "";
+            add = reader.readLine();
+            if (add == null) {
+                str = "";
+            } else {
+                str = "(" + add + "),";
+            }
+            line = line + str;
+        }
+
+        String[] lines = line.split("\\),\\(");
+        for (int i = 0; i < lines.length; i++) {
+            lines[i] = lines[i].replaceAll("[(')]", "");
+            lines[i] = lines[i].replaceAll("null", "");
+        }
+        return lines;
     }
 
     public static void stringMaker (String input) {

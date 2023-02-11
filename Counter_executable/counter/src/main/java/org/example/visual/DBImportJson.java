@@ -27,13 +27,9 @@ public class DBImportJson {
     JCheckBox importLocations;
     JCheckBox importTransportationTypes;
     JCheckBox importTravelData;
-
     JCheckBox importRoutesCounter;
-
     JCheckBox importFixedRoutesCounter;
-
     JCheckBox importFlyingRoutesCounter;
-
     JPanel pathPanel;
     JLabel pathLabel;
     JTextField pathField;
@@ -44,22 +40,22 @@ public class DBImportJson {
 
         importList = new DBImportList(false,false,false,false,false,false,false,false);
 
-        importFrame = new JFrame("Импорт баз данных в формате Json");
+        importFrame = new JFrame("Export database as JSON");
         importPanel = new JPanel();
 
         Dimension dimension = new Dimension(20,15);
 
-        importCountries = new JCheckBox("Сформировать countries.json");
-        importCurrencies = new JCheckBox("Сформировать currencies.json");
-        importLocations = new JCheckBox("Сформировать locations.json");
-        importTransportationTypes = new JCheckBox("Сформировать transportation_types.json");
-        importTravelData = new JCheckBox("Сформировать travel_data.json");
-        importRoutesCounter = new JCheckBox("Сформировать travel_data_counter_routes.json");
-        importFixedRoutesCounter = new JCheckBox("Сформировать travel_data_counter_fixed_routes.json");
-        importFlyingRoutesCounter = new JCheckBox("Сформировать travel_data_counter_flying_routes.json");
+        importCountries = new JCheckBox("Export countries.json");
+        importCurrencies = new JCheckBox("Export currencies.json");
+        importLocations = new JCheckBox("Export locations.json");
+        importTransportationTypes = new JCheckBox("Export transportation_types.json");
+        importTravelData = new JCheckBox("Export travel_data.json");
+        importRoutesCounter = new JCheckBox("Export travel_data_counter_routes.json");
+        importFixedRoutesCounter = new JCheckBox("Export travel_data_counter_fixed_routes.json");
+        importFlyingRoutesCounter = new JCheckBox("Export travel_data_counter_flying_routes.json");
 
         pathPanel = new JPanel();
-        pathLabel = new JLabel("Путь к папке: ", SwingConstants.LEFT);
+        pathLabel = new JLabel("Folder to save: ", SwingConstants.LEFT);
         pathField = new JTextField(40);
         pathLabel.setSize(dimension);
         pathField.setSize(dimension);
@@ -67,7 +63,7 @@ public class DBImportJson {
         pathPanel.add(pathField);
         pathPanel.setLayout(new GridLayout(1,2,0,10));
 
-        importStart = new JButton("Импорт");
+        importStart = new JButton("Execute");
         importStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

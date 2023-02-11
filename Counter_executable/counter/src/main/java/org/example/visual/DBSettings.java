@@ -22,24 +22,18 @@ public class DBSettings {
 
     JFrame settingsFrame;
     JPanel settingsPanel;
-
     JTextField loginField;
     JLabel loginLabel;
     JPanel loginPanel;
-
-
     JTextField passwordField;
     JLabel passwordLabel;
     JPanel passwordPanel;
-
     JTextField urlField;
     JLabel urlLabel;
     JPanel urlPanel;
-
     JTextField schemaField;
     JLabel schemaLabel;
     JPanel schemaPanel;
-
     JButton readyButton;
 
     public DBSettings(){
@@ -49,7 +43,7 @@ public class DBSettings {
 
         loginPanel = new JPanel();
         loginField = new JTextField("");
-        loginLabel = new JLabel("Введите имя пользователя базы данных",SwingConstants.CENTER);
+        loginLabel = new JLabel("Insert username",SwingConstants.CENTER);
         loginPanel.add(loginField);
         loginPanel.add(loginLabel);
         loginPanel.setLayout(new GridLayout(0, 1, 10, 0));
@@ -57,7 +51,7 @@ public class DBSettings {
         //password panel
         passwordPanel = new JPanel();
         passwordField = new JTextField("");
-        passwordLabel = new JLabel("Введите пароль к базе данных",SwingConstants.CENTER);
+        passwordLabel = new JLabel("Insert password",SwingConstants.CENTER);
         passwordPanel.add(passwordField);
         passwordPanel.add(passwordLabel);
         passwordPanel.setLayout(new GridLayout(0, 1, 10, 0));
@@ -65,7 +59,7 @@ public class DBSettings {
         //url panel
         urlPanel = new JPanel();
         urlField = new JTextField("");
-        urlLabel = new JLabel("Введите URL базы данных",SwingConstants.CENTER);
+        urlLabel = new JLabel("Insert database URL",SwingConstants.CENTER);
         urlPanel.add(urlField);
         urlPanel.add(urlLabel);
         urlPanel.setLayout(new GridLayout(0, 1, 10, 0));
@@ -73,12 +67,12 @@ public class DBSettings {
         //schema panel
         schemaPanel = new JPanel();
         schemaField = new JTextField("");
-        schemaLabel = new JLabel("Введите название схемы БД",SwingConstants.CENTER);
+        schemaLabel = new JLabel("Insert schema name",SwingConstants.CENTER);
         schemaPanel.add(schemaField);
         schemaPanel.add(schemaLabel);
         schemaPanel.setLayout(new GridLayout(0, 1, 10, 0));
 
-        readyButton = new JButton("Готово");
+        readyButton = new JButton("Start");
         readyButton.setSize(new Dimension(30,30));
         readyButton.addActionListener(new ActionListener() {
             @Override

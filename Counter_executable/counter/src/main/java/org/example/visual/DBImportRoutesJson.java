@@ -34,13 +34,13 @@ public class DBImportRoutesJson {
     JPanel flyingRoutesPanel;
 
     public DBImportRoutesJson (){
-        jsonFrame = new JFrame("Импорт from locations в формате .json");
+        jsonFrame = new JFrame("Export 'from locations' as JSON");
         jsonPanel = new JPanel();
 
         routesPanel = new JPanel();
-        routesLabel = new JLabel("Путь для сохранения from__.json routes");
+        routesLabel = new JLabel("Folder to save from__.json routes");
         routesPath = new JTextField();
-        routesButton = new JButton("Импорт routes");
+        routesButton = new JButton("Export routes");
         routesButton.setSize(30,20);
         routesButton.addActionListener(new ActionListener() {
             @Override
@@ -62,9 +62,9 @@ public class DBImportRoutesJson {
 
 
         fixedRoutesPanel = new JPanel();
-        fixedRoutesLabel = new JLabel("Путь для сохранения from__.json fixed_routes");
+        fixedRoutesLabel = new JLabel("Folder to save from__.json fixed_routes");
         fixedRoutesPath = new JTextField();
-        fixedRoutesButton = new JButton("Импорт fixed_routes");
+        fixedRoutesButton = new JButton("Export fixed_routes");
         fixedRoutesButton.setSize(30,20);
         fixedRoutesButton.addActionListener(new ActionListener() {
             @Override
@@ -86,9 +86,9 @@ public class DBImportRoutesJson {
         fixedRoutesPanel.setLayout(new GridLayout(1,2,0,10));
 
         flyingRoutesPanel = new JPanel();
-        flyingRoutesLabel = new JLabel("Путь для сохранения from__.json flying_routes");
+        flyingRoutesLabel = new JLabel("Folder to save from__.json flying_routes");
         flyingRoutesPath = new JTextField();
-        flyingRoutesButton = new JButton("Импорт flying_routes");
+        flyingRoutesButton = new JButton("Export flying_routes");
         flyingRoutesButton.setSize(30,20);
         flyingRoutesButton.addActionListener(new ActionListener() {
             @Override

@@ -16,7 +16,7 @@ public class Console extends OutputStream {
     ScrollPane pane;
 
     public Console () {
-        consoleFrame = new JFrame("Консоль");
+        consoleFrame = new JFrame("Console");
         textArea = new JTextArea();
         panel = new JPanel();
         pane = new ScrollPane();

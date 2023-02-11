@@ -1,7 +1,6 @@
 package org.example.visual;
 
 import org.example.CounterMenuTest;
-import org.example.functional.parser.ParserDBtoJson;
 import org.example.functional.parser.ParserDBtoSQL;
 import org.example.visual.additional_classes.DBCredentials;
 import org.example.visual.additional_classes.DBImportSQLList;
@@ -32,29 +31,27 @@ public class DBImportSQL {
     JCheckBox importRoutes;
     JCheckBox importFixedRoutes;
     JCheckBox importFlyingRoutes;
-
     JPanel pathPanel;
     JLabel pathLabel;
     JTextField pathField;
-
     JButton importStart;
 
     public DBImportSQL () {
         importList = new DBImportSQLList(false,false,false,false,false,false,false,false);
 
-        importFrame = new JFrame("Импорт баз данных в формате SQL");
+        importFrame = new JFrame("Export tables as SQL");
         importPanel = new JPanel();
 
         Dimension dimension = new Dimension(20,15);
 
-        importCountries = new JCheckBox("Сформировать countries.sql");
-        importCurrencies = new JCheckBox("Сформировать currencies.sql");
-        importLocations = new JCheckBox("Сформировать locations.sql");
-        importTransportationTypes = new JCheckBox("Сформировать transportation_types.sql");
-        importTravelData = new JCheckBox("Сформировать travel_data.sql");
-        importRoutes = new JCheckBox("Сформировать routes.sql");
-        importFixedRoutes = new JCheckBox("Сформировать fixed_routes.sql");
-        importFlyingRoutes = new JCheckBox("Сформировать flying_routes.sql");
+        importCountries = new JCheckBox("Export countries.sql");
+        importCurrencies = new JCheckBox("Export currencies.sql");
+        importLocations = new JCheckBox("Export locations.sql");
+        importTransportationTypes = new JCheckBox("Export transportation_types.sql");
+        importTravelData = new JCheckBox("Export travel_data.sql");
+        importRoutes = new JCheckBox("Export routes.sql");
+        importFixedRoutes = new JCheckBox("Export fixed_routes.sql");
+        importFlyingRoutes = new JCheckBox("Export flying_routes.sql");
 
         pathPanel = new JPanel();
         pathLabel = new JLabel("Путь к папке: ", SwingConstants.LEFT);
@@ -65,7 +62,7 @@ public class DBImportSQL {
         pathPanel.add(pathField);
         pathPanel.setLayout(new GridLayout(1,2,0,10));
 
-        importStart = new JButton("Импорт");
+        importStart = new JButton("Export");
         importStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

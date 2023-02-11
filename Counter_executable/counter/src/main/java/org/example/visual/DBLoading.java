@@ -1,7 +1,6 @@
 package org.example.visual;
 
 import org.example.CounterMenuTest;
-import org.example.functional.parser.ParserCSVtoString;
 import org.example.functional.table_maker.NewInserter;
 import org.example.visual.additional_classes.DBCredentials;
 import org.example.functional.table_maker.OldInserter;
@@ -21,35 +20,25 @@ public class DBLoading {
     DBCredentials credentials = CounterMenuTest.credentials;
     public static Console console = CounterMenuTest.console;
     public static PrintStream stream = new PrintStream(console);
-    // travel_data
-    // locations
-    // countries
-    // currencies
-    // transportation_types
 
     JFrame loadingFrame;
     JPanel loadingPanel;
     JCheckBox usingStandardTables;
     JCheckBox travelDataWithIndexes;
     JButton downloadButton;
-
     JLabel countriesLabel;
     JTextField countriesAddress;
-
     JLabel locationsLabel;
     JTextField locationsAddress;
-
     JLabel currenciesLabel;
     JTextField currenciesAddress;
-
     JLabel travelDataLabel;
     JTextField travelDataField;
-
     JLabel transportationTypesLabel;
     JTextField transportationTypesField;
 
     public DBLoading(){
-        loadingFrame = new JFrame("Наполнение таблиц");
+        loadingFrame = new JFrame("Loading tables");
         loadingPanel = new JPanel();
 
         Dimension dimension = new Dimension(20,15);
@@ -99,12 +88,12 @@ public class DBLoading {
         travelDataPanel.add(travelDataField);
         travelDataPanel.setLayout(new GridLayout(1,2,0,10));
 
-        travelDataWithIndexes = new JCheckBox("Импорт travel_data с id в csv файле");
+        travelDataWithIndexes = new JCheckBox("Import travel_data with 'id' column is .csv file");
 
-        usingStandardTables = new JCheckBox("Использовать стандартные таблицы countries, locations, currencies, " +
+        usingStandardTables = new JCheckBox("Load standard tables countries, locations, currencies, " +
                 "transportation_types");
 
-        downloadButton = new JButton("Старт");
+        downloadButton = new JButton("Start");
         downloadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -118,7 +107,7 @@ public class DBLoading {
                     countries = true;
                     try {
                         stringMaker("Inserting countries...");
-                        NewInserter.insertNewCountries(ParserCSVtoString.CSVoString(countriesAddress.getText()),
+                        NewInserter.insertNewCountries(NewInserter.CSVoString(countriesAddress.getText()),
                                 connectionMaker(credentials));
                         stringMaker("Insertion of countries completed");
                     } catch (IOException e1) {
@@ -132,7 +121,7 @@ public class DBLoading {
                     currencies = true;
                     try {
                         stringMaker("Inserting currencies...");
-                        NewInserter.insertNewCurrencies(ParserCSVtoString.CSVoString(currenciesAddress.getText()),
+                        NewInserter.insertNewCurrencies(NewInserter.CSVoString(currenciesAddress.getText()),
                                 connectionMaker(credentials));
                         stringMaker("Insertion of currencies completed");
                     } catch (IOException e1) {
@@ -146,7 +135,7 @@ public class DBLoading {
                     locations = true;
                     try {
                         stream.println("Inserting locations...");
-                        NewInserter.creatingNewLocations((ParserCSVtoString.CSVoString(locationsAddress.getText())),
+                        NewInserter.creatingNewLocations((NewInserter.CSVoString(locationsAddress.getText())),
                                 connectionMaker(credentials));
                         stream.println("Insertion of locations completed");
                     } catch (IOException e1) {
@@ -160,7 +149,7 @@ public class DBLoading {
                     transportation_types = true;
                     try {
                         stringMaker("Inserting transportation_types...");
-                        NewInserter.insertNewTransportationTypes(ParserCSVtoString.CSVoString(transportationTypesField.getText()),
+                        NewInserter.insertNewTransportationTypes(NewInserter.CSVoString(transportationTypesField.getText()),
                                 connectionMaker(credentials));
                         stringMaker("Insertion of transportation_types completed");
                     } catch (IOException e1) {
@@ -171,7 +160,7 @@ public class DBLoading {
                 if (!travelDataField.getText().equals("") && travelDataWithIndexes.isSelected()) {
                     try {
                         stringMaker("Inserting of travel_data...");
-                        NewInserter.insertNewTravelDataWithIndexes(ParserCSVtoString.CSVoString(travelDataField.getText()),
+                        NewInserter.insertNewTravelDataWithIndexes(NewInserter.CSVoString(travelDataField.getText()),
                                 connectionMaker(credentials));
                         stringMaker("Insertion of travel_data completed");
                     } catch (IOException e1) {
@@ -182,7 +171,7 @@ public class DBLoading {
                 if (!travelDataField.getText().equals("") && !travelDataWithIndexes.isSelected()) {
                     try {
                         stringMaker("Inserting of travel_data...");
-                        NewInserter.insertNewTravelDataWithoutIndexes(ParserCSVtoString.CSVoString(travelDataField.getText()),
+                        NewInserter.insertNewTravelDataWithoutIndexes(NewInserter.CSVoString(travelDataField.getText()),
                                 connectionMaker(credentials));
                         stringMaker("Insertion of travel_data completed");
                     } catch (IOException e1) {

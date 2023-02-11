@@ -6,8 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CounterMenu {
-
-    //Visual interface
     public JFrame counterMenuFrame;
     JPanel counterMenuPanel;
     JButton DBSettingsButton;
@@ -16,25 +14,22 @@ public class CounterMenu {
     JButton DBDeleteButton;
     JButton StartCountingButton;
     JButton ImportToJsonButton;
-
     JButton ImportRoutesJsonButton;
-
     JButton ImportRoutesCSVButton;
-
     JButton ImportSQLButton;
 
     public CounterMenu (){
         counterMenuFrame = new JFrame();
         counterMenuPanel = new JPanel();
-        DBSettingsButton = new JButton("Настройка базы данных");
-        DBCreationButton = new JButton("Создание таблиц");
-        DBLoadingButton = new JButton("Наполнение таблиц");
-        DBDeleteButton = new JButton("Удаление таблиц");
-        StartCountingButton = new JButton("Управление расчетом");
-        ImportToJsonButton = new JButton("Импорт баз данных в формате .json");
-        ImportRoutesJsonButton = new JButton("Импорт routes в формате .json");
-        ImportRoutesCSVButton = new JButton("Импорт routes в формате .csv");
-        ImportSQLButton = new JButton("Импорт SQL файлов таблиц базы данных");
+        DBSettingsButton = new JButton("Database settings");
+        DBCreationButton = new JButton("Database creation");
+        DBLoadingButton = new JButton("Database loading");
+        DBDeleteButton = new JButton("Delete tables");
+        StartCountingButton = new JButton("Counter settings");
+        ImportToJsonButton = new JButton("Export tables from database to JSON");
+        ImportRoutesJsonButton = new JButton("Export routes from database to JSON");
+        ImportRoutesCSVButton = new JButton("Export routes from database to CSV");
+        ImportSQLButton = new JButton("Export tables from database to SQL files");
 
         DBSettingsButton.setSize(40,40);
         DBSettingsButton.addActionListener(new ActionListener() {
@@ -123,7 +118,7 @@ public class CounterMenu {
 
         counterMenuFrame.add(counterMenuPanel, BorderLayout.CENTER);
         counterMenuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        counterMenuFrame.setTitle("Меню расчетчика");
+        counterMenuFrame.setTitle("Counter menu");
         counterMenuFrame.pack();
         counterMenuFrame.setVisible(true);
     }

@@ -17,35 +17,31 @@ public class DBDelete {
 
     DBCredentials credentials = CounterMenuTest.credentials;
     DBTablesDeleteList deleteList;
-
     JFrame deleteMenu;
     JPanel deletePanel;
-
     JCheckBox deleteCountries;
     JCheckBox deleteCurrencies;
     JCheckBox deleteLocations;
     JCheckBox deleteTravelData;
     JCheckBox deleteTransportationTypes;
     JCheckBox deleteCountingTables;
-
     JButton executeButton;
-
     JButton deleteSchemaButton;
     public DBDelete (){
 
-        deleteMenu = new JFrame("Удаление таблиц");
+        deleteMenu = new JFrame("Delete tables");
         deletePanel = new JPanel();
 
         deleteList = new DBTablesDeleteList(false,false,false,false,false,false,false,false,false);
 
-        deleteCountries = new JCheckBox("Удалить таблицу 'countries'");
-        deleteCurrencies = new JCheckBox("Удалить таблицу 'currencies'");
-        deleteLocations = new JCheckBox("Удалить таблицу 'locations'");
-        deleteTransportationTypes = new JCheckBox("Удалить таблицу 'transportations_types'");
-        deleteTravelData = new JCheckBox("Удалить таблицу 'travel_data'");
-        deleteCountingTables = new JCheckBox("Удалить расчетные таблицы");
+        deleteCountries = new JCheckBox("Delete table 'countries'");
+        deleteCurrencies = new JCheckBox("Delete table 'currencies'");
+        deleteLocations = new JCheckBox("Delete table 'locations'");
+        deleteTransportationTypes = new JCheckBox("Delete table 'transportations_types'");
+        deleteTravelData = new JCheckBox("Delete table 'travel_data'");
+        deleteCountingTables = new JCheckBox("Delete counting tables");
 
-        executeButton = new JButton("Удалить");
+        executeButton = new JButton("Delete");
         executeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

@@ -23,30 +23,28 @@ public class DBCreation {
 
     JFrame creationFrame;
     JPanel creationPanel;
-
     JCheckBox createCountries;
     JCheckBox createCurrencies;
     JCheckBox createLocations;
     JCheckBox createTransportationTypes;
     JCheckBox createTravelData;
-
     JCheckBox createCountingTable;
     JCheckBox createAdditional;
     JButton createButton;
 
     public DBCreation() {
         creationList = new DBTablesCreationList(false,false,false,false,false,false,false,false);
-        creationFrame = new JFrame("Создание таблиц");
+        creationFrame = new JFrame("Tables' creation");
         creationPanel = new JPanel();
 
-        createCountries = new JCheckBox("Создать таблицу 'countries'");
-        createCurrencies = new JCheckBox("Создать таблицу 'currencies'");
-        createLocations = new JCheckBox("Создать таблицу 'locations'");
-        createTransportationTypes = new JCheckBox("Создать таблицу 'transportation_types'");
-        createTravelData = new JCheckBox("Создать таблицу 'travel_data'");
-        createCountingTable = new JCheckBox("Создать результирующие таблицы расчета");
-        createAdditional = new JCheckBox("Дополнительные таблицы (travel_data_count, countries, currencies)");
-        createButton = new JButton("Готово");
+        createCountries = new JCheckBox("Create table 'countries'");
+        createCurrencies = new JCheckBox("Create table 'currencies'");
+        createLocations = new JCheckBox("Create table 'locations'");
+        createTransportationTypes = new JCheckBox("Create table 'transportation_types'");
+        createTravelData = new JCheckBox("Create table 'travel_data'");
+        createCountingTable = new JCheckBox("Create necessary counting tables");
+        createAdditional = new JCheckBox("Additional tables (travel_data_count, countries, currencies)");
+        createButton = new JButton("Start");
 
         createButton.setSize(40,40);
         createButton.addActionListener(new ActionListener() {

@@ -3,12 +3,12 @@ from datetime import datetime
 import csv
 import haversine as hs
 
-from config import NOT_FOUND, LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR,\
-                   OLD_OUTPUT_JSON_DIR, ROMANIAN_CITIES, TRANS_NICOLAESCU,\
-                   BAD_VALUES, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV
-from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, mismatch_euro_zone_terms
+from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR,\
+                   OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV
+from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
 from exchange import update_exchange_rates
 from generators import gen_jsons
+from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch, bad_price_value, is_trans_nicolaescu
 
 
 # logging config
@@ -25,12 +25,13 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
     
     origin_id, destination_id, pathes = input_data
     
+    # stores the unique routes from input pathes
     valid_routes = set()
     
-    # main data list              
+    # returning data list              
     data = list()
     
-    # extraction all direct routes from all pathes and filling the main data dictionary
+    # extracts direct routes from all pathes
     for path_id, path in enumerate(pathes):
         for route_id, route in enumerate(path[8][:-1]):
                                  
@@ -38,28 +39,31 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                 
                 from_id = get_id_from_acode(route[2][0])
                 to_id = get_id_from_acode(route[3][0])
-                if from_id == NOT_FOUND or to_id == NOT_FOUND: continue
+                
+                if id_not_found(from_id, to_id): continue
                 
                 currency = route[11][0][1]
-                if currency not in euro_rates.keys() or currency in BAD_VALUES: 
+                if currency_mismatch(currency, euro_rates.keys()): 
                     unknown_currencies.add(currency)
                     continue
                 
                 price_min = route[11][0][0]
-                if price_min in BAD_VALUES: continue
+                if bad_price_value(price_min): continue
                 price_min_EUR = round(price_min / euro_rates[currency]['value'])
                 
                 duration_min = round(route[4] / 60) # sec to min
                 
                 if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
                 
-                distance_km = round(hs.haversine(route[2][3:5], route[3][3:5]))
-                frequency_tpw = route[7]
                 transport_id = TRANSPORT_TYPES_ID['fly']
                 
-                if (from_id, to_id, transport_id, price_min_EUR, duration_min) in valid_routes: continue
-                
+                # to avoid full duplicating routes
+                num_of_valid_routes = len(valid_routes)
                 valid_routes.add((from_id, to_id, transport_id, price_min_EUR, duration_min))
+                if num_of_valid_routes == len(valid_routes): continue
+                
+                distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # for flyes only
+                frequency_tpw = route[7]
                 
                 data.append({'origin_id': origin_id,
                              'destination_id': destination_id,
@@ -81,34 +85,35 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                     
                     from_id = get_id_from_bb(route[6][2:4])
                     to_id = get_id_from_bb(route[7][2:4])
-                    if from_id == NOT_FOUND or to_id == NOT_FOUND: continue
-                    if from_id == to_id: continue
+                    if id_not_found(from_id, to_id) or same_ids(from_id, to_id): continue
                     
                     transporter = route[10][8][0][0]                   
-                    if ttype == 'bus' and transporter == TRANS_NICOLAESCU:
-                        if (from_id not in ROMANIAN_CITIES) or (to_id not in ROMANIAN_CITIES): continue                   
+                    if is_trans_nicolaescu(ttype, transporter, from_id, to_id): continue                   
                                        
                     currency = route[13][0][1]
-                    if currency not in euro_rates.keys() or currency in BAD_VALUES: 
+                    if currency_mismatch(currency, euro_rates): 
                         unknown_currencies.add(currency)
                         continue
                     
                     price_min = route[13][0][0]
-                    if price_min in BAD_VALUES: continue
+                    if bad_price_value(price_min): continue
                     price_min_EUR = price_min / euro_rates[currency]['value']
                     if 0 < price_min_EUR < 1: price_min_EUR == 1
                     price_min_EUR = round(price_min_EUR)
                     
                     duration_min = round(route[3] / 60) # sec to min
+                    
                     if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
+                    
+                    transport_id = TRANSPORT_TYPES_ID[ttype]
+                    
+                    # to avoid full duplicating routes
+                    num_of_valid_routes = len(valid_routes)
+                    valid_routes.add((from_id, to_id, transport_id, price_min_EUR, duration_min))
+                    if num_of_valid_routes == len(valid_routes): continue
                     
                     distance_km = round(route[5])
                     frequency_tpw = route[10][8][0][6]  
-                    transport_id = TRANSPORT_TYPES_ID[ttype]
-                    
-                    if (from_id, to_id, transport_id, price_min_EUR, duration_min) in valid_routes: continue
-                
-                    valid_routes.add((from_id, to_id, transport_id, price_min_EUR, duration_min))
                     
                     data.append({'origin_id': origin_id,
                                  'destination_id': destination_id,
@@ -149,7 +154,8 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
     
     #create output csv dir and add header to output csv file
     OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
-    with open(OUTPUT_CSV_DIR/RAW_CSV, mode='w') as f:
+    
+    with open(RAW_CSV, mode='w') as f:
         csv_writer = csv.DictWriter(f, fieldnames=OUTPUT_COLUMNS)
         csv_writer.writeheader()
     

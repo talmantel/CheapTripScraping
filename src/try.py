@@ -72,5 +72,6 @@ if __name__ == '__main__':
     # print(int('008'))
     # print(in_coords((49.19347, 16.61441)))
     #get_exchange_rates()
-    print(make_tuple(1, 2, 3, 4, 5))
+    #print(make_tuple(1, 2, 3, 4, 5))
+    pass
     

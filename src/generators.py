@@ -42,14 +42,10 @@ def gen_injection():
 
 if __name__ == '__main__':
     
-    """ with open('all_city_country_pairs_3.csv', 'w') as f:    
-        for i, (from_city_id, from_city, from_country, to_city_id, to_city, to_country) in enumerate(gen_city_country_pairs()):
-            f.writelines(f'{from_city_id},{to_city_id},{from_city},{from_country},{to_city},{to_country}\n') """
-    
     pass
 
-    x = gen_jsons(OUTPUT_JSON_DIR)
+    """ x = gen_jsons(OUTPUT_JSON_DIR)
     print(next(x))
-    """ print(next(x))
+    print(next(x))
     print(next(x))"""
     

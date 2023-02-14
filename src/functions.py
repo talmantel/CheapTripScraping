@@ -1,5 +1,4 @@
-from config import df_bb, df_airports, NOT_FOUND, CURRENCY_JSON, CURRENCY_HRK, DASH_NAME_CITIES,\
-                   EURO_ZONE, EURO_ZONE_LOWEST_PRICE, EURO_ZONE_DURATION_LIMIT
+from config import df_bb, df_airports, NOT_FOUND, CURRENCY_JSON, CURRENCY_HRK, DASH_NAME_CITIES
 import json
 from datetime import datetime, date
 from progress.bar import IncrementalBar
@@ -72,13 +71,6 @@ def get_exchange_rates() -> tuple:
             
     except FileNotFoundError as err:
         print(f'File not found: {err.filename}')
-          
-          
-# check the minimal euro zone conditions
-def mismatch_euro_zone_terms(from_id: int, to_id: int, price: int, duration: int) -> bool:
-    if (from_id in EURO_ZONE and to_id in EURO_ZONE) and price < EURO_ZONE_LOWEST_PRICE and duration > EURO_ZONE_DURATION_LIMIT:
-        return True
-    return False
 
     
 if __name__ == '__main__':

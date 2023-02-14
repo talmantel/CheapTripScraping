@@ -69,7 +69,7 @@ TRANS_NICOLAESCU = 'Trans Nicolaescu'
 
 # set transport types and ids
 TRANSPORT_TYPES = {'fly': ('fly', 'flight', 'plane'), 
-                    'bus': ('busferry', 'bus', 'nightbus'), 
+                    'bus': ('bus', 'busferry', 'nightbus'), 
                     'train': ('train', 'nighttrain'),
                     'share': 'rideshare', 
                     'ferry': ('ferry', 'carferry', 'trainferry')}

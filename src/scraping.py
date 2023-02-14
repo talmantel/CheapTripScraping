@@ -39,7 +39,7 @@ def scrap_routine(cities_countries_pairs, injection=''):
     
     # extract all avaliable pathes for each pair
     try:      
-        r = session.get(tmp_url, headers={}, stream=True)
+        r = session.get(tmp_url)
         
         soup = BeautifulSoup(r.text, 'html.parser')
         
@@ -53,12 +53,12 @@ def scrap_routine(cities_countries_pairs, injection=''):
         compress_json.dump(parsed, target_file)
         
     except TypeError:
-        missed_pairs(cities_countries_pairs)
-        logging.error(f"{datetime.today()} On {tmp_url} exception occurred", exc_info=True)
+        logging.error(f'{datetime.today()} On {tmp_url} exception occurred', exc_info=True)
         scrap_routine(cities_countries_pairs, injection=next(inject))
     
     except:
-        logging.error(f"{datetime.today()} On {tmp_url} exception occurred", exc_info=True)
+        missed_pairs(cities_countries_pairs)
+        logging.error(f'{datetime.today()} an exception occurred', exc_info=True)
 
     
 def scrap_json():

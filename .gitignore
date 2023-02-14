@@ -1,7 +1,7 @@
-/.ctenv
-/.vscode
-/files/output
-/files/csv/arch
-/output
-/src/try.py
-/notebooks
+.ctenv/
+.vscode/
+files/output/
+files/csv/arch/
+output/
+src/try.py
+notebooks/

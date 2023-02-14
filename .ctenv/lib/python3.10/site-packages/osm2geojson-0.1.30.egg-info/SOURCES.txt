@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+osm2geojson/__init__.py
+osm2geojson/areaKeys.json
+osm2geojson/helpers.py
+osm2geojson/main.py
+osm2geojson/parse_xml.py
+osm2geojson/polygon-features.json
+osm2geojson.egg-info/PKG-INFO
+osm2geojson.egg-info/SOURCES.txt
+osm2geojson.egg-info/dependency_links.txt
+osm2geojson.egg-info/requires.txt
+osm2geojson.egg-info/top_level.txt

@@ -1,0 +1,12 @@
+beautifulsoup4
+geojson
+lxml
+matplotlib
+numpy
+pandas
+ujson
+xarray
+
+[test]
+pytest
+pytest-sugar

@@ -49,8 +49,8 @@ if __name__ == '__main__':
     
     pass
 
-    x = gen_next_id()
+    """ x = gen_next_id()
     print(next(x))
     print(next(x))
-    print(next(x))
+    print(next(x)) """
     

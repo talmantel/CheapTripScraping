@@ -17,7 +17,7 @@ def treat_data():
     
     # Making dataset for triples from raw csv
     df = pd.read_csv(RAW_CSV, index_col=None, 
-                    usecols=['temp_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+                    usecols=['json_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
     
     # Sorting by price in ascending order
     df = df.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], 
@@ -44,7 +44,7 @@ def treat_data():
     df_triples = pd.concat(frames)
 
     # Output 
-    df_triples.to_csv(TRIPLES_CSV, columns=['temp_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+    df_triples.to_csv(TRIPLES_CSV, columns=['json_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
     
     print('Data treatment finished successfully!\n')
     

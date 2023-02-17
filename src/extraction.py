@@ -4,8 +4,8 @@ import csv
 import json
 import haversine as hs
 
-from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, ROUTES_JSON_DIR,\
-                   OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV
+from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR,\
+                   OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, df_bb
 from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
 from exchange import update_exchange_rates
 from generators import gen_jsons, gen_next_id
@@ -26,8 +26,8 @@ unknown_currencies = set()
 unique_routes = set()
 
 # counter for json_id
-counter = gen_next_id()
-        
+counter = {k: k * 10000 for k in df_bb['id_city']}
+     
     
 def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
     
@@ -37,7 +37,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
     raw_data = list()
     
     # extracts direct routes from all pathes
-    for path_id, path in enumerate(pathes):
+    for inner_path_id, path in enumerate(pathes):
         for route_id, route in enumerate(path[8][:-1]):
                                  
             if route[0] in TRANSPORT_TYPES['fly']:
@@ -70,21 +70,28 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                 distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # for flyes only
                 frequency_tpw = route[7]
                 
-                json_id = next(counter)
-                dict_for_json = {'json_id': json_id,
-                                'distance_km': distance_km,
-                                'frequency_tpw': frequency_tpw
+                counter[from_id] += 1
+                path_id = counter[from_id]
+                inner_json = {'path_id': path_id,
+                              'from_id': from_id,
+                              'to_id': to_id,
+                              'transport_id': transport_id,
+                              'price_min_EUR': price_min_EUR,
+                              'duration_min': duration_min,
+                              'distance_km': distance_km,
+                              'frequency_tpw': frequency_tpw,
+                              'transporter': None
                                 
                                 }
                 
-                ROUTES_JSON_DIR.mkdir(parents=True, exist_ok=True)
-                with open(f'{ROUTES_JSON_DIR}/{str(json_id)}.json', mode='w') as file:
-                    json.dump(dict_for_json, file)
+                INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
+                with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
+                    json.dump(inner_json, file)
                 
-                raw_data.append({'json_id': json_id,
+                raw_data.append({'path_id': path_id,
                                  'origin_id': origin_id,
                                  'destination_id': destination_id,
-                                 'path_id': path_id,
+                                 'inner_path_id': inner_path_id,
                                  'route_id': route_id,
                                  'from_id': from_id,
                                  'to_id': to_id,
@@ -132,31 +139,37 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                     distance_km = round(route[5])
                     frequency_tpw = route[10][8][0][6]  
                     
-                    json_id = next(counter)
-                    dict_for_json = {'json_id': json_id,
-                                    'distance_km': distance_km,
-                                    'frequency_tpw': frequency_tpw
-                                
+                    counter[from_id] += 1
+                    path_id = counter[from_id]
+                    inner_json = {'path_id': path_id,
+                                  'from_id': from_id,
+                                  'to_id': to_id,
+                                  'transport_id': transport_id,
+                                  'price_min_EUR': price_min_EUR,
+                                  'duration_min': duration_min,
+                                  'distance_km': distance_km,
+                                  'frequency_tpw': frequency_tpw,
+                                  'transporter': transporter
                                     }
                 
-                    ROUTES_JSON_DIR.mkdir(parents=True, exist_ok=True)
-                    with open(f'{ROUTES_JSON_DIR}/{str(json_id)}.json', mode='w') as file:
-                        json.dump(dict_for_json, file)
+                    INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
+                    with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
+                        json.dump(inner_json, file)
                     
                     
-                    raw_data.append({'json_id': json_id,
-                                 'origin_id': origin_id,
-                                 'destination_id': destination_id,
-                                 'path_id': path_id,
-                                 'route_id': route_id,
-                                 'from_id': from_id,
-                                 'to_id': to_id,
-                                 'transport_id': transport_id,
-                                 'price_min_EUR': price_min_EUR,
-                                 'duration_min': duration_min,
-                                 'distance_km': distance_km,
-                                'frequency_tpw': frequency_tpw
-                                })
+                    raw_data.append({'path_id': path_id,
+                                     'origin_id': origin_id,
+                                     'destination_id': destination_id,
+                                     'inner_path_id': inner_path_id,
+                                     'route_id': route_id,
+                                     'from_id': from_id,
+                                     'to_id': to_id,
+                                     'transport_id': transport_id,
+                                     'price_min_EUR': price_min_EUR,
+                                     'duration_min': duration_min,
+                                     'distance_km': distance_km,
+                                     'frequency_tpw': frequency_tpw
+                                    })
                       
                 except StopIteration:
                     no_id_transport.add(route[1]) # for no id transport types

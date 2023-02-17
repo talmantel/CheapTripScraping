@@ -16,35 +16,16 @@ def treat_data():
     
     
     # Making dataset for triples from raw csv
-    df = pd.read_csv(RAW_CSV, index_col=None, 
-                    usecols=['json_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+    df_triples = pd.read_csv(RAW_CSV, usecols=['path_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
     
     # Sorting by price in ascending order
-    df = df.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], 
-                            ignore_index=True, 
-                            ascending=True)
+    df_triples.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], ascending=True, inplace=True)
 
     # Removing duplicates by triples ('from_id', 'to_id', 'transport_id')
-    df = df.drop_duplicates(['from_id', 'to_id', 'transport_id'], ignore_index=True)
-
-    # Create index in resulting csv files and cutting small files 'from_id.csv' type
-    frames = []
-    for from_id in df['from_id'].unique():
-        
-        temp_df = df[df['from_id'] == from_id]
-        
-        temp_df.index = from_id * 10_000 + range(1, temp_df.shape[0] + 1)
-        
-        temp_df.index.name = 'path_id'
-        
-        #temp_df.to_csv(f'{TARGET_DIR}/{from_id}.csv') # small csv files cutting
-        
-        frames.append(temp_df)
-        
-    df_triples = pd.concat(frames)
-
+    df_triples = df_triples.drop_duplicates(['from_id', 'to_id', 'transport_id']).sort_values(by='path_id')
+    
     # Output 
-    df_triples.to_csv(TRIPLES_CSV, columns=['json_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+    df_triples.to_csv(TRIPLES_CSV, index=False)
     
     print('Data treatment finished successfully!\n')
     

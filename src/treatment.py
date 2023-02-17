@@ -6,18 +6,21 @@ def treat_data():
     
     print('Start treatment process...')
     
-    # Reading raw csv
-    df_raw= pd.read_csv(RAW_CSV, index_col=None, 
-                        usecols=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min', 'distance_km', 'frequency_tpw'])
-
-    # Removing full duplicates
-    df_val = df_raw.drop_duplicates(ignore_index=True) 
+    # Making validation dataset from raw csv
+    df_val= pd.read_csv(RAW_CSV, index_col=None, 
+                        usecols=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 
+                                 'duration_min', 'distance_km', 'frequency_tpw'])
     
     # Write to csv for validation purposes
     df_val.to_csv(VALIDATION_CSV, index=False)
     
+    
+    # Making dataset for triples from raw csv
+    df = pd.read_csv(RAW_CSV, index_col=None, 
+                    usecols=['temp_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+    
     # Sorting by price in ascending order
-    df = df_val.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], 
+    df = df.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], 
                             ignore_index=True, 
                             ascending=True)
 
@@ -41,7 +44,7 @@ def treat_data():
     df_triples = pd.concat(frames)
 
     # Output 
-    df_triples.to_csv(TRIPLES_CSV, columns=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+    df_triples.to_csv(TRIPLES_CSV, columns=['temp_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
     
     print('Data treatment finished successfully!\n')
     

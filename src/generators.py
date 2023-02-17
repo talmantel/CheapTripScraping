@@ -38,14 +38,19 @@ def gen_injection():
     letters = string.ascii_lowercase * 3
     for item in permutations(letters, 3):
         yield '-' + ''.join(item)
+        
+        
+def gen_next_id():
+    for i in range(1, 1000000):
+        yield i
 
 
 if __name__ == '__main__':
     
     pass
 
-    """ x = gen_jsons(OUTPUT_JSON_DIR)
+    x = gen_next_id()
     print(next(x))
     print(next(x))
-    print(next(x))"""
+    print(next(x))
     

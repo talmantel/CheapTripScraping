@@ -1,35 +1,40 @@
 import logging
 from datetime import datetime
 import csv
+import json
 import haversine as hs
 
-from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR,\
+from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, ROUTES_JSON_DIR,\
                    OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV
 from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
 from exchange import update_exchange_rates
-from generators import gen_jsons
+from generators import gen_jsons, gen_next_id
 from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch, bad_price_value, is_trans_nicolaescu
 
 
 # logging config
 logging.basicConfig(filename=LOGS_DIR/'extraction.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
+
 # set for store no id transport
 no_id_transport = set()
 
 # set for store unknown currencies
 unknown_currencies = set()
+
+# stores the unique routes from input pathes
+unique_routes = set()
+
+# counter for json_id
+counter = gen_next_id()
         
     
 def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
     
     origin_id, destination_id, pathes = input_data
     
-    # stores the unique routes from input pathes
-    valid_routes = set()
-    
     # returning data list              
-    data = list()
+    raw_data = list()
     
     # extracts direct routes from all pathes
     for path_id, path in enumerate(pathes):
@@ -58,25 +63,37 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                 transport_id = TRANSPORT_TYPES_ID['fly']
                 
                 # to avoid full duplicating routes
-                num_of_valid_routes = len(valid_routes)
-                valid_routes.add((from_id, to_id, transport_id, price_min_EUR, duration_min))
-                if num_of_valid_routes == len(valid_routes): continue
-                
+                num_of_unique_routes = len(unique_routes)
+                unique_routes.add((from_id, to_id, transport_id, price_min_EUR)) #, duration_min))
+                if num_of_unique_routes == len(unique_routes): continue
+                                
                 distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # for flyes only
                 frequency_tpw = route[7]
                 
-                data.append({'origin_id': origin_id,
-                             'destination_id': destination_id,
-                             'path_id': path_id,
-                             'route_id': route_id,
-                             'from_id': from_id,
-                             'to_id': to_id,
-                             'transport_id': transport_id,
-                             'price_min_EUR': price_min_EUR,
-                             'duration_min': duration_min,
-                             'distance_km': distance_km,
-                             'frequency_tpw': frequency_tpw
-                            })
+                json_id = next(counter)
+                dict_for_json = {'json_id': json_id,
+                                'distance_km': distance_km,
+                                'frequency_tpw': frequency_tpw
+                                
+                                }
+                
+                ROUTES_JSON_DIR.mkdir(parents=True, exist_ok=True)
+                with open(f'{ROUTES_JSON_DIR}/{str(json_id)}.json', mode='w') as file:
+                    json.dump(dict_for_json, file)
+                
+                raw_data.append({'json_id': json_id,
+                                 'origin_id': origin_id,
+                                 'destination_id': destination_id,
+                                 'path_id': path_id,
+                                 'route_id': route_id,
+                                 'from_id': from_id,
+                                 'to_id': to_id,
+                                 'transport_id': transport_id,
+                                 'price_min_EUR': price_min_EUR,
+                                 'duration_min': duration_min,
+                                 'distance_km': distance_km,
+                                 'frequency_tpw': frequency_tpw
+                               })
                                     
             # for other used types of vehicles            
             else:
@@ -108,14 +125,27 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                     transport_id = TRANSPORT_TYPES_ID[ttype]
                     
                     # to avoid full duplicating routes
-                    num_of_valid_routes = len(valid_routes)
-                    valid_routes.add((from_id, to_id, transport_id, price_min_EUR, duration_min))
-                    if num_of_valid_routes == len(valid_routes): continue
+                    num_of_unique_routes = len(unique_routes)
+                    unique_routes.add((from_id, to_id, transport_id, price_min_EUR)) #, duration_min))
+                    if num_of_unique_routes == len(unique_routes): continue
                     
                     distance_km = round(route[5])
                     frequency_tpw = route[10][8][0][6]  
                     
-                    data.append({'origin_id': origin_id,
+                    json_id = next(counter)
+                    dict_for_json = {'json_id': json_id,
+                                    'distance_km': distance_km,
+                                    'frequency_tpw': frequency_tpw
+                                
+                                    }
+                
+                    ROUTES_JSON_DIR.mkdir(parents=True, exist_ok=True)
+                    with open(f'{ROUTES_JSON_DIR}/{str(json_id)}.json', mode='w') as file:
+                        json.dump(dict_for_json, file)
+                    
+                    
+                    raw_data.append({'json_id': json_id,
+                                 'origin_id': origin_id,
                                  'destination_id': destination_id,
                                  'path_id': path_id,
                                  'route_id': route_id,
@@ -132,10 +162,10 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                     no_id_transport.add(route[1]) # for no id transport types
                     continue
                 except:
-                    logging.error(f'{datetime.today()} the exception occurred', exc_info=True)
+                    logging.error(f'{datetime.today()} an exception occurred', exc_info=True)
                     continue
                         
-    return data
+    return raw_data
 
 
 def extract_data(source_dir=OUTPUT_JSON_DIR):
@@ -176,3 +206,4 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
 if __name__ == '__main__':
     #source_dir = OLD_OUTPUT_JSON_DIR
     extract_data(OLD_OUTPUT_JSON_DIR)
+    #extract_data()

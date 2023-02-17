@@ -34,6 +34,7 @@ def mismatch_euro_zone_terms(from_id: int, to_id: int, price: int, duration: int
     return False
 
 
+# misses the routes from or to Romania by bus via transporter TRANS NICOLAESCU
 def is_trans_nicolaescu(ttype: str, transporter: str, from_id: int, to_id: int) -> bool:
     if ttype == 'bus' and transporter == TRANS_NICOLAESCU:
         if (from_id not in ROMANIAN_CITIES) or (to_id not in ROMANIAN_CITIES):

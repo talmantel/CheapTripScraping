@@ -23,6 +23,7 @@ CURRENCY_HRK = Path('../files/currencies/last_HRK_EUR_rates.json')
 # set up outputs folders
 OUTPUT_JSON_DIR = Path('../output/json_output')
 OUTPUT_CSV_DIR = Path('../output/csv_output')
+ROUTES_JSON_DIR = Path('../output/routes_json_output')
 OLD_OUTPUT_JSON_DIR = Path('../files/output/json_output/2_run_jsons_r2r')
 HOTELS_DIR = Path('../files/hotels')
 
@@ -49,7 +50,7 @@ EXCLUDED_CITIES = ('19', '47', '185', '221', '361',
                    '322', '328', '344', '355')
 
 # set up output columns
-OUTPUT_COLUMNS = ('origin_id', 'destination_id', 'path_id', 'route_id', 'from_id', 'to_id', 
+OUTPUT_COLUMNS = ('json_id', 'origin_id', 'destination_id', 'path_id', 'route_id', 'from_id', 'to_id', 
                   'transport_id', 'price_min_EUR', 'duration_min', 'distance_km', 'frequency_tpw')
 
 # these items can be extracted from the scrapped json

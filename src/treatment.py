@@ -13,8 +13,7 @@ def treat_data():
     
     # Write to csv for validation purposes
     df_val.to_csv(VALIDATION_CSV, index=False)
-    
-    
+        
     # Making dataset for triples from raw csv
     df_triples = pd.read_csv(RAW_CSV, usecols=['path_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
     

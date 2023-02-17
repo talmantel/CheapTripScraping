@@ -5,11 +5,12 @@ import json
 import haversine as hs
 
 from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR,\
-                   OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, df_bb
+                   OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, df_cities
 from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
 from exchange import update_exchange_rates
-from generators import gen_jsons, gen_next_id
+from generators import gen_jsons
 from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch, bad_price_value, is_trans_nicolaescu
+from treatment import treat_data
 
 
 # logging config
@@ -26,7 +27,7 @@ unknown_currencies = set()
 unique_routes = set()
 
 # counter for json_id
-counter = {k: k * 10000 for k in df_bb['id_city']}
+counter = {k: k * 10000 for k in df_cities['id_city']}
      
     
 def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
@@ -215,8 +216,11 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
     
     print('Data extraction finished successfully!\n')
     
+    # data treatment to obtain the datasets for validation and ordered by triples 
+    #treat_data()
+    
     
 if __name__ == '__main__':
     #source_dir = OLD_OUTPUT_JSON_DIR
-    extract_data(OLD_OUTPUT_JSON_DIR)
-    #extract_data()
+    #extract_data(OLD_OUTPUT_JSON_DIR)
+    extract_data()

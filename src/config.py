@@ -14,7 +14,7 @@ LOGS_DIR = Path('../logs')
 # set up inputs
 INPUT_CSV_DIR = Path('../files/csv')
 AIRPORT_CODES_CSV = Path(INPUT_CSV_DIR/'airport_codes_short.csv')
-BBOXES_CSV = Path(INPUT_CSV_DIR/'bbox_short.csv')
+BBOXES_CSV = Path(INPUT_CSV_DIR/'bbox_short_try.csv')
 CITIES_CSV = Path(INPUT_CSV_DIR/'cities.csv')
 CITY_COUNTRY_CSV = Path(INPUT_CSV_DIR/'Full_list_with_countries_CLEANED_for_scraping.csv')
 CURRENCY_JSON = Path('../files/currencies/exchange_rates_EUR.json')

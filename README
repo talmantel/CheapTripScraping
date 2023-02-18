@@ -1,21 +1,43 @@
-The process consists of three stages:
-    1) SCRAPING jsons from Rom2Rio.com (scraping.py)
-    2) direct routes EXTRACTION from the scraped jsons (extraction.py)
-    3) obtained data TREATMENT with the purpose to create the datasets for validation etc (treatment.py)
+Whole process consists of the following steps:
+    1) SCRAPING jsons from the site (scraping.py)
+    2) EXTRACTION of direct routes from the scraped jsons (extraction.py)
+    3) TREATMENT of obtained data to create the datasets for validation etc (treatment.py)
+    4) FIXING the prices for specific routes listed in corresponding file (fixing.py)
 
-All nessecary input files are stored in directory 'files/csv'.
-All output files are stored in the folder 'output':
-    - all_direct_routes_raw.csv - non-ordered file with all avaliable 'raw' data each direct route (output of extraction.py)
+All nessecary input files are stored in directory 'files/csv':
+    - airport_codes_short.csv
+    - bbox_short.csv
+    - cities.csv
+    - Full_list_with_countries_CLEANED_for_scraping.csv
+
+After the scripts processing there are following output subfolders in output:
+    - /csv_output;
+    - /inner_json_output;
+    - /json_output.
+
+Below is a list of the output files stored in the folder 'output/csv_output':
+    - all_direct_routes_raw.csv - non-ordered file with all avaliable 'raw' data per each of direct routes (output of extraction.py)
     - all_direct_routes_validation.csv - non-ordered file with only the columns relevant to validation purposes (output of treatment.py)
-    - all_direct_routes_triples - file containing ordered by triples (from_id, to_id, transport_id) routes with lowest price (treatment.py)
-    - all_direct_
+    - all_direct_routes_triples.csv - file containing the routes ordered by triples (from_id, to_id, transport_id) with lowest price (treatment.py)
+    - all_direct_valid_routes.csv - the same 'all_direct_routes_triples.csv' file with fixed prices (output of fixing.py)
+    - fixed_ids.csv - file containing ids of routes which were already fixed (output of fixing.py)
+    - no_id_transport.csv - list of transport types that were not taken into account (output of extraction.py)
+    - unknown_currencies - list of currencies that may have been missed due to their absence in existing database of currencies (output of extraction.py)
 
-Whole process can be runed with only one 'scrapRome2Rio.py' script.
+The output subfolder  'inner_json_output' stores json files for each of valid routes.
+The output subfolder 'json_output' stores scraped and zipped json files.
 
-Also there is an script 'fixing.py' fixing prices for the specific routes stored in csv file(s) by path "files/routes_to_fix/". 
-    To do this run:
-                     $ python3 fixing.py -f [filename].csv
-    Running 
-                     $ python3 fixing.py -b 
+Whole process (exluding price fixing) can be runed by only one 'scrapRome2Rio.py' script.
 
-    makes possible to process of multiple files in a batch.
+The 'fixing.py' script aimed to fix prices for the specific routes stored in csv file(s) by path 'files/routes_to_fix/'. 
+    To fix from only one file run:
+                                    $ python3 fixing.py -f [filename].csv
+
+    Or run to fix from batch of files:
+                                        $ python3 fixing.py -b 
+
+Subfolder 'files/currencies' stores the json files with currency exchange rates (updated each time when extraction.py is running).
+
+
+
+                

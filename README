@@ -1,6 +1,6 @@
 The process consists of three stages:
     1) SCRAPING jsons from Rom2Rio.com (scraping.py)
-    2) direct routes EXTRACTION from the jsons have to be scraped (extraction.py)
+    2) direct routes EXTRACTION from the scraped jsons (extraction.py)
     3) obtained data TREATMENT with the purpose to create the datasets for validation etc (treatment.py)
 
 All nessecary input files are stored in directory 'files/csv'.

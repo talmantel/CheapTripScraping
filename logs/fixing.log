@@ -232,3 +232,5 @@ root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
 	matches not found: from_id = 314, to_id = 340, transport_id = 1
 root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
 	matches not found: from_id = 212, to_id = 171, transport_id = 1
+root - ERROR - In file: 'routes_to_fix.csv'
+	matches not found: from_id = 7, to_id = 7, transport_id = 7

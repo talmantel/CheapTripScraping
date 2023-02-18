@@ -5,24 +5,22 @@ import sys
 from pathlib import Path
 
 
-from config import TRIPLES_CSV, ROUTES_TO_FIX_CSV, FIXED_IDS_CSV, VALID_ROUTES_CSV, LOGS_DIR, OUTPUT_CSV_DIR, ROUTES_TO_FIX_DIR
+from config import TRIPLES_CSV, FIXED_IDS_CSV, VALID_ROUTES_CSV, LOGS_DIR, ROUTES_TO_FIX_DIR
 
 
 logging.basicConfig(filename=LOGS_DIR/'fixing.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 
-def fix_price(input_csv=ROUTES_TO_FIX_CSV):
-    
-    INPUT_CSV = input_csv
+def fix_price(input_csv):
     
     try: 
         
-        if not INPUT_CSV.is_file():
-            raise FileNotFoundError(INPUT_CSV)
+        if not input_csv.is_file():
+            raise FileNotFoundError(input_csv)
         
         print(f"Start fixing process from '{input_csv}' ...")
         
-        df_input = pd.read_csv(INPUT_CSV, usecols=['from_id', 'to_id', 'transport_id', 'price_to_fix'])
+        df_input = pd.read_csv(input_csv, usecols=['from_id', 'to_id', 'transport_id', 'price_to_fix'])
         valid_trips = tuple(zip(df_input['from_id'], df_input['to_id'], df_input['transport_id'], df_input['price_to_fix']))
               
         if not FIXED_IDS_CSV.is_file():
@@ -79,8 +77,9 @@ def fix_price(input_csv=ROUTES_TO_FIX_CSV):
 if __name__ == '__main__':
     
     if len(sys.argv) > 1 and sys.argv[1] == '-b':
-        files = Path(ROUTES_TO_FIX_DIR).glob('routes_to_fix_*.csv')
+        files = Path(ROUTES_TO_FIX_DIR).glob('*.csv')
         for file in files:
             fix_price(input_csv=file)
-    else:
-        fix_price()
+            
+    elif len(sys.argv) > 2 and sys.argv[1] == '-f':
+        fix_price(Path(ROUTES_TO_FIX_DIR)/sys.argv[2])

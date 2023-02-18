@@ -26,11 +26,11 @@ unknown_currencies = set()
 # stores the unique routes from input pathes
 unique_routes = set()
 
-# counter for json_id
+# counter for path_id
 counter = {k: k * 10000 for k in df_cities['id_city']}
      
     
-def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
+def extract_routine(input_data: tuple, euro_rates: dict) -> list():
     
     origin_id, destination_id, pathes = input_data
     
@@ -85,7 +85,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                               'distance_km': distance_km,
                               'frequency_tpw': frequency_tpw,
                               'transporter': None
-                                
+                            
                                 }
                 
                 INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)

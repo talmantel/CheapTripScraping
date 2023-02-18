@@ -1,529 +1,742 @@
-root - ERROR - 2023-02-18 14:20:43.079997 On https://www.rome2rio.com/map/Tehran-Iran/Dushanbe-Tajikistan exception occurred
+root - ERROR - 2023-02-18 16:05:06.483163 On https://www.rome2rio.com/map/Tehran-Iran/Dushanbe-Tajikistan exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:43.720737 On https://www.rome2rio.com/map/Tehran-Iran/Naypyidaw-Myanmar exception occurred
+root - ERROR - 2023-02-18 16:05:06.539003 On https://www.rome2rio.com/map/Tehran-Iran/Phnom Penh-Cambodia exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:43.974912 On https://www.rome2rio.com/map/Tehran-Iran/Phnom Penh-Cambodia exception occurred
+root - ERROR - 2023-02-18 16:05:06.552495 On https://www.rome2rio.com/map/Tehran-Iran/Naypyidaw-Myanmar exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:44.107542 On https://www.rome2rio.com/map/Tehran-Iran/Bishkek-Kyrgyzstan exception occurred
+root - ERROR - 2023-02-18 16:05:06.563815 On https://www.rome2rio.com/map/Tehran-Iran/Bishkek-Kyrgyzstan exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:44.388459 On https://www.rome2rio.com/map/Tehran-Iran/Naypyidaw-Myanmar-abd exception occurred
+root - ERROR - 2023-02-18 16:05:07.117182 On https://www.rome2rio.com/map/Tehran-Iran/Phnom Penh-Cambodia-abd exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:45.359907 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Sanaa-Yemen exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:47.026983 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Paris-France exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:47.052506 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Jerusalem-Israel exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:47.407746 On https://www.rome2rio.com/map/Sanaa-Yemen/Naypyidaw-Myanmar exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:47.953244 On https://www.rome2rio.com/map/Sanaa-Yemen/Kuwait City-Kuwait exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:48.175910 On https://www.rome2rio.com/map/Sanaa-Yemen/Kathmandu-Nepal exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:49.859096 On https://www.rome2rio.com/map/Sanaa-Yemen/London-United Kingdom exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:50.505222 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Kuwait City-Kuwait exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:51.082845 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Beirut-Lebanon exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:51.263911 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Kuwait City-Kuwait-abo exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:51.504544 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Astana-Kazakhstan exception occurred
+root - ERROR - 2023-02-18 16:05:07.462098 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Naypyidaw-Myanmar exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:51.825817 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tehran-Iran exception occurred
+root - ERROR - 2023-02-18 16:05:07.869095 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Sanaa-Yemen exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:51.829798 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Eilat-Israel exception occurred
+root - ERROR - 2023-02-18 16:05:08.504317 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Beirut-Lebanon exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:52.687425 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tashkent-Uzbekistan exception occurred
+root - ERROR - 2023-02-18 16:05:08.654560 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Baghdad-Iraq exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:52.816309 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Phnom Penh-Cambodia exception occurred
+root - ERROR - 2023-02-18 16:05:08.679820 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Sanaa-Yemen-abi exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:53.072130 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Male-Maldives exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:53.326015 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Lhasa-China exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:53.814302 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Male-Maldives-abw exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:54.110962 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Bandar Seri Begawan-Brunei exception occurred
+root - ERROR - 2023-02-18 16:05:09.795817 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Paris-France exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:54.512651 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tel-Aviv-Israel exception occurred
+root - ERROR - 2023-02-18 16:05:10.051000 On https://www.rome2rio.com/map/Tashkent-Uzbekistan/Jerusalem-Israel exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:55.359531 On https://www.rome2rio.com/map/Muscat-Oman/Phnom Penh-Cambodia exception occurred
+root - ERROR - 2023-02-18 16:05:10.186876 On https://www.rome2rio.com/map/Sanaa-Yemen/Naypyidaw-Myanmar exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:55.982833 On https://www.rome2rio.com/map/Muscat-Oman/Dhaka-Bangladesh exception occurred
+root - ERROR - 2023-02-18 16:05:10.423644 On https://www.rome2rio.com/map/Sanaa-Yemen/Kuwait City-Kuwait exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:57.010660 On https://www.rome2rio.com/map/Manila-Philippines/Sanaa-Yemen exception occurred
+root - ERROR - 2023-02-18 16:05:10.805750 On https://www.rome2rio.com/map/Sanaa-Yemen/Kathmandu-Nepal exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:57.707346 On https://www.rome2rio.com/map/Manila-Philippines/Lhasa-China exception occurred
+root - ERROR - 2023-02-18 16:05:12.264296 On https://www.rome2rio.com/map/Sanaa-Yemen/London-United Kingdom exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:20:58.451577 On https://www.rome2rio.com/map/Manila-Philippines/Beirut-Lebanon exception occurred
+root - ERROR - 2023-02-18 16:05:13.191406 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Kuwait City-Kuwait exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:00.264832 On https://www.rome2rio.com/map/Male-Maldives/Kuwait City-Kuwait exception occurred
+root - ERROR - 2023-02-18 16:05:13.373187 On https://www.rome2rio.com/map/Sanaa-Yemen/London-United Kingdom-abr exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:00.806628 On https://www.rome2rio.com/map/Male-Maldives/Doha-Qatar exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:01.615964 On https://www.rome2rio.com/map/Lhasa-China/Tehran-Iran exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:02.208966 On https://www.rome2rio.com/map/Lhasa-China/Kuwait City-Kuwait exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:04.914958 On https://www.rome2rio.com/map/Kuwait City-Kuwait/Astana-Kazakhstan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:07.646751 On https://www.rome2rio.com/map/Islamabad-Pakistan/Phnom Penh-Cambodia exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:08.905178 On https://www.rome2rio.com/map/Islamabad-Pakistan/Astana-Kazakhstan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:09.189039 On https://www.rome2rio.com/map/Dushanbe-Tajikistan/Tehran-Iran exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:09.237955 On https://www.rome2rio.com/map/Islamabad-Pakistan/Cluj-Napoca-Romania exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:09.316572 On https://www.rome2rio.com/map/Islamabad-Pakistan/Jerusalem-Israel exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:11.791954 On https://www.rome2rio.com/map/Doha-Qatar/Muscat-Oman exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:13.279294 On https://www.rome2rio.com/map/Doha-Qatar/Eilat-Israel exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:13.482288 On https://www.rome2rio.com/map/Doha-Qatar/Rome-Italy exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:13.786352 On https://www.rome2rio.com/map/Doha-Qatar/Paris-France exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:14.364824 On https://www.rome2rio.com/map/Dhaka-Bangladesh/Islamabad-Pakistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:17.102429 On https://www.rome2rio.com/map/Colombo-Sri Lanka/Ashgabat-Turkmenistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:19.472843 On https://www.rome2rio.com/map/Beirut-Lebanon/Tehran-Iran exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:19.661836 On https://www.rome2rio.com/map/Beirut-Lebanon/Sanaa-Yemen exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:20.478406 On https://www.rome2rio.com/map/Beirut-Lebanon/Male-Maldives exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:20.635088 On https://www.rome2rio.com/map/Beirut-Lebanon/Manila-Philippines exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:21.149763 On https://www.rome2rio.com/map/Beirut-Lebanon/Ashgabat-Turkmenistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:22.144894 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Phnom Penh-Cambodia exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:22.201501 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Muscat-Oman exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:23.006689 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Islamabad-Pakistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:23.015736 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Dushanbe-Tajikistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:23.109092 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Doha-Qatar exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:23.180788 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Baghdad-Iraq exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:24.202955 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Tel-Aviv-Israel exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:25.078247 On https://www.rome2rio.com/map/Baghdad-Iraq/Kuwait City-Kuwait exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:25.717484 On https://www.rome2rio.com/map/Baghdad-Iraq/Dhaka-Bangladesh exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:26.765562 On https://www.rome2rio.com/map/Astana-Kazakhstan/Muscat-Oman exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:27.643238 On https://www.rome2rio.com/map/Astana-Kazakhstan/Muscat-Oman-abk exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:28.446516 On https://www.rome2rio.com/map/Astana-Kazakhstan/Cluj-Napoca-Romania exception occurred
+root - ERROR - 2023-02-18 16:05:13.619317 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Beirut-Lebanon exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:28.656636 On https://www.rome2rio.com/map/Ashgabat-Turkmenistan/Tashkent-Uzbekistan exception occurred
+root - ERROR - 2023-02-18 16:05:13.849900 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Astana-Kazakhstan exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:28.871951 On https://www.rome2rio.com/map/Astana-Kazakhstan/Tel-Aviv-Israel exception occurred
+root - ERROR - 2023-02-18 16:05:14.434127 On https://www.rome2rio.com/map/Phnom Penh-Cambodia/Eilat-Israel exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:29.081559 On https://www.rome2rio.com/map/Ashgabat-Turkmenistan/Naypyidaw-Myanmar exception occurred
+root - ERROR - 2023-02-18 16:05:14.467516 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tehran-Iran exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:31.687897 On https://www.rome2rio.com/map/Cluj-Napoca-Romania/Kuwait City-Kuwait exception occurred
+root - ERROR - 2023-02-18 16:05:15.159375 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tehran-Iran-abx exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:31.872797 On https://www.rome2rio.com/map/Cluj-Napoca-Romania/Islamabad-Pakistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:32.034594 On https://www.rome2rio.com/map/Cluj-Napoca-Romania/Lhasa-China exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:34.333374 On https://www.rome2rio.com/map/Paris-France/Naypyidaw-Myanmar exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:34.790434 On https://www.rome2rio.com/map/Paris-France/Kuwait City-Kuwait exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:35.926702 On https://www.rome2rio.com/map/Paris-France/Baghdad-Iraq exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:36.933392 On https://www.rome2rio.com/map/Eilat-Israel/Sanaa-Yemen exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:37.101719 On https://www.rome2rio.com/map/Eilat-Israel/Muscat-Oman exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:37.796813 On https://www.rome2rio.com/map/Eilat-Israel/Dushanbe-Tajikistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:37.905813 On https://www.rome2rio.com/map/Eilat-Israel/Doha-Qatar exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:38.359842 On https://www.rome2rio.com/map/Eilat-Israel/Colombo-Sri Lanka exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:39.877629 On https://www.rome2rio.com/map/Eilat-Israel/Berlin-Germany exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:43.555440 On https://www.rome2rio.com/map/Jerusalem-Israel/Phnom Penh-Cambodia exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:44.168255 On https://www.rome2rio.com/map/Jerusalem-Israel/Colombo-Sri Lanka exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:45.700222 On https://www.rome2rio.com/map/Jerusalem-Israel/Rome-Italy exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:45.975871 On https://www.rome2rio.com/map/Jerusalem-Israel/Berlin-Germany exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:46.306054 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Manila-Philippines exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:46.407478 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Islamabad-Pakistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:46.612052 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Dushanbe-Tajikistan exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:47.089255 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Dhaka-Bangladesh exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
-    parsed = json.loads(pathes_info["content"])[2][1]
-TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:47.497350 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Manila-Philippines-aci exception occurred
-Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:48.098391 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Dhaka-Bangladesh-acl exception occurred
+root - ERROR - 2023-02-18 16:05:15.184944 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Phnom Penh-Cambodia exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:15.237842 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tashkent-Uzbekistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:15.528401 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Male-Maldives exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:15.552377 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Lhasa-China exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:15.911821 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tehran-Iran-aby exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:48.453834 On https://www.rome2rio.com/map/London-United Kingdom/Tehran-Iran exception occurred
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:49.927550 On https://www.rome2rio.com/map/London-United Kingdom/Islamabad-Pakistan exception occurred
+root - ERROR - 2023-02-18 16:05:16.190353 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Bandar Seri Begawan-Brunei exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:50.823663 On https://www.rome2rio.com/map/London-United Kingdom/Bandar Seri Begawan-Brunei exception occurred
+root - ERROR - 2023-02-18 16:05:16.231347 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Lhasa-China-abc exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:51.589551 On https://www.rome2rio.com/map/London-United Kingdom/Tel-Aviv-Israel exception occurred
+
+During handling of the above exception, another exception occurred:
+
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:53.514941 On https://www.rome2rio.com/map/Berlin-Germany/Doha-Qatar exception occurred
+root - ERROR - 2023-02-18 16:05:17.117480 On https://www.rome2rio.com/map/Naypyidaw-Myanmar/Tel-Aviv-Israel exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:54.034145 On https://www.rome2rio.com/map/Berlin-Germany/Bandar Seri Begawan-Brunei exception occurred
+root - ERROR - 2023-02-18 16:05:17.669652 On https://www.rome2rio.com/map/Muscat-Oman/Phnom Penh-Cambodia exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:54.337555 On https://www.rome2rio.com/map/Berlin-Germany/Ashgabat-Turkmenistan exception occurred
+root - ERROR - 2023-02-18 16:05:18.362903 On https://www.rome2rio.com/map/Muscat-Oman/Dhaka-Bangladesh exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:55.239451 On https://www.rome2rio.com/map/Berlin-Germany/Tel-Aviv-Israel exception occurred
+root - ERROR - 2023-02-18 16:05:19.678408 On https://www.rome2rio.com/map/Manila-Philippines/Sanaa-Yemen exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
-root - ERROR - 2023-02-18 14:21:56.154906 On https://www.rome2rio.com/map/Berlin-Germany/London-United Kingdom exception occurred
+root - ERROR - 2023-02-18 16:05:19.931916 On https://www.rome2rio.com/map/Manila-Philippines/Lhasa-China exception occurred
 Traceback (most recent call last):
-  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 48, in scrap_routine
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:20.749822 On https://www.rome2rio.com/map/Manila-Philippines/Beirut-Lebanon exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:22.321902 On https://www.rome2rio.com/map/Male-Maldives/Kuwait City-Kuwait exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:22.596726 On https://www.rome2rio.com/map/Male-Maldives/Kuwait City-Kuwait-abm exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:22.652748 On https://www.rome2rio.com/map/Male-Maldives/Doha-Qatar exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:23.565488 On https://www.rome2rio.com/map/Lhasa-China/Tehran-Iran exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:24.357537 On https://www.rome2rio.com/map/Lhasa-China/Kuwait City-Kuwait exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:26.947079 On https://www.rome2rio.com/map/Kuwait City-Kuwait/Astana-Kazakhstan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:28.253504 On https://www.rome2rio.com/map/Kathmandu-Nepal/Bandar Seri Begawan-Brunei exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:28.835465 On https://www.rome2rio.com/map/Kathmandu-Nepal/Tel-Aviv-Israel exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:29.786381 On https://www.rome2rio.com/map/Islamabad-Pakistan/Phnom Penh-Cambodia exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:30.945689 On https://www.rome2rio.com/map/Islamabad-Pakistan/Astana-Kazakhstan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:31.232296 On https://www.rome2rio.com/map/Islamabad-Pakistan/Jerusalem-Israel exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:31.262488 On https://www.rome2rio.com/map/Dushanbe-Tajikistan/Tehran-Iran exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:31.321811 On https://www.rome2rio.com/map/Islamabad-Pakistan/Cluj-Napoca-Romania exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:31.833310 On https://www.rome2rio.com/map/Dushanbe-Tajikistan/Male-Maldives exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:33.053191 On https://www.rome2rio.com/map/Dushanbe-Tajikistan/London-United Kingdom exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:34.219131 On https://www.rome2rio.com/map/Doha-Qatar/Muscat-Oman exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:35.276911 On https://www.rome2rio.com/map/Doha-Qatar/Eilat-Israel exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:35.544727 On https://www.rome2rio.com/map/Doha-Qatar/Paris-France exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:36.093170 On https://www.rome2rio.com/map/Doha-Qatar/Rome-Italy exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:37.023575 On https://www.rome2rio.com/map/Dhaka-Bangladesh/Islamabad-Pakistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:39.905781 On https://www.rome2rio.com/map/Colombo-Sri Lanka/Ashgabat-Turkmenistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:40.090724 On https://www.rome2rio.com/map/Colombo-Sri Lanka/Rome-Italy exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:40.558400 On https://www.rome2rio.com/map/Colombo-Sri Lanka/Ashgabat-Turkmenistan-abg exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:42.445456 On https://www.rome2rio.com/map/Beirut-Lebanon/Tehran-Iran exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:42.658463 On https://www.rome2rio.com/map/Beirut-Lebanon/Sanaa-Yemen exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:43.492969 On https://www.rome2rio.com/map/Beirut-Lebanon/Male-Maldives exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:43.810032 On https://www.rome2rio.com/map/Beirut-Lebanon/Manila-Philippines exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:44.317376 On https://www.rome2rio.com/map/Beirut-Lebanon/Ashgabat-Turkmenistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:45.232646 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Phnom Penh-Cambodia exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:45.424748 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Muscat-Oman exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:46.017180 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Islamabad-Pakistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:46.162653 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Doha-Qatar exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:46.193056 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Dushanbe-Tajikistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:46.371392 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Baghdad-Iraq exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:46.521718 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Islamabad-Pakistan-abq exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:47.234747 On https://www.rome2rio.com/map/Bandar Seri Begawan-Brunei/Tel-Aviv-Israel exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:47.967235 On https://www.rome2rio.com/map/Baghdad-Iraq/Kuwait City-Kuwait exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:48.323850 On https://www.rome2rio.com/map/Baghdad-Iraq/Dhaka-Bangladesh exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:49.588784 On https://www.rome2rio.com/map/Astana-Kazakhstan/Muscat-Oman exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:51.290482 On https://www.rome2rio.com/map/Astana-Kazakhstan/Cluj-Napoca-Romania exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:51.453085 On https://www.rome2rio.com/map/Ashgabat-Turkmenistan/Tashkent-Uzbekistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:51.518465 On https://www.rome2rio.com/map/Astana-Kazakhstan/Cluj-Napoca-Romania-abz exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:51.612398 On https://www.rome2rio.com/map/Astana-Kazakhstan/Tel-Aviv-Israel exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:51.684634 On https://www.rome2rio.com/map/Ashgabat-Turkmenistan/Naypyidaw-Myanmar exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:54.822078 On https://www.rome2rio.com/map/Cluj-Napoca-Romania/Kuwait City-Kuwait exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:54.977115 On https://www.rome2rio.com/map/Cluj-Napoca-Romania/Lhasa-China exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:55.026338 On https://www.rome2rio.com/map/Cluj-Napoca-Romania/Islamabad-Pakistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:57.263528 On https://www.rome2rio.com/map/Paris-France/Naypyidaw-Myanmar exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:57.377767 On https://www.rome2rio.com/map/Paris-France/Dushanbe-Tajikistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:57.831246 On https://www.rome2rio.com/map/Paris-France/Kuwait City-Kuwait exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:58.948661 On https://www.rome2rio.com/map/Paris-France/Baghdad-Iraq exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:05:59.765902 On https://www.rome2rio.com/map/Eilat-Israel/Sanaa-Yemen exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:00.132191 On https://www.rome2rio.com/map/Eilat-Israel/Muscat-Oman exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:01.403437 On https://www.rome2rio.com/map/Eilat-Israel/Doha-Qatar exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:01.412267 On https://www.rome2rio.com/map/Eilat-Israel/Colombo-Sri Lanka exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:01.433808 On https://www.rome2rio.com/map/Eilat-Israel/Kathmandu-Nepal exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:01.634079 On https://www.rome2rio.com/map/Eilat-Israel/Dushanbe-Tajikistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:03.040278 On https://www.rome2rio.com/map/Eilat-Israel/Berlin-Germany exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:06.787710 On https://www.rome2rio.com/map/Jerusalem-Israel/Phnom Penh-Cambodia exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:07.526241 On https://www.rome2rio.com/map/Jerusalem-Israel/Colombo-Sri Lanka exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:09.169049 On https://www.rome2rio.com/map/Jerusalem-Israel/Rome-Italy exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:09.485942 On https://www.rome2rio.com/map/Jerusalem-Israel/Berlin-Germany exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:09.788858 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Manila-Philippines exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:09.860064 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Islamabad-Pakistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:10.040170 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Dushanbe-Tajikistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:10.485479 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Dhaka-Bangladesh exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:10.743478 On https://www.rome2rio.com/map/Jerusalem-Israel/Berlin-Germany-acx exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:10.903109 On https://www.rome2rio.com/map/Tel-Aviv-Israel/Manila-Philippines-acy exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:12.028130 On https://www.rome2rio.com/map/London-United Kingdom/Tehran-Iran exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:12.347344 On https://www.rome2rio.com/map/Jerusalem-Israel/Berlin-Germany-acc exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:13.341029 On https://www.rome2rio.com/map/London-United Kingdom/Islamabad-Pakistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:13.691852 On https://www.rome2rio.com/map/London-United Kingdom/Islamabad-Pakistan-acg exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:13.697639 On https://www.rome2rio.com/map/London-United Kingdom/Tehran-Iran-ace exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:13.821648 On https://www.rome2rio.com/map/London-United Kingdom/Paris-France exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:14.004545 On https://www.rome2rio.com/map/London-United Kingdom/Rome-Italy exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:14.521677 On https://www.rome2rio.com/map/London-United Kingdom/Tel-Aviv-Israel exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:14.525423 On https://www.rome2rio.com/map/London-United Kingdom/Bandar Seri Begawan-Brunei exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:17.210082 On https://www.rome2rio.com/map/Berlin-Germany/Doha-Qatar exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:17.684963 On https://www.rome2rio.com/map/Berlin-Germany/Bandar Seri Begawan-Brunei exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:18.401572 On https://www.rome2rio.com/map/Berlin-Germany/Ashgabat-Turkmenistan exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:18.925659 On https://www.rome2rio.com/map/Berlin-Germany/Tel-Aviv-Israel exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:19.526620 On https://www.rome2rio.com/map/Berlin-Germany/Ashgabat-Turkmenistan-acp exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+root - ERROR - 2023-02-18 16:06:19.841877 On https://www.rome2rio.com/map/Berlin-Germany/London-United Kingdom exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
     parsed = json.loads(pathes_info["content"])[2][1]
 TypeError: 'NoneType' object is not subscriptable
 urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: www.rome2rio.com. Connection pool size: 10
+root - ERROR - 2023-02-18 16:06:20.661087 On https://www.rome2rio.com/map/Berlin-Germany/Ashgabat-Turkmenistan-acr exception occurred
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/andrii/code/projects/CheapTripScraping/src/scraping.py", line 49, in scrap_routine
+    parsed = json.loads(pathes_info["content"])[2][1]
+TypeError: 'NoneType' object is not subscriptable
 urllib3.connectionpool - WARNING - Connection pool is full, discarding connection: www.rome2rio.com. Connection pool size: 10

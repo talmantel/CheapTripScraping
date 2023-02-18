@@ -4,10 +4,18 @@ The process consists of three stages:
     3) obtained data TREATMENT with the purpose to create the datasets for validation etc (treatment.py)
 
 All nessecary input files are stored in directory 'files/csv'.
-All output files are stored in the folder 'output'.
+All output files are stored in the folder 'output':
+    - all_direct_routes_raw.csv - non-ordered file with all avaliable 'raw' data each direct route (output of extraction.py)
+    - all_direct_routes_validation.csv - non-ordered file with only the columns relevant to validation purposes (output of treatment.py)
+    - all_direct_routes_triples - file containing ordered by triples (from_id, to_id, transport_id) routes with lowest price (treatment.py)
+    - all_direct_
 
 Whole process can be runed with only one 'scrapRome2Rio.py' script.
 
 Also there is an script 'fixing.py' fixing prices for the specific routes stored in csv file(s) by path "files/routes_to_fix/". 
-    To do this run '$python3 fixing.py -f [filename].csv'.
-    Running '$python3 fixing.py -b' makes possible to process of multiple files in a batch.
+    To do this run:
+                     $ python3 fixing.py -f [filename].csv
+    Running 
+                     $ python3 fixing.py -b 
+
+    makes possible to process of multiple files in a batch.

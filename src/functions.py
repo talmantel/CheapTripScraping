@@ -81,5 +81,5 @@ if __name__ == '__main__':
     
     #print(get_bb_id([38.4511,68.9642]), type(get_bb_id([38.4511,68.9642]))) """
     
-    print(get_exchange_rates())
+    #print(get_exchange_rates())
     pass

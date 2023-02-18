@@ -5,10 +5,10 @@ The process consists of the following steps:
     4) FIXING the prices for specific routes listed in corresponding file (fixing.py)
 
 All nessecary input files are stored in directory 'files/csv':
-    - airport_codes_short.csv
-    - bbox_short.csv
-    - cities.csv
-    - Full_list_with_countries_CLEANED_for_scraping.csv
+    - airport_codes_short.csv (binds airport codes with city ids)
+    - bbox_short.csv (binds city ids with city geo coordinates)
+    - cities.csv (list of city names and city ids)
+    - Full_list_with_countries_CLEANED_for_scraping.csv (binds city ids, city names, country names)
 
 Subfolder 'files/currencies' stores the json files with the currency exchange rates (updates if last updating date is later than 1 day ago).    
 

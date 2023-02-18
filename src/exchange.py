@@ -13,7 +13,7 @@ def update_exchange_rates() -> bool:
     url = 'https://api.currencyapi.com/v3/latest'
     pars = {'apikey': 'XdHFU6mfUp0T3E7EQe0SNtGTfdE0JLgaxz8FDrSf', 'base_currency': 'EUR'}
     
-    print('Updating exchange rates', end='...')
+    print('\nUpdating exchange rates...', end='...')
     
     try:
         r = requests.get(url, params=pars)
@@ -22,7 +22,7 @@ def update_exchange_rates() -> bool:
         with open(CURRENCY_JSON, mode='w') as f:
             json.dump(r.json(), f)
     
-        print('successfully!')
+        print('successfully!\n')
         
         return True
     

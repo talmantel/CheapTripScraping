@@ -17,7 +17,7 @@ def fix_price(input_csv):
         if not input_csv.is_file():
             raise FileNotFoundError(input_csv)
         
-        print(f"Start fixing process from '{input_csv}' ...")
+        print(f"Price fixing from '{input_csv}'...", end='...')
         
         df_input = pd.read_csv(input_csv, usecols=['from_id', 'to_id', 'transport_id', 'price_to_fix'])
         valid_trips = tuple(zip(df_input['from_id'], df_input['to_id'], df_input['transport_id'], df_input['price_to_fix']))
@@ -64,7 +64,7 @@ def fix_price(input_csv):
         df_output.to_csv(VALID_ROUTES_CSV)
         df_fixed_ids.to_csv(FIXED_IDS_CSV, index=None)
         
-        print('Routes were fixed successfully!')
+        print('successfully!\n')
         
     except FileNotFoundError as err:
         print(f"File '{err}' with routes have to be fixed not found")

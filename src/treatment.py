@@ -4,7 +4,7 @@ from config import RAW_CSV, VALIDATION_CSV, TRIPLES_CSV
 
 def treat_data():
     
-    print('Start treatment process...')
+    print('\nData treatment...', end='...')
     
     # Making validation dataset from raw csv
     df_val= pd.read_csv(RAW_CSV, index_col=None, 
@@ -26,7 +26,7 @@ def treat_data():
     # Output 
     df_triples.to_csv(TRIPLES_CSV, index=False)
     
-    print('Data treatment finished successfully!\n')
+    print('successfully!\n')
     
     
 if __name__ == '__main__':

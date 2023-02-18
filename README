@@ -1,4 +1,4 @@
-Whole process consists of the following steps:
+The process consists of the following steps:
     1) SCRAPING jsons from the site (scraping.py)
     2) EXTRACTION of direct routes from the scraped jsons (extraction.py)
     3) TREATMENT of obtained data to create the datasets for validation etc (treatment.py)
@@ -10,7 +10,9 @@ All nessecary input files are stored in directory 'files/csv':
     - cities.csv
     - Full_list_with_countries_CLEANED_for_scraping.csv
 
-After the scripts processing following output subfolders appear in 'output' folder:
+Subfolder 'files/currencies' stores the json files with the currency exchange rates (updates if last updating date is later than 1 day ago).    
+
+After processing the scripts, the following subfolders appear in the 'output' folder:
     - /csv_output;
     - /inner_json_output;
     - /json_output.
@@ -36,7 +38,8 @@ The 'fixing.py' script aimed to fix prices for the specific routes stored in csv
     Or run to fix from batch of files:
                                         $ python3 fixing.py -b 
 
-Subfolder 'files/currencies' stores the json files with currency exchange rates (updated each time when extraction.py is running).
+Folder 'logs' stores the corresponding log-files for each stage of the process.
+Script 'hotels.py' extracts the links from the scraped json files and stores it in json file in the folder 'files/hotels'.
 
 
 

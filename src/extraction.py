@@ -190,9 +190,9 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
 
 def extract_data(source_dir=OUTPUT_JSON_DIR):
     
-    print('Start data extraction', end='...')
+    print('\n Data extraction...', end='...')
     
-    # get currency exchange rates for EUR and update date
+    # get last currency exchange rates for EUR and update date
     ago_days, euro_rates = get_exchange_rates()
           
     # updates currency exchange rates    
@@ -201,7 +201,6 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
     
     #create output csv dir and add header to output csv file
     OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
-    
     with open(RAW_CSV, mode='w') as f:
         csv_writer = csv.DictWriter(f, fieldnames=OUTPUT_COLUMNS)
         csv_writer.writeheader()
@@ -217,10 +216,7 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
     with open(OUTPUT_CSV_DIR/'unknown_currencies.csv', mode='w') as f:
         csv.writer(f).writerow(unknown_currencies)
     
-    print('Data extraction finished successfully!\n')
-    
-    # data treatment to obtain the datasets for validation and ordered by triples 
-    #treat_data()
+    print('successfully!\n')
     
     
 if __name__ == '__main__':

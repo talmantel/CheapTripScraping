@@ -14,7 +14,7 @@ LOGS_DIR = Path('../logs')
 # set up inputs
 INPUT_CSV_DIR = Path('../files/csv')
 AIRPORT_CODES_CSV = Path(INPUT_CSV_DIR/'airport_codes_short.csv')
-BBOXES_CSV = Path(INPUT_CSV_DIR/'bbox_short_try.csv')
+BBOXES_CSV = Path(INPUT_CSV_DIR/'bbox_short.csv')
 CITIES_CSV = Path(INPUT_CSV_DIR/'cities.csv')
 CITY_COUNTRY_CSV = Path(INPUT_CSV_DIR/'Full_list_with_countries_CLEANED_for_scraping.csv')
 CURRENCY_JSON = Path('../files/currencies/exchange_rates_EUR.json')
@@ -27,6 +27,7 @@ INNER_JSON_DIR = Path('../output/inner_json_output')
 OLD_OUTPUT_JSON_DIR = Path('../files/output/json_output/2_run_jsons_r2r')
 HOTELS_DIR = Path('../files/hotels')
 ROUTES_TO_FIX_DIR = Path('../files/routes_to_fix')
+CURRENCY_EXCHANGE_RATES_DIR = Path('../files/currencies')
 
 # set up csvs file names
 RAW_CSV = Path(OUTPUT_CSV_DIR/'all_direct_routes_raw.csv')

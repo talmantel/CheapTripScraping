@@ -10,7 +10,7 @@ All nessecary input files are stored in directory 'files/csv':
     - cities.csv
     - Full_list_with_countries_CLEANED_for_scraping.csv
 
-After the scripts processing there are following output subfolders in output:
+After the scripts processing following output subfolders appear in 'output' folder:
     - /csv_output;
     - /inner_json_output;
     - /json_output.

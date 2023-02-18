@@ -68,7 +68,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 num_of_unique_routes = len(unique_routes)
                 unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
                 if num_of_unique_routes == len(unique_routes): continue
-                                
+                         
                 distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # ffor flights only
                 frequency_tpw = route[7]
                 
@@ -190,17 +190,14 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
 
 def extract_data(source_dir=OUTPUT_JSON_DIR):
     
-    print('Start data extraction...')
+    print('Start data extraction', end='...')
     
     # get currency exchange rates for EUR and update date
     ago_days, euro_rates = get_exchange_rates()
-    
-    # get answer
-    answer = input(f'Last currency exchange rates update: {ago_days} days ago.'
-                   f' Update rates before extraction? (y/n) ')
-    if answer in ('Y', 'y'): 
-        update_exchange_rates()
-        _, euro_rates = get_exchange_rates()     
+          
+    # updates currency exchange rates    
+    if ago_days > 1: 
+        if update_exchange_rates(): _, euro_rates = get_exchange_rates()
     
     #create output csv dir and add header to output csv file
     OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)

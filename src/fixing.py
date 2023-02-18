@@ -13,8 +13,7 @@ logging.basicConfig(filename=LOGS_DIR/'fixing.log', filemode='w', format='%(name
 
 def fix_price(input_csv):
     
-    try: 
-        
+    try:   
         if not input_csv.is_file():
             raise FileNotFoundError(input_csv)
         

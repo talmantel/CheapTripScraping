@@ -78,7 +78,7 @@ def fix_price(input_csv=ROUTES_TO_FIX_CSV):
 
 if __name__ == '__main__':
     
-    if len(sys.argv) > 1 and sys.argv[1] == '-p':
+    if len(sys.argv) > 1 and sys.argv[1] == '-b':
         files = Path(ROUTES_TO_FIX_DIR).glob('routes_to_fix_*.csv')
         for file in files:
             fix_price(input_csv=file)

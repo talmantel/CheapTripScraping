@@ -26,12 +26,13 @@ OUTPUT_CSV_DIR = Path('../output/csv_output')
 INNER_JSON_DIR = Path('../output/inner_json_output')
 OLD_OUTPUT_JSON_DIR = Path('../files/output/json_output/2_run_jsons_r2r')
 HOTELS_DIR = Path('../files/hotels')
+ROUTES_TO_FIX_DIR = Path('../files/routes_to_fix')
 
 # set up csvs file names
 RAW_CSV = Path(OUTPUT_CSV_DIR/'all_direct_routes_raw.csv')
 VALIDATION_CSV = Path(OUTPUT_CSV_DIR/'all_direct_routes_validation.csv')
 TRIPLES_CSV = Path(OUTPUT_CSV_DIR/'all_direct_routes_triples.csv')
-ROUTES_TO_FIX_CSV = Path(OUTPUT_CSV_DIR/'routes_to_fix.csv')
+ROUTES_TO_FIX_CSV = Path(ROUTES_TO_FIX_DIR/'routes_to_fix.csv')
 FIXED_IDS_CSV = Path(OUTPUT_CSV_DIR/'fixed_ids.csv')
 VALID_ROUTES_CSV = Path(OUTPUT_CSV_DIR/'all_direct_valid_routes.csv')
 

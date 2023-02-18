@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 
-from config import TRIPLES_CSV, ROUTES_TO_FIX_CSV, FIXED_IDS_CSV, VALID_ROUTES_CSV, LOGS_DIR, OUTPUT_CSV_DIR
+from config import TRIPLES_CSV, ROUTES_TO_FIX_CSV, FIXED_IDS_CSV, VALID_ROUTES_CSV, LOGS_DIR, OUTPUT_CSV_DIR, ROUTES_TO_FIX_DIR
 
 
 logging.basicConfig(filename=LOGS_DIR/'fixing.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
@@ -28,7 +28,7 @@ def fix_price(input_csv=ROUTES_TO_FIX_CSV):
         if not FIXED_IDS_CSV.is_file():
             with open(FIXED_IDS_CSV, 'w') as val_file:
                 val_file.write('path_id')
-        df_fixed_ids = pd.read_csv(FIXED_IDS_CSV, index_col=None, dtype=int)
+        df_fixed_ids = pd.read_csv(FIXED_IDS_CSV)
         
         if not VALID_ROUTES_CSV.is_file():
             df_triples = pd.read_csv(TRIPLES_CSV, index_col='path_id')
@@ -38,27 +38,32 @@ def fix_price(input_csv=ROUTES_TO_FIX_CSV):
         for valid_trip in valid_trips:
             try:
                 # in forward direction
-                query = 'from_id == @valid_trip[0] and to_id == @valid_trip[1] and transport_id == @valid_trip[2]'
-                if len(df_output.query(query)) == 0: raise Exception(valid_trip[:3])
-                match_index = df_output.query(query).index
+                query_forward = 'from_id == @valid_trip[0] and to_id == @valid_trip[1] and transport_id == @valid_trip[2]'
+                
+                if df_output.query(query_forward).shape[0] == 0: raise IndexError(valid_trip[:3])
+                match_index = df_output.query(query_forward).index[0]
+                
                 if match_index not in list(df_fixed_ids['path_id']):
                     df_output.at[match_index, 'price_min_EUR'] = valid_trip[3]
-                    df_fixed_ids.at[len(df_fixed_ids.index)] = match_index
-                    print(type(match_index))
+                    df_fixed_ids.at[df_fixed_ids.shape[0]] = match_index
+                    print(match_index)
             
                 # backward
-                query = 'from_id == @valid_trip[1] and to_id == @valid_trip[0] and transport_id == @valid_trip[2]'
-                if len(df_output.query(query)) == 0: raise Exception(valid_trip[:3])
-                match_index = df_output.query(query).index
+                query_backward = 'from_id == @valid_trip[1] and to_id == @valid_trip[0] and transport_id == @valid_trip[2]'
+             
+                if df_output.query(query_backward).shape[0] == 0: raise IndexError(valid_trip[:3])
+                match_index = df_output.query(query_backward).index[0]
                 if match_index not in list(df_fixed_ids['path_id']):
                     df_output.at[match_index, 'price_min_EUR'] = valid_trip[3]
-                    df_fixed_ids.at[len(df_fixed_ids.index)] = match_index
+                    df_fixed_ids.at[df_fixed_ids.shape[0]] = match_index
+                    print(match_index)
             
-            except Exception as err:
-                logging.warning(f"In file: '{input_csv.name}' matches not found: "
+            except IndexError as err:
+                logging.error(f"In file: '{input_csv.name}'\n\tmatches not found: "
                                 f"from_id = {err.args[0][0]}, to_id = {err.args[0][1]}, transport_id = {err.args[0][2]}")
                 continue
-
+            
+            
         df_output.to_csv(VALID_ROUTES_CSV)
         df_fixed_ids.to_csv(FIXED_IDS_CSV, index=None)
         
@@ -73,8 +78,8 @@ def fix_price(input_csv=ROUTES_TO_FIX_CSV):
 
 if __name__ == '__main__':
     
-    if sys.argv[1] == '-p':
-        files = Path(OUTPUT_CSV_DIR).glob('routes_to_fix_*.csv')
+    if len(sys.argv) > 1 and sys.argv[1] == '-p':
+        files = Path(ROUTES_TO_FIX_DIR).glob('routes_to_fix_*.csv')
         for file in files:
             fix_price(input_csv=file)
     else:

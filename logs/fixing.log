@@ -1,2 +1,234 @@
-root - WARNING - In file: 'routes_to_fix_Most popular direct routes_Fly.csv' matches not found: from_id = 151, to_id = 250, transport_id = 1
-root - WARNING - In file: 'routes_to_fix_Most popular direct routes_Fly.csv' matches not found: from_id = 358, to_id = 62, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 305, to_id = 193, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 121, to_id = 365, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 127, to_id = 214, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 127, to_id = 365, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 249, to_id = 205, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 365, to_id = 121, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 171, to_id = 231, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 191, to_id = 329, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 214, to_id = 127, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 225, to_id = 162, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 286, to_id = 252, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 353, to_id = 365, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 358, to_id = 365, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 121, to_id = 214, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 152, to_id = 303, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 214, to_id = 121, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 230, to_id = 287, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 287, to_id = 230, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 303, to_id = 152, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 365, to_id = 353, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 116, to_id = 353, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 145, to_id = 284, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 150, to_id = 264, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 205, to_id = 128, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 225, to_id = 342, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 264, to_id = 150, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 266, to_id = 225, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 284, to_id = 145, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 318, to_id = 225, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 353, to_id = 116, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 205, to_id = 351, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 284, to_id = 351, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 351, to_id = 205, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 351, to_id = 284, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 127, to_id = 191, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 193, to_id = 329, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 205, to_id = 249, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 205, to_id = 252, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 252, to_id = 205, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 284, to_id = 321, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 321, to_id = 284, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 329, to_id = 193, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 159, to_id = 213, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 162, to_id = 225, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 191, to_id = 127, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 193, to_id = 191, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 213, to_id = 159, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 225, to_id = 314, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 242, to_id = 329, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 252, to_id = 286, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 277, to_id = 305, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 329, to_id = 191, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 329, to_id = 242, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 365, to_id = 127, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 191, to_id = 193, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 225, to_id = 252, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 228, to_id = 291, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 252, to_id = 225, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 262, to_id = 329, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 291, to_id = 228, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 305, to_id = 277, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 314, to_id = 225, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 329, to_id = 262, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 348, to_id = 277, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 105, to_id = 284, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 120, to_id = 162, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 128, to_id = 205, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 162, to_id = 120, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 214, to_id = 314, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 214, to_id = 329, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 225, to_id = 318, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 249, to_id = 284, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 284, to_id = 105, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 284, to_id = 249, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 314, to_id = 214, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 329, to_id = 214, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Europe trips by fly (id_1) 6-10 EUR.csv'
+	matches not found: from_id = 342, to_id = 225, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 191, to_id = 358, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 252, to_id = 205, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 284, to_id = 321, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 329, to_id = 242, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 213, to_id = 159, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 252, to_id = 286, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 162, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 214, to_id = 127, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 291, to_id = 228, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 329, to_id = 262, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 348, to_id = 277, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 214, to_id = 121, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 318, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 342, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 214, to_id = 329, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 127, to_id = 345, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 266, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 180, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 17, to_id = 69, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 321, to_id = 176, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 252, to_id = 285, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 191, to_id = 341, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 150, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 127, to_id = 321, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 365, to_id = 293, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 126, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 191, to_id = 325, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 213, to_id = 294, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 179, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 356, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 214, to_id = 108, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 191, to_id = 359, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 191, to_id = 347, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 550, to_id = 553, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 74, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 288, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 225, to_id = 210, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 314, to_id = 31, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 314, to_id = 340, transport_id = 1
+root - ERROR - In file: 'routes_to_fix_Most popular direct routes_Fly.csv'
+	matches not found: from_id = 212, to_id = 171, transport_id = 1

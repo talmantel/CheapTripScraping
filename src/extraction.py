@@ -41,38 +41,41 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
     for inner_path_id, path in enumerate(pathes):
         for route_id, route in enumerate(path[8][:-1]):
                                  
-            if route[0] in TRANSPORT_TYPES['fly']:
+            if route[0] in TRANSPORT_TYPES['fly']: # for 'flight', 'plane', 'fly'
                 
-                from_id = get_id_from_acode(route[2][0])
+                from_id = get_id_from_acode(route[2][0]) # gets city's id from the airport code
                 to_id = get_id_from_acode(route[3][0])
                 
-                if id_not_found(from_id, to_id): continue
+                if id_not_found(from_id, to_id): continue # at least one of ids was not found
                 
                 currency = route[11][0][1]
-                if currency_mismatch(currency, euro_rates.keys()): 
+                if currency_mismatch(currency, euro_rates.keys()): # the currency is out of used currency list
                     unknown_currencies.add(currency)
-                    continue
+                    continue 
                 
                 price_min = route[11][0][0]
-                if bad_price_value(price_min): continue
-                price_min_EUR = round(price_min / euro_rates[currency]['value'])
+                if bad_price_value(price_min): continue # the price has invalid value
+                price_min_EUR = round(price_min / euro_rates[currency]['value']) # convertation to EUR
                 
-                duration_min = round(route[4] / 60) # sec to min
+                duration_min = round(route[4] / 60) # sec to min 
                 
+                # checks mismatching to min price and duration terms for euro zone
                 if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
                 
                 transport_id = TRANSPORT_TYPES_ID['fly']
                 
-                # to avoid full duplicating routes
+                # to avoid duplicating routes
                 num_of_unique_routes = len(unique_routes)
-                unique_routes.add((from_id, to_id, transport_id, price_min_EUR)) #, duration_min))
+                unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
                 if num_of_unique_routes == len(unique_routes): continue
                                 
-                distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # for flyes only
+                distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # ffor flights only
                 frequency_tpw = route[7]
                 
                 counter[from_id] += 1
                 path_id = counter[from_id]
+                
+                # creates and writes to json file the parameters of certain route  
                 inner_json = {'path_id': path_id,
                               'from_id': from_id,
                               'to_id': to_id,
@@ -89,6 +92,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                 with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
                     json.dump(inner_json, file)
                 
+                # collects all avaliable data
                 raw_data.append({'path_id': path_id,
                                  'origin_id': origin_id,
                                  'destination_id': destination_id,
@@ -134,7 +138,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                     
                     # to avoid full duplicating routes
                     num_of_unique_routes = len(unique_routes)
-                    unique_routes.add((from_id, to_id, transport_id, price_min_EUR)) #, duration_min))
+                    unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
                     if num_of_unique_routes == len(unique_routes): continue
                     
                     distance_km = round(route[5])
@@ -142,6 +146,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                     
                     counter[from_id] += 1
                     path_id = counter[from_id]
+                    
+                    # creates and writes the parameters of certain route to json file 
                     inner_json = {'path_id': path_id,
                                   'from_id': from_id,
                                   'to_id': to_id,
@@ -157,7 +163,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> dict:
                     with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
                         json.dump(inner_json, file)
                     
-                    
+                    # collects all avaliable data
                     raw_data.append({'path_id': path_id,
                                      'origin_id': origin_id,
                                      'destination_id': destination_id,

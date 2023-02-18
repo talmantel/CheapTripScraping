@@ -15,9 +15,9 @@ from generators import gen_city_country_pairs, gen_injection
 logging.basicConfig(filename=LOGS_DIR/'scraping.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 
 session = requests.Session()
-inject = gen_injection()
+inject = gen_injection() # injection generator
 
-
+# writes missed cities pairs
 def missed_pairs(missed_pairs):
     
     from_city_id, to_city_id, from_city, from_country, to_city, to_country = missed_pairs
@@ -43,9 +43,9 @@ def scrap_routine(cities_countries_pairs, injection=''):
         
         soup = BeautifulSoup(r.text, 'html.parser')
         
-        dis = soup.find('meta', id="deeplinkTrip")
+        pathes_info = soup.find('meta', id="deeplinkTrip") # this tag contists all info about pathes between the cities specified in way
               
-        parsed = json.loads(dis["content"])[2][1]
+        parsed = json.loads(pathes_info["content"])[2][1]
         
         print(f'Recording path in {from_city_id}-{to_city_id}-{from_city}-{to_city}.json.gz')
         
@@ -68,6 +68,7 @@ def scrap_json():
     OUTPUT_JSON_DIR.mkdir(parents=True, exist_ok=True)
     OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)
     
+    # threads running 
     with concurrent.futures.ThreadPoolExecutor() as executor:
         executor.map(scrap_routine, gen_city_country_pairs())
         

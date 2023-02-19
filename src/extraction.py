@@ -196,8 +196,7 @@ def extract_data(source_dir=OUTPUT_JSON_DIR):
     ago_days, euro_rates = get_exchange_rates()
           
     # updates currency exchange rates    
-    if ago_days > 1: 
-        if update_exchange_rates(): _, euro_rates = get_exchange_rates()
+    if ago_days > 1 and update_exchange_rates(): _, euro_rates = get_exchange_rates()
     
     #create output csv dir and add header to output csv file
     OUTPUT_CSV_DIR.mkdir(parents=True, exist_ok=True)

@@ -12,17 +12,13 @@ logging.basicConfig(filename=LOGS_DIR/'currency_exchange.log', filemode='w',
 def update_exchange_rates() -> bool:
     url = 'https://api.currencyapi.com/v3/latest'
     pars = {'apikey': 'XdHFU6mfUp0T3E7EQe0SNtGTfdE0JLgaxz8FDrSf', 'base_currency': 'EUR'}
-    
-    print('\nUpdating exchange rates...', end='...')
-    
+       
     try:
         r = requests.get(url, params=pars)
     
         CURRENCY_EXCHANGE_RATES_DIR.mkdir(parents=True, exist_ok=True)
         with open(CURRENCY_JSON, mode='w') as f:
             json.dump(r.json(), f)
-    
-        print('successfully!\n')
         
         return True
     

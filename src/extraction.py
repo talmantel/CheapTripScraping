@@ -69,7 +69,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
                 if num_of_unique_routes == len(unique_routes): continue
                          
-                distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # ffor flights only
+                distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # for flights only
                 frequency_tpw = route[7]
                 
                 counter[from_id] += 1

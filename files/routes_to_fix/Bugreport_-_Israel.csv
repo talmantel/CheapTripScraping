@@ -1,0 +1,5 @@
+from_id,to_id,transport_id,price_to_fix,ttype
+336,52,3,6,train
+336,52,2,4,bus
+336,171,2,15,bus
+52,171,2,18,bus

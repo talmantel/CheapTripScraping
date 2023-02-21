@@ -13,11 +13,13 @@ logging.basicConfig(filename=LOGS_DIR/'fixing.log', filemode='w', format='%(name
 
 def fix_price(input_csv):
     
+    input_csv = Path(input_csv)
+    
     try:   
         if not input_csv.is_file():
             raise FileNotFoundError(input_csv)
         
-        print(f"Price fixing from '{input_csv}'...", end='...')
+        print(f"Price fixing from '{input_csv}'...")
         
         df_input = pd.read_csv(input_csv, usecols=['from_id', 'to_id', 'transport_id', 'price_to_fix'])
         valid_trips = tuple(zip(df_input['from_id'], df_input['to_id'], df_input['transport_id'], df_input['price_to_fix']))
@@ -40,6 +42,11 @@ def fix_price(input_csv):
                 if df_output.query(query_forward).shape[0] == 0: raise IndexError(valid_trip[:3])
                 match_index = df_output.query(query_forward).index[0]
                 
+                # drops record if price_to_fix == 0
+                if valid_trip[3] == 0: 
+                    df_output.drop(index=match_index, axis=0, inplace=True)
+                    continue
+                
                 if match_index not in list(df_fixed_ids['path_id']):
                     df_output.at[match_index, 'price_min_EUR'] = valid_trip[3]
                     df_fixed_ids.at[df_fixed_ids.shape[0]] = match_index
@@ -50,6 +57,7 @@ def fix_price(input_csv):
              
                 if df_output.query(query_backward).shape[0] == 0: raise IndexError(valid_trip[:3])
                 match_index = df_output.query(query_backward).index[0]
+                
                 if match_index not in list(df_fixed_ids['path_id']):
                     df_output.at[match_index, 'price_min_EUR'] = valid_trip[3]
                     df_fixed_ids.at[df_fixed_ids.shape[0]] = match_index
@@ -64,7 +72,7 @@ def fix_price(input_csv):
         df_output.to_csv(VALID_ROUTES_CSV)
         df_fixed_ids.to_csv(FIXED_IDS_CSV, index=None)
         
-        print('successfully!\n')
+        print('......successfully!\n')
         
     except FileNotFoundError as err:
         print(f"File '{err}' with routes have to be fixed not found")
@@ -81,4 +89,5 @@ if __name__ == '__main__':
             fix_price(file)
             
     elif len(sys.argv) > 2 and sys.argv[1] == '-f':
+        print(sys.argv[2])
         fix_price(Path(ROUTES_TO_FIX_DIR)/sys.argv[2])

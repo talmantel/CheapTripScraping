@@ -34,45 +34,59 @@ def fix_price(input_csv):
             df_triples.to_csv(VALID_ROUTES_CSV)
         df_output = pd.read_csv(VALID_ROUTES_CSV, index_col='path_id')
         
+        i, j, k = 0, 0, 0
         for valid_trip in valid_trips:
-            try:
-                # in forward direction
-                query_forward = 'from_id == @valid_trip[0] and to_id == @valid_trip[1] and transport_id == @valid_trip[2]'
+            try:                  
                 
-                if df_output.query(query_forward).shape[0] == 0: raise IndexError(valid_trip[:3])
-                match_index = df_output.query(query_forward).index[0]
+                # makes strings for queries in both direction
+                forward_conds = 'from_id == @valid_trip[0] and to_id == @valid_trip[1] and transport_id == @valid_trip[2]'
+                backward_conds = 'from_id == @valid_trip[1] and to_id == @valid_trip[0] and transport_id == @valid_trip[2]'
                 
-                # drops record if price_to_fix == 0
+                # executes queries
+                query_forward = df_output.query(forward_conds)
+                query_backward = df_output.query(backward_conds)
+                
+                # raises exceprion if no found matches for forward direction
+                if query_forward.empty: raise IndexError((valid_trip[0], valid_trip[1], valid_trip[2]))
+                if query_backward.empty: raise IndexError((valid_trip[1], valid_trip[0], valid_trip[2]))
+                    
+                # finds the indexes if match is found
+                match_index_forward = query_forward.index[0]
+                match_index_backward = query_backward.index[0]
+                
+                # drops invalid record
                 if valid_trip[3] == 0: 
-                    df_output.drop(index=match_index, axis=0, inplace=True)
+                    df_output.drop(index=[match_index_forward, match_index_backward], axis=0, inplace=True)
+                    continue
+                    
+                #
+                if (match_index_forward or match_index_backward) in df_fixed_ids['path_id'].values:
+                    print(f'{valid_trip[0], valid_trip[1]} and {valid_trip[1], valid_trip[0]} already fixed')
+                    j += 1
                     continue
                 
-                if match_index not in list(df_fixed_ids['path_id']):
-                    df_output.at[match_index, 'price_min_EUR'] = valid_trip[3]
-                    df_fixed_ids.at[df_fixed_ids.shape[0]] = match_index
-                    print(match_index)
-            
-                # backward
-                query_backward = 'from_id == @valid_trip[1] and to_id == @valid_trip[0] and transport_id == @valid_trip[2]'
-             
-                if df_output.query(query_backward).shape[0] == 0: raise IndexError(valid_trip[:3])
-                match_index = df_output.query(query_backward).index[0]
+                df_output.at[match_index_forward, 'price_min_EUR'] = valid_trip[3]
+                df_output.at[match_index_backward, 'price_min_EUR'] = valid_trip[3]
+                df_fixed_ids.at[df_fixed_ids.shape[0] + 1, 'path_id'] = match_index_forward
+                df_fixed_ids.at[df_fixed_ids.shape[0] + 1, 'path_id'] = match_index_backward
                 
-                if match_index not in list(df_fixed_ids['path_id']):
-                    df_output.at[match_index, 'price_min_EUR'] = valid_trip[3]
-                    df_fixed_ids.at[df_fixed_ids.shape[0]] = match_index
-                    print(match_index)
+                print(valid_trip[0], valid_trip[1])
+                print(valid_trip[1], valid_trip[0])
+                     
+                i += 2          
             
             except IndexError as err:
                 logging.error(f"In file: '{input_csv.name}'\n\tmatches not found: "
                                 f"from_id = {err.args[0][0]}, to_id = {err.args[0][1]}, transport_id = {err.args[0][2]}")
                 continue
             
+            except:
+                logging.error(f"{datetime.today()} an exception occurred: ", exc_info=True)
             
         df_output.to_csv(VALID_ROUTES_CSV)
         df_fixed_ids.to_csv(FIXED_IDS_CSV, index=None)
         
-        print('......successfully!\n')
+        print(f'{k} records deleted {j} records are already exist.........{i} records fixed successfully!\n')
         
     except FileNotFoundError as err:
         print(f"File '{err}' with routes have to be fixed not found")
@@ -89,5 +103,4 @@ if __name__ == '__main__':
             fix_price(file)
             
     elif len(sys.argv) > 2 and sys.argv[1] == '-f':
-        print(sys.argv[2])
         fix_price(Path(ROUTES_TO_FIX_DIR)/sys.argv[2])

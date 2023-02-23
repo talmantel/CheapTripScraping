@@ -76,7 +76,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 path_id = counter[from_id]
                 
                 # creates and writes to json file the parameters of certain route  
-                inner_json = {'path_id': path_id,
+                """ inner_json = {'path_id': path_id,
                               'from_id': from_id,
                               'to_id': to_id,
                               'transport_id': transport_id,
@@ -90,7 +90,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 
                 INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
                 with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
-                    json.dump(inner_json, file)
+                    json.dump(inner_json, file) """
                 
                 # collects all avaliable data
                 raw_data.append({'path_id': path_id,
@@ -104,7 +104,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                  'price_min_EUR': price_min_EUR,
                                  'duration_min': duration_min,
                                  'distance_km': distance_km,
-                                 'frequency_tpw': frequency_tpw
+                                 'frequency_tpw': frequency_tpw,
+                                 'num_transfers': len(route[12])
                                })
                                     
             # for other used types of vehicles            
@@ -148,7 +149,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                     path_id = counter[from_id]
                     
                     # creates and writes the parameters of certain route to json file 
-                    inner_json = {'path_id': path_id,
+                    """ inner_json = {'path_id': path_id,
                                   'from_id': from_id,
                                   'to_id': to_id,
                                   'transport_id': transport_id,
@@ -161,7 +162,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 
                     INNER_JSON_DIR.mkdir(parents=True, exist_ok=True)
                     with open(f'{INNER_JSON_DIR}/{str(path_id)}.json', mode='w') as file:
-                        json.dump(inner_json, file)
+                        json.dump(inner_json, file) """
                     
                     # collects all avaliable data
                     raw_data.append({'path_id': path_id,
@@ -175,7 +176,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                      'price_min_EUR': price_min_EUR,
                                      'duration_min': duration_min,
                                      'distance_km': distance_km,
-                                     'frequency_tpw': frequency_tpw
+                                     'frequency_tpw': frequency_tpw,
+                                     'num_transfers': ""
                                     })
                       
                 except StopIteration:

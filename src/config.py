@@ -53,7 +53,7 @@ EXCLUDED_CITIES = ('19', '47', '185', '221', '361',
 
 # set up output columns
 OUTPUT_COLUMNS = ('path_id', 'origin_id', 'destination_id', 'inner_path_id', 'route_id', 'from_id', 'to_id', 
-                  'transport_id', 'price_min_EUR', 'duration_min', 'distance_km', 'frequency_tpw')
+                  'transport_id', 'price_min_EUR', 'duration_min', 'distance_km', 'frequency_tpw', 'num_transfers')
 
 # these items can be extracted from the scrapped json
 AVALIABLE_DATA = ('from_city_id', 'from_city', 'to_city_id', 'to_city', 'path_id', 'path_name', 

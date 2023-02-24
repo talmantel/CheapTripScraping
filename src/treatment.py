@@ -9,13 +9,13 @@ def treat_data():
     # Making validation dataset from raw csv
     df_val= pd.read_csv(RAW_CSV, index_col=None, 
                         usecols=['from_id', 'to_id', 'transport_id', 'price_min_EUR', 
-                                 'duration_min', 'distance_km', 'frequency_tpw'])
+                                 'duration_min', 'distance_km', 'frequency_tpw', 'num_transfers'])
     
     # Write to csv for validation purposes
     df_val.to_csv(VALIDATION_CSV, index=False)
         
     # Making dataset for triples from raw csv
-    df_triples = pd.read_csv(RAW_CSV, usecols=['path_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min'])
+    df_triples = pd.read_csv(RAW_CSV, usecols=['path_id', 'from_id', 'to_id', 'transport_id', 'price_min_EUR', 'duration_min', 'num_transfers'])
     
     # Sorting by price in ascending order
     df_triples.sort_values(by=['from_id', 'to_id', 'transport_id', 'price_min_EUR'], ascending=True, inplace=True)

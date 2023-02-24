@@ -105,7 +105,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                  'duration_min': duration_min,
                                  'distance_km': distance_km,
                                  'frequency_tpw': frequency_tpw,
-                                 'num_transfers': len(route[12])
+                                 'num_transfers': len(route[12]),
+                                 'transfers': [transfer[:2] for transfer in route[12]]
                                })
                                     
             # for other used types of vehicles            
@@ -177,7 +178,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                      'duration_min': duration_min,
                                      'distance_km': distance_km,
                                      'frequency_tpw': frequency_tpw,
-                                     'num_transfers': ""
+                                     'num_transfers': "",
+                                     'transfers': ""
                                     })
                       
                 except StopIteration:

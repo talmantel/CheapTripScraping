@@ -10,7 +10,6 @@ from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates
 from exchange import update_exchange_rates
 from generators import gen_jsons
 from filters import id_not_found, same_ids, mismatch_euro_zone_terms, currency_mismatch, bad_price_value, is_trans_nicolaescu
-from treatment import treat_data
 
 
 # logging config
@@ -71,6 +70,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                          
                 distance_km = round(hs.haversine(route[2][3:5], route[3][3:5])) # for flights only
                 frequency_tpw = route[7]
+                num_transfers = len(route[12])
                 
                 counter[from_id] += 1
                 path_id = counter[from_id]
@@ -105,8 +105,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                  'duration_min': duration_min,
                                  'distance_km': distance_km,
                                  'frequency_tpw': frequency_tpw,
-                                 'num_transfers': len(route[12]),
-                                 'transfers': [transfer[:2] for transfer in route[12]]
+                                 'num_transfers': num_transfers
+                                 #'transfers': [transfer[:2] for transfer in route[12]]
                                })
                                     
             # for other used types of vehicles            
@@ -178,8 +178,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                      'duration_min': duration_min,
                                      'distance_km': distance_km,
                                      'frequency_tpw': frequency_tpw,
-                                     'num_transfers': "",
-                                     'transfers': ""
+                                     'num_transfers': ""
+                                     #'transfers': ""
                                     })
                       
                 except StopIteration:

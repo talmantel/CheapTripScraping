@@ -73,6 +73,66 @@ def get_exchange_rates() -> tuple:
         print(f'File not found: {err.filename}')
 
     
+def get_inner_json(pth, rt, route_dic):
+    try:
+        """ if route_dic[pth][8][rt][0] in ['walk', 'car', 'hotel']:
+            return 'bad type of transport' """
+        if route_dic[pth][8][rt][0] in ['flight', 'plane', 'fly']:
+            return {"path_id": None,
+                    "transport":   route_dic[pth][8][rt][0],
+                    "air_0":       route_dic[pth][8][rt][2][0],
+                    "station_0":   route_dic[pth][8][rt][2][1],
+                    "lat_0":       route_dic[pth][8][rt][2][3],
+                    "lon_0":       route_dic[pth][8][rt][2][4],
+                    "country_0":   route_dic[pth][8][rt][2][6],
+                    "city_0":      route_dic[pth][8][rt][2][5],
+                    "air_1":       route_dic[pth][8][rt][3][0],
+                    "station_1":   route_dic[pth][8][rt][3][1],
+                    "lat_1":       route_dic[pth][8][rt][3][3],
+                    "lon_1":       route_dic[pth][8][rt][3][4],
+                    "country_1":   route_dic[pth][8][rt][3][6],
+                    "city_1":      route_dic[pth][8][rt][3][5],
+                    "transporter": route_dic[pth][8][rt][2][5],
+                    #"dur_path":    route_dic[pth][5],
+                    "duration":   route_dic[pth][8][rt][4],
+                    "price_min":    route_dic[pth][20][0][0],
+                    "price_avg":    route_dic[pth][20][1][0],
+                    "price_max":    route_dic[pth][20][2][0],
+                    "currency":    route_dic[pth][20][0][1],
+                    "frequency":   route_dic[pth][8][rt][8],
+                    "num_transfers": len(route_dic[pth][8][rt][12]),
+                    "transfers_info": route_dic[pth][8][rt][12]
+                    }
+        else:
+            return {"id": None,
+                    "transport":   route_dic[pth][8][rt][1],
+                    "station_0":   route_dic[pth][8][rt][6][1],
+                    "lat_0":       route_dic[pth][8][rt][6][2],
+                    "lon_0":       route_dic[pth][8][rt][6][3],
+                    "country_0":   route_dic[pth][8][rt][6][4],
+                    "city_0":      route_dic[pth][8][rt][6][5],
+                    "station_1":   route_dic[pth][8][rt][7][1],
+                    "lat_1":       route_dic[pth][8][rt][7][2],
+                    "lon_1":       route_dic[pth][8][rt][7][3],
+                    "country_1":   route_dic[pth][8][rt][7][4],
+                    "city_1":      route_dic[pth][8][rt][7][5],
+                    "transporter": route_dic[pth][8][rt][10][8][0][0],
+                    "www":         route_dic[pth][8][rt][10][8][0][2],
+                    "phone":       route_dic[pth][8][rt][10][8][0][10],
+                    "mail":        route_dic[pth][8][rt][10][8][0][11],
+                    "price_min":    route_dic[pth][20][0][0],
+                    "price_avg":     route_dic[pth][20][1][0],
+                    "price_max":    route_dic[pth][20][2][0],
+                    #"cost_t_max":  route_dic[pth][8][rt][13][0][0],
+                    #"cost_t_avg":   route_dic[pth][8][rt][13][1][0],
+                    #"cost_tr_min": route_dic[pth][8][rt][13][2][0],
+                    "currency":    route_dic[pth][20][0][1],
+                    "dur_pth_max": route_dic[pth][5]
+                    }
+    except IndexError as err:
+        return "Error:", err 
+    
+    
 if __name__ == '__main__':
     
     #print(get_id_pair('10-Tel-Aviv-20-Clermont-Ferrand'))

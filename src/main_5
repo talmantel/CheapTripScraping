@@ -3,10 +3,10 @@ import json
 
 def get_inner_json(pth, rt, route_dic):
     try:
-        if route_dic[pth][8][rt][0] in ['walk', 'car', 'hotel']:
-            return 'bad type of transport'
-        elif route_dic[pth][8][rt][0] in ['flight']:
-            return {"id": None,
+        """ if route_dic[pth][8][rt][0] in ['walk', 'car', 'hotel']:
+            return 'bad type of transport' """
+        if route_dic[pth][8][rt][0] in ['flight']:
+            return {"path_id": 0,
                     "transport":   route_dic[pth][8][rt][0],
                     "Air_0":       route_dic[pth][8][rt][2][0],
                     "station_0":   route_dic[pth][8][rt][2][1],
@@ -21,19 +21,15 @@ def get_inner_json(pth, rt, route_dic):
                     "country_1":   route_dic[pth][8][rt][3][6],
                     "city_1":      route_dic[pth][8][rt][3][5],
                     "transporter": route_dic[pth][8][rt][2][5],
-                    "dur_pth_max": route_dic[pth][5],
-                    "dur_pth_avg": route_dic[pth][6],
-                    "dur_pth_min": route_dic[pth][7],
-                    "dur_rt_min":  route_dic[pth][8][rt][4],
+                    "dur_path":    route_dic[pth][5],
+                    "dur_route":   route_dic[pth][8][rt][4],
                     "cost_min":    route_dic[pth][20][0][0],
-                    "cost_HZ":     route_dic[pth][20][1][0],
+                    "cost_avg":     route_dic[pth][20][1][0],
                     "cost_max":    route_dic[pth][20][2][0],
                     "currency":    route_dic[pth][20][0][1],
                     "freq":        route_dic[pth][8][rt][8],
-                    "plane_change":route_dic[pth][8][rt][12][0],
-                    "time_travel":route_dic[pth][8][rt][5],
-                    "time_2?":     route_dic[pth][8][rt][6],
-                    "time_3?":     route_dic[pth][8][rt][7]
+                    "num_transfers": len(route_dic[pth][8][rt][12]),
+                    "transfer_info":route_dic[pth][8][rt][12]
                     }
         else:
             return {"id": None,
@@ -56,13 +52,10 @@ def get_inner_json(pth, rt, route_dic):
                     "cost_HZ":     route_dic[pth][20][1][0],
                     "cost_max":    route_dic[pth][20][2][0],
                     "cost_t_max":  route_dic[pth][8][rt][13][0][0],
-                    "cost_t_HZ":   route_dic[pth][8][rt][13][1][0],
+                    "cost_t_avg":   route_dic[pth][8][rt][13][1][0],
                     "cost_tr_min": route_dic[pth][8][rt][13][2][0],
                     "currency":    route_dic[pth][20][0][1],
-                    "dur_pth_max": route_dic[pth][5],
-                    "dur_pth_avg": route_dic[pth][6],
-                    "dur_pth_min": route_dic[pth][7],
-                    "dur_rt":      route_dic[pth][8][rt][3]
+                    "dur_pth_max": route_dic[pth][5]
                     }
     except IndexError as err:
         return "Error:", err
@@ -78,6 +71,6 @@ if __name__ == '__main__':
     for i, x in enumerate(route_dic):
         for j, _ in enumerate(x):
             q = get_inner_json(i, j, route_dic)
-            if type(q) == dict:
+            if type(q) == dict == dict and q['transport'] == 'flight':
                 print(q)
                 print()

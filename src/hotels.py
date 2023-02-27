@@ -1,7 +1,7 @@
 import json
+from urllib.parse import urlparse
 
-
-from config import EXCLUDED_CITIES, HOTELS_DIR, OLD_OUTPUT_JSON_DIR, NUMBER_OF_CITIES
+from config import EXCLUDED_CITIES, HOTELS_DIR, NUMBER_OF_CITIES
 from generators import gen_jsons
         
         
@@ -9,11 +9,14 @@ def get_hotels():
     
     booking = dict()
     
-    for _, to_id, pathes in gen_jsons(OLD_OUTPUT_JSON_DIR):
+    for _, to_id, pathes in gen_jsons():
         
         if (to_id in EXCLUDED_CITIES) or (to_id in booking.keys()): continue
         
-        booking[to_id] = pathes[0][8][-1][6][:-1]
+        parsed_url = urlparse(pathes[0][8][-1][6][:-1])
+        booking_query = {k: v for k, v in [str.split(item, '=') for item in [item for item in str.split(parsed_url.query, '&')]]}
+        
+        booking[to_id] = int(booking_query['city'])
         
         print(to_id, booking[to_id])
         

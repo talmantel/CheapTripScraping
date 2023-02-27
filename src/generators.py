@@ -21,7 +21,7 @@ def gen_city_country_pairs() -> tuple:
     
     
 # unzips files' content into json and generates tuple   
-def gen_jsons(source_dir) -> tuple:
+def gen_jsons(source_dir=OUTPUT_JSON_DIR) -> tuple:
     # iterate over files in
     files = Path(source_dir).glob('*.json.gz')
     for file in files:

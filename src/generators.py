@@ -2,22 +2,36 @@ from itertools import permutations
 from pathlib import Path
 import compress_json
 import string
+import polars as pl
 
-from config import df_bb, df_city_countries, OUTPUT_JSON_DIR
+from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV
 from functions import get_id_pair
 
 
-def gen_city_country_pairs() -> tuple:
+def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
     
-    city_countries_bboxes = set(df_city_countries['id_city']).intersection(df_bb['id_city'])
-    
-    for from_id_city, to_id_city in permutations(city_countries_bboxes, 2):
+    try:
+        input_csv = Path(input_csv)
         
-        # get the cities' and countries' names
-        from_city_id, from_city, from_country = df_city_countries.filter(df_city_countries['id_city'] == from_id_city).row(0)
-        to_city_id, to_city, to_country = df_city_countries.filter(df_city_countries['id_city'] == to_id_city).row(0)
+        if not input_csv.is_file():
+            raise FileNotFoundError(input_csv)
+
+        # read input csv in DataFrame
+        df = pl.read_csv(input_csv, has_header=False, new_columns=['id_city', 'city', 'country'])
+        
+        for from_id_city, to_id_city in permutations(df['id_city'], 2): # 
+            
+            # get the cities' and countries' names
+            from_city_id, from_city, from_country = df.filter(df['id_city'] == from_id_city).row(0)
+            to_city_id, to_city, to_country = df.filter(df['id_city'] == to_id_city).row(0)
+        
+            yield from_city_id, to_city_id, from_city, from_country, to_city, to_country
     
-        yield from_city_id, to_city_id, from_city, from_country, to_city, to_country
+    except FileNotFoundError as err:
+        print(f"File '{err.filename}' with routes have to be fixed not found")
+    
+    except Exception as err:
+        print(err)
     
     
 # unzips files' content into json and generates tuple   
@@ -41,7 +55,9 @@ def gen_injection():
         
 
 if __name__ == '__main__':
-    
+    x = gen_city_country_pairs()
+    for _ in range(100):
+        print(f'{_ + 1}. {next(x)}')
     pass
 
 

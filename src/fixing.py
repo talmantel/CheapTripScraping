@@ -66,7 +66,7 @@ def fix_price(input_csv):
                     fixed += 1
                       
                 else:     
-                    # gets index if match is found
+                    # gets index if match in forward direction is found
                     match_index_forward = query_forward.index[0]
                     
                     if match_index_forward in df_fixed_ids['path_id'].values:

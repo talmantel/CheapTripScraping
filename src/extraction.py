@@ -5,7 +5,7 @@ import json
 import haversine as hs
 
 from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR,\
-                   OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, df_cities
+                   OLD_OUTPUT_JSON_DIR, TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, df_bb
 from functions import get_id_from_bb, get_id_from_acode, get_exchange_rates, get_inner_json
 from exchange import update_exchange_rates
 from generators import gen_jsons
@@ -26,7 +26,7 @@ unknown_currencies = set()
 unique_routes = set()
 
 # counter for path_id
-counter = {k: k * 10000 for k in df_cities['id_city']}
+counter = {k: k * 10000 for k in df_bb['id_city']}
      
     
 def extract_routine(input_data: tuple, euro_rates: dict) -> list():

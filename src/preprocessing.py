@@ -1,6 +1,5 @@
 import pandas as pd
 from geopy.geocoders import Nominatim
-import time
 from pathlib import Path
 
 

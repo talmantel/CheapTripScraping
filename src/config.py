@@ -42,7 +42,7 @@ df_bb = pl.read_csv(BBOXES_CSV, has_header=False, new_columns=['id_city', 'lat_1
 df_airports = pl.read_csv(AIRPORT_CODES_CSV, has_header=False, new_columns=['code', 'id_city'])
 #df_cities = pl.read_csv(CITIES_CSV, has_header=False, new_columns=['id_city', 'city', 'lat', 'lon'])
 
-#NUMBER_OF_CITIES = df_bb.shape[0]
+NUMBER_OF_CITIES = df_bb.shape[0]
 
 # excluded cities as unimportant
 EXCLUDED_CITIES = ('19', '47', '185', '221', '361', 

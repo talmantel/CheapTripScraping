@@ -77,11 +77,6 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                 transport_id = TRANSPORT_TYPES_ID['fly']
                 
                 # to avoid duplicating routes
-                """ num_of_unique_routes = len(unique_routes)
-                unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
-                if num_of_unique_routes == len(unique_routes): continue """
-                
-                # to avoid duplicating routes
                 if (from_id, to_id, transport_id, price_min_EUR) in unique_routes: continue
                 unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
                          
@@ -195,11 +190,6 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                                                                       to=to_id,
                                                                       price=price_min_EUR, 
                                                                       duration=duration_min): continue
-                    
-                    # to avoid full duplicating routes
-                    """ num_of_unique_routes = len(unique_routes)
-                    unique_routes.add((from_id, to_id, transport_id, price_min_EUR))
-                    if num_of_unique_routes == len(unique_routes): continue """
                     
                     # to avoid full duplicating routes
                     if (from_id, to_id, transport_id, price_min_EUR) in unique_routes: continue

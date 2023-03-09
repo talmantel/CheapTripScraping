@@ -53,9 +53,6 @@ def gen_injection():
         
 
 if __name__ == '__main__':
-    """  x = gen_city_country_pairs()
-    for _ in range(100):
-        print(f'{_ + 1}. {next(x)}') """
     
     pass
 

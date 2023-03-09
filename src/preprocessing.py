@@ -3,15 +3,15 @@ from geopy.geocoders import Nominatim
 from pathlib import Path
 
 
-from config import CITIES_COUNTRIES_CSV, INPUT_CSV_DIR
+from config import CITIES_COUNTRIES_CSV, INPUT_CSV_DIR, AIRPORT_CODES_CSV
 
 
-def get_bboxes(city, country):
+def get_bboxes(city_country):
     geolocator = Nominatim(user_agent='Oleksandrpoliev@gmail.com')
     
     try:
                 
-        location = geolocator.geocode({'city': city, 'country': country})
+        location = geolocator.geocode(', '.join(city_country))
                 
         coords = map(float, list(filter(lambda x: x[0] == 'boundingbox', location.raw.items()))[0][1])
             
@@ -20,16 +20,19 @@ def get_bboxes(city, country):
         return lat_min, lat_max, lon_min, lon_max
         
     except AttributeError as err:
-        print(city, country, err)
+        print(city_country, err)
   
              
 
-def main():
+def preprocessing():
     
     try:
         if not CITIES_COUNTRIES_CSV.is_file(): raise FileNotFoundError
+        if not AIRPORT_CODES_CSV.is_file(): raise FileNotFoundError
     
-        df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
+        print('\nPreprocessing ...', end='...')
+        
+        df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city','country'], index_col='id_city')
     
         BBOXES_CSV = Path(INPUT_CSV_DIR/'bbox_short.csv')
     
@@ -41,11 +44,13 @@ def main():
             unboxed_ids = df_cities_countries.index.values
         
         for id in unboxed_ids:
-            city, country = df_cities_countries.loc[id, ['city', 'country']]
-            df_bboxes.loc[id, ['lat_min', 'lat_max', 'lon_min', 'lon_max']] = get_bboxes(city, country)
+            city_country = df_cities_countries.loc[id, ['city', 'country']]
+            df_bboxes.loc[id, ['lat_min', 'lat_max', 'lon_min', 'lon_max']] = get_bboxes(city_country)
         
         df_bboxes.sort_index(inplace=True)
         df_bboxes.to_csv(BBOXES_CSV, header=False)
+        
+        print('successfully!')
         
     except FileNotFoundError as err:
         print(err)
@@ -55,7 +60,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    preprocessing()
     
     
 

@@ -5,10 +5,10 @@ import string
 import polars as pl
 
 from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV
-from functions import get_id_pair
 
 
-def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
+
+def gen_city_country_pairs(*, input_csv=CITIES_COUNTRIES_CSV) -> tuple:
     
     try:
         input_csv = Path(input_csv)
@@ -35,14 +35,12 @@ def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
     
     
 # unzips files' content into json and generates tuple   
-def gen_jsons(source_dir=OUTPUT_JSON_DIR) -> tuple:
+def gen_jsons(*, source_dir=OUTPUT_JSON_DIR) -> tuple:
     # iterate over files in
     files = Path(source_dir).glob('*.json.gz')
     for file in files:
-        if source_dir == OUTPUT_JSON_DIR:
-            from_id, to_id = get_id_pair(file.name, old_file_name=False)
-        else: 
-            from_id, to_id = get_id_pair(file.name)
+        
+        from_id, to_id = file.name.split('-')[:2]
         
         yield from_id, to_id, compress_json.load(str(file))
         
@@ -55,9 +53,9 @@ def gen_injection():
         
 
 if __name__ == '__main__':
-    x = gen_city_country_pairs()
+    """  x = gen_city_country_pairs()
     for _ in range(100):
-        print(f'{_ + 1}. {next(x)}')
+        print(f'{_ + 1}. {next(x)}') """
     pass
 
 

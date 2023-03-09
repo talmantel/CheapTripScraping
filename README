@@ -40,6 +40,3 @@ The 'fixing.py' script aimed to fix prices for the specific routes stored in csv
 
 Folder 'logs' stores the corresponding log-files for each stage of the process.
 Script 'hotels.py' extracts the links from the scraped json files and stores it in json file in the folder 'files/hotels'.
-
-
-                

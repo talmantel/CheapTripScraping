@@ -1,0 +1,329 @@
+﻿8,Tehran,Iran
+9,Tashkent,Uzbekistan
+10,Sanaa,Yemen
+11,Phnom Penh,Cambodia
+12,Naypyidaw,Myanmar
+13,Muscat,Oman
+14,Manila,Philippines
+15,Male,Maldives
+16,Lhasa,China
+17,Kuwait City,Kuwait
+18,Kathmandu,Nepal
+20,Islamabad,Pakistan
+21,Dushanbe,Tajikistan
+22,Doha,Qatar
+23,Dhaka,Bangladesh
+24,Colombo,Sri Lanka
+25,Bishkek,Kyrgyzstan
+26,Beirut,Lebanon
+27,Bandar Seri Begawan,Brunei
+28,Baghdad,Iraq
+29,Astana,Kazakhstan
+30,Ashgabat,Turkmenistan
+31,Amman,Jordan
+32,Manama,Bahrain
+33,Tbilisi,Georgia
+34,Baku,Azerbaijan
+35,Yerevan,Armenia
+36,Honolulu,USA
+37,San Francisco,USA
+38,Orlando,USA
+39,Las Vegas,USA
+40,Los Angeles,USA
+41,Miami,USA
+42,New York,USA
+43,Johannesburg,South Africa
+44,Dammam,Saudi Arabia
+45,Riyadh,Saudi Arabia
+48,Fukuoka,Japan
+50,Kyoto,Japan
+51,Osaka,Japan
+52,Jerusalem,Israel
+53,Batam,Indonesia
+55,Kolkata,India
+56,Jaipur,India
+57,Chennai,India
+58,Hurgada,Egypt
+59,Beijing,China
+60,Zhuhai,China
+61,Guilin,China
+62,Vancouver,Canada
+63,Toronto,Canada
+64,Rio de Janeiro,Brazil
+65,Buenos Aires,Argentina
+66,Bangalore,India
+67,Krabi,Thailand
+68,Jeju,South Korea
+69,Abu Dhabi,United Arab Emirates
+70,Auckland,New Zealand
+71,Cebu,Philippines
+72,Sydney,Australia
+73,Melbourne,Australia
+74,Marrakech,Morocco
+75,Penang Island,Malaysia
+76,Jakarta,Indonesia
+77,Ha Noi,Vietnam
+78,Cairo,Egypt
+79,Johor Bahru,Malaysia
+80,Denpasar,Indonesia
+81,Ho Chi Minh,Vietnam
+82,Shanghai,China
+83,Seoul,South Korea
+84,Medina,Saudi Arabia
+85,Guangzhou,China
+86,Mecca,Saudi Arabia
+87,Taipei,Taiwan
+88,Pattaya,Thailand
+89,Tokyo,Japan
+90,Phuket,Thailand
+91,Mumbai,India
+92,Shenzhen,China
+93,Delhi,India
+94,Kuala Lumpur,Malaysia
+95,Dubai,United Arab Emirates
+96,Singapore,Singapore
+97,Macau,China
+98,Bangkok,Thailand
+99,Hong Kong,China
+100,Antwerp,Belgium
+101,Aberdeen,United Kingdom
+102,Augsburg,Germany
+103,Alexandroupoli,Greece
+104,Athens,Greece
+105,Alicante,Spain
+106,Almeria,Spain
+107,Aalborg,Denmark
+108,Aarhus,Denmark
+109,Ancona,Italy
+111,Amsterdam,Netherlands
+112,Alanya,Turkey
+113,Ankara,Turkey
+114,Antalya,Turkey
+115,Altenrhein,Switzerland
+116,Brussels,Belgium
+117,Burgas,Bulgaria
+118,Banja Luka,Bosnia and Herzegovina
+119,Belfast,United Kingdom
+120,Birmingham,United Kingdom
+121,Bournemouth,United Kingdom
+122,Bristol,United Kingdom
+123,Budapest,Hungary
+124,Berlin,Germany
+126,Bremen,Germany
+127,Billund,Denmark
+128,Barcelona,Spain
+129,Bilbao,Spain
+130,Bologna,Italy
+131,Bergen,Norway
+132,Bodo,Norway
+134,Bucharest,Romania
+135,Belgrade,Serbia
+136,Bratislava,Slovakia
+137,Bordeaux,France
+139,Brno,Czech Republic
+140,Basel,Switzerland
+141,Bern,Switzerland
+142,Cardiff,United Kingdom
+145,Cologne,Germany
+146,Corfu,Greece
+147,Copenhagen,Denmark
+150,Cork,Ireland
+151,Cagliari,Italy
+152,Catania,Italy
+153,Cluj-Napoca,Romania
+154,Clermont-Ferrand,France
+155,Chambery,France
+156,Cherbourg,France
+158,Doncaster,United Kingdom
+159,Dortmund,Germany
+160,Dresden,Germany
+161,Duesseldorf,Germany
+162,Dublin,Ireland
+163,Dalaman,Turkey
+164,Dubrovnik,Croatia
+165,East Midlands
+166,Edinburgh,United Kingdom
+167,Exeter,United Kingdom
+169,Esbjerg,Denmark
+171,Eilat,Israel
+172,Eindhoven,Netherlands
+174,Frankfurt,Germany
+175,Friedrichshafen,Germany
+176,Fuerteventura,Spain
+177,Florence,Italy
+178,Floro,Norway
+179,Faro,Portugal
+180,Funchal,Portugal
+181,Graz,Austria
+183,Guernsey,United Kingdom
+184,Glasgow,United Kingdom
+186,Granada,Spain
+187,Girona,Spain
+189,Genoa,Italy
+190,Groningen,Netherlands
+191,Gdansk,Poland
+192,Geneva,Switzerland
+193,Gothenburg,Sweden
+194,Humberside,United Kingdom
+196,Hamburg,Germany
+197,Hannover,Germany
+200,Heraklion,Greece
+201,Helsinki,Finland
+202,Innsbruck,Austria
+203,Inverness,United Kingdom
+204,Debrecen,Hungary
+205,Ibiza,Spain
+206,Izmir,Turkey
+207,Istanbul,Turkey
+208,Jonkoping,Sweden
+209,Klagenfurt,Austria
+210,Karlsruhe,Germany
+211,Kortrijk,Belgium
+212,Kaunas,Lithuania
+213,Katowice,Poland
+214,Krakow,Poland
+215,Kosice,Slovakia
+216,Karlovy Vary,Czech Republic
+217,Karlstad,Sweden
+218,Kuressaare,Estonia
+219,Linz,Austria
+220,Liege,Belgium
+222,Liverpool,United Kingdom
+224,Leeds,United Kingdom
+225,London,United Kingdom
+227,Lanzarote,Spain
+228,Las Palmas de Gran Canaria,Spain
+230,Lamezia Terme,Italy
+231,Larnaca,Cyprus
+232,Liepaja,Latvia
+233,Luxembourg,Luxembourg
+235,Lisbon,Portugal
+236,Ljubljana,Slovenia
+237,Lappeenranta,Finland
+239,Lille,France
+240,Lyon,France
+241,Lugano,Switzerland
+242,Lulea,Sweden
+243,Manchester,United Kingdom
+244,Mannheim,Germany
+245,Memmingen,Germany
+246,Muenster,Germany
+247,Munich,Germany
+248,Madrid,Spain
+249,Malaga,Spain
+250,Mahon,Ireland
+251,Murcia,Spain
+252,Milan,Italy
+253,Malta,Malta
+255,Maastricht,Netherlands
+257,Milas,Turkey
+259,Marseille,France
+260,Metz,France
+261,Montpellier,France
+262,Malmö,Sweden
+263,Norwich,United Kingdom
+264,Newcastle,United Kingdom
+265,Newquay,United Kingdom
+266,Nuremberg,Germany
+267,Naples,Italy
+268,Constanta,Romania
+269,Nantes,France
+270,Nice,France
+271,Norrkoping,Sweden
+272,Ostend,Belgium
+273,Alderney,United Kingdom
+274,Oviedo,Spain
+275,Olbia,Italy
+276,Ohrid,North Macedonia
+277,Oslo,Norway
+279,Ostrava,Czech Republic
+280,Plovdiv,Bulgaria
+281,Plymouth,United Kingdom
+282,Paderborn,Germany
+283,Rostock,Germany
+284,Palma de Mallorca,Spain
+285,Palermo,Italy
+286,Pescara,Italy
+287,Pisa,Italy
+288,Paphos,Cyprus
+289,Palanga,Lithuania
+290,Ponta Delgada,Portugal
+291,Porto,Portugal
+292,Poprad,Slovakia
+293,Paris,France
+294,Pula,Croatia
+295,Podgorica,Montenegro
+296,Pardubice,Czech Republic
+297,Prague,Czech Republic
+299,Rhodes,Greece
+300,Reykjavik,Iceland
+301,Reus,Spain
+302,Rijeka,Croatia
+303,Rome,Italy
+304,Rimini,Italy
+305,Riga,Latvia
+306,Rotterdam,Netherlands
+307,Ronneby,Sweden
+308,Salzburg,Austria
+309,Sofia,Bulgaria
+310,Sarajevo,Bosnia and Herzegovina
+311,Southampton,United Kingdom
+312,Swansea,United Kingdom
+314,Poznan,Poland
+315,Saarbruecken,Germany
+316,Stuttgart,Germany
+317,Thira,Greece
+318,Shannon,Ireland
+319,Salamanca,Spain
+320,Santiago de Compostela,Spain
+321,Sevilla,Spain
+323,Skopje,North Macedonia
+325,Stavanger,Norway
+326,Strasbourg,France
+327,Split,Croatia
+329,Stockholm,Sweden
+330,Tirana,Albania
+331,Thessaloniki,Greece
+332,Tenerife,Spain
+334,Trieste,Italy
+335,Turin,Italy
+336,Tel-Aviv,Israel
+337,Terceira,Portugal
+338,Timisoara,Romania
+339,Trabzon,Turkey
+340,Tampere,Finland
+341,Turku,Finland
+342,Toulouse,France
+343,Tivat,Montenegro
+345,Tallinn,Estonia
+346,Tartu,Estonia
+347,Umea,Sweden
+348,Vienna,Austria
+349,Varna,Bulgaria
+351,Valencia,Spain
+352,Valladolid,Spain
+353,Venice,Italy
+354,Verona,Italy
+356,Vilnius,Lithuania
+357,Iasi,Romania
+358,Vaxjo,Sweden
+359,Visby,Sweden
+362,Westerland,Germany
+364,Warsaw,Poland
+365,Wroclaw,Poland
+366,Zweibruecken,Germany
+367,Zaragoza,Spain
+368,Zagreb,Croatia
+369,Zadar,Croatia
+370,Zürich,Switzerland
+371,Chisinau,Moldova
+546,Pristina,Kosovo
+547,Thimphu,Bhutan
+548,Ulaanbaatar,Mongolia
+550,Agartala,India
+551,Agra,India
+552,Ahmedabad,India
+553,Aizawl,India
+554,Allahabad,India
+626,Thiruvananthapuram,India
+663,Chicago,USA

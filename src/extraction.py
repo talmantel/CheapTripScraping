@@ -4,7 +4,6 @@ from datetime import datetime
 import csv
 import json
 import haversine as hs
-import re
 
 from config import LOGS_DIR, OUTPUT_CSV_DIR, OUTPUT_JSON_DIR, INNER_JSON_DIR, BBOXES_CSV,\
                    TRANSPORT_TYPES, TRANSPORT_TYPES_ID, OUTPUT_COLUMNS, RAW_CSV, CITIES_COUNTRIES_CSV, NOT_FOUND
@@ -31,13 +30,11 @@ unique_routes = set()
 
 # counter for path_id
 df_bb = pd.read_csv(BBOXES_CSV, names=['id_city', 'lat_1', 'lat_2', 'lon_1', 'lon_2'], index_col='id_city')
-df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
+#df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
 
 counter = {k: k * 10000 for k in df_bb.index.values}
-     
-station_airport = set()
-
     
+
 def extract_routine(input_data: tuple, euro_rates: dict) -> list():
     
     origin_id, destination_id, pathes = input_data
@@ -146,7 +143,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
             # for other used types of vehicles            
             else:
                 try:                  
-                    #ttype = next(TRANSPORT_TYPES_ID[k] for k, v in TRANSPORT_TYPES.items() if route[1] in v)
+                    
                     transport_id = TRANSPORT_TYPES_ID[next(k for k, v in TRANSPORT_TYPES.items() if route[1] in v)]
                     
                     from_id = get_id_from_bb(route[6][2:4])     # gets id city by coords
@@ -295,6 +292,5 @@ def extract_data(*, source_dir=OUTPUT_JSON_DIR):
     
     
 if __name__ == '__main__':
-    #source_dir = OLD_OUTPUT_JSON_DIR
-    #extract_data(OLD_OUTPUT_JSON_DIR)
+    
     extract_data(source_dir='../output_4run/json_output')

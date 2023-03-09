@@ -1,4 +1,5 @@
 The process consists of the following steps:
+    1) PREPROCESSING
     1) SCRAPING jsons from the site (scraping.py)
     2) EXTRACTION of direct routes from the scraped jsons (extraction.py)
     3) TREATMENT of obtained data to create the datasets for validation etc (treatment.py)
@@ -7,7 +8,7 @@ The process consists of the following steps:
 All nessecary input files are stored in directory 'files/csv':
     - airport_codes_short.csv (binds airport codes with city ids)
     - bbox_short.csv (binds city ids with city geo coordinates)
-    - cities.csv (list of city names and city ids)
+    - cities_countries.csv (binds city id with corresponding city's name and country's name)
     - Full_list_with_countries_CLEANED_for_scraping.csv (binds city ids, city names, country names)
 
 Subfolder 'files/currencies' stores the json files with the currency exchange rates (updates if last updating date is later than 1 day ago).    

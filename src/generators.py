@@ -8,7 +8,7 @@ from config import OUTPUT_JSON_DIR, CITIES_COUNTRIES_CSV
 
 
 
-def gen_city_country_pairs(*, input_csv=CITIES_COUNTRIES_CSV) -> tuple:
+def gen_city_country_pairs(input_csv=CITIES_COUNTRIES_CSV) -> tuple:
     
     try:
         input_csv = Path(input_csv)
@@ -28,14 +28,14 @@ def gen_city_country_pairs(*, input_csv=CITIES_COUNTRIES_CSV) -> tuple:
             yield from_city_id, to_city_id, from_city, from_country, to_city, to_country
     
     except FileNotFoundError as err:
-        print(f"File '{err.filename}' with routes have to be fixed not found")
+        print(f"Input file '{err.filename}' cannot be found")
     
     except Exception as err:
         print(err)
     
     
 # unzips files' content into json and generates tuple   
-def gen_jsons(*, source_dir=OUTPUT_JSON_DIR) -> tuple:
+def gen_jsons(source_dir=OUTPUT_JSON_DIR) -> tuple:
     # iterate over files in
     files = Path(source_dir).glob('*.json.gz')
     for file in files:
@@ -56,6 +56,7 @@ if __name__ == '__main__':
     """  x = gen_city_country_pairs()
     for _ in range(100):
         print(f'{_ + 1}. {next(x)}') """
+    
     pass
 
 

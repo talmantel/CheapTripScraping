@@ -2,6 +2,7 @@
 .vscode/
 files/output/
 files/csv/arch/
+notebooks/
 output/
 output_4run/
 src/try.py

@@ -261,7 +261,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
     return raw_data
 
 
-def extract_data(*, source_dir=OUTPUT_JSON_DIR):
+def extract_data(source_dir=OUTPUT_JSON_DIR):
     
     print('\nData extraction...', end='...')
     
@@ -293,4 +293,4 @@ def extract_data(*, source_dir=OUTPUT_JSON_DIR):
     
 if __name__ == '__main__':
     
-    extract_data(source_dir='../output_4run/json_output')
+    extract_data()

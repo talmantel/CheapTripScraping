@@ -14,6 +14,7 @@ LOGS_DIR = Path('../logs')
 # set up inputs
 INPUT_CSV_DIR = Path('../files/csv')
 AIRPORT_CODES_CSV = Path(INPUT_CSV_DIR/'airport_codes.csv')
+IATA_CODES_CSV = Path(INPUT_CSV_DIR/'iata_codes.csv')
 BBOXES_CSV = Path(INPUT_CSV_DIR/'bounding_boxes.csv')
 CITIES_CSV = Path(INPUT_CSV_DIR/'cities.csv')
 CITIES_COUNTRIES_CSV = Path(INPUT_CSV_DIR/'cities_countries.csv')

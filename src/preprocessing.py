@@ -10,7 +10,7 @@ def get_bboxes(city_country):
     geolocator = Nominatim(user_agent='terraqwerty')
     
     try:
-        print(', '.join(city_country))        
+                
         location = geolocator.geocode(', '.join(city_country))
                 
         bbox = list(map(lambda x: round(float(x), 4), list(filter(lambda x: x[0] == 'boundingbox', location.raw.items()))[0][1]))
@@ -34,16 +34,17 @@ def preprocessing():
     try:
         if not CITIES_COUNTRIES_CSV.is_file(): raise FileNotFoundError
         if not AIRPORT_CODES_CSV.is_file(): raise FileNotFoundError
-    
-        print('\nPreprocessing ...')
         
         df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
     
-        BBOXES_CSV = Path(INPUT_CSV_DIR/'bboxes.csv')
+        BBOXES_CSV = Path(INPUT_CSV_DIR/'bounding_boxes.csv')
     
         if BBOXES_CSV.is_file():
             df_bboxes = pd.read_csv(BBOXES_CSV, names=['id_city', 'lat_min', 'lat_max', 'lon_min', 'lon_max'], index_col='id_city')
             unboxed_ids = set(df_cities_countries.index.values).difference(df_bboxes.index.values)
+            if len(unboxed_ids) == 0: 
+                print('\nGo on: all bounding boxes are already found!\n')
+                return
         else:
             df_bboxes = pd.DataFrame()
             unboxed_ids = df_cities_countries.index.values
@@ -56,13 +57,15 @@ def preprocessing():
         for id in unboxed_ids:
             try:
                 city_country = df_cities_countries.loc[id, ['city', 'country']].values
+                print(f'Adding the bounding box and coordinates for: {id} {city_country}', end='...')
                 bbox, coords = get_bboxes(city_country)
                 df_bboxes.loc[id, ['lat_min', 'lat_max', 'lon_min', 'lon_max']] = bbox
                 df_cities.at[id, 'city'] = city_country[0]
                 df_cities.loc[id, ['lat', 'lon']] = coords
-           
+                print(f'Success!')
+
             except TypeError as err:
-                print(f'Cannot find bounding box and/or coordinates for: {id} {city_country}')
+                print(f'Failure!')
                 continue
             
             except Exception as err:
@@ -73,8 +76,6 @@ def preprocessing():
         df_cities.sort_index(inplace=True)
         df_bboxes.to_csv(BBOXES_CSV, header=False)
         df_cities.to_csv(CITIES_CSV, header=False)
-        
-        print('successfully!')
         
     except FileNotFoundError as err:
         print(err)

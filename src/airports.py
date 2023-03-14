@@ -32,16 +32,18 @@ def add_country():
 def get_country_code():
     
     df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'city', 'country_code'], index_col='code')
-
-    name = 'Iran'
-    try:
-        acountry = pycountry.countries.get(name=r'$Iran*$').alpha_2
-        print('IR' in acountry)
-        """ country = pycountry.countries.get(name='Iraq')
-        print(country.alpha_2) """
-    except Exception as err:
-        print('Country not found', err, sep='\n')
-
+    print('start')
+    for code in df_iata_codes.index.values:
+        try:
+            country_name = pycountry.countries.get(alpha_2=df_iata_codes.at[code, 'country_code']).name
+            print(country_name)
+            df_iata_codes.at[code, 'country'] = country_name
+    
+        except Exception as err:
+            print(f'Country for code {code} not found', err, sep='\n')
+            continue
+    df_iata_codes.to_csv(IATA_CODES_CSV, header=False)
+    print(df_iata_codes.head())
     
 
 
@@ -49,4 +51,5 @@ def get_country_code():
 if __name__ == '__main__':
     #get_airports_codes()
     #add_country()
+    get_country_code()
     pass

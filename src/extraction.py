@@ -34,7 +34,6 @@ df_bb = pd.read_csv(BBOXES_CSV, names=['id_city', 'lat_1', 'lat_2', 'lon_1', 'lo
 
 counter = {k: k * 10000 for k in df_bb.index.values}
     
-
 def extract_routine(input_data: tuple, euro_rates: dict) -> list():
     
     origin_id, destination_id, pathes = input_data
@@ -143,8 +142,8 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
             # for other used types of vehicles            
             else:
                 try:                  
-                    
-                    transport_id = TRANSPORT_TYPES_ID[next(k for k, v in TRANSPORT_TYPES.items() if route[1] in v)]
+                    ttype = next(k for k, v in TRANSPORT_TYPES.items() if route[1] in v)
+                    transport_id = TRANSPORT_TYPES_ID[ttype]
                     
                     from_id = get_id_from_bb(route[6][2:4])     # gets id city by coords
                     station_name = str(route[6][1])             # attempt to get id city by station name containing 'airports'
@@ -161,7 +160,7 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                     if id_not_found(from_id, to_id) or same_ids(from_id, to_id): continue
                     
                     transporter = route[10][8][0][0]                   
-                    if is_trans_nicolaescu(transport_id, transporter, from_id, to_id): continue                   
+                    if ttype == 'bus' and is_trans_nicolaescu(transporter, from_id, to_id): continue                   
                                        
                     currency = route[13][0][1]
                     if currency_mismatch(currency, euro_rates): 
@@ -183,10 +182,10 @@ def extract_routine(input_data: tuple, euro_rates: dict) -> list():
                     if mismatch_euro_zone_terms(from_id, to_id, price_min_EUR, duration_min): continue
                     
                     # checks bus ticket price vs estimated one
-                    if transport_id == 2 and bus_price_below_estimate(fromm=from_id, 
-                                                                      to=to_id,
-                                                                      price=price_min_EUR, 
-                                                                      duration=duration_min): continue
+                    if ttype == 'bus': price_min_EUR = bus_price_below_estimate(fromm=from_id, 
+                                                                                to=to_id,
+                                                                                price=price_min_EUR, 
+                                                                                duration=duration_min)
                     
                     # to avoid full duplicating routes
                     if (from_id, to_id, transport_id, price_min_EUR) in unique_routes: continue

@@ -25,13 +25,13 @@
 33,Tbilisi,Georgia
 34,Baku,Azerbaijan
 35,Yerevan,Armenia
-36,Honolulu,USA
-37,San Francisco,USA
-38,Orlando,USA
-39,Las Vegas,USA
-40,Los Angeles,USA
-41,Miami,USA
-42,New York,USA
+36,Honolulu,United States
+37,San Francisco,United States
+38,Orlando,United States
+39,Las Vegas,United States
+40,Los Angeles,United States
+41,Miami,United States
+42,New York,United States
 43,Johannesburg,South Africa
 44,Dammam,Saudi Arabia
 45,Riyadh,Saudi Arabia
@@ -43,13 +43,13 @@
 55,Kolkata,India
 56,Jaipur,India
 57,Chennai,India
-58,Hurgada,Egypt
+58,Hurghada,Egypt
 59,Beijing,China
 60,Zhuhai,China
 61,Guilin,China
 62,Vancouver,Canada
 63,Toronto,Canada
-64,Rio de Janeiro,Brazil
+64,Rio De Janeiro,Brazil
 65,Buenos Aires,Argentina
 66,Bangalore,India
 67,Krabi,Thailand
@@ -207,11 +207,11 @@
 243,Manchester,United Kingdom
 244,Mannheim,Germany
 245,Memmingen,Germany
-246,Muenster,Germany
+246,Munster,Germany
 247,Munich,Germany
 248,Madrid,Spain
 249,Malaga,Spain
-250,Mahon,Ireland
+250,Mahon,Spain
 251,Murcia,Spain
 252,Milan,Italy
 253,Malta,Malta
@@ -270,7 +270,7 @@
 311,Southampton,United Kingdom
 312,Swansea,United Kingdom
 314,Poznan,Poland
-315,Saarbruecken,Germany
+315,Saarbrucken,Germany
 316,Stuttgart,Germany
 317,Thira,Greece
 318,Shannon,Ireland
@@ -311,7 +311,7 @@
 362,Westerland,Germany
 364,Warsaw,Poland
 365,Wroclaw,Poland
-366,Zweibruecken,Germany
+366,Zweibrücken,Germany
 367,Zaragoza,Spain
 368,Zagreb,Croatia
 369,Zadar,Croatia
@@ -326,4 +326,4 @@
 553,Aizawl,India
 554,Allahabad,India
 626,Thiruvananthapuram,India
-663,Chicago,USA
+663,Chicago,United States

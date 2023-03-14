@@ -1,12 +1,13 @@
 import pandas as pd
 from geopy.geocoders import Nominatim
 from pathlib import Path
+import pycountry as pyc
 
 from config import CITIES_COUNTRIES_CSV, AIRPORT_CODES_CSV, CITIES_CSV, IATA_CODES_CSV, BBOXES_CSV
 
 
 df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
-df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'city'], index_col='code')
+df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'city', 'country_code'], index_col='code')
 
 
 def get_bboxes(city_country):
@@ -44,29 +45,65 @@ def get_airport_codes():
         
         cities = df_cities_countries.loc[diff_ids]['city'].values
         print(f'\nTrying to get aiport codes for cities: {cities}')  
-                        
-        for id in diff_ids:
-            city = df_cities_countries.at[id, 'city']
-            print(f'\nFinding airport codes for city: {city}', end='...')
-            codes = df_iata_codes.query('city == @city').index.values
-            if len(codes) == 0: 
+        
+        no_airports_cities, no_such_country = list(), list()   
+        num_airports = 0             
+        for id_city in diff_ids:
+            city, country = df_cities_countries.loc[id_city, ['city', 'country']]
+        
+            print(f'\n{city}', end='...')
+            
+            #query = df_iata_codes[df_iata_codes['city'] == city or city in df_iata_codes['city']]
+            query_codes = list(filter(lambda x: df_iata_codes.at[x, 'city'] == city or 
+                                                city in str(df_iata_codes.at[x, 'city']).split(' ') or
+                                                city in str(df_iata_codes.at[x, 'city']).split('/'),
+                                                df_iata_codes.index.values))
+            
+            if len(query_codes) == 0:
                 print(f'...has no airports!')
+                no_airports_cities.append(city)
                 continue
-            for code in codes:
-                df_airport_codes.at[code.lower(), 'id_city'] = id
             
-            print(f'...{codes} was added successfully!')
-            
-        df_airport_codes = df_airport_codes.sort_values(by='id_city')
+            acodes = list()
+            for code in query_codes:
+                try:
+                    if code == 'PRN':
+                        country_name = 'Kosovo'
+                    else:    
+                        country_name = pyc.countries.get(alpha_2=df_iata_codes.at[code, 'country_code']).name
+                        
+                    if country_name == 'Korea, Republic of': country_name = 'South Korea'
+                    if country_name == 'Czechia': country_name = 'Czech Republic'
+                    if country_name == 'Viet Nam': country_name = 'Vietnam'
+                    if country_name == 'Macao': country_name = 'China'
+                    if country_name == 'Hong Kong': country_name = 'China'
+                        
+                    print('\n', country, '/', country_name)
+                    if country == country_name or country in str(country_name).split(',') or country in str(country_name).split():
+                        df_airport_codes.at[code.lower(), 'id_city'] = id_city
+                        acodes.append(code)
+                        num_airports += 1
+                except AttributeError as err:
+                    print(f"No such country code: {code}", end='...')
+                    no_such_country.append(code)
+                    continue
+                
+            print(f'...{acodes} was added successfully!')
+        
+        print(f'Airports report: processed {len(diff_ids)} cities, ' 
+              f'country code doesn`t exist for {no_such_country}, '
+              f'have no airport(s) {len(no_airports_cities)}: {no_airports_cities}')    
+        
+        df_airport_codes.sort_values(by='id_city', inplace=True)
         df_airport_codes.to_csv(AIRPORT_CODES_CSV, header=False)
-    
+        df_airport_codes = pd.read_csv(AIRPORT_CODES_CSV, names=['code', 'id_city'], index_col='code', dtype={'id_city':'Int32'})
+        df_airport_codes.to_csv(AIRPORT_CODES_CSV, header=False)
+        
     except FileNotFoundError as err:
         print(err)          
                 
                 
 def preprocessing():
-    
-    get_airport_codes()
     
     try:
         if not CITIES_COUNTRIES_CSV.is_file(): raise FileNotFoundError
@@ -118,10 +155,5 @@ def preprocessing():
     
 
 if __name__ == '__main__':
+    get_airport_codes()
     preprocessing()
-    
-    
-
-
-
-

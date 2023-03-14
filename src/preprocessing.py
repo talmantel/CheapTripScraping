@@ -38,7 +38,7 @@ def get_airport_codes():
         
         if AIRPORT_CODES_CSV.is_file():
             df_airport_codes = pd.read_csv(AIRPORT_CODES_CSV, names=['code', 'id_city'], index_col='code', dtype={'id_city':'Int32'})
-            diff_ids = set(df_cities_countries.index.values).difference(df_airport_codes['id_city'].unique())
+            diff_ids = df_cities_countries.index.difference(df_airport_codes['id_city'].unique())
         else:
             df_airport_codes = pd.DataFrame()
             diff_ids = df_cities_countries.index.values
@@ -68,7 +68,6 @@ def get_airport_codes():
                 df_airport_codes.at[code.lower(), 'id_city'] = id_city
                 acodes.append(code)
                 num_airports += 1
-
                 
             print(f'...{acodes} was added successfully!')
         

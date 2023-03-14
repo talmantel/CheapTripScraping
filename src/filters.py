@@ -68,5 +68,4 @@ def bus_price_below_estimate(fromm: int, to: int, price: int, duration: int) -> 
                             
         unreliable_buses.add((fromm, to, price, duration)) """
         
-    
     return price

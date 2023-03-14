@@ -1,5 +1,6 @@
 AccessControl==5.7
 Acquisition==4.13
+airportsdata==20230303
 appdirs==1.4.4
 asttokens==2.2.1
 attrs==22.2.0
@@ -80,6 +81,7 @@ prompt-toolkit==3.0.36
 psutil==5.9.4
 ptyprocess==0.7.0
 pure-eval==0.2.2
+pycountry==22.3.5
 pycparser==2.21
 pyee==8.2.2
 Pygments==2.13.0

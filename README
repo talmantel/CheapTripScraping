@@ -1,14 +1,16 @@
 The whole process of data obtaining consists of the following steps:
-    1) PREPROCESSING of input 'cities_counties.csv' file to get the corresponding bounding boxes (preprocessing.py)
+    1) PREPROCESSING of input 'cities_counties.csv' file to get the corresponding bounding boxes and airports codes (preprocessing.py)
     1) SCRAPING jsons from the site (scraping.py)
     2) EXTRACTION of direct routes from the scraped jsons (extraction.py)
     3) TREATMENT of obtained data to create the datasets for validation etc (treatment.py)
     5) FIXING the prices for specific routes listed in corresponding file (fixing.py)
 
-All nessecary input files are stored in directory 'files/csv':
-    - airport_codes_short.csv (binds airport codes with city id)
-    - bbox_short.csv (binds city id with city bounding box)
-    - cities_countries.csv (binds city id with corresponding city's name and country's name)
+Only two files stored in directory 'files/csv' are needed to start up:
+    - cities_countries.csv (contains cities of your interest)
+    - iata_codes.csv (IATA airport codes database)
+After 'preprocessing' the other two necessary .csv files are created (or changed):
+    - airport_codes.csv (binds airport codes with city id)
+    - bounding_boxes.csv (binds city id with city bounding box)
 
 Subfolder 'files/currencies' stores the json files with the currency exchange rates (updates if last updating date is later than 1 day ago).    
 

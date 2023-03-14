@@ -103,7 +103,7 @@ def get_airport_codes():
         print(err)          
                 
                 
-def preprocessing():
+def get_bounding_boxes():
     
     try:
         if not CITIES_COUNTRIES_CSV.is_file(): raise FileNotFoundError
@@ -156,4 +156,4 @@ def preprocessing():
 
 if __name__ == '__main__':
     get_airport_codes()
-    preprocessing()
+    get_bounding_boxes()

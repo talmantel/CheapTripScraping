@@ -46,9 +46,7 @@ def get_airport_codes():
         cities = df_cities_countries.loc[diff_ids]['city'].values
         print(f'\nTrying to get aiport codes for cities: {cities}')  
         
-        no_airports_cities = list()
-        num_airports = 0          
-           
+        no_airports_cities = list()        
         for id_city in diff_ids:
             
             city, country = df_cities_countries.loc[id_city, ['city', 'country']]
@@ -63,13 +61,10 @@ def get_airport_codes():
                 no_airports_cities.append(city)
                 continue
             
-            acodes = list()
             for code in match_codes:
                 df_airport_codes.at[code.lower(), 'id_city'] = id_city
-                acodes.append(code)
-                num_airports += 1
                 
-            print(f'...{acodes} was added successfully!')
+            print(f'...{match_codes} was added successfully!')
         
         print(f'\nAirports report: processed {len(diff_ids)} cities, '
               f'have no airport(s) {len(no_airports_cities)}: {no_airports_cities}\n')    

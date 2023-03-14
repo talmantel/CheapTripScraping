@@ -90,9 +90,9 @@ def get_airport_codes():
                 
             print(f'...{acodes} was added successfully!')
         
-        print(f'Airports report: processed {len(diff_ids)} cities, ' 
+        print(f'\nAirports report: processed {len(diff_ids)} cities, ' 
               f'country code doesn`t exist for {no_such_country}, '
-              f'have no airport(s) {len(no_airports_cities)}: {no_airports_cities}')    
+              f'have no airport(s) {len(no_airports_cities)}: {no_airports_cities}\n')    
         
         df_airport_codes.sort_values(by='id_city', inplace=True)
         df_airport_codes.to_csv(AIRPORT_CODES_CSV, header=False)
@@ -152,8 +152,13 @@ def get_bounding_boxes():
     
     except Exception as err:
         print(err)    
-    
 
-if __name__ == '__main__':
+
+def preprocessing():
+    
     get_airport_codes()
     get_bounding_boxes()
+
+
+if __name__ == '__main__':
+    preprocessing()

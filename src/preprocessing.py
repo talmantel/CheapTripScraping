@@ -7,7 +7,8 @@ from config import CITIES_COUNTRIES_CSV, AIRPORT_CODES_CSV, CITIES_CSV, IATA_COD
 
 
 df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
-df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'city', 'country_code', 'country'], index_col='code')
+df_iata_codes = pd.read_csv(IATA_CODES_CSV, names=['code', 'name', 'city', 'country_code', 'country', 'lat', 'lon'], 
+                                            index_col='code')
 
 
 def get_bboxes(city_country):

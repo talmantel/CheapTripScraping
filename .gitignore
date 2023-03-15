@@ -7,4 +7,4 @@ output/
 output_4run/
 src/try.py
 src/airports.py
-files/airports/
+files/airports/iata_codes.json

@@ -29,10 +29,10 @@ unknown_currencies = set()
 unique_routes = set()
 
 # counter for path_id
-df_bb = pd.read_csv(BBOXES_CSV, names=['id_city', 'lat_1', 'lat_2', 'lon_1', 'lon_2'], index_col='id_city')
-#df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
+#df_bb = pd.read_csv(BBOXES_CSV, names=['id_city', 'lat_1', 'lat_2', 'lon_1', 'lon_2'], index_col='id_city')
+df_cities_countries = pd.read_csv(CITIES_COUNTRIES_CSV, names=['id_city', 'city', 'country'], index_col='id_city')
 
-counter = {k: k * 10000 for k in df_bb.index.values}
+counter = {k: k * 10000 for k in df_cities_countries.index.values}
     
 def extract_routine(input_data: tuple, euro_rates: dict) -> list():
     

@@ -1,0 +1,73 @@
+code,id_city_old,city_old,id_city_new,city_new
+mnl,,,14,Manila
+dia,,,22,Doha
+zxt,,,34,Baku
+orl,,,38,Orlando
+tmb,,,41,Miami
+isp,,,42,New York
+swf,,,42,New York
+hla,,,43,Johannesburg
+qra,,,43,Johannesburg
+xxn,,,45,Riyadh
+nay,,,59,Beijing
+pek,,,59,Beijing
+pkx,,,59,Beijing
+snz,,,64,Rio De Janeiro
+bwu,,,72,Sydney
+mbw,,,73,Melbourne
+pcb,,,76,Jakarta
+nhd,,,95,Dubai
+hew,,,104,Athens
+ank,,,113,Ankara
+fzo,,,122,Bristol
+txl,,,124,Berlin
+bbu,,,134,Bucharest
+cer,,,156,Cherbourg
+eth,,,171,Eilat
+xfw,,,196,Hamburg
+hem,,,201,Helsinki
+isl,,,207,Istanbul
+bqh,,,225,London
+nht,,,225,London
+toj,,,248,Madrid
+mzm,,,260,Metz
+plq,,,289,Palanga
+ltq,,,293,Paris
+vst,,,329,Stockholm
+sdv,,,336,Tel-Aviv
+auz,,,663,Chicago
+dpa,,,663,Chicago
+rfd,,,663,Chicago
+mxa,14,Manila,,
+hsh,39,Las Vegas,,
+lsv,39,Las Vegas,,
+vgt,39,Las Vegas,,
+vny,40,Los Angeles,,
+whp,40,Los Angeles,,
+any,59,Beijing,,
+cxh,62,Vancouver,,
+ydt,62,Vancouver,,
+eze,65,Buenos Aires,,
+meb,73,Melbourne,,
+szb,94,Kuala Lumpur,,
+djh,95,Dubai,,
+dwc,95,Dubai,,
+xsp,96,Singapore,,
+bjy,135,Belgrade,,
+cfr,156,Cherbourg,,
+mgl,161,Dusseldorf,,
+nrn,161,Dusseldorf,,
+etm,171,Eilat,,
+hhn,174,Frankfurt,,
+lbc,196,Hamburg,,
+sen,225,London,,
+lyon,240,Lyon,,
+bgy,252,Milan,,
+trf,277,Oslo,,
+plg,289,Palanga,,
+bva,293,Paris,,
+cia,303,Rome,,
+bst,329,Stockholm,,
+tsf,353,Venice,,
+vbs,354,Verona,,
+uln,548,Ulaanbaatar,,
